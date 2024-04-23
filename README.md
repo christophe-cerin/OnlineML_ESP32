@@ -7,7 +7,7 @@ In the context of Smart Buildings, data arrive continually from sensors. Learnin
 
 ## Description of directories content
 
-This repository is mainly divided into 2 directories. The first is dedicated to Arduino (C/C++) developments, and the second is devoted to Micropython-ulab developments (Python).
+This repository is mainly divided into 3 directories. The first is dedicated to Arduino (C/C++) developments, the second is devoted to Micropython-ulab developments (Python), and the third contains material related to IoT, dataset, courses...
 
 ## Friends projects
 
