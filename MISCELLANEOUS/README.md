@@ -11,3 +11,5 @@ This directory contains miscellaneous material connected to IoT, datasets, cours
 1. [Institut Galilée](https://github.com/institut-galilee)
 
 ## Datasets
+
+1. [CampusIoT's LoRaWAN Datasets](https://github.com/CampusIoT/datasets)
