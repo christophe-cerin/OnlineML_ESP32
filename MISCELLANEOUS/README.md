@@ -12,6 +12,7 @@ This directory contains miscellaneous material connected to IoT, datasets (mainl
 ## Courses
 
 - [Institut Galilée](https://github.com/institut-galilee)
+- [Resources from IEEE](https://spectrum.ieee.org/ai-iot-smart-grid-courses). Check also with [Spectrum](https://spectrum.ieee.org/tag/internet-of-things), and with [IEEE Internet of Things](https://iot.ieee.org/2)
 
 ## Datasets
 
@@ -20,6 +21,7 @@ This directory contains miscellaneous material connected to IoT, datasets (mainl
 - [Smart Building Systems - EDA](https://www.kaggle.com/code/halimedogan/smart-building-system-eda)
 - [Smart Building Dataset](https://www.kaggle.com/datasets/ranakrc/smart-building-system)
 - [ASHRAE Global Occupant Behavior Database](https://www.kaggle.com/datasets/claytonmiller/ashrae-global-occupant-behavior-database)
+- [IEEE Dataport](https://ieee-dataport.org/): datasets in many domains.
 
 
 ## Regulation & publications
