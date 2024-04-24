@@ -1,15 +1,25 @@
 # Directory contents
 
-This directory contains miscellaneous material connected to IoT, datasets, courses, and many more stuff.
+This directory contains miscellaneous material connected to IoT, datasets (mainly for the Smart Building sector), courses, and many more stuff.
 
 ## Power monitoring
 
-1. [Nordic PPK2](https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2)
+- [Nordic PPK2](https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2)
 
 ## Courses
 
-1. [Institut Galilée](https://github.com/institut-galilee)
+- [Institut Galilée](https://github.com/institut-galilee)
 
 ## Datasets
 
-1. [CampusIoT's LoRaWAN Datasets](https://github.com/CampusIoT/datasets)
+- [CampusIoT's LoRaWAN Datasets](https://github.com/CampusIoT/datasets)
+- Thailand Data set: M. Pipattanasomporn, G. Chitalia, J. Songsiri, C. Aswakul, W. Pora, S. Suwanka- win, K. Audomvongseree, and N. Hoonchareon, “[Cu-bems](https://www.researchgate.net/publication/343078613_CU-BEMS_smart_building_electricity_consumption_and_indoor_environmental_sensor_datasets), smart building electricity consumption and indoor environmental sensor datasets,” Scientific Data, vol. 7, no. 1, pp. 1–14, 2020. ([Dataset](https://sgrudata.github.io/) or with [Kaggle](https://www.kaggle.com/datasets/claytonmiller/cubems-smart-building-energy-and-iaq-data)) ([Python code](https://nbviewer.org/github/mpipatta/mpipatta.github.io/blob/master/CHAM5.ipynb))
+- [Smart Building Systems - EDA](https://www.kaggle.com/code/halimedogan/smart-building-system-eda)
+- [Smart Building Dataset](https://www.kaggle.com/datasets/ranakrc/smart-building-system)
+- [ASHRAE Global Occupant Behavior Database](https://www.kaggle.com/datasets/claytonmiller/ashrae-global-occupant-behavior-database)
+
+
+## Regulation & publications
+
+- [BACS decree](https://www.adeunis.com/en/bacs-decree-buildings/) related to tertiary buildings;
+- [Smart Building Alliance](https://www.smartbuildingsalliance.org/en/resources/sba-publications)
