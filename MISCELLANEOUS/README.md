@@ -1,8 +1,8 @@
 # Directory contents
 
-This directory contains miscellaneous material connected to IoT, datasets (mainly for the Smart Building sector), courses, and many more stuff.
+This directory contains miscellaneous material connected to IoT, datasets (mainly for the Smart Building sector), courses, and many more artifacts.
 
-## Power monitoring
+## Hardware/Software tools
 
 - [Nordic PPK2](https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2)
 - [Micro Climate Station](https://github.com/i2hm/micro_climate_station): PCB designs and firmwares for the Microclimate station. This is an example of an embedded system.
