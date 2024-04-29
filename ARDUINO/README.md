@@ -37,4 +37,4 @@ operate toolchain
 - A text editor to write programs (Projects) in C for example Eclipse
 - The ESP32 board itself and a USB cable to connect it to the PC
 
-  ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](images/path/carte-esp32-wroom-32d.png)
+  ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](ARDUINO/images/path/carte-esp32-wroom-32d.png)
