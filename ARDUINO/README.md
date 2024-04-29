@@ -26,3 +26,11 @@ however it will be necessary to make some preparations to be able to program the
 in particular install the ESP32 card itself.
 Download and install the Arduinode IDE from the official [Arduino.cc Website](https://www.arduino.cc/en/software)
 
+# Preparing the ESP-WROOM-32D microcontrollerTo develop applications for ESP-WROOM-32D, you needed:
+
+• PC loaded with Ubuntu 22.04.1  LTS operating system
+• Toolchain to create application for ESP32
+• ESP-IDF or Arduino which essentially contains the API for ESP32 and scripts to do
+operate toolchain
+• A text editor to write programs (Projects) in C for example Eclipse
+• The ESP32 board itself and a USB cable to connect it to the PC
