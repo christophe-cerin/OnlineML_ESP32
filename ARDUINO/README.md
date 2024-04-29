@@ -38,8 +38,4 @@ operate toolchain
 - The ESP32 board itself and a USB cable to connect it to the PC
 
 ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png)
-  ###### ESP32-DevkitC microcontroller equipped with WROOM-32D 
-
-<picture>
-   <img alt="ESP32-DevkitC microcontroller equipped with WROOM-32D " src="[https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png)">
-</picture>
+                    ###### ESP32-DevkitC microcontroller equipped with WROOM-32D 
