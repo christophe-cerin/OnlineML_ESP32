@@ -39,4 +39,4 @@ operate toolchain
 
   ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](images/path/carte-esp32-wroom-32d.png)
 
-  <img src="ARDUINO/images/path/carte-esp32-wroom-32d.png" width="128"/>
+  <img src="/OnlineML_ESP32/ARDUINO/images/path/carte-esp32-wroom-32d.png" width="128"/>
