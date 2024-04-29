@@ -1,5 +1,5 @@
 
-# IDE (Integrated Development Environment): ARDUINO
+# IDE (Integrated Development Environment)
 
 The integrated development environment (Integrated Development Environment abbreviated IDE) is
 a software application that helps programmers develop software code efficiently. A
