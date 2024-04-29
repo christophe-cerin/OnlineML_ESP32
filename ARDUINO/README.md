@@ -41,4 +41,50 @@ operate toolchain
 
 ###### ESP32-DevkitC microcontroller equipped with WROOM-32D 
 
+# Presentation of the ESP-WROOM-32D microcontroller
+
+ESP32-DevKitC on a turnkey basis is an entry-level ESP32 development board
+range, it is also a small electronic card, called a microcontroller, easy to take
+in hand. On the ESP32 board, the pins are pinned for connection and use
+easy. Can be used to evaluate ESP-WROOM-32 modules and ESP32-D0WD chips.
+- Flash / PSRAM: 4 MB flash,
+- Interface: I/O,
+- USB,
+- User interface: button, LED
+Related products: ESP-WROOM-32
+
+There are a multitude of ESP32 boards with different pin placement. Standard serial ports on
+gpio3 (RX) and gpio1 (TX) connections are used in series to communicate with arduino IDE and to be connected to the
+CP2102.
+
+## Special operation of certain ESP32 pins
+Development boards based on an ESP32 generally have 33 pins apart from those for the power supply.
+Some GPIO pins have somewhat particular functions:
+- If your ESP32 card has pins GPIO6, GPIO7, GPIO8, GPIO9, GPIO10, GPIO11, you should especially not
+Do not use them because they are connected to the flash memory of the ESP32: if you use them the ESP32 will not work.
+- The GPIO1 (TX0) and GPIO3 (RX0) pins are used to communicate with the computer in UART via USB.
+If you use them, you will no longer be able to upload programs to the card or use the serial monitor via the
+USB port. They can be useful for programming the board without using USB with an external programmer.
+Fortunately, there are other UART interfaces available.
+-  GPIO36 (VP), GPIO39 (VN), GPIO34, GPIO35 pins can be used as input only. They don't have
+no integrated internal pullup and pulldown resistors either (We cannot use pinMode(36,
+INPUT_PULLUP) or pinMode(36, INPUT_PULLDOWN) ).
+- Some pins have a special role when starting the ESP32. These are the Strapping Pins. They are used for
+put the ESP32 in BOOT mode (to execute the program written in flash memory) or FLASH mode
+(to upload the program to flash memory). In fact, depending on the tension present at the edge of these
+pins, the ESP32 will boot either in BOOT mode or in FLASH mode. The strapping pins are the pins
+GPIO0, GPIO2, GPIO12 (MTDI) and GPIO15 (MTDO). You can use them, but you just have to be careful
+when a logic state (3.3V or 0V) is imposed with an external pullup or pulldown resistor.
+- When booting the ESP32, for a short period of time, certain pins quickly change logical states (0V
+→ 3.3V). You may have weird bugs with these pins: for example a relay that activates
+temporarily. The faulty pins are as follows:
+ GPIO 1: Send the ESP32 boot logs via the UART
+ GPIO 3: Voltage of 3.3V during boot
+ GPIO 5: Sends a PWM signal during boot
+ GPIO 14: Sends a PWM signal during boot
+ GPIO 15: Sending the ESP32 boot logs via the UART
+The EN pin allows you to control the ignition status of the ESP32 via an external wire. It is connected to the EN button of the
+map. When the ESP32 is turned on, it is at 3.3V. If we connect this pin to ground, the ESP32 is turned off. We can use it
+when the ESP32 is in a case and you want to be able to turn it on/off with a switch.
+The rest of the GPIO pins have no particular restrictions.
 
