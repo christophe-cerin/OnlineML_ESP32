@@ -58,6 +58,7 @@ gpio3 (RX) and gpio1 (TX) connections are used in series to communicate with ard
 CP2102.
 
 ## Special operation of certain ESP32 pins
+
 Development boards based on an ESP32 generally have 33 pins apart from those for the power supply.
 Some GPIO pins have somewhat particular functions:
 - If your ESP32 card has pins GPIO6, GPIO7, GPIO8, GPIO9, GPIO10, GPIO11, you should especially not
@@ -78,13 +79,13 @@ when a logic state (3.3V or 0V) is imposed with an external pullup or pulldown r
 - When booting the ESP32, for a short period of time, certain pins quickly change logical states (0V
 → 3.3V). You may have weird bugs with these pins: for example a relay that activates
 temporarily. The faulty pins are as follows:
- GPIO 1: Send the ESP32 boot logs via the UART
- GPIO 3: Voltage of 3.3V during boot
- GPIO 5: Sends a PWM signal during boot
- GPIO 14: Sends a PWM signal during boot
- GPIO 15: Sending the ESP32 boot logs via the UART
-The EN pin allows you to control the ignition status of the ESP32 via an external wire. It is connected to the EN button of the
+- GPIO 1: Send the ESP32 boot logs via the UART
+- GPIO 3: Voltage of 3.3V during boot
+- GPIO 5: Sends a PWM signal during boot
+- GPIO 14: Sends a PWM signal during boot
+- GPIO 15: Sending the ESP32 boot logs via the UART
+- The EN pin allows you to control the ignition status of the ESP32 via an external wire. It is connected to the EN button of the
 map. When the ESP32 is turned on, it is at 3.3V. If we connect this pin to ground, the ESP32 is turned off. We can use it
 when the ESP32 is in a case and you want to be able to turn it on/off with a switch.
-The rest of the GPIO pins have no particular restrictions.
+- The rest of the GPIO pins have no particular restrictions.
 
