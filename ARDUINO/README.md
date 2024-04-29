@@ -89,3 +89,9 @@ map. When the ESP32 is turned on, it is at 3.3V. If we connect this pin to groun
 when the ESP32 is in a case and you want to be able to turn it on/off with a switch.
 - The rest of the GPIO pins have no particular restrictions.
 
+  ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png)
+
+  ###### the GPIO pins of the ESP32-WROOM-32D
+
+
+
