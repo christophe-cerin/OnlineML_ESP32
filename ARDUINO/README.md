@@ -91,6 +91,37 @@ when the ESP32 is in a case and you want to be able to turn it on/off with a swi
 
   ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png)
 
+  ## ESP32 peripherals
+To interact with modules, sensors or electronic circuits, the ESP32, like any microcontroller, has a
+multitude of peripherals. They are also much more numerous than on a classic Arduino Uno board.
+The ESP32 has the following peripherals:
+
+- 3 UART interfaces
+- 2 I2C interfaces
+- 3 SPI interfaces
+- 16 PWM outputs
+- 10 capacitive sensors
+- 18 analog inputs (ADC)
+- 2 DAC outputs
+  
+Some peripherals are already used by the ESP32 during its basic operation. There is therefore in reality less
+of possible interfaces for each device.
+
+## The UART on the ESP32
+UART is the serial protocol that allows data to be easily exchanged between 2 devices. On the ESP32 3 bus
+UARTs are available: UART0, UART1 and UART2. They can be used to communicate with a sensor, a
+Arduino, a Raspberry Pi, a computer...
+
+- UART0 is by default on the GPIO1(TX0) and GPIO3(RX0) pins of the ESP32, it is used to communicate
+with the computer via the serial monitor. It is also the one used to flash the ESP32 card. In general,
+we use it to display messages in the console with Serial.println() .
+- To use UART2, simply add Serial2.begin() in the setup() function and use the function
+Serial2.println() to send messages. By default, the UART2 bus is on pins GPIO16(RX2) and
+GPIO17(TX2) but you can change them (useful with a Wrover module) during setup.
+- UART1 is by default on the pins used by the ESP32 flash. However, it can be used thanks to the “GPIO
+matrix” of the ESP32 by choosing the pins you want. So this code allows you to have a serial link on the pins
+GPIO14 and GPIO12 using the UART1 bus.
+
   ###### the GPIO pins of the ESP32-WROOM-32D
 
 
