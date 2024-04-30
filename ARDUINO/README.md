@@ -41,7 +41,7 @@ operate toolchain
 
 ###### the GPIO pins of the ESP32-WROOM-32D
   
-###### ESP32-DevkitC microcontroller equipped with WROOM-32D 
+
 
 # Presentation of the ESP-WROOM-32D microcontroller
 
@@ -92,6 +92,8 @@ when the ESP32 is in a case and you want to be able to turn it on/off with a swi
 - The rest of the GPIO pins have no particular restrictions.
 
   ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png)
+
+###### ESP32-DevkitC microcontroller equipped with WROOM-32D 
 
   ## ESP32 peripherals
 To interact with modules, sensors or electronic circuits, the ESP32, like any microcontroller, has a
