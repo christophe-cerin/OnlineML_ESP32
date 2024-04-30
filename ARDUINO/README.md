@@ -93,5 +93,21 @@ when the ESP32 is in a case and you want to be able to turn it on/off with a swi
 
   ###### the GPIO pins of the ESP32-WROOM-32D
 
+## ESP32 peripherals
+To interact with modules, sensors or electronic circuits, the ESP32, like any microcontroller, has a
+multitude of peripherals. They are also much more numerous than on a classic Arduino Uno board.
+The ESP32 has the following peripherals:
+
+- 3 UART interfaces
+- 2 I2C interfaces
+- 3 SPI interfaces
+- 16 PWM outputs
+- 10 capacitive sensors
+- 18 analog inputs (ADC)
+- 2 DAC outputs
+- 
+Some peripherals are already used by the ESP32 during its basic operation. There is therefore in reality less
+of possible interfaces for each device.
+
 
 
