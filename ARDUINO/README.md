@@ -1,5 +1,5 @@
 
-# IDE (Integrated Development Environment)
+## IDE (Integrated Development Environment)
 
 The integrated development environment (Integrated Development Environment abbreviated IDE) is
 a software application that helps programmers develop software code efficiently. A
@@ -7,7 +7,7 @@ IDE typically includes a graphical interface to launch the different tools, an e
 source code, a compiler, a debugger, and often a tool for building
 software graphical interfaces
 
-## Arduino IDE
+### Arduino IDE
 
 Makers, students, and professionals use the classic Arduino IDE (environment
 integrated development) since the birth of Arduino. The Arduino IDE 2.0 is an improvement
@@ -25,7 +25,7 @@ The Arduino card is very easily programmable with this software,
 however, it will be necessary to make some preparations to be able to program the ESP32,
 in particular, install the ESP32 card itself. Download and install the Arduino IDE from the official [Arduino.cc](https://www.arduino.cc/en/software) Website.
 
-# Preparing the ESP-WROOM-32D microcontroller 
+## Preparing the ESP-WROOM-32D microcontroller 
 
 To develop applications for ESP-WROOM-32D, you needed :
 
@@ -35,14 +35,17 @@ To develop applications for ESP-WROOM-32D, you needed :
 operate toolchain
 - A text editor to write programs (Projects) in C for example Eclipse
 - The ESP32 board itself and a USB cable to connect it to the PC
-
-![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png)
-
-###### the GPIO pins of the ESP32-WROOM-32D
   
+<!--
+![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png)
+-->
+
+<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png" width=30% height=30%  title="the GPIO pins of the ESP32-WROOM-32D"/>
 
 
-# Presentation of the ESP-WROOM-32D microcontroller
+###### **The GPIO pins of the ESP32-WROOM-32D**
+
+## Presentation of the ESP-WROOM-32D microcontroller
 
 ESP32-DevKitC on a turnkey basis is an entry-level ESP32 development board
 range, it is also a small electronic card, called a microcontroller, which is easy to take
@@ -58,7 +61,7 @@ There are a multitude of ESP32 boards with different pin placements. Standard se
 gpio3 (RX) and gpio1 (TX) connections are used in series to communicate with Arduino IDE and to be connected to the
 CP2102.
 
-## Special operation of certain ESP32 pins
+### Special operation of certain ESP32 pins
 
 Development boards based on an ESP32 generally have 33 pins apart from those for the power supply.
 Some GPIO pins have somewhat particular functions:
@@ -89,12 +92,16 @@ temporarily. The faulty pins are as follows:
 map. When the ESP32 is turned on, it is at 3.3V. If we connect this pin to the ground, the ESP32 is turned off. We can use it
 when the ESP32 is in a case and you want to be able to turn it on/off with a switch.
 - The rest of the GPIO pins have no particular restrictions.
-
+<!--
   ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png)
+  -->
 
-###### ESP32-DevkitC microcontroller equipped with WROOM-32D 
+  <img alt="ESP32-DevkitC microcontroller equipped with WROOM-32D" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png" width=60% height=60%  title="ESP32-DevkitC microcontroller equipped with WROOM-32D "/>
 
-  ## ESP32 peripherals
+
+###### **ESP32-DevkitC microcontroller equipped with WROOM-32D** 
+
+  ### ESP32 peripherals
 To interact with modules, sensors, or electronic circuits, the ESP32, like any microcontroller, has a
 multitude of peripherals. They are also much more numerous than on a classic Arduino Uno board.
 The ESP32 has the following peripherals:
@@ -110,7 +117,7 @@ The ESP32 has the following peripherals:
 Some peripherals are already used by the ESP32 during its basic operation. There is therefore in reality less
 of possible interfaces for each device.
 
-## The UART on the ESP32
+### The UART on the ESP32
 UART is the serial protocol that allows data to be easily exchanged between 2 devices. On the ESP32 3 bus
 UARTs are available: UART0, UART1 and UART2. They can be used to communicate with a sensor, a
 Arduino, a Raspberry Pi, a computer...
