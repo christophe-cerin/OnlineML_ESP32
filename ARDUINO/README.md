@@ -40,7 +40,7 @@ operate toolchain
 -->
 
 <div>
-<img src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png" width=30% height=30% alt="bonjour" title="bonjour">
+<img src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png" width=30% height=30% alt="bonjour" title="bonjour"/>
 </div>
 
 ###### the GPIO pins of the ESP32-WROOM-32D
