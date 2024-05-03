@@ -96,7 +96,7 @@ when the ESP32 is in a case and you want to be able to turn it on/off with a swi
   ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png)
   -->
 
-  <img alt="ESP32-DevkitC microcontroller equipped with WROOM-32D" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png" width=40% height=40%  title="ESP32-DevkitC microcontroller equipped with WROOM-32D "/>
+  <img alt="ESP32-DevkitC microcontroller equipped with WROOM-32D" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png" width=50% height=50%  title="ESP32-DevkitC microcontroller equipped with WROOM-32D "/>
 
 
 ###### ESP32-DevkitC microcontroller equipped with WROOM-32D 
