@@ -40,7 +40,7 @@ operate toolchain
 
 ###### the GPIO pins of the ESP32-WROOM-32D
 
-<img src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png" width=50% height=50%>
+<img src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png" width=30% height=30%>
 
 
 ## Presentation of the ESP-WROOM-32D microcontroller
