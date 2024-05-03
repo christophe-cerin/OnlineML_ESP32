@@ -35,6 +35,7 @@ To develop applications for ESP-WROOM-32D, you needed :
 operate toolchain
 - A text editor to write programs (Projects) in C for example Eclipse
 - The ESP32 board itself and a USB cable to connect it to the PC
+  
 <!--
 ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png)
 -->
@@ -95,7 +96,7 @@ when the ESP32 is in a case and you want to be able to turn it on/off with a swi
   ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png)
   -->
 
-  <img alt="ESP32-DevkitC microcontroller equipped with WROOM-32D " src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png)" width=30% height=30%  title="ESP32-DevkitC microcontroller equipped with WROOM-32D "/>
+  <img alt="ESP32-DevkitC microcontroller equipped with WROOM-32D" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png" width=30% height=30%  title="ESP32-DevkitC microcontroller equipped with WROOM-32D "/>
 
 
 ###### ESP32-DevkitC microcontroller equipped with WROOM-32D 
