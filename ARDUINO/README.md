@@ -166,7 +166,7 @@ matrix” of the ESP32 by choosing the pins you want. So this code allows you to
 GPIO14 and GPIO12 using the UART1 bus.
 
 ## ARDUINO IDE and the first Hello World project
-**Add the ESP32 card to the Arduino IDE card base**
+### Add the ESP32 card to the Arduino IDE card base
 
 In the Arduino IDE:
 - **Open File Menu > Preferences**
@@ -178,14 +178,14 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json,
 https://dl.espressif.com/dl/package_esp32_index.json,
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
-**Install ESP32 board in Arduino IDE**
+### Install ESP32 board in Arduino IDE
 
 Still in the Arduino IDE:
 - **Open menu Tools > Map Type > Map Manager**
 - Search for ESP32 package
 - Install the package: select the latest version available and click on Install
 
-**Select ESP32 card**
+### Select ESP32 card
 All that remains is to define the ESP32 card so that the program is correctly sent to the
 map. Still in the Arduino IDE:
 
@@ -201,7 +201,7 @@ The installation is now complete, you can now program your ESP32 card
 like a classic Arduino board. Examples are available, among others, for Wi-Fi and
 Bluetooth in **File → Examples**
 
-**Upload your first program to the ESP32-VROOM-3D card**
+### Upload your first program to the ESP32-VROOM-3D card
 Now that all the tools are installed, we will be able to create our first program and
 send it to the ESP32 card. But before doing our first program, we must ensure that
 we can communicate with the card. Normally, ESP32 cards are automatically detected,
