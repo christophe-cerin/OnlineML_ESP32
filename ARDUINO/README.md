@@ -185,3 +185,5 @@ Still in the Arduino IDE:
 Tools > Map Type > Map Manager
 - Search for ESP32 package
 - Install the package: select the latest version available and click on Install
+
+  
