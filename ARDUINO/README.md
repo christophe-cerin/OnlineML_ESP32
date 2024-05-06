@@ -165,3 +165,11 @@ GPIO17(TX2) but you can change them (useful with a Wrover module) during setup.
 matrix” of the ESP32 by choosing the pins you want. So this code allows you to have a serial link on the pins
 GPIO14 and GPIO12 using the UART1 bus.
 
+## ARDUINO IDE and the first Hello World project
+Add the ESP32 card to the Arduino IDE card base
+
+In the Arduino IDE:
+• Open File Menu > Preferences
+• Enter the following address in the field
+Additional Map Manager URLs:
+
