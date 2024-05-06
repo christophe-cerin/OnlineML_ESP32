@@ -216,4 +216,22 @@ The ESP32 sends debug messages at this speed when it starts up.
 The serial port speed may be different from 115200 baud but in this case the messages when
 boot of the ESP32 will not be visible and will appear with incomprehensible characters.
 Once the speed is changed, you can communicate with the ESP32.
+
+### My first program
+Here is a very simple example which allows you to flash the blue LED located on the GPIO2 pin of the
+ESP32 Wroom DevKit board.
+
+```
+void setup() {
+Serial.begin(115200);
+Serial.println("Mon premier programme");
+pinMode(2,OUTPUT);
+}
+void loop() {
+digitalWrite(2, HIGH); //On allume la led bleue
+delay(500); //On attend pendant 500 ms
+digitalWrite(2, LOW); //On eteinds la led bleue
+delay(500); //On attend pendant 500 ms
+}
+```
   
