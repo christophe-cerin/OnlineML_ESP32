@@ -242,3 +242,6 @@ even those not directly used by the program are compiled. Fortunately
 only modified files will be compiled at the next compilation.
 To do this, simply press the “Check” button. You will then have to click on the arrow next to
 to upload the program to the ESP32.
+Once the upload is complete, the ESP32 directly executes the program. It is therefore
+normal not to see the message “My first program” when you go to the monitor
+series.
