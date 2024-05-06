@@ -197,4 +197,7 @@ the ESP-WROOM DA Module board
 We configured the Arduino development environment to be able to program the
 ESP-WROOM DA module.
 
+The installation is now complete, you can now program your ESP32 card
+like a classic Arduino board. Examples are available, among others, for Wi-Fi and
+Bluetooth in **File → Examples**
   
