@@ -73,3 +73,13 @@ MQTT.
 We have installed and configured the client and server, now we can register a
 subscribed to a specific topic and wait for an incoming message from an editor. To register a subscriber,
 we will use this command: **Terminal 1**
+
+```
+mamadou@dugny:~/Arduino/mqtt/sketch_wifia212$ mosquitto_sub -d -t swa_news
+Client (null) sending CONNECT
+Client (null) received CONNACK (0)
+Client (null) sending SUBSCRIBE (Mid: 1, Topic: swa_news, QoS: 0, Options:
+0x00)
+Client (null) received SUBACK
+Subscribed (mid: 1): 0
+```
