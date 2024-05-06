@@ -61,3 +61,16 @@ client using SSL, password, or both.
 - Authorization consists of managing the client's rights. Authorization is not part of the
 MQTT protocol. It is provided by MQTT brokers. What is allowed or not depends
 what the broker does.
+
+**The MQTT client ID**
+
+The MQTT protocol defines a "client identifier" - client ID that uniquely identifies a
+client in a network. Simply put, when connecting to a broker, a client must specify
+a unique string that is not currently in use and will not be used by another client that is
+will connect to the MQTT broker.
+Now let's try to understand the implications of two clients getting the same username.
+customer. the MQTT broker monitors messages waiting to be sent to a running client
+customer ID. Thus, if a client uses the quality of service QoS1, that is to say the message is
+sure to arrive but it can do it several times or QoS2 so that the messages are not
+sent in duplicate. MQTT provides the possibility of having at most 65535 messages pending with a
+16-bit message identifier.
