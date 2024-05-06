@@ -234,4 +234,11 @@ digitalWrite(2, LOW); //On eteinds la led bleue
 delay(500); //On attend pendant 500 ms
 }
 ```
-  
+### Compile the program
+
+Once you have typed or copied the example code and saved the code, you will need to compile
+the program. The first compilation is quite long because all the source files for the ESP32,
+even those not directly used by the program are compiled. Fortunately
+only modified files will be compiled at the next compilation.
+To do this, simply press the “Check” button. You will then have to click on the arrow next to
+to upload the program to the ESP32.
