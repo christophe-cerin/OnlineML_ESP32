@@ -134,5 +134,114 @@ GPIO14 and GPIO12 using the UART1 bus.
 
 
 
+## ESP32 peripherals
+To interact with modules, sensors or electronic circuits, the ESP32, like any microcontroller, has a
+multitude of peripherals. They are also much more numerous than on a classic Arduino Uno board.
+The ESP32 has the following peripherals:
 
+- 3 UART interfaces
+- 2 I2C interfaces
+- 3 SPI interfaces
+- 16 PWM outputs
+- 10 capacitive sensors
+- 18 analog inputs (ADC)
+- 2 DAC outputs
+  
+Some peripherals are already used by the ESP32 during its basic operation. There is therefore in reality less
+of possible interfaces for each device.
 
+## The UART on the ESP32
+UART is the serial protocol that allows data to be easily exchanged between 2 devices. On the ESP32 3 bus
+UARTs are available: UART0, UART1 and UART2. They can be used to communicate with a sensor, a
+Arduino, a Raspberry Pi, a computer...
+
+- UART0 is by default on the GPIO1(TX0) and GPIO3(RX0) pins of the ESP32, it is used to communicate
+with the computer via the serial monitor. It is also the one used to flash the ESP32 card. In general,
+we use it to display messages in the console with Serial.println() .
+- To use UART2, simply add Serial2.begin() in the setup() function and use the function
+Serial2.println() to send messages. By default, the UART2 bus is on pins GPIO16(RX2) and
+GPIO17(TX2) but you can change them (useful with a Wrover module) during setup.
+- UART1 is by default on the pins used by the ESP32 flash. However, it can be used thanks to the “GPIO
+matrix” of the ESP32 by choosing the pins you want. So this code allows you to have a serial link on the pins
+GPIO14 and GPIO12 using the UART1 bus.
+
+## ARDUINO IDE and the first Hello World project
+### Add the ESP32 card to the Arduino IDE card base
+
+In the Arduino IDE:
+- **Open File Menu > Preferences**
+- Enter the following address in the field
+  
+Additional Map Manager URLs:
+```
+http://arduino.esp8266.com/stable/package_esp8266com_index.json,
+https://dl.espressif.com/dl/package_esp32_index.json,
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+```
+### Install ESP32 board in Arduino IDE
+
+Still in the Arduino IDE:
+- **Open menu Tools > Map Type > Map Manager**
+- Search for ESP32 package
+- Install the package: select the latest version available and click on Install
+
+### Select ESP32 card
+All that remains is to define the ESP32 card so that the program is correctly sent to the
+map. Still in the Arduino IDE:
+
+- **Open menu Tools > Board Type > esp32 > ESP-WROOM DA Module**
+- **Open menu Tools > Port > /dev/ttyUSB0**
+- Then choose the ESP32 card that corresponds to your version of ESP32. Most often it will be
+the ESP-WROOM DA Module board
+
+We configured the Arduino development environment to be able to program the
+ESP-WROOM DA module.
+
+The installation is now complete, you can now program your ESP32 card
+like a classic Arduino board. Examples are available, among others, for Wi-Fi and
+Bluetooth in **File → Examples**
+
+### Upload your first program to the ESP32-VROOM-3D card
+Now that all the tools are installed, we will be able to create our first program and
+send it to the ESP32 card. But before doing our first program, we must ensure that
+we can communicate with the card. Normally, ESP32 cards are automatically detected,
+there is therefore no need to install additional drivers. Plug your ESP32 board into your
+computer via USB (with a USB Micro-B cable), The red LED lights up when powered on
+of the ESP32 card.
+
+**The parameter that can be modified in the serial monitor is the transmission speed of the
+data**. In general, the typical serial port speed with an Arduino board is **9600 bauds**
+(bit/s). But with the ESP32, the commonly used speed is **115200 bauds**. The reason is that
+The ESP32 sends debug messages at this speed when it starts up.
+The serial port speed may be different from 115200 baud but in this case the messages when
+boot of the ESP32 will not be visible and will appear with incomprehensible characters.
+Once the speed is changed, you can communicate with the ESP32.
+
+### My first program
+Here is a very simple example which allows you to flash the blue LED located on the GPIO2 pin of the
+ESP32 Wroom DevKit board.
+
+```
+void setup() {
+Serial.begin(115200);
+Serial.println("Mon premier programme");
+pinMode(2,OUTPUT);
+}
+void loop() {
+digitalWrite(2, HIGH); //On allume la led bleue
+delay(500); //On attend pendant 500 ms
+digitalWrite(2, LOW); //On eteinds la led bleue
+delay(500); //On attend pendant 500 ms
+}
+```
+### Compile the program
+
+Once you have typed or copied the example code and saved the code, you will need to compile
+the program. The first compilation is quite long because all the source files for the ESP32,
+even those not directly used by the program are compiled. Fortunately
+only modified files will be compiled at the next compilation.
+To do this, simply press the “Check” button. You will then have to click on the arrow next to
+to upload the program to the ESP32.
+Once the upload is complete, the ESP32 directly executes the program. It is therefore
+normal not to see the message “My first program” when you go to the monitor
+series.
