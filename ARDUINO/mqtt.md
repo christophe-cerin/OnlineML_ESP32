@@ -97,3 +97,21 @@ Client (null) received CONNACK (0)
 Client (null) sending PUBLISH (d0, q0, r0, m1, 'swa_news', ... (14 bytes))
 Client (null) sending DISCONNECT
 ```
+An important aspect to note is that MQTT is a simple protocol, so the message is clear and
+everyone can read it. **Terminal 1**
+
+```
+mamadou@dugny:~/Arduino/mqtt/sketch_wifia212$ mosquitto_sub -d -t swa_news
+Client (null) sending CONNECT
+Client (null) received CONNACK (0)
+Client (null) sending SUBSCRIBE (Mid: 1, Topic: swa_news, QoS: 0, Options:
+0x00)
+Client (null) received SUBACK
+Subscribed (mid: 1): 0
+Client (null) received PUBLISH (d0, q0, r0, m0, 'swa_news', ... (14 bytes))
+Hello Protocol
+Client (null) sending PINGREQ
+Client (null) received PINGRESP
+^CClient (null) sending DISCONNECT
+```
+
