@@ -185,4 +185,16 @@ Still in the Arduino IDE:
 - Search for ESP32 package
 - Install the package: select the latest version available and click on Install
 
+**Select ESP32 card**
+All that remains is to define the ESP32 card so that the program is correctly sent to the
+map. Still in the Arduino IDE:
+
+- **Open menu Tools > Board Type > esp32 > ESP-WROOM DA Module**
+- **Open menu Tools > Port > /dev/ttyUSB0**
+- Then choose the ESP32 card that corresponds to your version of ESP32. Most often it will be
+the ESP-WROOM DA Module board
+
+We configured the Arduino development environment to be able to program the
+ESP-WROOM DA module.
+
   
