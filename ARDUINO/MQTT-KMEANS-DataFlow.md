@@ -45,7 +45,8 @@ various filters such as T1 / T2 / +, T1 / + / T3 or T1 / + / +.
 - \# represents as many levels as possible, and can only be used at the end of a filter pattern;
 thus T1 / # will filter all topics published by the broker with the exception of special topics
 starting with $.
-Security
+
+**Security**
 Three concepts are fundamental to MQTT security:
 - Identification consists of naming the broker and the client to whom access rights are given.
 The MQTT broker identifies itself to the client with its IP address and digital certificate.
