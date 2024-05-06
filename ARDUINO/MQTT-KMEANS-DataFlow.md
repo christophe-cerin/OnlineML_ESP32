@@ -1,5 +1,4 @@
-## Use of the MQTT protocol combined with the algorithm
-Kmeans with a Data Flow
+## Use of the MQTT protocol combined with the algorithm Kmeans with a Data Flow
 
 ### Functional architecture of the system
 Our design is as follows, firstly we will inject data from the
