@@ -74,3 +74,22 @@ customer ID. Thus, if a client uses the quality of service QoS1, that is to say 
 sure to arrive but it can do it several times or QoS2 so that the messages are not
 sent in duplicate. MQTT provides the possibility of having at most 65535 messages pending with a
 16-bit message identifier.
+
+### Data Flow
+
+The MQTT standard and binary packet format. The data is represented in 3 forms which
+follow
+
+1. Bits: they are labeled 7 to 0 without a byte
+2. Integer data values that are 16 bits
+3. character strings, they must be encoded in utf8 and prefixed by their length
+on two bytes, these strings are limited to a length of 65,535 bytes (216 - 1).
+
+In our system there will be the user who will be the external actor via an xtem terminal or console and
+the MQTT broker.
+The data flow will be as follows:
+
+1. The user sends an authentication request
+2. If the information is correct, the topics in which it will be loaded
+3. Topics will be displayed in the user interface
+4. Messages will be sent and received between the broker and the user according to the topics
