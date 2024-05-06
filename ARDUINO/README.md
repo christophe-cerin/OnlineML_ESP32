@@ -178,3 +178,10 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json,
 https://dl.espressif.com/dl/package_esp32_index.json,
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
+**Install ESP32 board in Arduino IDE**
+
+Still in the Arduino IDE:
+- Open menu
+Tools > Map Type > Map Manager
+- Search for ESP32 package
+- Install the package: select the latest version available and click on Install
