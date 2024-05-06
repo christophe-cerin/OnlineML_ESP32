@@ -4,7 +4,7 @@
 Our design is as follows, firstly we will inject data from the
 .csv format in the same MQTT Broker which will send and receive the messages, i.e.
 subscribe/publish.
-Connection and Disconnection
+**Connection and Disconnection**
 MQTT uses persistent connections between clients and the broker, and for this exploits the
 network protocols guaranteeing a good level of reliability such as TCP.
 Before being able to send orders, the client must first register with the broker,
@@ -22,14 +22,15 @@ Each published message is necessarily associated with a subject, which allows it
 subscribers. Topics can be organized in a tree hierarchy, thus subscriptions
 may relate to filtering reasons. Subscription management is very simple and consists of
 three essential commands:
-1. SUBSCRIBE allows a customer to subscribe to a topic, once subscribed he will receive via
+1. **SUBSCRIBE** allows a customer to subscribe to a topic, once subscribed he will receive via
 following all publications concerning this subject.
-2. UNSUBSCRIBE gives the possibility of canceling a subscription, and thus no longer receiving the
+2. **UNSUBSCRIBE** gives the possibility of canceling a subscription, and thus no longer receiving the
 subsequent publications.
-3. PUBLISH initiated by a client, allows you to publish a message which will be transmitted by the broker
+3. **PUBLISH** initiated by a client, allows you to publish a message which will be transmitted by the broker
 to potential subscribers. The same command will be sent by the broker to subscribers for
 deliver the message.
-Topic and filtering reasons
+
+**Topic and filtering reasons**
 A subject is a UTF-8 string, which is used by the broker to filter messages to filter
 messages for each connected client. A topic is made up of one or more topic levels.
 Each topic level is separated by a slash. Here are some example topics:
@@ -41,7 +42,7 @@ tree structure using the / separator.
 Two wildcards are reserved to represent one and more tree levels:
 - + represents a tree level, so T1/T2/T3 can be mapped to
 various filters such as T1 / T2 / +, T1 / + / T3 or T1 / + / +.
-- # represents as many levels as possible, and can only be used at the end of a filter pattern;
+- \# represents as many levels as possible, and can only be used at the end of a filter pattern;
 thus T1 / # will filter all topics published by the broker with the exception of special topics
 starting with $.
 Security
