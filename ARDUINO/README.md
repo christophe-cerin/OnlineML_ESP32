@@ -169,7 +169,11 @@ GPIO14 and GPIO12 using the UART1 bus.
 Add the ESP32 card to the Arduino IDE card base
 
 In the Arduino IDE:
-• Open File Menu > Preferences
-• Enter the following address in the field
+- Open File Menu > Preferences
+- Enter the following address in the field
+  
 Additional Map Manager URLs:
-
+> http://arduino.esp8266.com/stable/package_esp8266com_index.json,
+https://dl.espressif.com/dl/package_esp32_index.json,
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/
+package_esp32_index.json
