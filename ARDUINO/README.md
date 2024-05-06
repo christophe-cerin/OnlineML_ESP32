@@ -200,4 +200,20 @@ ESP-WROOM DA module.
 The installation is now complete, you can now program your ESP32 card
 like a classic Arduino board. Examples are available, among others, for Wi-Fi and
 Bluetooth in **File → Examples**
+
+**Upload your first program to the ESP32-VROOM-3D card**
+Now that all the tools are installed, we will be able to create our first program and
+send it to the ESP32 card. But before doing our first program, we must ensure that
+we can communicate with the card. Normally, ESP32 cards are automatically detected,
+there is therefore no need to install additional drivers. Plug your ESP32 board into your
+computer via USB (with a USB Micro-B cable), The red LED lights up when powered on
+of the ESP32 card.
+
+**The parameter that can be modified in the serial monitor is the transmission speed of the
+data**. In general, the typical serial port speed with an Arduino board is **9600 bauds**
+(bit/s). But with the ESP32, the commonly used speed is **115200 bauds**. The reason is that
+The ESP32 sends debug messages at this speed when it starts up.
+The serial port speed may be different from 115200 baud but in this case the messages when
+boot of the ESP32 will not be visible and will appear with incomprehensible characters.
+Once the speed is changed, you can communicate with the ESP32.
   
