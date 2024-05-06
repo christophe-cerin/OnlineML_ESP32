@@ -4,7 +4,9 @@
 Our design is as follows, firstly we will inject data from the
 .csv format in the same MQTT Broker which will send and receive the messages, i.e.
 subscribe/publish.
+
 **Connection and Disconnection**
+
 MQTT uses persistent connections between clients and the broker, and for this exploits the
 network protocols guaranteeing a good level of reliability such as TCP.
 Before being able to send orders, the client must first register with the broker,
@@ -31,6 +33,7 @@ to potential subscribers. The same command will be sent by the broker to subscri
 deliver the message.
 
 **Topic and filtering reasons**
+
 A subject is a UTF-8 string, which is used by the broker to filter messages to filter
 messages for each connected client. A topic is made up of one or more topic levels.
 Each topic level is separated by a slash. Here are some example topics:
@@ -47,6 +50,7 @@ thus T1 / # will filter all topics published by the broker with the exception of
 starting with $.
 
 **Security**
+
 Three concepts are fundamental to MQTT security:
 - Identification consists of naming the broker and the client to whom access rights are given.
 The MQTT broker identifies itself to the client with its IP address and digital certificate.
