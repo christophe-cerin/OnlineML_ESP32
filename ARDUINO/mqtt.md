@@ -83,3 +83,17 @@ Client (null) sending SUBSCRIBE (Mid: 1, Topic: swa_news, QoS: 0, Options:
 Client (null) received SUBACK
 Subscribed (mid: 1): 0
 ```
+As you can see, our subscriber is waiting for a message. In this example, we have
+used a topic called swa_news. We will now send a message using a
+MQTT editor that uses the same topic swa_news.
+In the example, the MQTT publisher sends the "Hello Protocol" message. On the subscriber side, we
+receive the message: **Terminal 2**
+
+
+```
+mamadou@dugny:~$ mosquitto_pub -d -t swa_news -m "Hello Protocol"
+Client (null) sending CONNECT
+Client (null) received CONNACK (0)
+Client (null) sending PUBLISH (d0, q0, r0, m1, 'swa_news', ... (14 bytes))
+Client (null) sending DISCONNECT
+```
