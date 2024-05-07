@@ -278,7 +278,7 @@ AutoScroll which creates the text automatically.
 
 **On the program side**
 
-#####The Serial object
+##### The Serial object
 To use the serial channel and communicate with our computer, we use an object (an output of
 variable but more advanced) which is natively integrated into the Arduino assembly: the Serial object.
 This object gathers information (speed, data bits, etc.) on what a serial channel is.
@@ -286,7 +286,7 @@ for Arduino. Thus, there is no need for the programmer to recreate all the proto
 write the WHOLE protocol, such as “Write a high bit for 1 ms, then 1 low bit for 1 ms,
 then the character “a” in 8 ms...
 
-#####The Setup
+##### The Setup
 To begin, we initialize the Serial object each time. With the aim of creating a
 communication between the computer and the card with the microcontroller, it is necessary to declare a
 communication and define the speed at which these two devices will communicate. If this
