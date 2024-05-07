@@ -100,13 +100,19 @@ Details of some essential algorithms
 __________________________________________________________________________________
 **Algorithm 1**: Authentication method
 __________________________________________________________________________________
-**Result**: Status\\
-Read Username and Password settings;\\
-Connection to the database;\\
-**if** the line exists then\\
+**Result**: Status
+
+Read Username and Password settings;
+Connection to the database;
+
+**if** the line exists then
+
 Status = connection;
+
 **else**
+
 Status = error;
+
 **end**
 ________________________________________________________________________________
 This previous pseudo algorithm represents the following authentication method:
