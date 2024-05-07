@@ -257,3 +257,37 @@ way, if the initialized representative points are so biased, some labels contain
 too much data and a single update is not enough to change the label and
 learning can be truncated. So, to use this algorithm, it is better to think about
 how to give initial values and how to truncate.
+
+## Send and receive data over the serial channel of the Arduino IDE
+We will learn how to use the serial route with Arduino. We will see how to send then
+receive information with the computer, finally we will do some exercises to check that
+you understood everything.
+
+### Preparing the serial channel
+How to communicate information from a microcontroller or Arduino board, Seeed WIOT,
+ESP-WROOM-32D ... to the computer and vice versa.
+
+**On the computer side**
+To be able to use computer communication, Arduino development environment
+offers a basic tool for communicating, just click on the Tools/Monitor bar
+Series or on the Series Monitor icon in the Horizontal Icon Bar a window opens: this is
+the Serial Terminal. In this window, you can send messages on the serial channel of
+the computer which is emulated by the Arduino IDE; receive messages that the Arduino IDE tells you
+send ; and adjust two or three parameters such as the communication speed with the Arduino and
+AutoScroll which creates the text automatically.
+
+**On the program side**
+#####The Serial object
+To use the serial channel and communicate with our computer, we use an object (an output of
+variable but more advanced) which is natively integrated into the Arduino assembly: the Serial object.
+This object gathers information (speed, data bits, etc.) on what a serial channel is.
+for Arduino. Thus, there is no need for the programmer to recreate all the protocol otherwise we would have had to
+write the WHOLE protocol, such as “Write a high bit for 1 ms, then 1 low bit for 1 ms,
+then the character “a” in 8 ms...
+
+#####The Setup
+To begin, we initialize the Serial object each time. With the aim of creating a
+communication between the computer and the card with the microcontroller, it is necessary to declare a
+communication and define the speed at which these two devices will communicate. If this
+speed is different, the Arduino IDE will not understand what the computer and vice versa. This
+adjustment is made in the setup function using the begin() function of the Serial object
