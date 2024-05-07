@@ -341,3 +341,17 @@ Result in the serial terminal:
 Hello world ?! Live life' !
 This sentence goes below the previous two
 ```
+## Receive data
+This is the Arduino which receives the data that we, the user, will transmit through the
+serial terminal. the Serial object has a function to "listen" to the serial channel to find out if yes
+or not there is data communication.
+
+**Data presence check**
+To check if we have received data, we will regularly interrogate the card to ask it if
+data is available in its reception buffer. A buffer is a memory area
+allowing data to be stored over a short period of time. In our situation, this memory is
+dedicated to reception on the serial channel. There is also one for sending data, which puts the
+Queue the data to be sent and send it as soon as possible. In summary, a buffer is a
+sort of waiting room for data. To do this, we use the available() function (from
+the English "available") of the Serial object. This function returns the number of characters in the
+serial channel reception buffer. Here is an example of processing:
