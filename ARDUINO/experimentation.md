@@ -152,3 +152,9 @@ Serial.println();
 }
 }
 ```
+
+
+<img alt="the GPIO pins of the ESP32-WROOM-32D" src="" width=30% height=30%  title="the GPIO pins of the ESP32-WROOM-32D"/>
+
+
+###### **The GPIO pins of the ESP32-WROOM-32D**
