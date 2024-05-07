@@ -180,7 +180,7 @@ the convergence criteria are met
 ______________________________________________________________________________
 
 
-## MQTT Broker
+### MQTT Broker
 
 Eclipse Mosquitto is an Open Source Message Broker (under EPL/EDL license) which
 implements several versions of the MQTT protocol. Mosquitto is lightweight and suitable for all
