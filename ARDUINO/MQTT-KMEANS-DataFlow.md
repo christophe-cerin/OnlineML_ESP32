@@ -105,7 +105,7 @@ ________________________________________________________________________________
 Read Username and Password settings;
 Connection to the database;
 
-**if** the line exists then
+**if** the line exists **then**
 
 Status = connection;
 
@@ -123,16 +123,26 @@ username and password
 4. If the line exists, we connect.
 5. Otherwise an error message will be displayed
 The return message sending pseudocode will be as follows:
-Algorithm 2: Return Message Sending Method
-Result: Message
+__________________________________________________________________________________
+**Algorithm 2**: Return Message Sending Method
+__________________________________________________________________________________
+**Result**: Message
+
 Connect to the MQTT Broker;
-if Connection = success then
+
+**if** Connection = success **then**
+
 x = true;
-else
+
+**else**
+
 x = false;
-while x == true do
+
+**while** x == true **do**
+
 wait for message;
-if request received then
+
+**if** request received **then**
 sub;
 publish;
 ________________________________________________________________________________
