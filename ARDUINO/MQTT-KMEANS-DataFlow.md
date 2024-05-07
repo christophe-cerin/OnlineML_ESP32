@@ -153,7 +153,7 @@ The return message sending method will be as follows:
 3. Read predictions
 4. read the learnings
 __________________________________________________________________________________
-**Algorithm 3***: K-means algorithm
+**Algorithm 3**: K-means algorithm
 __________________________________________________________________________________
 **Input**:
 
