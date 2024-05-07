@@ -107,11 +107,11 @@ Connection to the database;
 
 **if** the line exists then
 
-Status = connection;
+    Status = connection;
 
 **else**
 
-Status = error;
+    Status = error;
 
 **end**
 ________________________________________________________________________________
