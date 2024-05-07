@@ -6,7 +6,7 @@
 ## [Use of the MQTT protocol combined with the Kmeans algorithm and a Data Flow](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/MQTT-KMEANS-DataFlow.md)
 ### Functional architecture of the system
 ### Data Flow and Design
-### MQTT Broker
+### [MQTT Broker](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/MQTT-PRINCIPLE.md)
 
 ## Experimental study of a data flow on the MQTT broker with the K-Means algorithm implemented
 ### Test data
