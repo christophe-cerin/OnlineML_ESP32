@@ -93,3 +93,331 @@ The data flow will be as follows:
 2. If the information is correct, the topics in which it will be loaded
 3. Topics will be displayed in the user interface
 4. Messages will be sent and received between the broker and the user according to the topics
+
+## Design
+
+Details of some essential algorithms
+__________________________________________________________________________________
+**Algorithm 1**: Authentication method
+__________________________________________________________________________________
+**Result**: Status
+
+Read Username and Password settings;
+Connection to the database;
+
+**if** the line exists **then**
+
+Status = connection;
+
+**else**
+
+Status = error;
+
+**end**
+________________________________________________________________________________
+This previous pseudo algorithm represents the following authentication method:
+1. The method takes two string type parameters which will be the name
+username and password
+2. We initialize the parameters received.
+3. We connect to the database on the server.
+4. If the line exists, we connect.
+5. Otherwise an error message will be displayed
+The return message sending pseudocode will be as follows:
+__________________________________________________________________________________
+**Algorithm 2**: Return Message Sending Method
+__________________________________________________________________________________
+**Result**: Message
+
+Connect to the MQTT Broker;
+
+**if** Connection = success **then**
+
+x = true;
+
+**else**
+
+x = false;
+
+**while** x == true **do**
+
+wait for message;
+
+**if** request received **then**
+sub;
+
+publish;
+________________________________________________________________________________
+The return message sending method will be as follows:
+1. Connect to the MQTT Broker which will be on the server
+2. Wait for the request message
+3. Read predictions
+4. read the learnings
+__________________________________________________________________________________
+**Algorithm 3**: K-means algorithm
+__________________________________________________________________________________
+**Input**:
+
+D ={x<sub>1</sub>, x<sub>2</sub>,x<sub>3</sub>, ... x<sub>n</sub>} // Data Entry
+
+K // Desired number of clusters
+
+**Output**:
+
+K // Entering Clusters
+
+**K-Means**:
+
+Assignment of initial values for m<sub>1</sub>,m<sub>2</sub>, m<sub>3</sub>, ..... m<sub>k</sub>
+
+**repeat**
+
+each element x<sub>n</sub> to the clusters whose mean is closest; calculate a
+new average for each cluster
+
+**until**
+
+the convergence criteria are met
+______________________________________________________________________________
+
+
+### MQTT Broker
+
+Eclipse Mosquitto is an Open Source Message Broker (under EPL/EDL license) which
+implements several versions of the MQTT protocol. Mosquitto is lightweight and suitable for all
+devices, from low-power single-board computers to complete servers.
+The MQTT protocol provides a lightweight method of running messaging using a
+publication/subscription. this makes it suitable for Internet of Things messaging, for example with
+low power sensors or mobile devices such as phones, computers
+integrated or microcontrollers.
+The Mosquitto project also provides a C library for implementing MQTT clients,
+and the very popular online MQTT clients mosquitto_pub and mosquitto_sub.
+Mosquitto is part of the Eclipse Foundation and is an iot project.eclipse.org is sponsored by
+CEDALO.COM.
+
+#### Subscribe to a topic / Suscrib to topic
+To subscribe, call the client.Subscribe method with three parameters:
+
+- topic: string with the subject of the subscription
+- qos: 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is not received
+only once)
+- callback: a function to call when a message from this subject is received. It can be nil
+so only the default handler will be called
+
+#### Publish to a Topic
+To publish a message, call the client.Publish method. It receives four parameters:
+
+- topic: same topic as before, send a timestamp before disconnecting
+- qos: 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is only received once)
+- retained: boolean indicating whether the message must be retained by the server
+- payload: message to publish under the subject
+
+## Intervention and Adaptation of the K-Means algorithm
+### What is Kmeans?
+Kmeans is one of the easiest access algorithms among clustering algorithms. Kmeans
+is one of the machine learning algorithms without filling and separating the data into
+specific cluster. The remarkable feature is to be able to choose the number of clusters in
+which data is to be separated.
+
+### Kmeans algorithm
+The Kmeans algorithm defines k representative points and ensures that the data belongs to the
+nearest representative point. About each representative point, it calculates the average of the
+data that belongs to this point. The calculated point becomes a new representative point and
+again it makes the data belong to the closest ones. Until you can't find the
+change of state, simply repeat the cycle.
+In a word, it can be summarized as follows after defining the first representative points,
+- make the data belong to the nearest representative point
+- make the center of gravity of the assigned data a new representative point
+- repeat these 2 steps above until the state does not change
+
+### Characteristics of the implemented Kmeans algorithm
+- Initialize the representative points with a fixed random number
+- Use Euclidean distance as a distance function
+- Truncate it when it cannot observe any label changes by upgrade
+- Most of the code is the fit() method. The fit() method takes the target data from
+clustering and the number of clusters as arguments. At first it stores the target data
+in the structure.
+- Kmeans first prepares the k representative points. k is the number that we can choose
+as number of clusters. And these are updated by the data. In practice, the
+Initial values of these representative points are very important. This time we have to give
+the initial values by a random number whose range is from the minimum of variables
+explanatory information as relevant as possible.
+- Part of the code calculates the distance between the data and the representative points and
+the label of the nearest representative point is given to the data. This time the clue
+representative points is used as a label.
+- The Kmeans algorithm: On the first half, it updates the representative points and on the
+second half it updates the data label. Concretely, updating the points
+representative defines the centroid of the data that belongs to the representative point
+as a new updated point. Updating labels sets a new label
+by calculating the distance between the data and the representative points. Usually, the
+truncation is performed when the change state becomes stable, meaning that
+the label changes according to the change of the representative points, the change of
+distance, etc. This time the concise method chooses truncates when updating the point
+representative does not change any labels, to reduce code size. In fact, of this
+way, if the initialized representative points are so biased, some labels contain
+too much data and a single update is not enough to change the label and
+learning can be truncated. So, to use this algorithm, it is better to think about
+how to give initial values and how to truncate.
+
+## Send and receive data over the serial channel of the Arduino IDE
+We will learn how to use the serial route with Arduino. We will see how to send then
+receive information with the computer, finally we will do some exercises to check that
+you understood everything.
+
+### Preparing the serial channel
+How to communicate information from a microcontroller or Arduino board, Seeed WIOT,
+ESP-WROOM-32D ... to the computer and vice versa.
+
+**On the computer side**
+To be able to use computer communication, Arduino development environment
+offers a basic tool for communicating, just click on the Tools/Monitor bar
+Series or on the Series Monitor icon in the Horizontal Icon Bar a window opens: this is
+the Serial Terminal. In this window, you can send messages on the serial channel of
+the computer which is emulated by the Arduino IDE; receive messages that the Arduino IDE tells you
+send ; and adjust two or three parameters such as the communication speed with the Arduino and
+AutoScroll which creates the text automatically.
+
+**On the program side**
+
+##### The Serial object
+To use the serial channel and communicate with our computer, we use an object (an output of
+variable but more advanced) which is natively integrated into the Arduino assembly: the Serial object.
+This object gathers information (speed, data bits, etc.) on what a serial channel is.
+for Arduino. Thus, there is no need for the programmer to recreate all the protocol otherwise we would have had to
+write the WHOLE protocol, such as “Write a high bit for 1 ms, then 1 low bit for 1 ms,
+then the character “a” in 8 ms...
+
+##### The Setup
+To begin, we initialize the Serial object each time. With the aim of creating a
+communication between the computer and the card with the microcontroller, it is necessary to declare a
+communication and define the speed at which these two devices will communicate. If this
+speed is different, the Arduino IDE will not understand what the computer and vice versa. This
+adjustment is made in the **setup** function using the **begin()** function of the **Serial** object
+
+```
+void setup() {
+// we start the connection
+// by setting it to a speed of 9600 bits per second.
+Serial.begin(115200);
+while (!Serial) {
+}
+}
+```
+This code will need to be copied each time you write a program that uses the serial channel. The software
+Arduino has provided, in its Serial library, a whole bunch of functions which are very useful, even
+essential in order to properly use the serial channel. These functions are:
+
+>if(Serial), available(), availableForWrite(), begin(), end(), find(),
+findUntil(), flush(), parseFloat(), parseInt(), peek(), print(), println(),
+read(), readBytes(), readBytesUntil(), readString(), readStringUntil(),
+setTimeout(), write(), serialEvent()
+
+## Send data
+The data or information sent generally comes from sensors connected to the card
+or program. The card processes the information coming from the sensors by adapting to the
+information before transmitting it.
+- A single character is written between single quotation marks: 'A’, 'a’, '2’, '!’, ...
+- A character string or a sentence is a sequence of characters and is written between quotation marks
+doubles: “Hello everyone”, “I’m 60”, “Long live life!”
+- print(): this function allows you to send data over the serial channel
+- println(): this is the same function as the previous one, it simply allows a return to
+the line at the end of the sent message.
+
+```
+void setup()
+{
+// creation of the Serial object
+// (=establishment of a new serial communication)
+Serial.begin(115200);
+// send from the chain "Hello, how's that?!" on the serial channel
+Serial.print("Hello world?!");
+// then a second function, different this time
+Serial.println("Live life!");
+// and execute the same again
+Serial.println("This sentence goes below the previous two");
+}
+```
+Result in the serial terminal:
+```
+Hello world ?! Live life' !
+This sentence goes below the previous two
+```
+## Receive data
+This is the Arduino which receives the data that we, the user, will transmit through the
+serial terminal. the Serial object has a function to "listen" to the serial channel to find out if yes
+or not there is data communication.
+
+**Data presence check**
+
+To check if we have received data, we will regularly interrogate the card to ask it if
+data is available in its **reception buffer**. A buffer is a memory area
+allowing data to be stored over a short period of time. In our situation, this memory is
+dedicated to reception on the serial channel. There is also one for sending data, which puts the
+Queue the data to be sent and send it as soon as possible. In summary, a buffer is a
+sort of waiting room for data. To do this, we use the available() function (from
+the English "available") of the Serial object. This function returns the number of characters in the
+serial channel reception buffer. Here is an example of processing:
+
+```
+void loop()
+{
+// reading the number of characters available in the buffer
+int dataALread = Serial.available();
+if (dataALread > 0) // if the buffer is not empty
+{
+// There is data, we read it and we do processing
+}
+// we have finished processing the reception or there is nothing to read
+}
+NB: This function of the Serial object, available(), returns the value -1 when
+there is nothing to read from the reception buffer.
+```
+**Reading data**
+
+Once we know that there is data, we must read it to possibly make it
+something. Reading will simply be done with the **read()** function! This function will return
+the first character to arrive unprocessed. We therefore access the data received character by character.
+This type of operation is called FIFO (First In First Out, first come, first processed). If
+nothing is ever to be read, the function will return -1 to indicate this.
+
+```
+void loop()
+{
+// we read the first unprocessed character from the buffer
+char thingRead = Serial.read();
+if (choseRead == -1) // if the buffer is empty
+{
+// Nothing to read, nothing read
+}
+else // the buffer is not empty
+{
+// We read a character
+}
+}
+```
+**Complete Code Example**
+
+Here is now a complete code example which will read the characters present in the buffer
+reception if there are any and send them back as is to the sender (echo mechanism).
+
+```
+void setup()
+{
+Serial.begin(115200);
+}
+void loop()
+{
+// variable containing the character to read
+char carlu = 0;
+// variable containing the number of characters available in the buffer
+int cardispo = 0;
+cardispo = Serial.available();
+while(cardispo > 0) // as long as there are characters to read
+{
+carlu = Serial.read(); // we read the character
+Serial.print(carlu); // then we send it back to the sender as is
+cardispo = Serial.available(); // we reread the number of characters
+available
+}
+// end of program
+}
+```
