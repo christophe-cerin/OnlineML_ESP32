@@ -93,3 +93,45 @@ The data flow will be as follows:
 2. If the information is correct, the topics in which it will be loaded
 3. Topics will be displayed in the user interface
 4. Messages will be sent and received between the broker and the user according to the topics
+
+## Design
+
+Details of some essential algorithms
+__________________________________________________________________________________
+**Algorithm 1**: Authentication method
+__________________________________________________________________________________
+**Result**: Status
+Read Username and Password settings;
+Connection to the database;
+**if** the line exists then
+Status = connection;
+**else**
+Status = error;
+**end**
+________________________________________________________________________________
+This previous pseudo algorithm represents the following authentication method:
+1. The method takes two string type parameters which will be the name
+username and password
+2. We initialize the parameters received.
+3. We connect to the database on the server.
+4. If the line exists, we connect.
+5. Otherwise an error message will be displayed
+The return message sending pseudocode will be as follows:
+Algorithm 2: Return Message Sending Method
+Result: Message
+Connect to the MQTT Broker;
+if Connection = success then
+x = true;
+else
+x = false;
+while x == true do
+wait for message;
+if request received then
+sub;
+publish;
+________________________________________________________________________________
+The return message sending method will be as follows:
+1. Connect to the MQTT Broker which will be on the server
+2. Wait for the request message
+3. Read predictions
+4. read the learnings
