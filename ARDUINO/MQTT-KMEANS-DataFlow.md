@@ -331,7 +331,7 @@ Serial.begin(9600);
 // send from the chain "Hello, how's that?!" on the serial channel
 Serial.print("Hello world?!");
 // then a second function, different this time
-Serial.println("Long live life!");
+Serial.println("Live life!");
 // and execute the same again
 Serial.println("This sentence goes below the previous two");
 }
