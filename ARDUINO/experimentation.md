@@ -152,12 +152,12 @@ Serial.println();
 }
 }
 ```
+## Results
 
+<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/generdata.png" width=60% height=60%  title="Console bash"/>
 
-<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/generdata.png" width=50% height=50%  title="the GPIO pins of the ESP32-WROOM-32D"/>
+###### **Console bash**
 
-###### **The GPIO pins of the ESP32-WROOM-32D**
+<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/arduinoreceivmessag.png" width=60% height=60%  title="Arduino IDE serial monitor"/>
 
-<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/arduinoreceivmessag.png" width=30% height=30%  title="the GPIO pins of the ESP32-WROOM-32D"/>
-
-###### **The GPIO pins of the ESP32-WROOM-32D**
+###### **Arduino IDE serial monitor**
