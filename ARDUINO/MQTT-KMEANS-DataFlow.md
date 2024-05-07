@@ -321,3 +321,23 @@ doubles: “Hello everyone”, “I’m 60”, “Long live life!”
 - print(): this function allows you to send data over the serial channel
 - println(): this is the same function as the previous one, it simply allows a return to
 the line at the end of the sent message.
+
+```
+void setup()
+{
+// creation of the Serial object
+// (=establishment of a new serial communication)
+Serial.begin(9600);
+// send from the chain "Hello, how's that?!" on the serial channel
+Serial.print("Hello world?!");
+// then a second function, different this time
+Serial.println("Long live life!");
+// and execute the same again
+Serial.println("This sentence goes below the previous two");
+}
+```
+Result in the serial terminal:
+```
+Hello world ?! Live life' !
+This sentence goes below the previous two
+```
