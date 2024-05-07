@@ -1,4 +1,4 @@
-##The ESP-WROOM-32D Microcontroller, MQTT
+## The ESP-WROOM-32D Microcontroller, MQTT
 Broker 10.10.6.228 and the Arduino-IDE on the computer
 portable
 
