@@ -217,6 +217,7 @@ Kmeans is one of the easiest access algorithms among clustering algorithms. Kmea
 is one of the machine learning algorithms without filling and separating the data into
 specific cluster. The remarkable feature is to be able to choose the number of clusters in
 which data is to be separated.
+
 ### Kmeans algorithm
 The Kmeans algorithm defines k representative points and ensures that the data belongs to the
 nearest representative point. About each representative point, it calculates the average of the
@@ -227,3 +228,32 @@ In a word, it can be summarized as follows after defining the first representati
 - make the data belong to the nearest representative point
 - make the center of gravity of the assigned data a new representative point
 - repeat these 2 steps above until the state does not change
+
+### Characteristics of the implemented Kmeans algorithm
+- Initialize the representative points with a fixed random number
+- Use Euclidean distance as a distance function
+- Truncate it when it cannot observe any label changes by upgrade
+- Most of the code is the fit() method. The fit() method takes the target data from
+clustering and the number of clusters as arguments. At first it stores the target data
+in the structure.
+- Kmeans first prepares the k representative points. k is the number that we can choose
+as number of clusters. And these are updated by the data. In practice, the
+Initial values of these representative points are very important. This time we have to give
+the initial values by a random number whose range is from the minimum of variables
+explanatory information as relevant as possible.
+- Part of the code calculates the distance between the data and the representative points and
+the label of the nearest representative point is given to the data. This time the clue
+representative points is used as a label.
+- The Kmeans algorithm: On the first half, it updates the representative points and on the
+second half it updates the data label. Concretely, updating the points
+representative defines the centroid of the data that belongs to the representative point
+as a new updated point. Updating labels sets a new label
+by calculating the distance between the data and the representative points. Usually, the
+truncation is performed when the change state becomes stable, meaning that
+the label changes according to the change of the representative points, the change of
+distance, etc. This time the concise method chooses truncates when updating the point
+representative does not change any labels, to reduce code size. In fact, of this
+way, if the initialized representative points are so biased, some labels contain
+too much data and a single update is not enough to change the label and
+learning can be truncated. So, to use this algorithm, it is better to think about
+how to give initial values and how to truncate.
