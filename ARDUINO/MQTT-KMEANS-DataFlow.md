@@ -310,3 +310,14 @@ essential in order to properly use the serial channel. These functions are:
 findUntil(), flush(), parseFloat(), parseInt(), peek(), print(), println(),
 read(), readBytes(), readBytesUntil(), readString(), readStringUntil(),
 setTimeout(), write(), serialEvent()
+
+## Send data
+The data or information sent generally comes from sensors connected to the card
+or program. The card processes the information coming from the sensors by adapting to the
+information before transmitting it.
+- A single character is written between single quotation marks: 'A’, 'a’, '2’, '!’, ...
+- A character string or a sentence is a sequence of characters and is written between quotation marks
+doubles: “Hello everyone”, “I’m 60”, “Long live life!”
+- print(): this function allows you to send data over the serial channel
+- println(): this is the same function as the previous one, it simply allows a return to
+the line at the end of the sent message.
