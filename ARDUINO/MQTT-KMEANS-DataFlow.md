@@ -356,3 +356,18 @@ Queue the data to be sent and send it as soon as possible. In summary, a buffer 
 sort of waiting room for data. To do this, we use the available() function (from
 the English "available") of the Serial object. This function returns the number of characters in the
 serial channel reception buffer. Here is an example of processing:
+
+```
+void loop()
+{
+// reading the number of characters available in the buffer
+int dataALread = Serial.available();
+if (dataALread > 0) // if the buffer is not empty
+{
+// There is data, we read it and we do processing
+}
+// we have finished processing the reception or there is nothing to read
+}
+NB: This function of the Serial object, available(), returns the value -1 when
+there is nothing to read from the reception buffer.
+```
