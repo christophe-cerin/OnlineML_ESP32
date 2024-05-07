@@ -144,6 +144,7 @@ wait for message;
 
 **if** request received **then**
 sub;
+
 publish;
 ________________________________________________________________________________
 The return message sending method will be as follows:
@@ -151,3 +152,29 @@ The return message sending method will be as follows:
 2. Wait for the request message
 3. Read predictions
 4. read the learnings
+__________________________________________________________________________________
+**Algorithm 3***: K-means algorithm
+__________________________________________________________________________________
+**Input**:
+
+D ={x<sub>1</sub>, x<sub>2</sub>,x<sub>3</sub>, ... x<sub>n</sub>} // Data Entry
+
+K // Desired number of clusters
+
+**Output**:
+
+K // Entering Clusters
+
+**K-Means**:
+
+Assignment of initial values for m<sub>1</sub>,m<sub>2</sub>, m<sub>3</sub>, ..... m<sub>k</sub>
+
+**repeat**
+
+each element x<sub>n</sub> to the clusters whose mean is closest; calculate a
+new average for each cluster
+
+**until**
+
+the convergence criteria are met
+_________________________________________________
