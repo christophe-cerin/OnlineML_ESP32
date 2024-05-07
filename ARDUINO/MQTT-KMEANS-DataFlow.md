@@ -291,4 +291,14 @@ To begin, we initialize the Serial object each time. With the aim of creating a
 communication between the computer and the card with the microcontroller, it is necessary to declare a
 communication and define the speed at which these two devices will communicate. If this
 speed is different, the Arduino IDE will not understand what the computer and vice versa. This
-adjustment is made in the setup function using the begin() function of the Serial object
+adjustment is made in the **setup** function using the **begin()** function of the **Serial** object
+
+```
+void setup() {
+// on démarre la liaison
+// en la réglant à une vitesse de 9600 bits par seconde.
+169Serial.begin(115200);
+while (!Serial) {
+}
+}
+```
