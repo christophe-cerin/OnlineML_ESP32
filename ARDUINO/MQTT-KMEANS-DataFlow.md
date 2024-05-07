@@ -302,3 +302,11 @@ while (!Serial) {
 }
 }
 ```
+This code will need to be copied each time you write a program that uses the serial channel. The software
+Arduino has provided, in its Serial library, a whole bunch of functions which are very useful, even
+essential in order to properly use the serial channel. These functions are:
+
+>if(Serial), available(), availableForWrite(), begin(), end(), find(),
+findUntil(), flush(), parseFloat(), parseInt(), peek(), print(), println(),
+read(), readBytes(), readBytesUntil(), readString(), readStringUntil(),
+setTimeout(), write(), serialEvent()
