@@ -347,6 +347,7 @@ serial terminal. the Serial object has a function to "listen" to the serial chan
 or not there is data communication.
 
 **Data presence check**
+
 To check if we have received data, we will regularly interrogate the card to ask it if
 data is available in its reception buffer. A buffer is a memory area
 allowing data to be stored over a short period of time. In our situation, this memory is
