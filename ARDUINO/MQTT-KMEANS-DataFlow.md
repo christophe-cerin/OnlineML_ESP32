@@ -193,3 +193,20 @@ The Mosquitto project also provides a C library for implementing MQTT clients,
 and the very popular online MQTT clients mosquitto_pub and mosquitto_sub.
 Mosquitto is part of the Eclipse Foundation and is an iot project.eclipse.org is sponsored by
 CEDALO.COM.
+
+#### Subscribe to a topic / Suscrib to topic
+To subscribe, call the client.Subscribe method with three parameters:
+
+- topic: string with the subject of the subscription
+- qos: 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is not received
+only once)
+- callback: a function to call when a message from this subject is received. It can be nil
+so only the default handler will be called
+
+#### Publish to a Topic
+To publish a message, call the client.Publish method. It receives four parameters:
+
+- topic: same topic as before, send a timestamp before disconnecting
+- qos: 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is only received once)
+- retained: boolean indicating whether the message must be retained by the server
+- payload: message to publish under the subject
