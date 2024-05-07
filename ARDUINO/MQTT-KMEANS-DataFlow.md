@@ -349,7 +349,7 @@ or not there is data communication.
 **Data presence check**
 
 To check if we have received data, we will regularly interrogate the card to ask it if
-data is available in its reception buffer. A buffer is a memory area
+data is available in its **reception buffer**. A buffer is a memory area
 allowing data to be stored over a short period of time. In our situation, this memory is
 dedicated to reception on the serial channel. There is also one for sending data, which puts the
 Queue the data to be sent and send it as soon as possible. In summary, a buffer is a
@@ -370,4 +370,27 @@ if (dataALread > 0) // if the buffer is not empty
 }
 NB: This function of the Serial object, available(), returns the value -1 when
 there is nothing to read from the reception buffer.
+```
+**Reading data**
+
+Once we know that there is data, we must read it to possibly make it
+something. Reading will simply be done with the **read()** function! This function will return
+the first character to arrive unprocessed. We therefore access the data received character by character.
+This type of operation is called FIFO (First In First Out, first come, first processed). If
+nothing is ever to be read, the function will return -1 to indicate this.
+
+```
+void loop()
+{
+// we read the first unprocessed character from the buffer
+char thingRead = Serial.read();
+if (choseRead == -1) // if the buffer is empty
+{
+// Nothing to read, nothing read
+}
+else // the buffer is not empty
+{
+// We read a character
+}
+}
 ```
