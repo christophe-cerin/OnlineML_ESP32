@@ -295,8 +295,8 @@ adjustment is made in the **setup** function using the **begin()** function of t
 
 ```
 void setup() {
-// on démarre la liaison
-// en la réglant à une vitesse de 9600 bits par seconde.
+// we start the connection
+// by setting it to a speed of 9600 bits per second.
 169Serial.begin(115200);
 while (!Serial) {
 }
