@@ -402,7 +402,7 @@ reception if there are any and send them back as is to the sender (echo mechanis
 ```
 void setup()
 {
-Serial.begin(9600);
+Serial.begin(115200);
 }
 void loop()
 {
