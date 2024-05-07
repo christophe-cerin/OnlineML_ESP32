@@ -154,7 +154,7 @@ Serial.println();
 ```
 ## Results
 
-<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/generdata.png" width=60% height=60%  title="Console bash"/>
+<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/generdata.png" width=70% height=70%  title="Console bash"/>
 
 ###### **Console bash**
 
