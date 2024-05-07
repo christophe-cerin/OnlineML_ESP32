@@ -210,3 +210,20 @@ To publish a message, call the client.Publish method. It receives four parameter
 - qos: 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is only received once)
 - retained: boolean indicating whether the message must be retained by the server
 - payload: message to publish under the subject
+
+## Intervention and Adaptation of the K-Means algorithm
+### What is Kmeans?
+Kmeans is one of the easiest access algorithms among clustering algorithms. Kmeans
+is one of the machine learning algorithms without filling and separating the data into
+specific cluster. The remarkable feature is to be able to choose the number of clusters in
+which data is to be separated.
+### Kmeans algorithm
+The Kmeans algorithm defines k representative points and ensures that the data belongs to the
+nearest representative point. About each representative point, it calculates the average of the
+data that belongs to this point. The calculated point becomes a new representative point and
+again it makes the data belong to the closest ones. Until you can't find the
+change of state, simply repeat the cycle.
+In a word, it can be summarized as follows after defining the first representative points,
+- make the data belong to the nearest representative point
+- make the center of gravity of the assigned data a new representative point
+- repeat these 2 steps above until the state does not change
