@@ -154,7 +154,10 @@ Serial.println();
 ```
 
 
-<img alt="the GPIO pins of the ESP32-WROOM-32D" src="" width=30% height=30%  title="the GPIO pins of the ESP32-WROOM-32D"/>
+<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/generdata.png" width=30% height=30%  title="the GPIO pins of the ESP32-WROOM-32D"/>
 
+###### **The GPIO pins of the ESP32-WROOM-32D**
+
+<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/generdata.png" width=30% height=30%  title="the GPIO pins of the ESP32-WROOM-32D"/>
 
 ###### **The GPIO pins of the ESP32-WROOM-32D**
