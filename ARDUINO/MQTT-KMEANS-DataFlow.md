@@ -277,6 +277,7 @@ send ; and adjust two or three parameters such as the communication speed with t
 AutoScroll which creates the text automatically.
 
 **On the program side**
+
 #####The Serial object
 To use the serial channel and communicate with our computer, we use an object (an output of
 variable but more advanced) which is natively integrated into the Arduino assembly: the Serial object.
