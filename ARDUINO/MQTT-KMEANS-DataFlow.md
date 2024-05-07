@@ -297,7 +297,7 @@ adjustment is made in the **setup** function using the **begin()** function of t
 void setup() {
 // we start the connection
 // by setting it to a speed of 9600 bits per second.
-169Serial.begin(115200);
+Serial.begin(115200);
 while (!Serial) {
 }
 }
@@ -327,7 +327,7 @@ void setup()
 {
 // creation of the Serial object
 // (=establishment of a new serial communication)
-Serial.begin(9600);
+Serial.begin(115200);
 // send from the chain "Hello, how's that?!" on the serial channel
 Serial.print("Hello world?!");
 // then a second function, different this time
@@ -392,5 +392,32 @@ else // the buffer is not empty
 {
 // We read a character
 }
+}
+```
+**Complete Code Example**
+
+Here is now a complete code example which will read the characters present in the buffer
+reception if there are any and send them back as is to the sender (echo mechanism).
+
+```
+void setup()
+{
+Serial.begin(9600);
+}
+void loop()
+{
+// variable containing the character to read
+char carlu = 0;
+// variable containing the number of characters available in the buffer
+int cardispo = 0;
+cardispo = Serial.available();
+while(cardispo > 0) // as long as there are characters to read
+{
+carlu = Serial.read(); // we read the character
+Serial.print(carlu); // then we send it back to the sender as is
+cardispo = Serial.available(); // we reread the number of characters
+available
+}
+// end of program
 }
 ```
