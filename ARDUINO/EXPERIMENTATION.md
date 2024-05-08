@@ -1,5 +1,5 @@
 ## The ESP-WROOM-32D Microcontroller, MQTT
-Broker 10.10.6.228 and the Arduino-IDE on the computer
+Broker IP Adress : 10.10.6.228 and the Arduino-IDE on the computer
 portable
 
 ### Configuring the MQTT Broker server
@@ -54,13 +54,18 @@ done
 ## Arduino program for receiving messages and printing the message on the serial port
 
 ```
-/* ESP32_MQTT_WFI_RECEIVING_MESSAGE
+/* 
+Mamadou SOW
+12/09/2023
 ArduinoMqttClient - WiFi Simple Receive
-This example connects to a MQTT broker and subscribes to a single topic.
-When a message is received it prints the message to the Serial Monitor.
+This example connects to a MQTT broker and subscribes to a two topics.
+When the messages are received it prints the messages to the Serial Monitor.
 The circuit:
-- esp32, Arduino MKR 1000, MKR 1010 or Uno WiFi Rev2 board
+- ESP32, Arduino MKR 1000, MKR 1010 or Uno WiFi Rev2 board
 This example code is in the public domain.
+- Open a Terminal and execute the program "test-29062021-broker-10.10.6.228-500points-
+Portable-Dell-pub.sh"
+- We can have a response on the Serial Monitor of Arduino IDE
 */
 #include <ArduinoMqttClient.h>
 #if defined(ARDUINO_SAMD_MKRWIFI1010) || defined(ARDUINO_SAMD_NANO_33_IOT) ||
@@ -156,8 +161,8 @@ Serial.println();
 
 <img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/generdata.png" width=70% height=70%  title="Console bash"/>
 
-###### **In a terminal you have to run the program to generate**
+###### **Figure 1 : In a terminal you have to run the program to generate**
 
 <img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/arduinoreceivmessag.png" width=60% height=60%  title="Arduino IDE serial monitor"/>
 
-###### **Result obtained in the arduino ide serial monitor**
+###### **Figure 2 : Result obtained in the arduino ide serial monitor**
