@@ -19,5 +19,5 @@
 ### [Online machine learning and online learning technique with real data](https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-LEARNING-TECHNIQUE-WITH-REAL-DATA.md)
 #### Motivations and Challenges
 #### Tower Perret (Grenobles) – Data acquisition and exploitation by LoRaWAN
-#### Data analysis: Using data from Tour Perret – Local MQTT server and Arduino IDE
+#### Data analysis: Using data from Tower Perret, Local MQTT server and Arduino IDE
 
