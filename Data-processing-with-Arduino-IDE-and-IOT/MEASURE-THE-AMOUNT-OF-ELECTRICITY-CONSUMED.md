@@ -24,3 +24,8 @@ USB port no. 2 of the laptop
 <img alt="Schematic representation of all hardware and connection principle" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/connect-PC-PPK2-CP2102-ESP32.png" width=60% height=60%  title="Schematic representation of all hardware and connection principle"/>
 
 ###### **Schematic representation of all hardware and connection principle**
+
+
+<img alt="Image of the entire hardware and connection principle" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/connect-PC-PPK2-CP2102-ESP32.png" width=60% height=60%  title="Image of the entire hardware and connection principle"/>
+
+###### **Image of the entire hardware and connection principle**
