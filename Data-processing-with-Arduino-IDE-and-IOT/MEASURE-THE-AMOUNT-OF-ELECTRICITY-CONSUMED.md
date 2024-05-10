@@ -31,6 +31,6 @@ USB port no. 2 of the laptop
 ###### **Image of the entire hardware and connection principle**
 
 
-<img alt="Viewing measurements with the Power Profiler" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/pc-esp32-ppk2.jpg" width=60% height=60%  title="Viewing measurements with the Power Profiler"/>
+<img alt="Viewing measurements with the Power Profiler" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/3.png" width=60% height=60%  title="Viewing measurements with the Power Profiler"/>
 
 ###### **Viewing measurements with the Power Profiler**
