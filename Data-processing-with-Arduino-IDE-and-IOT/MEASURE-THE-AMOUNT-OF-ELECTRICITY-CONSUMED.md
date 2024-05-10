@@ -33,6 +33,8 @@ USB port no. 2 of the laptop
 
 <img alt="Viewing measurements with the Power Profiler" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/3.png" width=70% height=70%  title="Viewing measurements with the Power Profiler"/>
 
+### Exploitation of results
+
 ###### **Viewing measurements with the Power Profiler**
 
 <img alt="Viewing measurements with the Power Profiler" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/resultat-ppk2-traitementdata.png" width=70% height=70%  title="Viewing measurements with the Power Profiler"/>
