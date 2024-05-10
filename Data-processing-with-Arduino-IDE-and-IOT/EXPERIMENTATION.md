@@ -159,10 +159,10 @@ Serial.println();
 ```
 ## Results
 
-<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/generdata.png" width=70% height=70%  title="Console bash"/>
+<img alt="Console bash" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/generdata.png" width=70% height=70%  title="Console bash"/>
 
 ###### **Figure 1 : In a terminal you have to run the program to generate**
 
-<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/arduinoreceivmessag.png" width=60% height=60%  title="Arduino IDE serial monitor"/>
+<img alt="Arduino IDE serial monitor" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/arduinoreceivmessag.png" width=60% height=60%  title="Arduino IDE serial monitor"/>
 
 ###### **Figure 2 : Result obtained in the arduino ide serial monitor**
