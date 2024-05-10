@@ -18,3 +18,9 @@ USB port n°1 of the laptop
 USB port no. 2 of the laptop
 - connect the CP2102N module to the Laptop, it will be mounted on the device /dev/ttyUSB0
 - connect the RX, TX, GND GPIO of the ESP32 card to the RX, TX, GND pins of the CP2102N module with 3 female grove cables.
+
+  
+<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/carte-esp32-wroom-32d.png" width=30% height=30%  title="the GPIO pins of the ESP32-WROOM-32D"/>
+
+
+###### **The GPIO pins of the ESP32-WROOM-32D**
