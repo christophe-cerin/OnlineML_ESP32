@@ -1,4 +1,4 @@
-## Data Processing with Arduino IDE and IOT
+## Data Processing with Arduino IDE and Internet Of Things (IOT)
 
 ### [Presentation of Tools](https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ARDUINO-ESP32WROOM32D.md)
 #### IDE (Integrated Development Environment): ARDUINO
