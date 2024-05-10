@@ -611,4 +611,5 @@ mqttClient.poll();
 
 ```
 
+By referring to an equation with 3 unknowns, namely x (set of messages), y (splitting or subset of messages) and z (number of splits of messages processed), the satisfactory result corresponds to the case allowing the observation of a maximum of messages processed in a message set.
 
