@@ -17,7 +17,7 @@ and reduce costs.
 The clustering application is a visualization tool that will simplify tasks such as controlling building temperature, 
 maintaining equipment via mobile devices and computers.
 
-### La Tour Perret (Grenobles) – Data acquisition and exploitation by LoRaWAN
+### Tower Perret (Grenobles) : Data acquisition and exploitation by LoRaWAN
 
 LoRaWAN : radio communication protocol that defines how terminal equipment communicates wirelessly via gateways, thus forming a low-consumption extended network
 
@@ -30,7 +30,7 @@ Weather conditions can be correlated with weather data from services such as Ope
 
 The data from the ELSYS-ERS sensor from January 1 at 00:05 a.m. to January 31 at 9:48 p.m. 2021, the quantity of C02, the Temperature, the date and the chronograph recorded every 5 minutes will be necessary to carry out interesting scientific work.
 
-### Data analysis: Using data from Tour Perret – Local MQTT server and Arduino IDE
+### Data analysis : Using data from Tour Perret, Local MQTT server and Arduino IDE
 
 The CO2 concentration and temperature will be published from our local MQTT server with the subjects "C02/celsius" and "final/final" the data is received via the ESP32 board and used by the Arduino IDE where a program has been implemented works to carry out clustering with the K-MEANS algorithm. We considered in our case, a structure as a means of defining this type of data although it is more than a simple container for primitive data types because we can also define other functionalities what it does with the elements or data points, it is a movement that meets the criteria at the end of the range. it then returns an iterator to the first element of the deleted elements (which are actually just moved).
 
