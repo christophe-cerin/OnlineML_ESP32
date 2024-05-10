@@ -90,7 +90,7 @@ when the ESP32 is in a case and you want to be able to turn it on/off with a swi
 - The rest of the GPIO pins have no particular restrictions.
 
 
-  <img alt="ESP32-DevkitC microcontroller equipped with WROOM-32D" src="" width=60% height=60%  title="ESP32-DevkitC microcontroller equipped with WROOM-32D "/>
+  <img alt="ESP32-DevkitC microcontroller equipped with WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/carte-ESPWROOM32D.png" width=60% height=60%  title="ESP32-DevkitC microcontroller equipped with WROOM-32D "/>
 
 
 ###### **ESP32-DevkitC microcontroller equipped with WROOM-32D** 
