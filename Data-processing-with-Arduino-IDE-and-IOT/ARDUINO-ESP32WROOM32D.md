@@ -35,12 +35,8 @@ To develop applications for ESP-WROOM-32D, you needed :
 operate toolchain
 - A text editor to write programs (Projects) in C for example Eclipse
 - The ESP32 board itself and a USB cable to connect it to the PC
-  
-<!--
-![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png)
--->
 
-<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-esp32-wroom-32d.png" width=30% height=30%  title="the GPIO pins of the ESP32-WROOM-32D"/>
+<img alt="the GPIO pins of the ESP32-WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/carte-esp32-wroom-32d.png" width=30% height=30%  title="the GPIO pins of the ESP32-WROOM-32D"/>
 
 
 ###### **The GPIO pins of the ESP32-WROOM-32D**
@@ -92,11 +88,9 @@ temporarily. The faulty pins are as follows:
 map. When the ESP32 is turned on, it is at 3.3V. If we connect this pin to the ground, the ESP32 is turned off. We can use it
 when the ESP32 is in a case and you want to be able to turn it on/off with a switch.
 - The rest of the GPIO pins have no particular restrictions.
-<!--
-  ![Microcontrôleur ESP32-DevkitC équipé de WROOM-32](https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png)
-  -->
 
-  <img alt="ESP32-DevkitC microcontroller equipped with WROOM-32D" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/images/carte-ESPWROOM32D.png" width=60% height=60%  title="ESP32-DevkitC microcontroller equipped with WROOM-32D "/>
+
+  <img alt="ESP32-DevkitC microcontroller equipped with WROOM-32D" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/carte-ESPWROOM32D.png" width=60% height=60%  title="ESP32-DevkitC microcontroller equipped with WROOM-32D "/>
 
 
 ###### **ESP32-DevkitC microcontroller equipped with WROOM-32D** 
