@@ -617,5 +617,5 @@ By referring to an equation with 3 unknowns, namely x (set of messages), y (spli
 
 ###### **Table  : Message Flow, Processing Slice and Number of Possible Iterations**
 
-
+Looking at this table, we can say that the ESP32 microcontroller can easily receive a stream of 1024 messages with optimized batch processing of 128 messages
 
