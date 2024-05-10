@@ -1,4 +1,4 @@
-## Let's measure the amount of electricity consumed by the ESP32-VROOM-32D during data processing with Arduino
+## Measuring the amount of electricity consumed by the ESP32-VROOM-32D during data processing with Arduino
 
 ### Necessary material :
  
