@@ -159,7 +159,7 @@ Serial.println();
 ```
 ## Results
 
-<img alt="Console bash" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/images/generdata.png" width=70% height=70%  title="Console bash"/>
+<img alt="Console bash" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/generdata.png" width=70% height=70%  title="Console bash"/>
 
 ###### **Figure 1 : In a terminal you have to run the program to generate**
 
