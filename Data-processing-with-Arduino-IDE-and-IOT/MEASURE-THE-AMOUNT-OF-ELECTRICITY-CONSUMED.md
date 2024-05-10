@@ -19,8 +19,8 @@ USB port no. 2 of the laptop
 - connect the CP2102N module to the Laptop, it will be mounted on the device /dev/ttyUSB0
 - connect the RX, TX, GND GPIO of the ESP32 card to the RX, TX, GND pins of the CP2102N module with 3 female grove cables.
 
-  
-<img alt="Schematic representation of all hardware and connection principle" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/connect-PC-PPK2-CP2102-ESP32.png" width=60% height=60%  title="Schematic representation of all hardware and connection principle"/>
 
+
+<img alt="Schematic representation of all hardware and connection principle" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/images/connect-PC-PPK2-CP2102-ESP32.png" width=60% height=60%  title="Schematic representation of all hardware and connection principle"/>
 
 ###### **Schematic representation of all hardware and connection principle**
