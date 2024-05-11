@@ -43,7 +43,7 @@ Using our integrated Arduino development environment, we have carried out a dist
 
 /*
 
-Mamadou SOW
+M. SOW
 12/09/2023
 
 ArduinoMqttClient - WiFi Simple Receive
