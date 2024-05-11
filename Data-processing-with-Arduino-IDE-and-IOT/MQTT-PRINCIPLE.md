@@ -1,4 +1,4 @@
-## Tutorial on the MQTT protocol: description of the
+## Tutorial on the MQTT protocol : description of the
 technique with practical example of Mosquitto
 
 MQTT protocol is a Machine to Machine (M2M) protocol widely used in IoT
@@ -112,6 +112,6 @@ Client (null) received PUBLISH (d0, q0, r0, m0, 'swa_news', ... (14 bytes))
 Hello Protocol
 Client (null) sending PINGREQ
 Client (null) received PINGRESP
-^CClient (null) sending DISCONNECT
+Client (null) sending DISCONNECT
 ```
 
