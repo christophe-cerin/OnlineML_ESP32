@@ -218,14 +218,14 @@ ESP32 Wroom DevKit board.
 ```
 void setup() {
 Serial.begin(115200);
-Serial.println("Mon premier programme");
+Serial.println("My first program");
 pinMode(2,OUTPUT);
 }
 void loop() {
-digitalWrite(2, HIGH); //On allume la led bleue
-delay(500); //On attend pendant 500 ms
-digitalWrite(2, LOW); //On eteinds la led bleue
-delay(500); //On attend pendant 500 ms
+digitalWrite(2, HIGH); //We turn on the blue LED
+delay(500); //We wait for 500 ms
+digitalWrite(2, LOW); //We turn off the blue LED
+delay(500); //We wait for 500 ms
 }
 ```
 ### Compile the program

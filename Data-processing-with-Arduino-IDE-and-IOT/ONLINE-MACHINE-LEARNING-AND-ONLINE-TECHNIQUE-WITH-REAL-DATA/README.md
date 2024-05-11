@@ -43,7 +43,7 @@ Using our integrated Arduino development environment, we have carried out a dist
 
 /*
 
-Mamadou SOW
+M. SOW
 12/09/2023
 
 ArduinoMqttClient - WiFi Simple Receive
@@ -78,11 +78,11 @@ The circuit:
 
 
 
-#include "/home/mamadou/Arduino/mqttesp32/ESP32_MQTT_WIFICLIENT_RECV_MESSAGES_mycompt_clear_buffer_cc/src/simple_svg.hpp"
+#include "src/simple_svg.hpp"
 
 
 #ifdef USING_OMP
-#include </usr/lib/gcc/x86_64-linux-gnu/8/include/omp.h>
+#include <src/omp.h>
 #endif
 
 
@@ -103,8 +103,8 @@ const char topic2[] = "final/final";
 
 
 
-#include "/home/mamadou/Arduino/mqttesp32/ESP32_MQTT_WIFICLIENT_RECV_MESSAGES_mycompt_clear_buffer_cc/src/concurrentqueue/concurrentqueue.h"
-#include "/home/mamadou/Arduino/mqttesp32/ESP32_MQTT_WIFICLIENT_RECV_MESSAGES_mycompt_clear_buffer_cc/src/semaphore.h"
+#include "src/concurrentqueue.h"
+#include "src/semaphore.h"
 
 using namespace std;
 

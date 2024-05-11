@@ -75,7 +75,7 @@ subscribed to a specific topic and wait for an incoming message from an editor. 
 we will use this command: **Terminal 1**
 
 ```
-mamadou@dugny:~/Arduino/mqtt/sketch_wifia212$ mosquitto_sub -d -t swa_news
+$ mosquitto_sub -d -t swa_news
 Client (null) sending CONNECT
 Client (null) received CONNACK (0)
 Client (null) sending SUBSCRIBE (Mid: 1, Topic: swa_news, QoS: 0, Options:
@@ -91,7 +91,7 @@ receive the message: **Terminal 2**
 
 
 ```
-mamadou@dugny:~$ mosquitto_pub -d -t swa_news -m "Hello Protocol"
+$ mosquitto_pub -d -t swa_news -m "Hello Protocol"
 Client (null) sending CONNECT
 Client (null) received CONNACK (0)
 Client (null) sending PUBLISH (d0, q0, r0, m1, 'swa_news', ... (14 bytes))
@@ -101,7 +101,7 @@ An important aspect to note is that MQTT is a simple protocol, so the message is
 everyone can read it. **Terminal 1**
 
 ```
-mamadou@dugny:~/Arduino/mqtt/sketch_wifia212$ mosquitto_sub -d -t swa_news
+$ mosquitto_sub -d -t swa_news
 Client (null) sending CONNECT
 Client (null) received CONNACK (0)
 Client (null) sending SUBSCRIBE (Mid: 1, Topic: swa_news, QoS: 0, Options:

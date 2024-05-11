@@ -5,8 +5,7 @@ portable
 ### Configuring the MQTT Broker server
 
 ```
-mamadou@port-lipn12:~/Arduino/libraries/ESP32WROOMDAMODULE_Arduino_KMEANS_MQTT/src/
-data$ cat /etc/mosquitto/mosquitto.conf
+$ cat /etc/mosquitto/mosquitto.conf
 # Place your local configuration in /etc/mosquitto/conf.d/
 #
 # A full description of the configuration file is at
@@ -27,8 +26,7 @@ include_dir /etc/mosquitto/conf.d
 ### Data management, data/celsius in csv format
 
 ```
-mamadou@port-lipn12:~/Arduino/libraries/ESP32WROOMDAMODULE_Arduino_KMEANS_MQTT/src/
-data$ cat test-29062021-broker-10.10.6.228-500points-Portable-Dell-pub.sh
+$ cat test-29062021-broker-10.10.6.228-500points-Portable-Dell-pub.sh
 name=`date +%d%m%Y%H%M%N.csv`
 #for i in {1..12256}; do
 ## Avec l'Ordinateur maintenir que 500 points
@@ -55,7 +53,7 @@ done
 
 ```
 /* 
-Mamadou SOW
+M. SOW
 12/09/2023
 ArduinoMqttClient - WiFi Simple Receive
 This example connects to a MQTT broker and subscribes to a two topics.
