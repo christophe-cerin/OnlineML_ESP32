@@ -1,52 +1,50 @@
-## Use of the MQTT protocol combined with the algorithm Kmeans and a Data Flow
+## Use of the MQTT protocol combined with the K-means algorithm over Data Flow
 
 ### Functional architecture of the system
 Our design is as follows, firstly we will inject data from the
-.csv format in the same MQTT Broker which will send and receive the messages, i.e.
+.csv file in the same MQTT Broker which will send and receive the messages. The interaction mechanism is
 subscribe/publish.
 
 **Connection and Disconnection**
 
 MQTT uses persistent connections between clients and the broker, and for this exploits the
 network protocols guaranteeing a good level of reliability such as TCP.
-Before being able to send orders, the client must first register with the broker,
-what is done with the CONNECT command
-Various connection parameters can be exchanged such as client identifiers or the
+Before being able to send data, the client must first register with the broker,
+what is done through the CONNECT command.
+We exchanged many connection parameters such as client identifiers or the
 desired persistence mode. The broker must confirm to the client that their REGISTRATION has been successful.
 taken into account, or indicate that an error has occurred by returning a CONNACK accompanied
-a return code.
+by a return code.
 When the client wants to disconnect, it first sends a DISCONNECT command to the
 broker to inform him of his intention. Otherwise, the broker will consider the
 disconnection as abnormal.
 
 ### Subscriptions and Publications
+
 Each published message is necessarily associated with a subject, which allows its distribution to
 subscribers. Topics can be organized in a tree hierarchy, thus subscriptions
-may relate to filtering reasons. Subscription management is very simple and consists of
+may relate to filtering reasons. Subscription management is simple and consists of
 three essential commands:
-1. **SUBSCRIBE** allows a customer to subscribe to a topic, once subscribed he will receive via
+1. **SUBSCRIBE** allows a customer to subscribe to a topic. Once subscribed he will receive via
 following all publications concerning this subject.
-2. **UNSUBSCRIBE** gives the possibility of canceling a subscription, and thus no longer receiving the
+2. **UNSUBSCRIBE** allows canceling a subscription and thus the customer no longer receiving the
 subsequent publications.
-3. **PUBLISH** initiated by a client, allows you to publish a message which will be transmitted by the broker
-to potential subscribers. The same command will be sent by the broker to subscribers for
-deliver the message.
+3. **PUBLISH** initiated by a client allows the publication of a message the broker will transmit
+to potential subscribers. The broker sends to customers, through the same command, to deliver the message.
 
 **Topic and filtering reasons**
 
-A subject is a UTF-8 string, which is used by the broker to filter messages to filter
-messages for each connected client. A topic is made up of one or more topic levels.
-Each topic level is separated by a slash. Here are some example topics:
-concession / house / living room / sofa
-Each subject must have 1 character to be valid and it can also contain spaces. There
+A subject is a UTF-8 string, which is used by the broker to filter messages for each connected client. A topic is made up of one or more topic levels. A slash symbol separates each topic. Here are some example topics:
+concession/house/living/room/sofa.
+Each subject must have 1 character to be valid and it can also contain spaces. Their
 slash alone is a valid topic. A customer can subscribe to several topics at once.
-In order to offer an effective filtering system on subjects, it is possible to define a
+To offer an effective filtering system on subjects, it is possible to define a
 tree structure using the / separator.
-Two wildcards are reserved to represent one and more tree levels:
+Two wildcards are reserved to represent one or more tree levels:
 - \+ represents a tree level, so T1/T2/T3 can be mapped to
 various filters such as T1 / T2 / +, T1 / + / T3 or T1 / + / +.
 - \# represents as many levels as possible, and can only be used at the end of a filter pattern;
-thus T1 / # will filter all topics published by the broker with the exception of special topics
+thus T1 / # will filter all topics published by the broker except of special topics
 starting with $.
 
 **Security**
@@ -59,19 +57,19 @@ The MQTT client uses the SSL protocol to authenticate the certificate sent by th
 client authenticates a broker using the SSL protocol. An MQTT broker authenticates a
 client using SSL, password, or both.
 - Authorization consists of managing the client's rights. Authorization is not part of the
-MQTT protocol. It is provided by MQTT brokers. What is allowed or not depends
+MQTT protocol. MQTT brokers provide it. What is allowed or not depends on
 what the broker does.
 
 **The MQTT client ID**
 
-The MQTT protocol defines a "client identifier" - client ID that uniquely identifies a
+The MQTT protocol defines a "client identifier" - a client ID that uniquely identifies a
 client in a network. Simply put, when connecting to a broker, a client must specify
-a unique string that is not currently in use and will not be used by another client that is
+a unique string that is not currently in use and will not be used by another client that 
 will connect to the MQTT broker.
-Now let's try to understand the implications of two clients getting the same username.
-customer. the MQTT broker monitors messages waiting to be sent to a running client
-customer ID. Thus, if a client uses the quality of service QoS1, that is to say the message is
-sure to arrive but it can do it several times or QoS2 so that the messages are not
+Now let's understand the implications of two clients getting the same username.
+customer. The MQTT broker monitors messages waiting to be sent to a running client
+customer ID. Thus, if a client uses the quality of service QoS1, that is to say, the message is
+sure to arrive but it can do it several times, or QoS2 so that the messages are not
 sent in duplicate. MQTT provides the possibility of having at most 65535 messages pending with a
 16-bit message identifier.
 
@@ -82,10 +80,10 @@ follow
 
 1. Bits: they are labeled 7 to 0 without a byte
 2. Integer data values that are 16 bits
-3. character strings, they must be encoded in utf8 and prefixed by their length
+3. Character strings, must be encoded in utf8 and prefixed by their length
 on two bytes, these strings are limited to a length of 65,535 bytes (216 - 1).
 
-In our system there will be the user who will be the external actor via an xtem terminal or console and
+In our system there will be the user who will be the external actor via an xterm terminal or console and
 the MQTT broker.
 The data flow will be as follows:
 
@@ -140,7 +138,7 @@ x = false;
 
 **while** x == true **do**
 
-wait for message;
+wait for the message;
 
 **if** request received **then**
 sub;
@@ -182,19 +180,19 @@ ______________________________________________________________________________
 
 ### MQTT Broker
 
-Eclipse Mosquitto is an Open Source Message Broker (under EPL/EDL license) which
+Eclipse Mosquitto is an Open Source Message Broker (under an EPL/EDL license) and it
 implements several versions of the MQTT protocol. Mosquitto is lightweight and suitable for all
 devices, from low-power single-board computers to complete servers.
 The MQTT protocol provides a lightweight method of running messaging using a
 publication/subscription. this makes it suitable for Internet of Things messaging, for example with
-low power sensors or mobile devices such as phones, computers
-integrated or microcontrollers.
+low-power sensors or mobile devices such as phones, computers
+integrated, or microcontrollers.
 The Mosquitto project also provides a C library for implementing MQTT clients,
 and the very popular online MQTT clients mosquitto_pub and mosquitto_sub.
-Mosquitto is part of the Eclipse Foundation and is an iot project.eclipse.org is sponsored by
+Mosquitto is part of the Eclipse Foundation and is an IoT project.eclipse.org is sponsored by
 CEDALO.COM.
 
-#### Subscribe to a topic / Suscrib to topic
+#### Subscribe to a topic / Subscribe to topic
 To subscribe, call the client.Subscribe method with three parameters:
 
 - topic: string with the subject of the subscription
@@ -204,22 +202,22 @@ only once)
 so only the default handler will be called
 
 #### Publish to a Topic
-To publish a message, call the client.Publish method. It receives four parameters:
+To publish a message, call the client. Publish method. It receives four parameters:
 
 - topic: same topic as before, send a timestamp before disconnecting
-- qos: 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is only received once)
+- qos: 0 (fire-and-forget), 1 (resend if missed), or 2 (make sure it is only received once)
 - retained: boolean indicating whether the message must be retained by the server
 - payload: message to publish under the subject
 
 ## Intervention and Adaptation of the K-Means algorithm
-### What is Kmeans?
-Kmeans is one of the easiest access algorithms among clustering algorithms. Kmeans
+### What is K-means?
+K-means is one of the easiest access algorithms among clustering algorithms. K-means
 is one of the machine learning algorithms without filling and separating the data into
-specific cluster. The remarkable feature is to be able to choose the number of clusters in
+specific clusters. The remarkable feature is to be able to choose the number of clusters in
 which data is to be separated.
 
 ### Kmeans algorithm
-The Kmeans algorithm defines k representative points and ensures that the data belongs to the
+The K-means algorithm defines k representative points and ensures that the data belongs to the
 nearest representative point. About each representative point, it calculates the average of the
 data that belongs to this point. The calculated point becomes a new representative point and
 again it makes the data belong to the closest ones. Until you can't find the
