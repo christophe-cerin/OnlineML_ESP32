@@ -295,11 +295,11 @@ adjustment is made in the **setup** function using the **begin()** function of t
 
 ```
 void setup() {
-// we start the connection
-// by setting it to a speed of 9600 bits per second.
-Serial.begin(115200);
-while (!Serial) {
-}
+    // we start the connection
+    // by setting it to a speed of 9600 bits per second.
+    Serial.begin(115200);
+          while (!Serial) {
+    }
 }
 ```
 This code will need to be copied each time you write a program that uses the serial channel. The software
@@ -323,17 +323,16 @@ doubles: “Hello everyone”, “I’m 60”, “Long live life!”
 the line at the end of the sent message.
 
 ```
-void setup()
-{
-// creation of the Serial object
-// (=establishment of a new serial communication)
-Serial.begin(115200);
-// send from the chain "Hello, how's that?!" on the serial channel
-Serial.print("Hello world?!");
-// then a second function, different this time
-Serial.println("Live life!");
-// and execute the same again
-Serial.println("This sentence goes below the previous two");
+void setup(){
+        // creation of the Serial object
+        // (=establishment of a new serial communication)
+        Serial.begin(115200);
+        // send from the chain "Hello, how's that?!" on the serial channel
+        Serial.print("Hello world?!");
+        // then a second function, different this time
+        Serial.println("Live life!");
+        // and execute the same again
+        Serial.println("This sentence goes below the previous two");
 }
 ```
 Result in the serial terminal:
@@ -358,15 +357,13 @@ the English "available") of the Serial object. This function returns the number 
 serial channel reception buffer. Here is an example of processing:
 
 ```
-void loop()
-{
-// reading the number of characters available in the buffer
-int dataALread = Serial.available();
-if (dataALread > 0) // if the buffer is not empty
-{
-// There is data, we read it and we do processing
-}
-// we have finished processing the reception or there is nothing to read
+void loop(){
+    // reading the number of characters available in the buffer
+    int dataALread = Serial.available();
+    if (dataALread > 0) // if the buffer is not empty {
+            // There is data, we read it and we do processing
+    }
+    // we have finished processing the reception or there is nothing to read
 }
 NB: This function of the Serial object, available(), returns the value -1 when
 there is nothing to read from the reception buffer.
@@ -380,18 +377,15 @@ This type of operation is called FIFO (First In First Out, first come, first pro
 nothing is ever to be read, the function will return -1 to indicate this.
 
 ```
-void loop()
-{
-// we read the first unprocessed character from the buffer
-char thingRead = Serial.read();
-if (choseRead == -1) // if the buffer is empty
-{
-// Nothing to read, nothing read
-}
-else // the buffer is not empty
-{
-// We read a character
-}
+void loop(){
+    // we read the first unprocessed character from the buffer
+    char thingRead = Serial.read();
+    if (choseRead == -1) // if the buffer is empty {
+        // Nothing to read, nothing read
+    }
+    else // the buffer is not empty {
+        // We read a character
+    }
 }
 ```
 **Complete Code Example**
@@ -400,24 +394,23 @@ Here is now a complete code example which will read the characters present in th
 reception if there are any and send them back as is to the sender (echo mechanism).
 
 ```
-void setup()
-{
-Serial.begin(115200);
+void setup(){
+    Serial.begin(115200);
 }
-void loop()
-{
-// variable containing the character to read
-char carlu = 0;
-// variable containing the number of characters available in the buffer
-int cardispo = 0;
-cardispo = Serial.available();
-while(cardispo > 0) // as long as there are characters to read
-{
-carlu = Serial.read(); // we read the character
-Serial.print(carlu); // then we send it back to the sender as is
-cardispo = Serial.available(); // we reread the number of characters
-available
-}
-// end of program
+
+void loop(){
+    // variable containing the character to read
+    char carlu = 0;
+    // variable containing the number of characters available in the buffer
+    int cardispo = 0;
+    cardispo = Serial.available();
+    while(cardispo > 0) // as long as there are characters to read
+    {
+        carlu = Serial.read(); // we read the character
+        Serial.print(carlu); // then we send it back to the sender as is
+        cardispo = Serial.available(); // we reread the number of characters
+        available
+    }
+    // end of program
 }
 ```
