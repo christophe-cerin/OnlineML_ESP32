@@ -16,7 +16,7 @@ USB port n°1 of the laptop
 - the PPK2, connected to the Laptop via the miniUSB/USB cable, will be mounted on the device /dev/ttyACM0
 - now connect PPK2 and ESP32, two female grove cables will be useful for this. The red cable will connect the positive terminal of the 3.8 V voltage difference on ESP32 to the VOUT (+) terminal on PPK2. The black cable will connect the negative terminal of the 3.8 V voltage difference on ESP32 to the GND(-) terminal on PPK2
 USB port no. 2 of the laptop
-- connect the [CP2102N module](https://tuni-smart-innovation.com/products/module-convertisseur-cp2102-5pin-usb-vers-uart-ttl) to the Laptop, it will be mounted on the device /dev/ttyUSB0
+- connect the [CP2102N module](https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf) to the Laptop, it will be mounted on the device /dev/ttyUSB0
 - connect the RX, TX, GND GPIO of the ESP32 card to the RX, TX, GND pins of the CP2102N module with 3 female grove cables.
 
 
