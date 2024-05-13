@@ -155,7 +155,7 @@ The return message sending method will be as follows:
 __________________________________________________________________________________
 **Algorithm 3** : K-means algorithm
 __________________________________________________________________________________
-**Input**:
+**Input** :
 
 D ={x<sub>1</sub>, x<sub>2</sub>,x<sub>3</sub>, ... x<sub>n</sub>} // Data Entry
 
