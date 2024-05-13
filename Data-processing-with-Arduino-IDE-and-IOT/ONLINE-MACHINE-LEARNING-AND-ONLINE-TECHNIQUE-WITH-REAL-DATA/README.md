@@ -413,19 +413,17 @@ bool ok = true;
 void onMqttMessage(int messageSize) {
 int i = 0;
 while (mqttClient.available()) {
-my_str[i++] = (char)mqttClient.read();
-//Serial.print((char)mqttClient.read());
+            my_str[i++] = (char)mqttClient.read();
+            //Serial.print((char)mqttClient.read());
 }
 my_str[i]= '\0'; 
 //Serial.print(my_str);
 if (!strcmp((const char *)my_str,(const char *)"0.0,0.0")) { 
-//Serial.print("End of the DATA reception, the name of data file is : "); 
-//Serial.println();
-return; 
+        //Serial.print("End of the DATA reception, the name of data file is : "); 
+        //Serial.println();
+        return; 
 } 
 else {
-
-
 //==1D 
 string s(my_str); 
 int pos = s.find(",");
@@ -452,7 +450,7 @@ arr[mycount++] = myPoint;
 
 //if(mycount == 32){
 //if(mycount == 64){ 
-if(mycount == 128)
+if(mycount == 128){
 //if(mycount == 256){
 //if(mycount == 512){ 
 printf("==========\n");
@@ -461,7 +459,7 @@ printf("==========\n");
 
 vector<Point> points;
 for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
-points.push_back(arr[i]);
+        points.push_back(arr[i]);
 }
 
 
