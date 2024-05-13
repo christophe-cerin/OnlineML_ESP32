@@ -383,7 +383,7 @@ void kMeansClustering(vector<Point>*points, int epochs, int k) {
             cout<<"The data points and the Centroids with their cluster-id : "<<endl;
             
             for (vector<Point>::iterator it = points->begin(); it != points->end(); ++it) {
-            cout << it->x << ", " << it->y << ", " << it->cluster << endl;
+                            cout << it->x << ", " << it->y << ", " << it->cluster << endl;
             }
 
 }
