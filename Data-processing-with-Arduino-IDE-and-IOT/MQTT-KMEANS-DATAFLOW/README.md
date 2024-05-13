@@ -212,7 +212,7 @@ To publish a message, call the client.Publish method. It receives four parameter
 - payload : message to publish under the subject
 
 ## Intervention and Adaptation of the K-Means algorithm
-### What is Kmeans?
+### What is Kmeans ?
 Kmeans is one of the easiest access algorithms among clustering algorithms. Kmeans
 is one of the machine learning algorithms without filling and separating the data into
 specific cluster. The remarkable feature is to be able to choose the number of clusters in
