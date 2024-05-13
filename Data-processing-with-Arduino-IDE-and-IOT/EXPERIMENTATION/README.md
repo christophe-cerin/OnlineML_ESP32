@@ -59,17 +59,16 @@ Portable-Dell-pub.sh"
 */
 
 #include <ArduinoMqttClient.h>
-#if defined(ARDUINO_SAMD_MKRWIFI1010) || defined(ARDUINO_SAMD_NANO_33_IOT) ||
-defined(ARDUINO_AVR_UNO_WIFI_REV2)
+#if defined(ARDUINO_SAMD_MKRWIFI1010) || defined(ARDUINO_SAMD_NANO_33_IOT) || defined(ARDUINO_AVR_UNO_WIFI_REV2)
 #include <WiFiNINA.h>
 #elif defined(ARDUINO_SAMD_MKR1000)
 #include <WiFi101.h>
 #elif defined(ARDUINO_ARCH_ESP8266)
 #include <ESP8266WiFi.h>
-#elif defined(ARDUINO_PORTENTA_H7_M7) || defined(ARDUINO_NICLA_VISION) ||
-defined(ARDUINO_ARCH_ESP32) || defined(ARDUINO_GIGA)
+#elif defined(ARDUINO_PORTENTA_H7_M7) || defined(ARDUINO_NICLA_VISION) || defined(ARDUINO_ARCH_ESP32) || defined(ARDUINO_GIGA)
 #include <WiFi.h>
 #endif
+
 #include <PubSubClient.h> //Librairie pour la gestion Mqtt
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
 char ssid[] = SECRET_SSID; // your network SSID (name)
@@ -122,21 +121,21 @@ void setup() {
 
 
 void loop() {
-int messageSize = mqttClient.parseMessage();
-if (messageSize) {
-// we received a message, print out the topic and contents
-Serial.print("Received a message with topic '");
-Serial.print(mqttClient.messageTopic());
-Serial.print("', length ");
-Serial.print(messageSize);
-Serial.println(" bytes:");
-// use the Stream interface to print the contents
-while (mqttClient.available()) {
-Serial.print((char)mqttClient.read());
-}
-Serial.println();
-Serial.println();
-}
+        int messageSize = mqttClient.parseMessage();
+        if (messageSize) {
+                    // we received a message, print out the topic and contents
+                    Serial.print("Received a message with topic '");
+                    Serial.print(mqttClient.messageTopic());
+                    Serial.print("', length ");
+                    Serial.print(messageSize);
+                    Serial.println(" bytes:");
+            // use the Stream interface to print the contents
+                    while (mqttClient.available()) {
+                        Serial.print((char)mqttClient.read());
+            }
+            Serial.println();
+            Serial.println();
+        }
 }
 ```
 ## Results
