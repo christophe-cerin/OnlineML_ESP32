@@ -53,8 +53,7 @@ When the messages are received it prints the messages to the Serial Monitor.
 The circuit:
 - ESP32, Arduino MKR 1000, MKR 1010 or Uno WiFi Rev2 board
 This example code is in the public domain.
-- Open a Terminal and execute the program "test-29062021-broker-10.10.6.228-500points-
-Portable-Dell-pub.sh"
+- Open a Terminal and execute the program "test-29062021-broker-10.10.6.228-500points-Portable-Dell-pub.sh"
 - We can have a response on the Serial Monitor of Arduino IDE
 */
 
