@@ -98,9 +98,9 @@ The data flow will be as follows:
 
 Details of some essential algorithms
 __________________________________________________________________________________
-**Algorithm 1**: Authentication method
+**Algorithm 1** : Authentication method
 __________________________________________________________________________________
-**Result**: Status
+**Result** : Status
 
 Read Username and Password settings;
 Connection to the database;
@@ -124,9 +124,9 @@ username and password
 5. Otherwise an error message will be displayed
 The return message sending pseudocode will be as follows:
 __________________________________________________________________________________
-**Algorithm 2**: Return Message Sending Method
+**Algorithm 2** : Return Message Sending Method
 __________________________________________________________________________________
-**Result**: Message
+**Result** : Message
 
 Connect to the MQTT Broker;
 
@@ -153,7 +153,7 @@ The return message sending method will be as follows:
 3. Read predictions
 4. read the learnings
 __________________________________________________________________________________
-**Algorithm 3**: K-means algorithm
+**Algorithm 3** : K-means algorithm
 __________________________________________________________________________________
 **Input**:
 
@@ -161,11 +161,11 @@ D ={x<sub>1</sub>, x<sub>2</sub>,x<sub>3</sub>, ... x<sub>n</sub>} // Data Entry
 
 K // Desired number of clusters
 
-**Output**:
+**Output** :
 
 K // Entering Clusters
 
-**K-Means**:
+**K-Means** :
 
 Assignment of initial values for m<sub>1</sub>,m<sub>2</sub>, m<sub>3</sub>, ..... m<sub>k</sub>
 
@@ -206,8 +206,8 @@ so only the default handler will be called
 #### Publish to a Topic
 To publish a message, call the client.Publish method. It receives four parameters:
 
-- topic: same topic as before, send a timestamp before disconnecting
-- qos: 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is only received once)
+- topic : same topic as before, send a timestamp before disconnecting
+- qos : 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is only received once)
 - retained: boolean indicating whether the message must be retained by the server
 - payload: message to publish under the subject
 
