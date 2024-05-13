@@ -2,7 +2,7 @@
 
 ### Necessary material :
  
-- the current source to power the ESP32 card will be PPK2
+- the current source to power the ESP32 card will be [PPK2](https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2)
 - the multimeter will be the PPK2 using the nrfconnect software
 - the Arduino IDE on the Laptop PC needs to detect the ESP32-VROOM-32D card through the serial port of the console, the CP2102N module or USB-TTL converter will be the suitable hardware.
 
