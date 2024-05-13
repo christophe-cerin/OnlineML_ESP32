@@ -80,7 +80,7 @@ sent in duplicate. MQTT provides the possibility of having at most 65535 message
 The MQTT standard and binary packet format. The data is represented in 3 forms which
 follow
 
-1. Bits: they are labeled 7 to 0 without a byte
+1. Bits : they are labeled 7 to 0 without a byte
 2. Integer data values that are 16 bits
 3. character strings, they must be encoded in utf8 and prefixed by their length
 on two bytes, these strings are limited to a length of 65,535 bytes (216 - 1).
@@ -197,10 +197,10 @@ CEDALO.COM.
 #### Subscribe to a topic / Suscrib to topic
 To subscribe, call the client.Subscribe method with three parameters:
 
-- topic: string with the subject of the subscription
-- qos: 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is not received
+- topic : string with the subject of the subscription
+- qos : 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is not received
 only once)
-- callback: a function to call when a message from this subject is received. It can be nil
+- callback : a function to call when a message from this subject is received. It can be nil
 so only the default handler will be called
 
 #### Publish to a Topic
@@ -208,8 +208,8 @@ To publish a message, call the client.Publish method. It receives four parameter
 
 - topic : same topic as before, send a timestamp before disconnecting
 - qos : 0 (fire-and-forget), 1 (resend if missed) or 2 (make sure it is only received once)
-- retained: boolean indicating whether the message must be retained by the server
-- payload: message to publish under the subject
+- retained : boolean indicating whether the message must be retained by the server
+- payload : message to publish under the subject
 
 ## Intervention and Adaptation of the K-Means algorithm
 ### What is Kmeans?
