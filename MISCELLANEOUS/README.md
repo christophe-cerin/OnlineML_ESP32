@@ -21,7 +21,7 @@ This directory contains miscellaneous material connected to IoT, datasets (mainl
 - [Smart Building Systems - EDA](https://www.kaggle.com/code/halimedogan/smart-building-system-eda)
 - [Smart Building Dataset](https://www.kaggle.com/datasets/ranakrc/smart-building-system)
 - [ASHRAE Global Occupant Behavior Database](https://www.kaggle.com/datasets/claytonmiller/ashrae-global-occupant-behavior-database)
-- [IEEE Dataport](https://ieee-dataport.org): datasets in many domains.
+- [IEEE Dataport](https://ieee-dataport.org/): datasets in many domains.
 
 
 ## Regulation & publications
