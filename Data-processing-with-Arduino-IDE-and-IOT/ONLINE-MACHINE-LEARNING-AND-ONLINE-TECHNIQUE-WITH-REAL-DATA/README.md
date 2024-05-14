@@ -94,7 +94,7 @@ WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
 
 
-const char broker[] = "10.10.6.142";//IP address lipn
+const char broker[] = "10.10.6.228";//IP address lipn
 
 int port = 1883;
 
