@@ -416,103 +416,102 @@ while (mqttClient.available()) {
             my_str[i++] = (char)mqttClient.read();
             //Serial.print((char)mqttClient.read());
 }
-my_str[i]= '\0'; 
-//Serial.print(my_str);
+my_str[i]= '\0';
+
 if (!strcmp((const char *)my_str,(const char *)"0.0,0.0")) { 
-        //Serial.print("End of the DATA reception, the name of data file is : "); 
-        //Serial.println();
-        return; 
+            //Serial.print("End of the DATA reception, the name of data file is : "); 
+            //Serial.println();
+            return; 
 } 
 else {
-//==1D 
-string s(my_str); 
-int pos = s.find(",");
-string sub1 = s.substr(0,pos); 
-
-string sub2 = s.substr(pos + 1); 
-//==1F
-//== 2D
-int length = sub1.length(); 
-// declaring character array (+1 for null terminator) 
-char* char_array_sub1 = new char[length + 1]; 
-// copying the contents of the string to char array 
-strcpy(char_array_sub1, sub1.c_str()); 
-
-length = sub2.length(); 
-// declaring character array (+1 for null terminator) 
-char* char_array_sub2 = new char[length + 1]; 
-// copying the contents of the string to char array 
-strcpy(char_array_sub2, sub2.c_str()); 
-// atof() — Convert Character String to Float
-Point myPoint = Point(atof(char_array_sub1),atof(char_array_sub2));
-arr[mycount++] = myPoint;
-
-
-//if(mycount == 32){
-//if(mycount == 64){ 
-if(mycount == 128){
-//if(mycount == 256){
-//if(mycount == 512){ 
-printf("==========\n");
-printf("===== Calculation Turn Number = %d with 1024 vector points and with an iteration of 128 points=====\n",my_round++);
-printf("==========\n");
-
-vector<Point> points;
-for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
-        points.push_back(arr[i]);
-}
-
-
-
-//kMeansClustering(&points, 32, 4);
-//kMeansClustering(&points, 64, 4);
-kMeansClustering(&points, 128, 4);
-//kMeansClustering(&points, 128, 2);
-//kMeansClustering(&points, 256, 4);
-//kMeansClustering(&points, 512, 4);
-//kMeansClustering(&points, 512, 2);
-
-
-
-// Tri rapide des données
-//Serial.println("Displaying a set of 128 data points after quicksorting");
-//quicksort(arr, 0, mycount -1);
-//printarr(arr, mycount);
-// == end : Display and Quick Data 
-
-//=== Debut Clear Buffer points 
-Point arr[mycount];
-std::copy(points.begin(), points.end(), arr); 
-
-int taille = (int) sqrt((double) mycount);
-int mysize = mycount - 1;
-
-for (int i = taille - 1; i < mysize; i += taille) {
-            auto it = std::find_if(points.begin(), points.end(), [&](const Point v) {
-            return equalPoints(v, arr[i]);}
-            );
+            //==1D 
+            string s(my_str); 
+            int pos = s.find(",");
+            string sub1 = s.substr(0,pos); 
             
-            // if (mykmeans._Centers.end() == it) {
-                        if (points.end() == it) {
-                                auto remove_start = remove_if(points.begin(), points.end(), [&](const Point v) { 
-                                        return equalPoints(v, arr[i - 1]); 
-                                });
-                                points.erase(remove_start,points.end());
-                        }
-                        else {
-                                auto remove_start = remove_if(points.begin(), points.end(), [&](const Point v) { 
-                                return equalPoints(v, arr[i]); 
-                        });
-                                points.erase(remove_start,points.end());
-                        }
+            string sub2 = s.substr(pos + 1); 
+            //==1F
+            //== 2D
+            int length = sub1.length(); 
+            // declaring character array (+1 for null terminator) 
+            char* char_array_sub1 = new char[length + 1]; 
+            // copying the contents of the string to char array 
+            strcpy(char_array_sub1, sub1.c_str()); 
+            
+            length = sub2.length(); 
+            // declaring character array (+1 for null terminator) 
+            char* char_array_sub2 = new char[length + 1]; 
+            // copying the contents of the string to char array 
+            strcpy(char_array_sub2, sub2.c_str()); 
+            // atof() — Convert Character String to Float
+            Point myPoint = Point(atof(char_array_sub1),atof(char_array_sub2));
+            arr[mycount++] = myPoint;
+            
+            //if(mycount == 32){
+            //if(mycount == 64){ 
+            //if(mycount == 256){
+            //if(mycount == 512){
+            if(mycount == 128){
+            printf("==========\n");
+            printf("===== Calculation Turn Number = %d with 1024 vector points and with an iteration of 128 points=====\n",my_round++);
+            printf("==========\n");
+            
+            vector<Point> points;
+            for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+                    points.push_back(arr[i]);
             }
             
-            //=== Fin Clear Buffer points
-            mycount=0;
-
-} 
-
-}
+            
+            
+            //kMeansClustering(&points, 32, 4);
+            //kMeansClustering(&points, 64, 4);
+            kMeansClustering(&points, 128, 4);
+            //kMeansClustering(&points, 128, 2);
+            //kMeansClustering(&points, 256, 4);
+            //kMeansClustering(&points, 512, 4);
+            //kMeansClustering(&points, 512, 2);
+            
+            
+            
+            // Tri rapide des données
+            //Serial.println("Displaying a set of 128 data points after quicksorting");
+            //quicksort(arr, 0, mycount -1);
+            //printarr(arr, mycount);
+            // == end : Display and Quick Data 
+            
+            //=== Debut Clear Buffer points 
+            Point arr[mycount];
+            std::copy(points.begin(), points.end(), arr); 
+            
+            int taille = (int) sqrt((double) mycount);
+            int mysize = mycount - 1;
+            
+            for (int i = taille - 1; i < mysize; i += taille) {
+                        auto it = std::find_if(points.begin(), points.end(), [&](const Point v) {
+                        return equalPoints(v, arr[i]);}
+                        );
+                        
+                        // if (mykmeans._Centers.end() == it) {
+                                    if (points.end() == it) {
+                                            auto remove_start = remove_if(points.begin(), points.end(), [&](const Point v) { 
+                                                    return equalPoints(v, arr[i - 1]); 
+                                            });
+                                            points.erase(remove_start,points.end());
+                                    }
+                                    else {
+                                            auto remove_start = remove_if(points.begin(), points.end(), [&](const Point v) { 
+                                            return equalPoints(v, arr[i]); 
+                                    });
+                                            points.erase(remove_start,points.end());
+                                    }
+                        }
+                        
+                        //=== Fin Clear Buffer points
+                        mycount=0;
+            
+            } 
+            
+            }
 }
 
 //===
