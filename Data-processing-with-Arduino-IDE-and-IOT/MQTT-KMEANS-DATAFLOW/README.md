@@ -3,7 +3,7 @@
 ### Functional architecture of the system
 Our design is as follows, firstly we will inject data from the
 .csv format in the same MQTT Broker which will send and receive the messages, i.e.
-subscribe/publish.
+`subscribe/publish`.
 
 **Connection and Disconnection**
 
