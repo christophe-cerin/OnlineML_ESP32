@@ -83,7 +83,7 @@ follow
 1. Bits : they are labeled 7 to 0 without a byte
 2. Integer data values that are 16 bits
 3. character strings, they must be encoded in utf8 and prefixed by their length
-on two bytes, these strings are limited to a length of 65,535 bytes (216 - 1).
+on two bytes, these strings are limited to a length of 65,535 bytes (2 sup 16 - 1).
 
 In our system there will be the user who will be the external actor via an xtem terminal or console and
 the MQTT broker.
