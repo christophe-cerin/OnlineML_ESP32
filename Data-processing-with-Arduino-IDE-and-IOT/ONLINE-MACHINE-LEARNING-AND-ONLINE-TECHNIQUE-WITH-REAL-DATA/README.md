@@ -595,3 +595,14 @@ By referring to an equation with 3 unknowns, namely x (set of messages), y (spli
 ###### **Table  : Message Flow, Processing Slice and Number of Possible Iterations**
 
 Looking at this table, we can say that the ESP32 microcontroller can easily receive a stream of 1024 messages with optimized batch processing of 128 messages
+
+
+
+## KMeans Clustering for the CampusIOT's LoRaWAN Datasets
+### ELSYS-ERS-CO2, ERS-CO2-48B30 W=512, Data = 5120, K=4
+
+
+**About the dataset**
+
+This input file contains the basic information (ID, CO2, T(°C), Cluster) about the datas recorded by the LNS. Cluster is something assign to the dataset based on the defined parameters like the behavior of datas recorded.
+
