@@ -388,7 +388,7 @@ void kMeansClustering(vector<Point>*points, int epochs, int k) {
 
 }
 
-//===5F
+
 /*
 Be careful here, struct constitutes all the data points.
 The struct is variable mycount, it is a multiple of 8. 
@@ -424,14 +424,13 @@ if (!strcmp((const char *)my_str,(const char *)"0.0,0.0")) {
             return; 
 } 
 else {
-            //==1D 
+            
             string s(my_str); 
             int pos = s.find(",");
             string sub1 = s.substr(0,pos); 
             
             string sub2 = s.substr(pos + 1); 
-            //==1F
-            //== 2D
+
             int length = sub1.length(); 
             // declaring character array (+1 for null terminator) 
             char* char_array_sub1 = new char[length + 1]; 
@@ -514,7 +513,6 @@ else {
             }
 }
 
-//===
 
 void setup() {
             //Initialize serial and wait for port to open:
