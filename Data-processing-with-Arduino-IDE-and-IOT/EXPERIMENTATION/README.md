@@ -69,9 +69,8 @@ This example code is in the public domain.
 #endif
 
 #include <PubSubClient.h> //Librairie pour la gestion Mqtt
-///////please enter your sensitive data in the Secret tab/arduino_secrets.h
 char ssid[] = SECRET_SSID; // your network SSID (name)
-char pass[] = SECRET_PASS; // your network password (use for WPA, or use as key for WEP)
+char pass[] = SECRET_PASS; // your network password 
 
 WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);

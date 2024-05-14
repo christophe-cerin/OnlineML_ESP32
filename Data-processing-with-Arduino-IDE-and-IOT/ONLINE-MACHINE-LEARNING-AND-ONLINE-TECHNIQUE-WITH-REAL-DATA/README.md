@@ -32,7 +32,7 @@ The data from the ELSYS-ERS sensor from January 1 at 00:05 a.m. to January 31 at
 
 ### Data analysis : Using data from Tour Perret, Local MQTT server and Arduino IDE
 
-The CO2 concentration and temperature will be published from our local MQTT server with the subjects "C02/celsius" and "final/final" the data is received via the ESP32 board and used by the Arduino IDE where a program has been implemented works to carry out clustering with the K-MEANS algorithm. We considered in our case, a structure as a means of defining this type of data although it is more than a simple container for primitive data types because we can also define other functionalities what it does with the elements or data points, it is a movement that meets the criteria at the end of the range. it then returns an iterator to the first element of the deleted elements (which are actually just moved).
+The CO<sub>2</sub> concentration and temperature will be published from our local MQTT server with the subjects "C02/celsius" and "final/final" the data is received via the ESP32 board and used by the Arduino IDE where a program has been implemented works to carry out clustering with the K-MEANS algorithm. We considered in our case, a structure as a means of defining this type of data although it is more than a simple container for primitive data types because we can also define other functionalities what it does with the elements or data points, it is a movement that meets the criteria at the end of the range. it then returns an iterator to the first element of the deleted elements (which are actually just moved).
 
 The objective is to analyze the behavior of the ESP32 controller in the face of a stream of messages received continuously subject to an implemented algorithm containing both a clustering algorithm which makes it possible to identify a maximum of 4 clusters.
 
@@ -94,7 +94,7 @@ WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
 
 
-const char broker[] = "10.10.6.142";//IP address lipn
+const char broker[] = "10.10.6.228";//IP address
 
 int port = 1883;
 
@@ -388,7 +388,7 @@ void kMeansClustering(vector<Point>*points, int epochs, int k) {
 
 }
 
-//===5F
+
 /*
 Be careful here, struct constitutes all the data points.
 The struct is variable mycount, it is a multiple of 8. 
@@ -416,106 +416,103 @@ while (mqttClient.available()) {
             my_str[i++] = (char)mqttClient.read();
             //Serial.print((char)mqttClient.read());
 }
-my_str[i]= '\0'; 
-//Serial.print(my_str);
+my_str[i]= '\0';
+
 if (!strcmp((const char *)my_str,(const char *)"0.0,0.0")) { 
-        //Serial.print("End of the DATA reception, the name of data file is : "); 
-        //Serial.println();
-        return; 
+            //Serial.print("End of the DATA reception, the name of data file is : "); 
+            //Serial.println();
+            return; 
 } 
 else {
-//==1D 
-string s(my_str); 
-int pos = s.find(",");
-string sub1 = s.substr(0,pos); 
-
-string sub2 = s.substr(pos + 1); 
-//==1F
-//== 2D
-int length = sub1.length(); 
-// declaring character array (+1 for null terminator) 
-char* char_array_sub1 = new char[length + 1]; 
-// copying the contents of the string to char array 
-strcpy(char_array_sub1, sub1.c_str()); 
-
-length = sub2.length(); 
-// declaring character array (+1 for null terminator) 
-char* char_array_sub2 = new char[length + 1]; 
-// copying the contents of the string to char array 
-strcpy(char_array_sub2, sub2.c_str()); 
-// atof() — Convert Character String to Float
-Point myPoint = Point(atof(char_array_sub1),atof(char_array_sub2));
-arr[mycount++] = myPoint;
-
-
-//if(mycount == 32){
-//if(mycount == 64){ 
-if(mycount == 128){
-//if(mycount == 256){
-//if(mycount == 512){ 
-printf("==========\n");
-printf("===== Calculation Turn Number = %d with 1024 vector points and with an iteration of 128 points=====\n",my_round++);
-printf("==========\n");
-
-vector<Point> points;
-for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
-        points.push_back(arr[i]);
-}
-
-
-
-//kMeansClustering(&points, 32, 4);
-//kMeansClustering(&points, 64, 4);
-kMeansClustering(&points, 128, 4);
-//kMeansClustering(&points, 128, 2);
-//kMeansClustering(&points, 256, 4);
-//kMeansClustering(&points, 512, 4);
-//kMeansClustering(&points, 512, 2);
-
-
-
-// Tri rapide des données
-//Serial.println("Displaying a set of 128 data points after quicksorting");
-//quicksort(arr, 0, mycount -1);
-//printarr(arr, mycount);
-// == end : Display and Quick Data 
-
-//=== Debut Clear Buffer points 
-Point arr[mycount];
-std::copy(points.begin(), points.end(), arr); 
-
-int taille = (int) sqrt((double) mycount);
-int mysize = mycount - 1;
-
-for (int i = taille - 1; i < mysize; i += taille) {
-            auto it = std::find_if(points.begin(), points.end(), [&](const Point v) {
-            return equalPoints(v, arr[i]);}
-            );
             
-            // if (mykmeans._Centers.end() == it) {
-                        if (points.end() == it) {
-                                auto remove_start = remove_if(points.begin(), points.end(), [&](const Point v) { 
-                                        return equalPoints(v, arr[i - 1]); 
-                                });
-                                points.erase(remove_start,points.end());
-                        }
-                        else {
-                                auto remove_start = remove_if(points.begin(), points.end(), [&](const Point v) { 
-                                return equalPoints(v, arr[i]); 
-                        });
-                                points.erase(remove_start,points.end());
-                        }
+            string s(my_str); 
+            int pos = s.find(",");
+            string sub1 = s.substr(0,pos); 
+            
+            string sub2 = s.substr(pos + 1); 
+
+            int length = sub1.length(); 
+            // declaring character array (+1 for null terminator) 
+            char* char_array_sub1 = new char[length + 1]; 
+            // copying the contents of the string to char array 
+            strcpy(char_array_sub1, sub1.c_str()); 
+            
+            length = sub2.length(); 
+            // declaring character array (+1 for null terminator) 
+            char* char_array_sub2 = new char[length + 1]; 
+            // copying the contents of the string to char array 
+            strcpy(char_array_sub2, sub2.c_str()); 
+            // atof() — Convert Character String to Float
+            Point myPoint = Point(atof(char_array_sub1),atof(char_array_sub2));
+            arr[mycount++] = myPoint;
+            
+            //if(mycount == 32){
+            //if(mycount == 64){ 
+            //if(mycount == 256){
+            //if(mycount == 512){
+            if(mycount == 128){
+            printf("==========\n");
+            printf("===== Calculation Turn Number = %d with 1024 vector points and with an iteration of 128 points=====\n",my_round++);
+            printf("==========\n");
+            
+            vector<Point> points;
+            for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+                    points.push_back(arr[i]);
             }
             
-            //=== Fin Clear Buffer points
-            mycount=0;
-
-} 
-
+            
+            
+            //kMeansClustering(&points, 32, 4);
+            //kMeansClustering(&points, 64, 4);            
+            //kMeansClustering(&points, 128, 2);
+            //kMeansClustering(&points, 256, 4);
+            //kMeansClustering(&points, 512, 4);
+            //kMeansClustering(&points, 512, 2);
+            kMeansClustering(&points, 128, 4);
+            
+            
+            
+            // Tri rapide des données
+            //Serial.println("Displaying a set of 128 data points after quicksorting");
+            //quicksort(arr, 0, mycount -1);
+            //printarr(arr, mycount);
+            // == end : Display and Quick Data 
+            
+            //=== Debut Clear Buffer points 
+            Point arr[mycount];
+            std::copy(points.begin(), points.end(), arr); 
+            
+            int taille = (int) sqrt((double) mycount);
+            int mysize = mycount - 1;
+            
+            for (int i = taille - 1; i < mysize; i += taille) {
+                        auto it = std::find_if(points.begin(), points.end(), [&](const Point v) {
+                        return equalPoints(v, arr[i]);}
+                        );
+                        
+                        // if (mykmeans._Centers.end() == it) {
+                                    if (points.end() == it) {
+                                            auto remove_start = remove_if(points.begin(), points.end(), [&](const Point v) { 
+                                                    return equalPoints(v, arr[i - 1]); 
+                                            });
+                                            points.erase(remove_start,points.end());
+                                    }
+                                    else {
+                                            auto remove_start = remove_if(points.begin(), points.end(), [&](const Point v) { 
+                                            return equalPoints(v, arr[i]); 
+                                    });
+                                            points.erase(remove_start,points.end());
+                                    }
+                        }
+                        
+                        //=== Fin Clear Buffer points
+                        mycount=0;
+            
+            } 
+            
+            }
 }
-}
 
-//===
 
 void setup() {
             //Initialize serial and wait for port to open:

@@ -3,7 +3,7 @@
 ### Functional architecture of the system
 Our design is as follows, firstly we will inject data from the
 .csv format in the same MQTT Broker which will send and receive the messages, i.e.
-subscribe/publish.
+`subscribe/publish`.
 
 **Connection and Disconnection**
 
@@ -43,10 +43,10 @@ slash alone is a valid topic. A customer can subscribe to several topics at once
 In order to offer an effective filtering system on subjects, it is possible to define a
 tree structure using the / separator.
 Two wildcards are reserved to represent one and more tree levels:
-- \+ represents a tree level, so T1/T2/T3 can be mapped to
-various filters such as T1 / T2 / +, T1 / + / T3 or T1 / + / +.
+- \+ represents a tree level, so `T1/T2/T3` can be mapped to
+various filters such as `T1 / T2 / +`, `T1 / + / T3` or `T1 / + / +`.
 - \# represents as many levels as possible, and can only be used at the end of a filter pattern;
-thus T1 / # will filter all topics published by the broker with the exception of special topics
+thus `T1 / #` will filter all topics published by the broker with the exception of special topics
 starting with $.
 
 **Security**
@@ -83,7 +83,7 @@ follow
 1. Bits : they are labeled 7 to 0 without a byte
 2. Integer data values that are 16 bits
 3. character strings, they must be encoded in utf8 and prefixed by their length
-on two bytes, these strings are limited to a length of 65,535 bytes (216 - 1).
+on two bytes, these strings are limited to a length of 65,535 bytes (2<sup>16</sup> - 1).
 
 In our system there will be the user who will be the external actor via an xtem terminal or console and
 the MQTT broker.
@@ -115,6 +115,7 @@ Status = error;
 
 **end**
 ________________________________________________________________________________
+
 This previous pseudo algorithm represents the following authentication method:
 1. The method takes two string type parameters which will be the name
 username and password
@@ -186,11 +187,11 @@ Eclipse Mosquitto is an Open Source Message Broker (under EPL/EDL license) which
 implements several versions of the MQTT protocol. Mosquitto is lightweight and suitable for all
 devices, from low-power single-board computers to complete servers.
 The MQTT protocol provides a lightweight method of running messaging using a
-publication/subscription. this makes it suitable for Internet of Things messaging, for example with
+`publication/subscription`. this makes it suitable for Internet of Things messaging, for example with
 low power sensors or mobile devices such as phones, computers
 integrated or microcontrollers.
 The Mosquitto project also provides a C library for implementing MQTT clients,
-and the very popular online MQTT clients mosquitto_pub and mosquitto_sub.
+and the very popular online MQTT clients `mosquitto_pub` and `mosquitto_sub`.
 Mosquitto is part of the Eclipse Foundation and is an iot project.eclipse.org is sponsored by
 CEDALO.COM.
 
@@ -327,17 +328,17 @@ void setup(){
         // creation of the Serial object
         // (=establishment of a new serial communication)
         Serial.begin(115200);
-        // send from the chain "Hello, how's that?!" on the serial channel
-        Serial.print("Hello world?!");
+        // send from the chain "Hello, how's that ?" on the serial channel
+        Serial.print("Hello world !");
         // then a second function, different this time
-        Serial.println("Live life!");
+        Serial.println("Live life !");
         // and execute the same again
         Serial.println("This sentence goes below the previous two");
 }
 ```
 Result in the serial terminal:
 ```
-Hello world ?! Live life' !
+Hello world ! Live life !
 This sentence goes below the previous two
 ```
 ## Receive data
