@@ -463,12 +463,12 @@ else {
             
             
             //kMeansClustering(&points, 32, 4);
-            //kMeansClustering(&points, 64, 4);
-            kMeansClustering(&points, 128, 4);
+            //kMeansClustering(&points, 64, 4);            
             //kMeansClustering(&points, 128, 2);
             //kMeansClustering(&points, 256, 4);
             //kMeansClustering(&points, 512, 4);
             //kMeansClustering(&points, 512, 2);
+            kMeansClustering(&points, 128, 4);
             
             
             
