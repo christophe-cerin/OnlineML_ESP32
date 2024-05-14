@@ -43,10 +43,10 @@ slash alone is a valid topic. A customer can subscribe to several topics at once
 In order to offer an effective filtering system on subjects, it is possible to define a
 tree structure using the / separator.
 Two wildcards are reserved to represent one and more tree levels:
-- \+ represents a tree level, so T1/T2/T3 can be mapped to
-various filters such as T1 / T2 / +, T1 / + / T3 or T1 / + / +.
+- \+ represents a tree level, so `T1/T2/T3` can be mapped to
+various filters such as `T1 / T2 / +`, `T1 / + / T3` or `T1 / + / +`.
 - \# represents as many levels as possible, and can only be used at the end of a filter pattern;
-thus T1 / # will filter all topics published by the broker with the exception of special topics
+thus `T1 / #` will filter all topics published by the broker with the exception of special topics
 starting with $.
 
 **Security**
@@ -187,11 +187,11 @@ Eclipse Mosquitto is an Open Source Message Broker (under EPL/EDL license) which
 implements several versions of the MQTT protocol. Mosquitto is lightweight and suitable for all
 devices, from low-power single-board computers to complete servers.
 The MQTT protocol provides a lightweight method of running messaging using a
-publication/subscription. this makes it suitable for Internet of Things messaging, for example with
+`publication/subscription`. this makes it suitable for Internet of Things messaging, for example with
 low power sensors or mobile devices such as phones, computers
 integrated or microcontrollers.
 The Mosquitto project also provides a C library for implementing MQTT clients,
-and the very popular online MQTT clients mosquitto_pub and mosquitto_sub.
+and the very popular online MQTT clients `mosquitto_pub` and `mosquitto_sub`.
 Mosquitto is part of the Eclipse Foundation and is an iot project.eclipse.org is sponsored by
 CEDALO.COM.
 
