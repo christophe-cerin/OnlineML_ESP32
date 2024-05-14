@@ -328,17 +328,17 @@ void setup(){
         // creation of the Serial object
         // (=establishment of a new serial communication)
         Serial.begin(115200);
-        // send from the chain "Hello, how's that?!" on the serial channel
-        Serial.print("Hello world?!");
+        // send from the chain "Hello, how's that ?" on the serial channel
+        Serial.print("Hello world !");
         // then a second function, different this time
-        Serial.println("Live life!");
+        Serial.println("Live life !");
         // and execute the same again
         Serial.println("This sentence goes below the previous two");
 }
 ```
 Result in the serial terminal:
 ```
-Hello world ?! Live life' !
+Hello world ! Live life !
 This sentence goes below the previous two
 ```
 ## Receive data
