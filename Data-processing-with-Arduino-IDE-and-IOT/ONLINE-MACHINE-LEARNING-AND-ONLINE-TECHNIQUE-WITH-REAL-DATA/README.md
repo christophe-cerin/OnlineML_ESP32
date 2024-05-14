@@ -599,14 +599,13 @@ Looking at this table, we can say that the ESP32 microcontroller can easily rece
 
 
 ## KMeans Clustering for the CampusIOT's LoRaWAN Datasets
-
-### ELSYS_ERS_CO2, ERS_CO2_48B30 W=512, Data = 5120, K=4
+### ELSYS-ERS-CO2, ERS-CO2-48B30 W=512, Data = 5120, K=4
 
 **Clustering**
 
 Clustering is the task of dividing the population or data points into a number of groups such that data points in the same groups are more similar to other data points in the same group than those in other groups. In simple words, the aim is to segregate groups with similar traits and assign them into clusters.
 
-** KMeans Clustering
+**KMeans Clustering**
 
 K-means clustering is one of the simplest and popular unsupervised machine learning algorithms. You’ll define a target number k, which refers to the number of centroids you need in the dataset. A centroid is the imaginary or real location representing the center of the cluster. Every data point is allocated to each of the clusters through reducing the in-cluster sum of squares. In other words, the K-means algorithm identifies k number of centroids, and then allocates every data point to the nearest cluster, while keeping the centroids as small as possible. The ‘means’ in the K-means refers to averaging of the data; that is, finding the centroid.
 
