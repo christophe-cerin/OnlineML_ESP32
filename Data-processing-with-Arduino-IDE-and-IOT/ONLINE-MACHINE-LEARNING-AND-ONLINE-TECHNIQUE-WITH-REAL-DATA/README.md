@@ -606,3 +606,27 @@ Looking at this table, we can say that the ESP32 microcontroller can easily rece
 
 This input file contains the basic information (ID, CO2, T(°C), Cluster) about the datas recorded by the LNS. Cluster is something assign to the dataset based on the defined parameters like the behavior of datas recorded.
 
+**About K-Means Clustering**
+
+Clustering involves dividing points in a data set into a number of groups such that data points in the same groups are more similar to other data points in the same group than to those in other groups. The goal in clustering is to separate groups with similar characteristics and distribute them into clusters.
+
+K-means clustering is one of the unsupervised machine learning algorithms. We define a target number k, which refers to the number of centroids we need in the dataset. As for the centroid, it is the imaginary or real location representing the center of the cluster. Each point in the dataset is assigned to each of the clusters by reducing the sum of squares within the cluster. Alternatively, the K-means algorithm identifies k number of centroids and then allocates each data point to the closest cluster, while keeping the centroids as small as possible. The “means” in K-means refer to the average of the data; i.e. find the center of gravity.
+
+**Data Exploration**
+
+Using the Seaborn module as well as the Matplotlib module, we will represent the distribution diagram with different variations of the data such as [cluster1data5120w512.csv](https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/data/cluster1data5120w512.csv). The Distplot represents the data by a histogram and a line in combination with it.
+A Distplot or distribution diagram represents the variation in the distribution of data. Seaborn Distplot represents the overall distribution of continuous data variables.
+
+  <img alt="Distribution Diagram" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/cluster1data5120wk4displot.png" width=70% height=70%  title="Distribution Diagram"/>
+
+
+###### **Distribution Diagram ELSYS_ERS_CO2, ERS_CO2_48B30 W=512, Data= 5120, K=4** 
+
+**Applying KMeans Clustering with scikit-learn and  K=5**
+
+K is The number of clusters to form as well as the number of centroids to generate.
+Initialization method with k-means++' allows to select the initial cluster centroids using sampling based on an empirical probability distribution of the points' contribution to the overall inertia.
+
+  <img alt="KMeans Clustering with scikit-learn and  K=5" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/algokmeansk5data5120w512k4.png" width=70% height=70%  title="KMeans Clustering with scikit-learn and  K=5"/>
+
+###### **Applying KMeans Clustering with scikit-learn and  K=5** 
