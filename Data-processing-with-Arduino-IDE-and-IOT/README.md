@@ -8,13 +8,16 @@
 #### Functional architecture of the system
 #### Data Flow and Design
 #### [MQTT Broker](https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/MQTT-PRINCIPLE/README.md)
+#### Intervention and Adaptation of the K-Means algorithm
+#### Send and receive data over the serial channel of the Arduino IDE
 
 ### [Experimental study of a data flow on the MQTT broker with the K-Means algorithm implemented](https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/EXPERIMENTATION/README.md)
-#### Test data
-#### The MQTT Client connection type
-#### Intervention and Adaptation of the K-Means algorithm
-#### Processing csv data
-#### Send and receive data over the Arduino IDE serial port
+
+#### The ESP-WROOM-32D Microcontroller, MQTT
+##### Configuring the MQTT Broker server
+##### Data management, data/celsius in csv format
+##### Arduino program for receiving messages and printing the message on the serial port
+##### Results
 
 ### [Online machine learning and online learning technique with CampusIOT's LoRaWAN Datasets](https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/README.md)
 #### Motivations and Challenges
