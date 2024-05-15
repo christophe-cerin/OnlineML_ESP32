@@ -612,4 +612,7 @@ Clustering involves dividing points in a data set into a number of groups such t
 
 K-means clustering is one of the unsupervised machine learning algorithms. We define a target number k, which refers to the number of centroids we need in the dataset. As for the centroid, it is the imaginary or real location representing the center of the cluster. Each point in the dataset is assigned to each of the clusters by reducing the sum of squares within the cluster. Alternatively, the K-means algorithm identifies k number of centroids and then allocates each data point to the closest cluster, while keeping the centroids as small as possible. The “means” in K-means refer to the average of the data; i.e. find the center of gravity.
 
+**Data Exploration**
 
+Using the Seaborn module as well as the Matplotlib module, we will represent the distribution diagram with different variations of the data such as . The Distplot represents the data by a histogram and a line in combination with it.
+A Distplot or distribution diagram represents the variation in the distribution of data. Seaborn Distplot represents the overall distribution of continuous data variables.
