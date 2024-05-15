@@ -628,3 +628,5 @@ Initialization method with k-means++ allows to select the initial cluster centro
   <img alt="KMeans Clustering with scikit-learn and  K=5" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/algokmeansk5data5120w512k4.png" width=70% height=70%  title="KMeans Clustering with scikit-learn and  K=5"/>
 
 ###### **Applying KMeans Clustering with scikit-learn and  K=5** 
+
+the scatter plots in the form of a cloud of points thus show how the Temperature variable is affected by the CO2 concentration variable. Lon cannot deduce either a linear or non-linear correlation. While we observe a linear evolution of the 5 centroids
