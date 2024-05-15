@@ -614,7 +614,7 @@ K-means clustering is one of the unsupervised machine learning algorithms. We de
 
 **Data Exploration**
 
-Using the Seaborn module as well as the Matplotlib module, we will represent the distribution diagram with different variations of the data such as . The Distplot represents the data by a histogram and a line in combination with it.
+Using the Seaborn module as well as the Matplotlib module, we will represent the distribution diagram with different variations of the data such as [cluster1data5120w512.csv](https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/data/cluster1data5120w512.csv). The Distplot represents the data by a histogram and a line in combination with it.
 A Distplot or distribution diagram represents the variation in the distribution of data. Seaborn Distplot represents the overall distribution of continuous data variables.
 
   <img alt="Distribution Diagram" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/cluster1data5120wk4displot.png" width=70% height=70%  title="Distribution Diagram"/>
