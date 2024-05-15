@@ -413,10 +413,8 @@ bool ok = true;
 void onMqttMessage(int messageSize) {
 int i = 0;
 while (mqttClient.available()) {
-            my_str[i++] = (char)mqttClient.read();
-            //Serial.print((char)mqttClient.read());
-}
-my_str[i]= '\0';
+            my_str[i++] = (char)mqttClient.read();          
+            my_str[i]= '\0';
 
 if (!strcmp((const char *)my_str,(const char *)"0.0,0.0")) { 
             //Serial.print("End of the DATA reception, the name of data file is : "); 
