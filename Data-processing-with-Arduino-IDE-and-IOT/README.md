@@ -13,7 +13,7 @@
 
 ### [Experimental study of a data flow on the MQTT broker with the K-Means algorithm implemented](https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/EXPERIMENTATION/README.md)
 
-#### The ESP-WROOM-32D Microcontroller, MQTT
+#### The ESP-WROOM-32D Microcontroller, MQTT server and Arduino Program
 ##### Configuring the MQTT Broker server
 ##### Data management, data/celsius in csv format
 ##### Arduino program for receiving messages and printing the message on the serial port
