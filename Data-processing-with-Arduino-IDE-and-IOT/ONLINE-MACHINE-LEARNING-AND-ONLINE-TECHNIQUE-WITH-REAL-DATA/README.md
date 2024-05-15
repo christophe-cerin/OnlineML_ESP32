@@ -606,3 +606,10 @@ Looking at this table, we can say that the ESP32 microcontroller can easily rece
 
 This input file contains the basic information (ID, CO2, T(°C), Cluster) about the datas recorded by the LNS. Cluster is something assign to the dataset based on the defined parameters like the behavior of datas recorded.
 
+**About K-Means Clustering**
+
+Clustering involves dividing points in a data set into a number of groups such that data points in the same groups are more similar to other data points in the same group than to those in other groups. The goal in clustering is to separate groups with similar characteristics and distribute them into clusters.
+
+K-means clustering is one of the unsupervised machine learning algorithms. We define a target number k, which refers to the number of centroids we need in the dataset. As for the centroid, it is the imaginary or real location representing the center of the cluster. Each point in the dataset is assigned to each of the clusters by reducing the sum of squares within the cluster. Alternatively, the K-means algorithm identifies k number of centroids and then allocates each data point to the closest cluster, while keeping the centroids as small as possible. The “means” in K-means refer to the average of the data; i.e. find the center of gravity.
+
+
