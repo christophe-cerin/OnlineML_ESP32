@@ -625,7 +625,7 @@ A Distplot or distribution diagram represents the variation in the distribution 
 **Applying KMeans Clustering with scikit-learn and  K=5**
 
 K is The number of clusters to form as well as the number of centroids to generate.
-Initialization method with k-means++' allows to select the initial cluster centroids using sampling based on an empirical probability distribution of the points' contribution to the overall inertia.
+Initialization method with k-means++ allows to select the initial cluster centroids using sampling based on an empirical probability distribution of the points contribution to the overall inertia.
 
   <img alt="KMeans Clustering with scikit-learn and  K=5" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/algokmeansk5data5120w512k4.png" width=70% height=70%  title="KMeans Clustering with scikit-learn and  K=5"/>
 
