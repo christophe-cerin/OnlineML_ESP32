@@ -621,3 +621,12 @@ A Distplot or distribution diagram represents the variation in the distribution 
 
 
 ###### **Distribution Diagram ELSYS_ERS_CO2, ERS_CO2_48B30 W=512, Data= 5120, K=4** 
+
+**Applying KMeans Clustering with scikit-learn and  K=5**
+
+
+Method for initialization k-means++’ : selects initial cluster centroids using sampling based on an empirical probability distribution of the points’ contribution to the overall inertia. This technique speeds up convergence
+
+  <img alt="KMeans Clustering with scikit-learn and  K=5" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/algokmeansk5data5120w512k4.png" width=70% height=70%  title="KMeans Clustering with scikit-learn and  K=5"/>
+
+###### **Applying KMeans Clustering with scikit-learn and  K=5** 
