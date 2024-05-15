@@ -20,6 +20,7 @@
 #### Motivations and Challenges
 #### Tower Perret (Grenobles) – Data acquisition and exploitation by LoRaWAN
 #### Data analysis: Using data from Tower Perret, Local MQTT server and Arduino IDE
+#### KMeans Clustering for the CampusIOT's LoRaWAN Datasets
 
 ### [Measuring the amount of electricity consumed by the ESP32-VROOM-32D during data processing with Arduino](https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/MEASURE-THE-AMOUNT-OF-ELECTRICITY-CONSUMED/README.md)
 #### Necessary material
