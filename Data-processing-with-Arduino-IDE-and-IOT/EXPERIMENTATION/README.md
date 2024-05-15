@@ -1,4 +1,4 @@
-## The ESP-WROOM-32D Microcontroller, MQTT
+## The ESP-WROOM-32D Microcontroller, MQTT server and Arduino Program
 Broker IP Address : 10.10.6.228 and the Arduino-IDE on the computer
 portable
 
