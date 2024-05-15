@@ -629,4 +629,4 @@ Initialization method with k-means++ allows to select the initial cluster centro
 
 ###### **Applying KMeans Clustering with scikit-learn and  K=5** 
 
-the scatter plots in the form of a cloud of points thus show how the Temperature variable is affected by the CO2 concentration variable. Lon cannot deduce either a linear or non-linear correlation. While we observe a linear evolution of the 5 centroids
+the scatter plots in the form of a cloud of points thus show how the Temperature variable is affected by the CO2 concentration variable. We cannot deduce either a linear or non-linear correlation. While we observe a linear evolution of the 5 centroids
