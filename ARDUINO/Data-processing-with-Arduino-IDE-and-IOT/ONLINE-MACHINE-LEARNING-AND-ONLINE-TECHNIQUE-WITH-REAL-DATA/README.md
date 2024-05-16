@@ -615,7 +615,7 @@ K-means clustering is one of the unsupervised machine learning algorithms. We de
 Using the Seaborn module as well as the Matplotlib module, we will represent the distribution diagram with different variations of the data such as [cluster1data5120w512.csv](https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/data/cluster1data5120w512.csv). The Distplot represents the data by a histogram and a line in combination with it.
 A Distplot or distribution diagram represents the variation in the distribution of data. Seaborn Distplot represents the overall distribution of continuous data variables.
 
-  <img alt="Distribution Diagram" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/cluster1data5120wk4displot.png" width=70% height=70%  title="Distribution Diagram"/>
+  <img alt="Distribution Diagram" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/cluster1data5120wk4displot.png" width=70% height=70%  title="Distribution Diagram"/>
 
 
 ###### **Distribution Diagram ELSYS_ERS_CO2, ERS_CO2_48B30 W=512, Data= 5120, K=4** 
@@ -625,7 +625,7 @@ A Distplot or distribution diagram represents the variation in the distribution 
 K is The number of clusters to form as well as the number of centroids to generate.
 Initialization method with k-means++ allows to select the initial cluster centroids using sampling based on an empirical probability distribution of the points contribution to the overall inertia.
 
-  <img alt="KMeans Clustering with scikit-learn and  K=5" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/algokmeansk5data5120w512k4.png" width=70% height=70%  title="KMeans Clustering with scikit-learn and  K=5"/>
+  <img alt="KMeans Clustering with scikit-learn and  K=5" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/algokmeansk5data5120w512k4.png" width=70% height=70%  title="KMeans Clustering with scikit-learn and  K=5"/>
 
 ###### **Applying KMeans Clustering with scikit-learn and  K=5** 
 
