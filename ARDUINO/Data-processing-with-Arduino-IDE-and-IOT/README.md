@@ -1,12 +1,12 @@
 ## SECTION TABLE OF CONTENTS Data Processing with Arduino IDE and Internet Of Things (IOT)
 
 ### [Presentation of Tools](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ARDUINO-ESP32WROOM32D/README.md)
-**Contents**
+**Contents : **
 #### IDE (Integrated Development Environment): ARDUINO
 #### ESP-WROOM-32D, a microcontroller
 
 ### [Use of the MQTT protocol combined with the Kmeans algorithm and a Data Flow](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/MQTT-KMEANS-DATAFLOW/README.md)
-**Contents**
+**Contents : **
 #### Functional architecture of the system
 #### Data Flow and Design
 #### [MQTT Broker](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/MQTT-PRINCIPLE/README.md)
