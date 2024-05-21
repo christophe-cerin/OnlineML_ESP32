@@ -12,7 +12,7 @@
 ##### Intervention and Adaptation of the K-Means algorithm
 ##### Send and receive data over the serial channel of the Arduino IDE
 
-#### Content of the subsection : [Experimental study of a data flow on the MQTT broker and with the IDE Arduino](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/EXPERIMENTATION/README.md)
+#### Content of the subsection : [Experimental study of a data flow on the MQTT broker with the IDE Arduino](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/EXPERIMENTATION/README.md)
 ##### The ESP-WROOM-32D Microcontroller, MQTT server and Arduino Program
 ###### Configuring the MQTT Broker server
 ###### Data management, data/celsius in csv format
