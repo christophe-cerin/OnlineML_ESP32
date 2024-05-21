@@ -19,7 +19,7 @@
 ###### Arduino program for receiving messages and printing the message on the serial port
 ###### Results
 
-#### Content of the subsection : [Online machine learning and online learning technique with CampusIOT's LoRaWAN Datasets](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/README.md)
+#### Content of the subsection : [Online machine learning and technique with CampusIOT's LoRaWAN Datasets and the Kmeans Clustering Algorithm Implemented](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/README.md)
 ##### Motivations and Challenges
 ##### Tower Perret (Grenobles) – Data acquisition and exploitation by LoRaWAN
 ##### Data analysis: Using data from Tower Perret, Local MQTT server and Arduino IDE
