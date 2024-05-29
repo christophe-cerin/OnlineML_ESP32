@@ -17,7 +17,7 @@
 ###### 1.3.1- Configuring the MQTT Broker server
 ###### 1.3.2- Data management, data/celsius in csv format
 ###### 1.3.3- Arduino program for receiving messages and printing the message on the serial port
-###### Results
+###### 1.3.4- Results
 
 #### Content of the subsection : [1.4 - Online machine learning and online technique with CampusIOT's LoRaWAN Datasets and the Kmeans Clustering Algorithm Implemented](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/README.md)
 ##### 1.4.1- Motivations and Challenges
