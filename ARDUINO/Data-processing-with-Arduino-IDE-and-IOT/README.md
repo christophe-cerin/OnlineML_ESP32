@@ -13,10 +13,10 @@
 
 ### Content of the subsection : [3- Experimental study of a data flow on the MQTT broker with the IDE Arduino](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/EXPERIMENTATION/README.md)
 #### The ESP-WROOM-32D Microcontroller, MQTT server and Arduino Program
-##### Configuring the MQTT Broker server
-##### Data management, data/celsius in csv format
-##### Arduino program for receiving messages and printing the message on the serial port
-##### Results
+##### 3.1- Configuring the MQTT Broker server
+##### 3.2- Data management, data/celsius in csv format
+##### 3.3- Arduino program for receiving messages and printing the message on the serial port
+##### 3.4- Results
 
 ### Content of the subsection : [4- Online machine learning and online learning technique with CampusIOT's LoRaWAN Datasets and the Kmeans Clustering Algorithm Implemented](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/README.md)
 #### 4.1- Motivations and Challenges
