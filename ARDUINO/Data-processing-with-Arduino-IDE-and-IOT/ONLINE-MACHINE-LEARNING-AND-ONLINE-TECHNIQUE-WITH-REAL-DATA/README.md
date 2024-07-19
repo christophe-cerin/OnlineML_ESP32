@@ -32,6 +32,10 @@ The data from the ELSYS-ERS sensor from January 1 at 00:05 a.m. to January 31 at
 
 **The 512 lines correspond to 4 days of recording from January 1 to 4, 2021**
 
+The 512 lines correspond to 4 days of recording from January 1 to 4, 2021
+
+Let's look again through these 4 figures at the evolution of the temperature as a function of CO2 concentration. Overall, we obtain Gaussian curves with a significant increase in temperature and CO2 concentration between 10 a.m. and 5 p.m.
+
 <img alt="Message Flow, Average temperature data per hour depending on the CO2 concentration from January 1, 2021" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/TempCO2-20210101perHour.png" width=60% height=60%  title="Average temperature data per hour depending on the CO2 concentration from January 1, 2021"/>
 
 <img alt="Message Flow, Average temperature data per hour depending on the CO2 concentration from January 2, 2021" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ONLINE-MACHINE-LEARNING-AND-ONLINE-TECHNIQUE-WITH-REAL-DATA/images/TempCO2-20210102perHour.png" width=60% height=60%  title="Average temperature data per hour depending on the CO2 concentration from January 2, 2021"/>
