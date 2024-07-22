@@ -1,4 +1,8 @@
 /*
+Created : 2024, July 2024
+Implemented by : M. SOW
+Dataset from CampusIOT ELSYS
+
 knn algorithm:
 
 1. get neighbors by euclidean distance
@@ -79,7 +83,7 @@ double predict(
 int main() {
     
     vector<vector<double>> trainSet = {
-		{264,20,2},
+{264,20,2},
 {269,21.7,2},
 {262,20.1,1},
 {266,21.6,2},
