@@ -8,7 +8,7 @@ This repository contains implementations of various anomaly detection algorithms
 4) One-Class SVM
 
 ### Pre-requisites
-MicroPython-ulab: Ensure you have MicroPython installed on your ESP32. You can find installation instructions in MICROPYTHON-ULAB.
+MicroPython-ulab: Ensure you have MicroPython-ulab installed on your ESP32. You can find installation instructions in MICROPYTHON-ULAB.
 
 ### Example Usage
 
