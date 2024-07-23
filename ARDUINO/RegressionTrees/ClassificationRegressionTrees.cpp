@@ -1,7 +1,11 @@
-/* mainco2t.cpp
-CART (Classification and Regression Trees)
+/* 
 
-https://github.com/magikerwin/ML-From-Scratch-With-CPP/tree/main/RegressionTrees
+
+Created : 2024, July 2024
+Implemented by : M. SOW
+Dataset from CampusIOT ELSYS
+
+CART (Classification and Regression Trees)
 
 Regression:
 The cost function that is minimized to choose split points is the sum squared error across all training samples that fall within the rectangle.
