@@ -1,4 +1,4 @@
-## Regression Trees: CART (classification and regression trees) in machine learning
+## Regression Trees: CART (classification and regression trees) in machine learning
 
 CART is a variant of the decision tree algorithm. It is a predictive algorithm that explains how the values ​​of the target variable can be predicted based on others.  
 
@@ -19,7 +19,7 @@ Classification: The Gini cost function is used to provide an indication of node 
  4. Make a prediction
 
 
-## Result of program execution 
+## Result of program execution 
 
 ```
 ./RegressionTrees
