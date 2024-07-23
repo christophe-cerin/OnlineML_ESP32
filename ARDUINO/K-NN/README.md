@@ -1,4 +1,4 @@
-## Neighborhood Algorithm (KNN): What is the Nearest Neighbor Algorithm ?¶
+## Neighborhood Algorithm (KNN): What is the Nearest Neighbor Algorithm ?
 
 The K-Nearest Neighbors (KNN) algorithm is a supervised machine learning method used to address classification and regression problems in pattern recognition, data mining, and intrusion detection.
 
