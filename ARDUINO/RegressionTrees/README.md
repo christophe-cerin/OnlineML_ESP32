@@ -13,9 +13,9 @@ Classification: The Gini cost function is used to provide an indication of node 
   - A value of 0.5 indicates that elements are evenly distributed in certain classes.
  2. Create a division
  3. Build a tree
- 3.1 Leaf nodes (maximum tree depth, minimum number of node records)
- 3.2 Recursive slicing
- 3.3 Building a tree
+  3.1 Leaf nodes (maximum tree depth, minimum number of node records)
+  3.2 Recursive slicing
+  3.3 Building a tree
  4. Make a prediction
 
 
