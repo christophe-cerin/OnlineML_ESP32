@@ -1,4 +1,4 @@
-## Multiple linear regression
+## Multiple Linear Regression
 
 Unlike simple linear regression, multiple linear regression allows more than two independent variables to be taken into account. The objective is to estimate a variable based on several other variables. The variable to be estimated is called the dependent variable (criterion). The variables used for prediction are called independent variables (predictors).
 
