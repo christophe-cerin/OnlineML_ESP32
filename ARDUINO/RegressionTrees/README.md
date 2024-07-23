@@ -24,7 +24,7 @@ Classification: The Gini cost function is used to provide an indication of node 
 ## Result of program execution 
 
 ```
-./RegressionTrees
+./ClassificationRegressionTrees
 depth: 0, featureIdx: 0, featureValue: 272
 depth: 1, label: 2
 depth: 1, label: 3
