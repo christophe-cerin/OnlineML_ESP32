@@ -1,4 +1,4 @@
-## Regression Trees: CART (classification and regression trees) in machine learning
+## Regression Trees : CART (classification and regression trees)
 
 CART is a variant of the decision tree algorithm. It is a predictive algorithm that explains how the values ​​of the target variable can be predicted based on others.  
 
