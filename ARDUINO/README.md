@@ -29,3 +29,14 @@
 ##### 1.5.1- Necessary material
 ##### 1.5.2- Handling : follow the steps as indicated
 ##### 1.5.3- Exploitation of results
+
+#### 1.6 - Implementations of the Classic Machine Learning Algorithm with C++
+
+Most machine learning implementations are based on Python, here are some algorithms we implemented in C++ language
+
+##### [1.6.1- K-Means](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/K-Means)
+##### [1.6.2- K-NN](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/K-NN)
+##### [1.6.3- Simple Linear Regression](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/SIMPLE-LINEAR-Regression)
+##### [1.6.4- Multiple Linear Regression](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/MULTIPLE-LINEAR-Regression)
+##### [1.6.5- Regression Tree](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/RegressionTrees)
+
