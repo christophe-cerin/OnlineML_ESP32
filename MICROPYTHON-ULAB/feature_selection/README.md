@@ -31,7 +31,7 @@ example()
 
  ```
 
-####Poisson Inclusion
+#### Poisson Inclusion
 Randomly selects features based on a probability of inclusion. Features are added with a probability p using a geometric distribution.
  ```
 def example():
