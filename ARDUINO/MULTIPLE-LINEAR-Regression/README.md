@@ -5,6 +5,7 @@ Unlike simple linear regression, multiple linear regression allows more than two
 ## The Result of Programm Execution
 
 ```
+./MultipleLinearRegression
 epoch: 0, error: 7.07728e+36
 epoch: 1, error: 2.02122e+42
 epoch: 2, error: 5.79419e+47
