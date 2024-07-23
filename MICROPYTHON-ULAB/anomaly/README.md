@@ -1,6 +1,6 @@
 
 # Anomaly Detection Algorithms for MicroPython on ESP32
-This repository contains implementations of various anomaly detection algorithms for MicroPython, specifically designed to run on the ESP32. The algorithms included are:
+This repository contains implementations of various anomaly detection algorithms for MicroPython, specifically designed to run on the ESP32. These algorithms are conversions of the main River algorithms, which can be viewed [here](https://github.com/online-ml/river/tree/main/river/anomaly). Due to the limited functionality of micropython-ulab, which does not support the full River algorithms, we have converted the River code into micropython-ulab compatible versions as described in this repository. The algorithms included are:
 
 1) Local Outlier Factor (LOF)
 2) Half-Space Trees (HST)
