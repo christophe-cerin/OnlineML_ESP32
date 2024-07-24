@@ -4,7 +4,7 @@ Unlike simple linear regression, multiple linear regression allows more than two
 
 ## [Program MultipleLinearRegression.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/MULTIPLE-LINEAR-Regression/MultipleLinearRegression.cpp)
 
-## The Result of Programm Execution
+## The Result of Program Execution
 
 ```
 ./MultipleLinearRegression
