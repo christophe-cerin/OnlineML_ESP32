@@ -6,7 +6,7 @@ It is widely used in real-world scenarios because it is non-parametric, meaning 
 
 ## [Program knn.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/K-NN/knn.cpp)
 
-## The Result of Programm Execution
+## The Result of Program Execution
 ```
 ./knn
 input: {264, 20}, prediction: 2
