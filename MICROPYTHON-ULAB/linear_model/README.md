@@ -1,4 +1,4 @@
-## Linear Model for MicroPython on ESP32
+## Linear Model for MicroPython-Ulab on ESP32
 The goal of this repository is to provide accessible implementations of common machine learning models that can run in 
 resource-limited environments, specifically designed to run on the ESP32. These models are conversions of the main [River](https://riverml.xyz/latest/) algorithms, which can be viewed [here](https://github.com/online-ml/river/tree/main/river/linear_model). Due to the limited functionality of micropython-ulab, which does not support the full River algorithms, we have converted the River code into micropython-ulab compatible versions as described in this repository. 
 The tools are designed for use with MicroPython on ESP32 devices, leveraging the micropython-ulab library for numerical operations.
