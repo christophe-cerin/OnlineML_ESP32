@@ -1,5 +1,6 @@
 ## Feature Extraction code for MicroPython on ESP32
-This repository contains Python code for various feature extraction techniques useful for data preprocessing and model improvement. 
+
+This repository contains Python code for various feature extraction techniques useful for data preprocessing and model improvement, specifically designed to run on the ESP32. These algorithms are conversions of the main [River](https://riverml.xyz/latest/) algorithms, which can be viewed [here](https://github.com/online-ml/river/tree/main/river/anomaly). Due to the limited functionality of micropython-ulab, which does not support the full River algorithms, we have converted the River code into micropython-ulab compatible versions as described in this repository. 
 The tools are designed for use with MicroPython on ESP32 devices, leveraging the micropython-ulab library for numerical operations.
 
 ### Pre-requisites
