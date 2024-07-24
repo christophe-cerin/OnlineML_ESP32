@@ -14,23 +14,23 @@ The repository includes the following components:
 
 #### Time Series Forecasting Models:
 
-Holt-Winters: Implements the Holt-Winters method for exponential smoothing, supporting both additive and multiplicative seasonal components.
-SNARIMAX: Implements a Seasonal Non-Additive AutoRegressive Integrated Moving Average model (SNARIMAX) with differencing.
+Holt-Winters: Implements the Holt-Winters method for exponential smoothing, supporting both additive and multiplicative seasonal components.  <br /> 
+SNARIMAX**: Implements a Seasonal Non-Additive AutoRegressive Integrated Moving Average model (SNARIMAX) with differencing.
 
 #### Metrics:
 
-HorizonMetric: A class for calculating metrics over a forecasting horizon.
-HorizonAggMetric: Aggregates horizon metrics using a specified aggregation function.
-DummyMetric: A placeholder metric for testing purposes.
+HorizonMetric: A class for calculating metrics over a forecasting horizon.  <br /> 
+HorizonAggMetric**: Aggregates horizon metrics using a specified aggregation function.  <br /> 
+DummyMetric**: A placeholder metric for testing purposes.
 
 #### Utilities:
 
-FixedQueue: A fixed-size queue implementation for handling data with a maximum length.
-Differencer: A class for differencing time series data to make it stationary.
+FixedQueue**: A fixed-size queue implementation for handling data with a maximum length.  <br /> 
+Differencer**: A class for differencing time series data to make it stationary.
 
 #### Evaluation:
 
-Iterative Evaluation: Functions for evaluating models over a rolling horizon, including an example of calculating mean absolute error.
+Iterative Evaluation**: Functions for evaluating models over a rolling horizon, including an example of calculating mean absolute error.
 
 
 
