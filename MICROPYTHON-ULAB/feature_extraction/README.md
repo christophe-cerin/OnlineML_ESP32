@@ -4,7 +4,7 @@ This repository contains Python code for various feature extraction techniques u
 The tools are designed for use with MicroPython on ESP32 devices, leveraging the micropython-ulab library for numerical operations.
 
 ### Pre-requisites
-MicroPython-ulab: Ensure you have MicroPython-ulab installed on your ESP32. You can find installation instructions in MICROPYTHON-ULAB.
+MicroPython-ulab: Ensure you have MicroPython-ulab installed on your ESP32. You can find installation instructions in [MICROPYTHON-ULAB](https://github.com/online-ml/river/tree/main/river/feature_extraction)
 
 ### Example Usage
 
