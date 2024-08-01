@@ -12,4 +12,4 @@ creating an algorithm which has a linear time complexity with a low constant and
 iForest also works well in high dimensional problems which have a large number of irrelevant attributes, and in situations where training set does not contain any anomalies.
 
 
-## The Result of Program Execution ##
+## The Result of Program Execution ##
