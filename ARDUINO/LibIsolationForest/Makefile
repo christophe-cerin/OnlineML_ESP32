@@ -2,17 +2,18 @@ CFLAGS=-Wall -O3 -std=c++11
 
 .PHONY: all clean 
 
-all : IsolationForest
+all : IsolationForestiForestpy
 
-IsolationForest : main.o IsolationForest.o 
+IsolationForestiForestpy : main-iForestpy.o IsolationForestiForestpy.o 
 	${CXX} ${CFLAGS} $^ -o $@ ${LDFLAGS} 
 
-main.o : main.cpp
+main-iForestpy.o : main-iForestpy.cpp
 	${CXX} ${CFLAGS} -c $^ -o $@
 
-IsolationForest.o : IsolationForest.cpp
+IsolationForestiForestpy.o : IsolationForestiForestpy.cpp
 	${CXX} ${CFLAGS} -c $^ -o $@
 
 clean : 
-	#-rm -f *.o IsolationForest
+	#-rm -f *.o IsolationForestiForestpy
 	-rm -f *.o 
+
