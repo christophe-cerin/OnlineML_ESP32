@@ -10,3 +10,6 @@ This method proposes a fundamentally different model-based method that explicitl
 The use of isolation enables the proposed method, iForest, to exploit sub-sampling to an extent that is not feasible in existing methods, 
 creating an algorithm which has a linear time complexity with a low constant and a low memory requirement.  
 iForest also works well in high dimensional problems which have a large number of irrelevant attributes, and in situations where training set does not contain any anomalies.
+
+
+## The Result of Program Execution ##
