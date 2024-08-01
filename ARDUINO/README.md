@@ -39,4 +39,5 @@ Most machine learning implementations are based on Python, here are some algorit
 ##### [1.6.3- Simple Linear Regression](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/SIMPLE-LINEAR-Regression)
 ##### [1.6.4- Multiple Linear Regression](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/MULTIPLE-LINEAR-Regression)
 ##### [1.6.5- Regression Tree](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/RegressionTrees)
+##### [1.6.6- LibIsolationForest](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/LibIsolationForest)
 
