@@ -1,4 +1,4 @@
-//	MIT License
+/	MIT License
 //
 //  Copyright © 2017 Michael J Simms. All rights reserved.
 //
@@ -22,7 +22,7 @@
 
 // This file contains test and example code for using the C++ IsolationForest implementation.
 
-#include "IsolationForest.h"
+#include "IsolationForestiForestpy.h"
 #include <stdlib.h>
 #include <inttypes.h>
 #include <iostream>
@@ -38,8 +38,57 @@
 #include <pthread.h>
 #include <cmath>
 // sow fin
+//
+// numTrainingSamples = 
+// numTestSamples = 
+// numTrees =  n_trees
+// subSamplingSize = 
+// dump = 
+// features =
+// sample =
+//
+//
+//== 
+// IForest en python :
+// IsolationTreeEnsemble :
+//        sample_size = sample_size
+//        n_trees = n_trees
+//        depth = np.log2(sample_size)
+//        trees = []
+//        random_state = random_state
+//        _random_state = check_random_state(self.random_state)
+//        is_learning_phase_on = True 
+//
+// IsolationTree :
+//       depth = height_limit
+//       current_height = current_height
+//       split_by = None
+//       split_value = None
+//       right = None
+//       left = None
+//       size = 0
+//       exnodes = 0
+//       n_nodes = 1
+//==
+// IsolationForestStream avec scikitmultiflow en python :
+// 	n_estimators = n_estimators
+// 	ensemble = None      
+// 	random_state = random_state
+// 	window_size = window_size
+// 	samples_seen = 0
+// 	anomaly_rate = 0.20 
+// 	anomaly_threshold = anomaly_threshold
+// 	drift_threshold = drift_threshold
+// 	window = None
+// 	prec_window = None
+// 	cpt = 0
+//
+//
+//
 
-using namespace IsolationForest;
+
+
+using namespace IsolationForestiForestpy;
 
 void test(std::ofstream& outStream, size_t numTrainingSamples, size_t numTestSamples, uint32_t numTrees, uint32_t subSamplingSize, bool dump)
 {
@@ -47,7 +96,9 @@ void test(std::ofstream& outStream, size_t numTrainingSamples, size_t numTestSam
 
 	std::chrono::high_resolution_clock::time_point startTime = std::chrono::high_resolution_clock::now();
 
-	// Create some training samples.
+	// 
+	// Créez des exemples d'entraînement.
+	//
 	for (size_t i = 0; i < numTrainingSamples; ++i)
 	{
 		Sample sample("training");
@@ -156,7 +207,7 @@ int main(int argc, const char * argv[])
 	std::ofstream outStream;
 	bool dump = false;
 
-	// Parse the command line arguments.
+	// Analysez les arguments de la ligne de commande.
 	for (int i = 1; i < argc; ++i)
 	{
 		if ((strncmp(argv[i], ARG_OUTFILE, strlen(ARG_OUTFILE)) == 0) && (i + 1 < argc))
