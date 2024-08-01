@@ -14,7 +14,7 @@ iForest also works well in high dimensional problems which have a large number o
 
 ## The Result of Program Execution ##
 ```
-/IsolationForestiForestpy
+./IsolationForestiForestpy
 Test 1:
 -------
 Average of control test samples: 8.04
