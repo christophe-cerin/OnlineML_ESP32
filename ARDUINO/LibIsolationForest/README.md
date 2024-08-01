@@ -13,3 +13,22 @@ iForest also works well in high dimensional problems which have a large number o
 
 
 ## The Result of Program Execution ##
+```
+/IsolationForestiForestpy
+Test 1:
+-------
+Average of control test samples: 8.04
+Average of control test samples (normalized): 0.29638
+Average of outlier test samples: 5.13
+Average of outlier test samples (normalized): 0.461102
+Total time for Test 1: 0.00878337 seconds.
+
+Test 2:
+-------
+Average of control test samples: 8.7015
+Average of control test samples (normalized): 0.525309
+Average of outlier test samples: 5.0771
+Average of outlier test samples (normalized): 0.687113
+Total time for Test 1: 0.0489592 seconds.
+
+```
