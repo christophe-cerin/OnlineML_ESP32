@@ -1,4 +1,5 @@
-## LibIsolationForest
+## LibIsolationForest ##
+
 Isolation Forest is an anomaly detection algorithm based around a collection of randomly generated decision trees.
 
 It is an accurate and efficient anomaly detector especially for large databases. Its capacity in handling high
