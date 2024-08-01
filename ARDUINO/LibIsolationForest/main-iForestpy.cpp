@@ -1,4 +1,10 @@
-/	MIT License
+/*
+Created : 2024, July 2024
+Implemented by : M. SOW
+
+*/
+
+//	MIT License
 //
 //  Copyright © 2017 Michael J Simms. All rights reserved.
 //
