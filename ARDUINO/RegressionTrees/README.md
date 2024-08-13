@@ -9,7 +9,7 @@ Classification: The Gini cost function is used to provide an indication of node 
  Gini Index (cost function for evaluating splits in the dataset): The Gini Index is a measure for classification tasks in CART. It stores the sum of the squared probabilities of each class. It calculates the degree of probability of a specific variable being misclassified when chosen randomly and a change in the Gini coefficient. It operates on categorical variables, provides "pass" or "fail" results and therefore only conducts binary splitting. 
 
  
- 1.The degree of the Gini index varies from 0 to 1,  
+ 1. The degree of the Gini index varies from 0 to 1,  
    - Where 0 represents that all elements are allied to a certain class, or that only one class exists there.
    - Gini value index 1 means that all elements are randomly distributed among different classes, and
    - A value of 0.5 indicates that elements are evenly distributed in certain classes.
