@@ -10,9 +10,9 @@ Classification: The Gini cost function is used to provide an indication of node 
 
  
  1.The degree of the Gini index varies from 0 to 1,  
-  - Where 0 represents that all elements are allied to a certain class, or that only one class exists there.
-  - Gini value index 1 means that all elements are randomly distributed among different classes, and
-  - A value of 0.5 indicates that elements are evenly distributed in certain classes.
+   - Where 0 represents that all elements are allied to a certain class, or that only one class exists there.
+   - Gini value index 1 means that all elements are randomly distributed among different classes, and
+   - A value of 0.5 indicates that elements are evenly distributed in certain classes.
  2. Create a division
  3. Build a tree  
   3.1 Leaf nodes (maximum tree depth, minimum number of node records)  
