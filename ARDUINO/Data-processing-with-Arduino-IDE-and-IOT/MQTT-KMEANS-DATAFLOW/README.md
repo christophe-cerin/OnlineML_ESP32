@@ -97,7 +97,7 @@ The data flow will be as follows:
 ## Design
 
 Details of some essential algorithms
-``
+``` 
 __________________________________________________________________________________
 **Algorithm 1** : Authentication method
 __________________________________________________________________________________
@@ -116,7 +116,7 @@ Status = error;
 
 **end**
 ________________________________________________________________________________
-``
+``` 
 This previous pseudo algorithm represents the following authentication method:
 1. The method takes two string type parameters which will be the name
 username and password
