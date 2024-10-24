@@ -7,3 +7,11 @@ It is therefore possible to easily determine the input variance of each neuron o
 
 Ultimately, AHG is only justified when it is possible to limit ourselves to the first essential components. However, this is often the case, because they constitute the majority of the information present in the data. Finally, like PCA, HGA is an exclusively linear technique capable of identifying only linear correlations between data (i.e. it is based solely on covariance).
 
+By analogy with neurobiology, the neural network is composed of neurons connected to each other.A system like this consists of a network of interconnected small automata that automatically modify the parameters (weights) recurrently.
+• the global mechanism that facilitates the achievement of desired tasks (generally a categorization or a diagnosis)
+• the absence of information localization
+• a largely parallel operation
+• the artificial creation of meaning (by seeking a correlation between the data)
+• self-organization
+• the emergence of global configurations based on connections between simple components
+• a system devoid of determination. 
