@@ -6,4 +6,3 @@ However, GHA has some drawbacks. As is often the case with neural techniques, th
 
 In short, AHG is only justified when we can be satisfied with the first principal components. But this is often the case, since they represent the largest part of the information contained in the data. Finally, like PCA, HGA is a purely linear method that can only capture linear correlations between data (this is actually equivalent to using only covariance).
 
-This is probably sufficient for processing documents, but if one wants to overcome this limitation, one should consider other methods such as Independent Component Analysis (see Hérault & Jutten 1994) or Kohonen Maps (Ritter & Kohonen 1989)(Kohonen 1998).
