@@ -25,17 +25,17 @@ By analogy with neurobiology, the neural network is composed of neurons connecte
   - Elementary and parallel calculations
   - Data/information distributed in the network
 
-Each neuron connection is assigned a weight modulating the transmission of activity
-• these weights are gradually adjusted by learning procedures from an iterative presentation of the data
-• this allows the system to be adapted according to the inputs in order to solve the problem posed
-• there are various methods but unsupervised Hebbian learning, which requires input data without other information, is our center of interest
+**Each neuron connection is assigned a weight modulating the transmission of activity**
+- these weights are gradually adjusted by learning procedures from an iterative presentation of the data
+- this allows the system to be adapted according to the inputs in order to solve the problem posed
+- there are various methods but unsupervised Hebbian learning, which requires input data without other information, is our center of interest
 
-Application areas
-• Classification
-◦ divide objects into several classes
-◦ quantitative data => qualitative information
-◦ pattern recognition
-• Operational Research
-◦ solve problems for which the solution is not known
-• Associative Memory
-◦ restore data from incomplete and/or noisy information
+**Application areas**
+- Classification
+  - divide objects into several classes
+  - quantitative data => qualitative information
+  - pattern recognition
+- Operational Research
+  - solve problems for which the solution is not known
+- Associative Memory
+  - restore data from incomplete and/or noisy information
