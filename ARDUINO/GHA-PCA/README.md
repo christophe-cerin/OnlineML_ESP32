@@ -16,3 +16,26 @@ By analogy with neurobiology, the neural network is composed of neurons connecte
 - self-organization
 - the emergence of global configurations based on connections between simple components
 - a system devoid of determination. 
+
+**Each formal neuron**
+- calculates the weighted sum of its inputs
+- transmits its internal state to the neurons to which it is connected
+- some neurons will serve as input, and others as output, the processing is distributed across the entire network
+- Parallel Distributed Processing
+  - Elementary and parallel calculations
+  - Data/information distributed in the network
+
+Each neuron connection is assigned a weight modulating the transmission of activity
+• these weights are gradually adjusted by learning procedures from an iterative presentation of the data
+• this allows the system to be adapted according to the inputs in order to solve the problem posed
+• there are various methods but unsupervised Hebbian learning, which requires input data without other information, is our center of interest
+
+Application areas
+• Classification
+◦ divide objects into several classes
+◦ quantitative data => qualitative information
+◦ pattern recognition
+• Operational Research
+◦ solve problems for which the solution is not known
+• Associative Memory
+◦ restore data from incomplete and/or noisy information
