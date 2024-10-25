@@ -58,3 +58,7 @@ We consider a data table ***X*** where ***X*** is a matrix with ***n x p*** nume
 <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/Matricex.png" width=30% height=30%  title="Matrice X"/>
 </center>
 </picture>
+
+It should be noted:
+
+***X=(x<sub>ij</sub>)<sub>nXp</sub>***
