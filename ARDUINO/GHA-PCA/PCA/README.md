@@ -13,8 +13,8 @@ This technique can serve as a dual purpose data compression method and explorati
 
 In PCA, the data are presented in a table X with n rows and p columns where
   
-  • each row represents an individual 
-  • each column represents a variable
+  - each row represents an individual
+  - each column represents a variable
 
 The variables have a quantitative nature: the matrix X is composed of numerical values. It is the variance-covariance matrix (or that of correlations) that will allow an appropriate summary to be made, because it focuses mainly on the distribution of the data in question.
 
