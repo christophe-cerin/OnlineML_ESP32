@@ -52,3 +52,5 @@ The use of the weight metric in the space of real variables ***F*** gives a very
 ### 1.4- Basic notions
 
 We consider a data table ***X*** where ***X*** is a matrix with ***n x p*** numerical values ​​where ***n*** individuals are described on ***p*** variables
+
+[Matrice X](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/Matricex.png)
