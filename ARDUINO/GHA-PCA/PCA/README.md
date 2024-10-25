@@ -70,3 +70,7 @@ It should be noted :
 ### 2- Graphs
 
 It is the interpretation of the graphs that will allow us to understand the structure of the analyzed data. This interpretation will be guided by a certain number of numerical and graphic indicators, called interpretation aids, which are there to help the user make the most accurate and objective interpretation possible.
+
+### 2.1- Individuals
+
+The graphs obtained make it possible to represent “as best as possible” the Euclidean distances between individuals measured by the metric M.
