@@ -66,5 +66,5 @@ It should be noted :
 | <img alt="x R" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/xiR.png"  width=80% height=80% title="Mx R"/> | <img alt="x R" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/xjR.png" width=80% height=80% title="Mx R"/> |
 | --- |  --- |
 | The description of the ith individual (line of X) is an element of | The description of the ith individual (line of X) is an element of |
-| --- |  --- |
+
 
