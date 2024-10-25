@@ -1,6 +1,6 @@
 ## Principal Component Analysis (PCA) or Neural Factor Analysis (NFA)
 
-CA aims to return to a limited dimensional space by distorting the possibilities of reality as little as possible. The objective is therefore to obtain the most appropriate synthesis possible of the preliminary information.
+PCA aims to return to a limited dimensional space by distorting the possibilities of reality as little as possible. The objective is therefore to obtain the most appropriate synthesis possible of the preliminary information.
 
 Indeed, PCA involves the calculation of a limited number of new dimensions, which represent the linear combinations of the initial dimensions of the data (i.e. descriptive characteristics). These new dimensions do not present any correlation and reflect the greatest variance of the information (based on the mean). In other words, it is a factorial technique of dimension reduction used for the statistical analysis of complex quantitative data.
 
