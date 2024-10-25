@@ -63,7 +63,7 @@ It should be noted :
 
 ***X=(x<sub>ij</sub>)<sub>n X p</sub>*** the raw data matrix where <img alt="x R" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/xR.png"  title="Mx R"/> is the value of the i th individual on the j th variable
 
-| <img alt="x R" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/xiR.png"  width=80% height=80% title="Mx R"/> | <img alt="x R" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/xjR.png" width=80% height=80% title="Mx R"/> |
+| <img alt="x R" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/xiR.png"  width=50% height=50% title="Mx R"/> | <img alt="x R" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/xjR.png" width=50% height=50% title="Mx R"/> |
 | --- |  --- |
 | The description of the ith individual (line of X) is an element of | The description of the ith individual (line of X) is an element of |
 
