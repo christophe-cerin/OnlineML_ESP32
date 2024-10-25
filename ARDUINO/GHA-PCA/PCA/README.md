@@ -19,3 +19,15 @@ In PCA, the data are presented in a table X with n rows and p columns where
 The variables have a quantitative nature: the matrix X is composed of numerical values. It is the variance-covariance matrix (or that of correlations) that will allow an appropriate summary to be made, because it focuses mainly on the distribution of the data in question.
 
 By an appropriate mathematical process, we will extract in small numbers the factors that we are looking for from this matrix. They will facilitate the creation of the desired diagrams in this restricted space (the number of factors chosen), while minimizing the general configuration of the individuals according to all the initial variables.
+
+### 1.2- Weight Metrics
+
+The use of the weight metric in the space of real variables F gives a very particular meaning to the usual notions defined on Euclidean spaces. The statistical interpretations of the properties are defined below:
+
+- The empirical mean of Xj is a static calculated from a sample of data on one or more random data
+- The Barycenter of individuals is the center of gravity or the point that allows to reduce certain linear combinations of vectors.
+- The Matrix of centered data X is a constant added to each column so that the mean is zero.
+- The Standard Deviation is important information when comparing the dispersion of two sets of data of similar size that have approximately the same mean
+- Covariance of Xj and Xk is slightly different from the variance. If the variance allows to study the variations of a variable in relation to itself. The covariance will allow to study the simultaneous variations of two variables in relation to their respective mean.
+- Covariance matrix S: These values ​​show the magnitude and direction of the distribution of multivariate data in a multidimensional space.
+- Correlation of Xj and Xk is a relationship between two things, two notions, two facts, one of which implies the other and vice versa.
