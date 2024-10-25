@@ -10,9 +10,12 @@ This technique can serve as a dual purpose data compression method and explorati
 
 ### 1- Mathematical Design
 #### 1.1- Data in PCA
+
 In PCA, the data are presented in a table X with n rows and p columns where
-  • each row represents an individual
+  
+  • each row represents an individual 
   • each column represents a variable
 
 The variables have a quantitative nature: the matrix X is composed of numerical values. It is the variance-covariance matrix (or that of correlations) that will allow an appropriate summary to be made, because it focuses mainly on the distribution of the data in question.
+
 By an appropriate mathematical process, we will extract in small numbers the factors that we are looking for from this matrix. They will facilitate the creation of the desired diagrams in this restricted space (the number of factors chosen), while minimizing the general configuration of the individuals according to all the initial variables.
