@@ -1,4 +1,4 @@
-## Principal Component Analysis (PCA) or Neural Factor Analysis
+## Principal Component Analysis (PCA) or Neural Factor Analysis (NFA)
 
 CA aims to return to a limited dimensional space by distorting the possibilities of reality as little as possible. The objective is therefore to obtain the most appropriate synthesis possible of the preliminary information.
 
