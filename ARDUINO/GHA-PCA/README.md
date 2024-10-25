@@ -40,7 +40,7 @@ By analogy with neurobiology, the neural network is composed of neurons connecte
 - Associative Memory
   - restore data from incomplete and/or noisy information
 
-Principal Component Analysis (PCA) or Neural Factor Analysis
+## Principal Component Analysis (PCA) or Neural Factor Analysis
 
 CA aims to return to a limited dimensional space by distorting the possibilities of reality as little as possible. The objective is therefore to obtain the most appropriate synthesis possible of the preliminary information.
 
