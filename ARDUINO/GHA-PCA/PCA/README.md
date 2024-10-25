@@ -73,4 +73,4 @@ It is the interpretation of the graphs that will allow us to understand the stru
 
 ### 2.1- Individuals
 
-The graphs obtained make it possible to represent “as best as possible” the Euclidean distances between individuals measured by the metric M.
+The graphs obtained make it possible to represent “as best as possible” the Euclidean distances between individuals measured by the metric ***M***.
