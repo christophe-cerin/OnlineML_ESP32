@@ -11,39 +11,39 @@ This technique can serve as a dual purpose data compression method and explorati
 ### 1- Mathematical Design
 #### 1.1- Data in PCA
 
-In PCA, the data are presented in a table X with n rows and p columns where
+In PCA, the data are presented in a table ***X*** with ***n*** rows and ***p*** columns where
   
   - each row represents an individual
   - each column represents a variable
 
-The variables have a quantitative nature: the matrix X is composed of numerical values. It is the variance-covariance matrix (or that of correlations) that will allow an appropriate summary to be made, because it focuses mainly on the distribution of the data in question.
+The variables have a quantitative nature: the matrix ***X*** is composed of numerical values. It is the variance-covariance matrix (or that of correlations) that will allow an appropriate summary to be made, because it focuses mainly on the distribution of the data in question.
 
 By an appropriate mathematical process, we will extract in small numbers the factors that we are looking for from this matrix. They will facilitate the creation of the desired diagrams in this restricted space (the number of factors chosen), while minimizing the general configuration of the individuals according to all the initial variables.
 
 ### 1.2- Weight Metrics
 
-The use of the weight metric in the space of real variables F gives a very particular meaning to the usual notions defined on Euclidean spaces. The statistical interpretations of the properties are defined below:
+The use of the weight metric in the space of real variables ***F*** gives a very particular meaning to the usual notions defined on Euclidean spaces. The statistical interpretations of the properties are defined below:
 
-- The empirical mean of **X<sup>j</sup>** is a static calculated from a sample of data on one or more random data
+- The empirical mean of ***X<sup>j</sup>*** is a static calculated from a sample of data on one or more random data
 - The Barycenter of individuals is the center of gravity or the point that allows to reduce certain linear combinations of vectors.
-- The Matrix of centered data **X** is a constant added to each column so that the mean is zero.
+- The Matrix of centered data ***X*** is a constant added to each column so that the mean is zero.
 - The Standard Deviation is important information when comparing the dispersion of two sets of data of similar size that have approximately the same mean
-- Covariance of **X<sup>j</sup>** and **X<sup>k</sup>** is slightly different from the variance. If the variance allows to study the variations of a variable in relation to itself. The covariance will allow to study the simultaneous variations of two variables in relation to their respective mean.
-- Covariance matrix **S** : These values ​​show the magnitude and direction of the distribution of multivariate data in a multidimensional space.
-- Correlation of **X<sup>j</sup>** and **X<sup>k</sup>** is a relationship between two things, two notions, two facts, one of which implies the other and vice versa.
+- Covariance of ***X<sup>j</sup>*** and ***X<sup>k</sup>*** is slightly different from the variance. If the variance allows to study the variations of a variable in relation to itself. The covariance will allow to study the simultaneous variations of two variables in relation to their respective mean.
+- Covariance matrix ***S*** : These values ​​show the magnitude and direction of the distribution of multivariate data in a multidimensional space.
+- Correlation of ***X<sup>j</sup>*** and ***X<sup>k</sup>*** is a relationship between two things, two notions, two facts, one of which implies the other and vice versa.
 
 ### 1.3- Objectives
 
-- Table X can be analyzed through its rows (individuals) or through its columns (variables)
+- Table ***X*** can be analyzed through its rows (individuals) or through its columns (variables)
 - summarize the information while keeping in mind the duality
 - Typology of individuals
 - there is a variability of temperatures (as an example) between individuals
 - form groups of similar individuals
-- Key terms: resemblance
+- Key terms : resemblance
 - Typology of variables
 - there are variables linked to each other
 - form groups of linked variables
-- Key terms: link – correlation
-- Duality: visualize the groups of variables with the most inter-individual variability
-- The “optimal” graphical representation of individuals (rows), minimizing the deformations of the point cloud, in a subspace Eq of dimension **q (q < p)**
-- The graphical representation of variables in a subspace **F<sub>q</sub>** by best explaining the initial links between these variables
+- Key terms : link – correlation
+- Duality : visualize the groups of variables with the most inter-individual variability
+- The ***optimal*** graphical representation of individuals (rows), minimizing the deformations of the point cloud, in a subspace ***E<sub>q</sub>*** of dimension ***q (q < p)***
+- The graphical representation of variables in a subspace ***F<sub>q</sub>*** by best explaining the initial links between these variables
