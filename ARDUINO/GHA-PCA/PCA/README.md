@@ -48,3 +48,7 @@ The use of the weight metric in the space of real variables ***F*** gives a very
 - Duality : visualize the groups of variables with the most inter-individual variability
 - The ***optimal*** graphical representation of individuals (rows), minimizing the deformations of the point cloud, in a subspace ***E<sub>q</sub>*** of dimension ***q (q < p)***
 - The graphical representation of variables in a subspace ***F<sub>q</sub>*** by best explaining the initial links between these variables
+
+### 1.4- Basic notions
+
+We consider a data table ***X*** where ***X*** is a matrix with ***n x p*** numerical values ​​where ***n*** individuals are described on ***p*** variables
