@@ -84,4 +84,4 @@ The graphs obtained allow to represent “at best” the correlations between th
 This remark allows to interpret two other graphical representations in PCA projecting simultaneously individuals and variables.
 
 - the isometric line representation uses the matrices ***C*** and ***V***; it allows to interpret the distances between individuals as well as the scalar products between an individual and a variable which are, in the first principal plane, approximations of the observed values ​​***X<sup>j</sup> (ω<sub>i</sub>)***;
-- the isometric column representation uses the matrices U and VΛ<sup>1/2</sup>; it allows to interpret the angles between variable vectors (correlations) and the scalar products as previously.
+- the isometric column representation uses the matrices ***U*** and ***VΛ<sup>1/2</sup>***; it allows to interpret the angles between variable vectors (correlations) and the scalar products as previously.
