@@ -85,3 +85,11 @@ This remark allows to interpret two other graphical representations in PCA proje
 
 - the isometric line representation uses the matrices ***C*** and ***V***; it allows to interpret the distances between individuals as well as the scalar products between an individual and a variable which are, in the first principal plane, approximations of the observed values ​​***X<sup>j</sup> (ω<sub>i</sub>)***;
 - the isometric column representation uses the matrices ***U*** and ***VΛ<sup>1/2</sup>***; it allows to interpret the angles between variable vectors (correlations) and the scalar products as previously.
+
+### 3- Choice of dimension
+
+The quality of the estimates that the PCA leads to depends, obviously, on the choice of q, that is to say the number of components retained to reconstruct the data, or even on the dimension of the subspace re representation.
+
+Many criteria for choosing q have been proposed in the literature. We present here the most common ones, based on a heuristic and one based on a quantification of the stability of the subspace of representation.
+
+Other criteria, not explained, are inspired by statistical decision-making practices; under the hypothesis that the error admits a Gaussian distribution, we can exhibit the asymptotic laws of the eigenvalues ​​and therefore construct tests of nullity or equality of the latter. Unfortunately, in addition to the necessary hypothesis of normality, this leads to a procedure of nested tests whose overall level is uncontrollable. Their use therefore remains heuristic.
