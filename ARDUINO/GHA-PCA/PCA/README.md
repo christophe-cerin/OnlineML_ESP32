@@ -9,7 +9,8 @@ The eigenvectors, ranked by decreasing eigenvalues, belong to the new axes of th
 This technique can serve as a dual purpose data compression method and exploration tool in highly multidimensional domains. Thus, the calculation of principal axes thus performed not only facilitates the reduction of information, but also the interpretation of the domain in question, since the new measurements are usually extremely large.
 
 ### 1- Mathematical Design
-#### 1.1- Data in PCA
+
+### 1.1- Data in PCA
 
 In PCA, the data are presented in a table ***X*** with ***n*** rows and ***p*** columns where
   
