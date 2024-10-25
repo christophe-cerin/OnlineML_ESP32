@@ -1,5 +1,4 @@
-## Generalized Hebbian  Algorithm  (GHA)
+### [1- Generalized Hebbian  Algorithm  (GHA)]()
 
-
-## Principal Component Analysis (PCA) or Neural Factor Analysis
+### [2- Principal Component Analysis (PCA) or Neural Factor Analysis (NFA)]()
 
