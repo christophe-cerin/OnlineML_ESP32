@@ -101,7 +101,7 @@ The value of ***q*** is chosen so that this explained inertia share rq is greate
 
 ### 3.2- Elbow
 
-This is the graph showing the decrease in eigenvalues. The principle consists in searching, if it exists, for a “knee” (change of sign in the sequence of order 2 differences) in the graph and to keep only the eigenvalues ​​up to this knee. Intuitively, the larger the gap ***(λ<sub>q</sub> − λ<sub>q+1</sub>)***, for example greater than ***(λq−1 − λ<sub>q</sub>)***, the more we can be assured of the stability of ***E<sub>q</sub>***,
+This is the graph showing the decrease in eigenvalues. The principle consists in searching, if it exists, for a “knee” (change of sign in the sequence of order 2 differences) in the graph and to keep only the eigenvalues ​​up to this knee. Intuitively, the larger the gap ***(λ<sub>q</sub> − λ<sub>q+1</sub>)***, for example greater than ***(λ<sub>q−1</sub> − λ<sub>q</sub>)***, the more we can be assured of the stability of ***E<sub>q</sub>***,
 
 ### 3.3- Box plots
 
