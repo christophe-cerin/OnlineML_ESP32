@@ -107,6 +107,6 @@ This is the graph showing the decrease in eigenvalues. The principle consists in
 
 A graph presenting, in parallel, the box plots of the main variables illustrates their qualities well: stability when a large box is associated with small whiskers, instability in the presence of a small box, large whiskers and isolated points. Intuitively, we keep the first “large boxes”. Isolated points or “outliers” designate points with a strong contribution, or potentially influential, in a main direction. They require a clinical study: another analysis in which they are declared additional (zero weights) in order to evaluate their impact on the orientation of the axes.
 
-### 3.5- Stability
+### 3.4- Stability
 
 The presentation of the PCA, as a result of the estimation of a model, offers another approach to the problem of choosing a dimension. The quality of the estimates is usually evaluated in statistics by a quadratic mean risk defining a criterion of stability of the representation subspace. It is defined as the expectation of a distance between the “true” model and the estimate made of it. 
