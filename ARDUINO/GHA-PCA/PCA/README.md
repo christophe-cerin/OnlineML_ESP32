@@ -74,3 +74,14 @@ It is the interpretation of the graphs that will allow us to understand the stru
 ### 2.1- Individuals
 
 The graphs obtained make it possible to represent “as best as possible” the Euclidean distances between individuals measured by the metric ***M***.
+
+### 2.2- Variables
+
+The graphs obtained allow to represent “at best” the correlations between the variables (cosines of the angles) and, if these are not reduced, their variances (lengths).
+
+### 2.3- Biplot
+
+This remark allows to interpret two other graphical representations in PCA projecting simultaneously individuals and variables.
+
+- the isometric line representation uses the matrices C and V; it allows to interpret the distances between individuals as well as the scalar products between an individual and a variable which are, in the first principal plane, approximations of the observed values ​​X j (ωi );
+- the isometric column representation uses the matrices U and VΛ1/2; it allows to interpret the angles between variable vectors (correlations) and the scalar products as previously.
