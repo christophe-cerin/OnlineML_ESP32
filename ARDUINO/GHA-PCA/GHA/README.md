@@ -40,12 +40,13 @@ By analogy with neurobiology, the neural network is composed of neurons connecte
 - Associative Memory
   - restore data from incomplete and/or noisy information
 
-**Learning method** 
+**Learning method**
+
 Learning is a stage in the development of a neural network where the behavior of the network undergoes changes until the desired behavior is achieved.
+
 There are two main categories of learning algorithms:
 - Supervised learning: Supervised learning is a method of artificial intelligence (machine learning) in which the algorithm is trained to perform a specific task using a set of matched data, each with an annotation specifying the expected result.
 - Unsupervised learning: Unsupervised learning is a branch of machine learning distinguished by the collection and analysis of unlabeled data. In this way, these algorithms acquire the ability to detect patterns or clusters in the information, minimizing any human intervention.
 
 Learning rules: Learning involves modifying the weight of neuronal links.
 
-Translated with DeepL.com (free version)
