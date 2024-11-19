@@ -50,3 +50,9 @@ There are two main categories of learning algorithms:
 
 Learning rules: Learning involves modifying the weight of neuronal links.
 
+<picture>
+<center>
+<img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/poids-liaisons.png" width=60% height=60%  title="Matrice X"/>
+</center>
+</picture>
+
