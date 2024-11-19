@@ -52,11 +52,11 @@ Learning rules: Learning involves modifying the weight of neuronal links.
 
 <picture>
 <center>
-<img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/poids-liaisons.png" width=60% height=60%  title="Matrice X"/>
+<img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/poids-liaisons.png" width=40% height=40%  title="Matrice X"/>
 </center>
 </picture>
 
-**Hebb's law Δw<sub>ij</sub> = Ra<sub>i</sub>a<sub>j</sub>**
+**Hebb's law : Δw<sub>ij</sub> = Ra<sub>i</sub>a<sub>j</sub>**
 
 If two connected units are active simultaneously, the weight of their connection is increased or decreased. R is a positive constant representing the learning rate.
 
