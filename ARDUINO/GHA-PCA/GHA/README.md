@@ -40,7 +40,7 @@ By analogy with neurobiology, the neural network is composed of neurons connecte
 - Associative Memory
   - restore data from incomplete and/or noisy information
 
-**Learning method**
+### Learning method
 
 Learning is a stage in the development of a neural network where the behavior of the network undergoes changes until the desired behavior is achieved.
 
@@ -56,3 +56,6 @@ Learning rules: Learning involves modifying the weight of neuronal links.
 </center>
 </picture>
 
+**Hebb's law; Δw<sub>ij</sub> = Ra<sub>i</sub>a<sub>j</sub>**
+
+If two connected units are active simultaneously, the weight of their connection is increased or decreased. R is a positive constant representing the learning rate.
