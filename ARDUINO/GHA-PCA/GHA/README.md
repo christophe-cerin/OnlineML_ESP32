@@ -56,6 +56,6 @@ Learning rules: Learning involves modifying the weight of neuronal links.
 </center>
 </picture>
 
-**Hebb's law; Δw<sub>ij</sub> = Ra<sub>i</sub>a<sub>j</sub>**
+**Hebb's law Δw<sub>ij</sub> = Ra<sub>i</sub>a<sub>j</sub>**
 
 If two connected units are active simultaneously, the weight of their connection is increased or decreased. R is a positive constant representing the learning rate.
