@@ -16,8 +16,7 @@
  
    Created by : Mamadou SOW
    Date : 2024-12-16
-   Objective : To update the GHA (Generalized Hebbian Algorithm) and recalculate the eigenvalues and eigenvectors of the data in real time
-   Objective 2 : Performs the GHA update, calculating and updating the eigenvalues and eigenvectors of the data in real time
+   Objective : Performs the GHA update, calculating and updating the eigenvalues and eigenvectors of the data in real time
    Name of programm : online_GhaPca_update.cpp 
  */
 
