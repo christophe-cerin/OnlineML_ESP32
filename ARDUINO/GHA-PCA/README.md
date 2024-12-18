@@ -36,7 +36,7 @@ Results Output : Finally, the updated eigenvalues and eigenvectors are printed t
 
 This C++ code retains the core functionality of the original Python code while adapting it to the syntax and conventions of C++.
 
-##### [Code Source](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/ARDUINO/GHA-PCA/src/online_GhaPca_update.cpp)
+##### [Code Source](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update.cpp)
 
 ```
  
