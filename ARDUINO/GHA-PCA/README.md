@@ -38,7 +38,7 @@ This C++ code retains the core functionality of the original Python code while a
 
 ##### [Code Source](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update.cpp)
 
-```
+```C++
  
 #include <iostream>
 #include <vector>
