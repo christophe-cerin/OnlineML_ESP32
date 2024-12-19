@@ -4,7 +4,7 @@
 
 ### [2- Principal Component Analysis (PCA) or Neural Factor Analysis (NFA)](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/PCA/README.md)
 
-### [3- Conversion the Original Python Code to C++](#conversion)
+### [3- Conversion the Original Python Code for Reduction Dimension with GHA algoritm to C++](#conversion)
 
 - [Eigen : C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms](https://eigen.tuxfamily.org/index.php?title=Main_Page)
 - [Eigen 3 Documentation](https://eigen.tuxfamily.org/dox/index.html)
