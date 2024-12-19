@@ -14,7 +14,7 @@
 
 /*
  
-   Created by : Mamadou SOW
+   Author : M. SOW
    Date : 2024-12-16
    Objective : Performs the GHA update, calculating and updating the eigenvalues and eigenvectors of the data in real time
    Name of programm : online_GhaPca_update.cpp 
