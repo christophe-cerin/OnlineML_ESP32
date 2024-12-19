@@ -7,7 +7,8 @@
 ### [3- Conversion the Original Python Code to C++](#conversion)
 
 - [Eigen : C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms](https://eigen.tuxfamily.org/index.php?title=Main_Page)
-- [Eigen 3 Documentation](https://eigen.tuxfamily.org/dox/index.html) 
+- [Eigen 3 Documentation](https://eigen.tuxfamily.org/dox/index.html)
+- [Matplotlib for C++ Documentation](https://matplotlib.org/3.1.1/index.html)
 - [Overview](#overview)
 - [Code Source](#code)
 - [Compilation](#compilation)
@@ -17,6 +18,8 @@
 ##### Overview
 
 Eigen is a C++ numerical analysis library composed of template headers, developed by Benoît Jacob and Gaël Guennebaud at INRIA. It is free software under MPL2 license and multiplatform.
+
+Matplotlib is for C++, a C++ wrapper for Python’s matplotlib (MPL) plotting library. Thus, to learn more about the functions that are eventually called the matplotlib documentation might be useful. Most functions have a link to the MPL function they call. Matplotlib for C++ requires a working Python installation as well as Matplotlib. Python2.7 and Python3 (>= 3.6) have been tested, but other versions should work as well. In the linking process the exact version of Python to use can be specified by linking the according library.
 
 We have transformed the original Python code into C++ while maintaining the structure and logic of the algorithm. The code utilizes the Eigen library for matrix operations, which is a popular choice in C++ for linear algebra tasks. This C++ code retains the core functionality of the original Python code while adapting it to the syntax and conventions of C++.
 
@@ -34,7 +37,6 @@ GHA Algorithm Iteration : The loop iterates over each observation in the dataset
 
 Results Output : Finally, the updated eigenvalues and eigenvectors are printed to the console.
 
-Matplotlib is for C++, a C++ wrapper for Python’s matplotlib (MPL) plotting library. Thus, to learn more about the functions that are eventually called the [matplotlib documentation](https://matplotlib.org/3.1.1/index.html) might be useful. Most functions have a link to the MPL function they call. Matplotlib for C++ requires a working Python installation as well as Matplotlib. Python2.7 and Python3 (>= 3.6) have been tested, but other versions should work as well. In the linking process the exact version of Python to use can be specified by linking the according library.
 
 ##### [Code Source](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update.cpp)
 
