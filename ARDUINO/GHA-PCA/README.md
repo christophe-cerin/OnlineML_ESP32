@@ -1,8 +1,8 @@
 ## Technique of Dimension Reduction 
 
-### [1- Generalized Hebbian  Algorithm  (GHA)](http://localhost:8888/notebooks/acp-agh-sow/GHA-PCA/GHA/README.ipynb)
+### [1- Generalized Hebbian  Algorithm  (GHA)](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/GHA/README.md)
 
-### [2- Principal Component Analysis (PCA) or Neural Factor Analysis (NFA)](http://localhost:8888/notebooks/acp-agh-sow/GHA-PCA/PCA/README.ipynb)
+### [2- Principal Component Analysis (PCA) or Neural Factor Analysis (NFA)](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/PCA/README.md)
 
 ### [3- Conversion the Original Python Code to C++](#conversion)
 
