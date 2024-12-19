@@ -18,7 +18,7 @@
 
 Eigen is a C++ numerical analysis library composed of template headers, developed by Benoît Jacob and Gaël Guennebaud at INRIA. It is free software under MPL2 license and multiplatform.
 
-In this conversion, we have transformed the original Python code into C++ while maintaining the structure and logic of the algorithm. The code utilizes the Eigen library for matrix operations, which is a popular choice in C++ for linear algebra tasks.
+We have transformed the original Python code into C++ while maintaining the structure and logic of the algorithm. The code utilizes the Eigen library for matrix operations, which is a popular choice in C++ for linear algebra tasks. This C++ code retains the core functionality of the original Python code while adapting it to the syntax and conventions of C++.
 
 Random Seed Initialization : We set the random seed using std::mt19937 to ensure reproducibility, similar to np.random.seed(123) in Python.
 
@@ -34,7 +34,7 @@ GHA Algorithm Iteration : The loop iterates over each observation in the dataset
 
 Results Output : Finally, the updated eigenvalues and eigenvectors are printed to the console.
 
-This C++ code retains the core functionality of the original Python code while adapting it to the syntax and conventions of C++.
+Matplotlib is for C++, a C++ wrapper for Python’s matplotlib (MPL) plotting library. Thus, to learn more about the functions that are eventually called the [matplotlib documentation](https://matplotlib.org/3.1.1/index.html) might be useful. Most functions have a link to the MPL function they call.
 
 ##### [Code Source](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update.cpp)
 
@@ -55,11 +55,10 @@ This C++ code retains the core functionality of the original Python code while a
 #include "/usr/include/python3.10/Python.h"
 
 /*
- 
    Author : M. SOW
    Date : 2024-12-16
    Objective : Performs the GHA update, calculating and updating the eigenvalues and eigenvectors of the data in real time
-   Name of programm : online_GhaPca_update.cpp 
+   Name of program : online_GhaPca_update.cpp 
  */
 
 
