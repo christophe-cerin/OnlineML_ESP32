@@ -34,7 +34,7 @@ GHA Algorithm Iteration : The loop iterates over each observation in the dataset
 
 Results Output : Finally, the updated eigenvalues and eigenvectors are printed to the console.
 
-Matplotlib is for C++, a C++ wrapper for Python’s matplotlib (MPL) plotting library. Thus, to learn more about the functions that are eventually called the [matplotlib documentation](https://matplotlib.org/3.1.1/index.html) might be useful. Most functions have a link to the MPL function they call.
+Matplotlib is for C++, a C++ wrapper for Python’s matplotlib (MPL) plotting library. Thus, to learn more about the functions that are eventually called the [matplotlib documentation](https://matplotlib.org/3.1.1/index.html) might be useful. Most functions have a link to the MPL function they call. Matplotlib for C++ requires a working Python installation as well as Matplotlib. Python2.7 and Python3 (>= 3.6) have been tested, but other versions should work as well. In the linking process the exact version of Python to use can be specified by linking the according library.
 
 ##### [Code Source](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update.cpp)
 
