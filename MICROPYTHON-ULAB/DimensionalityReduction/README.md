@@ -72,7 +72,9 @@ First, a dataset [available online](https://github.com/CampusIoT/datasets/tree/m
 
 ### Example 3
 
-We simulate a computing system with limited RAM in size (W) and processing with the `ghapca` algorithm. Thus, the dataset does not fit entirely in RAM. We put in place an iterative schema that 1) runs the `ghapca` algorithm on a buffer of size W, 2) then cancels ($\sqrt{W}$) data from the buffer but keeping diversity, 3) then inserts $\sqrt{W}$ fresh data into the buffer of size W, then returns to step 1.
+We simulate a computing system with limited RAM in size (W) and processing with the `ghapca` algorithm. Thus, the dataset does not fit entirely in RAM. We put in place an iterative schema that 1) runs the `ghapca` algorithm on a buffer of size $W$, 2) then cancels ($\sqrt{W}$) data from the buffer but keeping diversity, 3) then inserts $\sqrt{W}$ fresh data into the buffer of size $W$, then returns to step 1.
+
+
 
 
 
