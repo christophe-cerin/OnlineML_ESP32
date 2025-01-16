@@ -55,10 +55,15 @@ First, a dataset [available online](https://github.com/CampusIoT/datasets/tree/m
 4. pulseAbs: Relative pulse count;
 5. temperature: outside temperature;
 6. vdd: battery voltage in mV. It varies with ambient temperature. The battery is almost empty at around 2.9 - 2.8V;
-7. waterleak: Water Leak strength or detection
+7. waterleak: Water Leak strength or detection;
 8. x: x-axis sensor orientation;
 9. y: y-axis sensor orientation;
 10 z: z-axis sensor orientation.
 
-![Dimensionality reduction on JSON data](Figure_2.png "Dimensionality Reduction on Tour Perret Dataset.")
+<figure>
+    <img src="Figure_2.png"
+         alt="Dimensionality reduction on JSON data">
+    <figcaption>Dimensionality Reduction on the Tour Perret Dataset.</figcaption>
+</figure>
+
 
