@@ -1,6 +1,6 @@
 # Generalized Hebbian Algorithm (GHA) for Online Principal Component Analysis (PCA)
 
-This repository implements the **Generalized Hebbian Algorithm (GHA)**, also known as **Sanger's Rule**, for performing online Principal Component Analysis (PCA). The GHA algorithm incrementally updates the principal components and eigenvalues from streaming data, allowing for an efficient, adaptive computation of PCA.
+This repository implements the **[Generalized Hebbian Algorithm (GHA)](https://en.wikipedia.org/wiki/Generalized_Hebbian_algorithm)**, also known as **Sanger's Rule**, for performing online Principal Component Analysis (PCA). The GHA algorithm incrementally updates the principal components and eigenvalues from streaming data, allowing for an efficient, adaptive computation of PCA.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -16,6 +16,9 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 The two main functions provided in this code are:
 1. `ghapca_C`: Updates the matrix `Q` (the eigenvectors) based on the current data point `x`, the projected data point `y`, and the learning rate `gamma`.
 2. `ghapca`: Performs the GHA update, calculating and updating the eigenvalues and eigenvectors of the data in an online fashion.
+
+> Terence D. Sanger, Optimal unsupervised learning in a single-layer linear feedforward neural network, Neural Networks, Volume 2, Issue 6, 1989, Pages 459-473, [http://dx.doi.org/10.1016/0893-6080(89)90044-0](http://dx.doi.org/10.1016/0893-6080(89)90044-0).
+> ghapca in R: [Generalized Hebbian Algorithm for PCA](https://www.rdocumentation.org/packages/onlinePCA/versions/1.3.2/topics/ghapca).
 
 ## Dependencies
 
