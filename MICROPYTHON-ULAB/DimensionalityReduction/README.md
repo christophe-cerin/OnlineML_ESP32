@@ -8,6 +8,7 @@ This repository implements the **[Generalized Hebbian Algorithm (GHA)](https://e
 - [Usage](#usage)
   - [Example 1](#example-1)
   - [Example 2](#example-2)
+  - [Example 3](#example-3)
 
 ## Overview
 
@@ -29,7 +30,7 @@ To run this code, you need to have the following Python packages installed:
 - `matplotlib`: This is used to plot the results.
 - `pandas`: For data analysis and manipulation tool. (only necessary to run `testing_ghapca_json.py`)
 
-You can install these dependencies via pip:
+You can install these dependencies via pip (or through a [virtual environment](https://docs.python.org/3/library/venv.html)):
 
 ```bash
 pip install numpy matplotlib pandas
@@ -68,5 +69,10 @@ First, a dataset [available online](https://github.com/CampusIoT/datasets/tree/m
          alt="Dimensionality reduction on JSON data">
     <figcaption>Dimensionality Reduction on the Tour Perret Dataset.</figcaption>
 </figure>
+
+### Example 3
+
+We simulate a computing system with limited RAM in size (W) and processing with the `ghapca` algorithm. Thus, the dataset does not fit entirely in RAM. We put in place an iterative schema that 1) runs the `ghapca` algorithm on a buffer of size W, 2) then cancels ($\sqrt{W}$) data from the buffer but keeping diversity, 3) then inserts $\sqrt{W}$ fresh data into the buffer of size W, then returns to step 1.
+
 
 
