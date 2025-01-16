@@ -6,9 +6,8 @@ This repository implements the **Generalized Hebbian Algorithm (GHA)**, also kno
 - [Overview](#overview)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
-  - [Example 1](#example1)
-  - [Example 2](#example2)
-- [License](#license)
+  - [Example 1](#example-1)
+  - [Example 2](#example-2)
 
 ## Overview
 
