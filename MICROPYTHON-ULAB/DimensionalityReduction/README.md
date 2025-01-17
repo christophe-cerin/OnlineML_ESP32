@@ -68,7 +68,7 @@ First, a dataset [available online](https://github.com/CampusIoT/datasets/tree/m
 <figure>
     <img src="Figure_2.png"
          alt="Dimensionality reduction on JSON data">
-    <figcaption>Dimensionality Reduction on the Tour Perret Dataset.</figcaption>
+    <figcaption><b>Figure 1:</b> Dimensionality Reduction on the Tour Perret Dataset.</figcaption>
 </figure>
 
 ### Example 3
@@ -80,16 +80,16 @@ In the following, we set $W=1024$ and explore the previous Tour Perret dataset a
 <figure>
     <img src="Figure_1_continual_learning.png"
          alt="Dimensionality reduction on JSON data with batch ghapca">
-    <figcaption>Dimensionality Reduction on the Tour Perret Dataset with batch ghapca.</figcaption>
+    <figcaption><b>Figure 2:</b> Dimensionality Reduction on the Tour Perret Dataset with batch ghapca.</figcaption>
 </figure>
 
 <figure>
     <img src="Figure_2_continual_learning.png"
          alt="Kernel Density Estimation with batch ghapca">
-    <figcaption>Kernel Density Estimation.</figcaption>
+    <figcaption><b>Figure 3:</b> Kernel Density Estimation.</figcaption>
 </figure>
 
-Let us quote [Sciki-learn](https://scikit-learn.org/1.5/modules/density.html). Mathematically, a kernel is a positive function $(K(x;h)$
+Let us quote [Sciki-learn](https://scikit-learn.org/1.5/modules/density.html). Mathematically, a kernel is a positive function $K(x;h)$
 which is controlled by the bandwidth parameter $h$.
 Given this kernel form, the density estimate at a point $y$ within
 a group of points $x_i; i=1\cdots N$ is given by:
