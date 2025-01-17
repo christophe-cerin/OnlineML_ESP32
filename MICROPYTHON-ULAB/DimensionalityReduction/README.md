@@ -28,7 +28,8 @@ To run this code, you need to have the following Python packages installed:
 
 - `numpy`: For efficient matrix and vector operations.
 - `matplotlib`: This is used to plot the results.
-- `pandas`: For data analysis and manipulation tool. (only necessary to run `testing_ghapca_json.py`)
+- `pandas`: For data analysis and manipulation tool. (only necessary to run `testing_ghapca_json.py`).
+- `scikit-learn`: For Kernel Density Estimation.
 
 You can install these dependencies via pip (or through a [virtual environment](https://docs.python.org/3/library/venv.html)):
 
@@ -73,6 +74,22 @@ First, a dataset [available online](https://github.com/CampusIoT/datasets/tree/m
 ### Example 3
 
 We simulate a computing system with limited size (W) RAM and processing with the `ghapca` algorithm. Thus, the dataset does not fit entirely in RAM. We put in place an iterative schema that 1) runs the `ghapca` algorithm on a buffer of size $W$, 2) then cancels ($\sqrt{W}$) data from the buffer but keeping diversity, 3) then inserts $\sqrt{W}$ fresh data into the buffer of size $W$, then returns to step 1.
+
+In the following, we set $W=1024$ and explore the previous Tour Perret dataset again. A run (`python3 testing_batch_ghapca_json.py`) sample gives two Figures:
+
+<figure>
+    <img src="Figure_1_continual_learning.png"
+         alt="Dimensionality reduction on JSON data with batch ghapca">
+    <figcaption>Dimensionality Reduction on the Tour Perret Dataset with batch ghapca.</figcaption>
+</figure>
+
+<figure>
+    <img src="Figure_2_continual_learning.png"
+         alt="Kernel Density Estimation with batch ghapca">
+    <figcaption>Kernel Density Estimation.</figcaption>
+</figure>
+
+
 
 
 
