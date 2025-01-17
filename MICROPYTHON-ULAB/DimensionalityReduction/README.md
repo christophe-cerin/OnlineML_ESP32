@@ -89,6 +89,8 @@ In the following, we set $W=1024$ and explore the previous Tour Perret dataset a
     <figcaption><b>Figure 3:</b> Kernel Density Estimation.</figcaption>
 </figure>
 
+<p></p>
+
 Let us quote [Sciki-learn](https://scikit-learn.org/1.5/modules/density.html). Mathematically, a kernel is a positive function $K(x;h)$
 which is controlled by the bandwidth parameter $h$.
 Given this kernel form, the density estimate at a point $y$ within
