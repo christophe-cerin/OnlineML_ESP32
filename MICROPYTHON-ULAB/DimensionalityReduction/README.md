@@ -89,6 +89,20 @@ In the following, we set $W=1024$ and explore the previous Tour Perret dataset a
     <figcaption>Kernel Density Estimation.</figcaption>
 </figure>
 
+Let us quote [Sciki-learn](https://scikit-learn.org/1.5/modules/density.html). Mathematically, a kernel is a positive function $(K(x;h)$
+which is controlled by the bandwidth parameter $h$.
+Given this kernel form, the density estimate at a point $y$ within
+a group of points $x_i; i=1\cdots N$ is given by:
+$\rho_K(y) = \sum_{i=1}^{N} K(y - x_i; h)$
+
+The bandwidth here acts as a smoothing parameter, controlling the tradeoff
+between bias and variance in the result.  A large bandwidth leads to a very
+smooth (i.e. high-bias) density distribution.  A small bandwidth leads
+to an unsmooth (i.e. high-variance) density distribution.
+
+The parameter $bandwidth$ controls this smoothing. One can either set
+this parameter manually or use Scott’s and Silverman's estimation
+methods. Check with the [implementation](https://scikit-learn.org/1.5/modules/generated/sklearn.neighbors.KernelDensity.html#sklearn.neighbors.KernelDensity).
 
 
 
