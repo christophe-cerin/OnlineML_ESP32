@@ -6,6 +6,10 @@ import sys
 import matplotlib.pyplot as plt
 from ghapca import ghapca
 import seaborn as sns
+#
+# for Kernel density estimation:
+#
+from sklearn.neighbors import KernelDensity
 
 #
 # Utilitty functions
@@ -137,7 +141,9 @@ if __name__ == "__main__":
     # learning since we do not know all data when starting!
     #
     data = normalize(data)
-        
+    # make a copy
+    data_orig = data
+    
     #print(data)
     n = W  # Number of observations
     p = 10    # Number of variables
@@ -148,11 +154,17 @@ if __name__ == "__main__":
 
     # Initialize eigenvalues and eigenvectors
     lambda_values = np.zeros(q)            # Initial eigenvalues
+    # Make a copy
+    lambda_values_orig = lambda_values
+    
     U = np.random.randn(p, q)              # Initial eigenvectors (random initialization)
     U = U / np.sqrt(np.sum(U**2, axis=0))  # Normalize eigenvectors
+    # make a copy
+    U_orig = U
     # Centering vector (mean of each column)
     center = np.mean(data, axis=0)
-
+    # make a copy
+    center_orig = center
     #
     # Work with the first chunck of data
     #
@@ -162,6 +174,20 @@ if __name__ == "__main__":
             my_points[i] = data[i]
         else:
             break
+
+    my_points_orig = [[0,0,0,0,0,0,0,0,0,0] for _ in range(Nrows)]
+    for i in range(Nrows):
+            my_points_orig[i] = data_orig[i]
+    
+    # Apply the GHA algorithm iteratively to each data point
+    for ii in range(Nrows):
+        print(type(Nrows),type(ii))
+        x = my_points_orig[ii]
+        gha_result_orig = ghapca(lambda_values_orig, U_orig, x, gamma, q, center_orig, sort=True)
+        lambda_values_orig = gha_result_orig['values']
+        U_orig = gha_result_orig['vectors']
+    # final scores
+    scores_orig = np.dot(my_points_orig, U_orig)
 
     #print(len(my_points),W,Nrows,No_payload,int(Nrows/W))
     #
@@ -177,6 +203,7 @@ if __name__ == "__main__":
     mes_indices = [i for i in range(sqrt_W - 1, W - sqrt_W, sqrt_W)]
     #print('Size:',len(mes_indices),'Indexes:',mes_indices)
 
+    # First round
     # Apply the GHA algorithm iteratively to each data point
     for ii in range(n):
         x = my_points[ii, :]
@@ -198,6 +225,9 @@ if __name__ == "__main__":
     #print('------')
     #print(scores[:, 1])
 
+    #
+    # Second, third, etc rounds
+    #
     N = int( (Nrows - W) / len(mes_indices))
     #print('N:',N,'Nrows:',Nrows,'W:',W,'mes_indices:',len(mes_indices))
     for i in range(N-1):
@@ -219,7 +249,8 @@ if __name__ == "__main__":
         #
         # Now we start the decicated calculation: ghapca
         #
-        for ii in range(n):
+        #for ii in range(n):
+        for ii in mes_indices:
             x = my_points[ii, :]
             gha_result = ghapca(lambda_values, U, x, gamma, q, center, sort=True)
             lambda_values = gha_result['values']
@@ -243,13 +274,16 @@ if __name__ == "__main__":
     # Kernel density estimation with scikit-learn
     # See: https://scikit-learn.org/1.5/modules/density.html#kernel-density-estimation
     #
-    from sklearn.neighbors import KernelDensity
-    import numpy as np
-
     kde = KernelDensity(kernel='gaussian', bandwidth="scott").fit(scores)
     my_kde = kde.score_samples(scores)
     print('Kernel Density Estimation (KDE) vector:',my_kde)
-    print('--- Statistics on the KDE vector ---')
+    print('--- Statistics on the KDE vector (incremental ghapca) ---')
+    print('Max:',np.max(my_kde),'Min:',np.min(my_kde),'Mean:',np.mean(my_kde),'StDev:',np.std(my_kde))
+
+    kde = KernelDensity(kernel='gaussian', bandwidth="scott").fit(scores)
+    my_kde = kde.score_samples(scores_orig)
+    print('Kernel Density Estimation (KDE) vector:',my_kde)
+    print('--- Statistics on the KDE vector (full dataset) ---')
     print('Max:',np.max(my_kde),'Min:',np.min(my_kde),'Mean:',np.mean(my_kde),'StDev:',np.std(my_kde))
 
     #print(len(scores[:, 0]), len(scores[:, 1]))
