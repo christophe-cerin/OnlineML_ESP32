@@ -78,9 +78,13 @@ First, a dataset [available online](https://github.com/CampusIoT/datasets/tree/m
 
 ### Example 3
 
+#### Introduction
+
 We simulate a computing system with limited size (W) RAM and processing with the `ghapca` algorithm. Thus, the dataset does not fit entirely in RAM. We put in place an iterative schema that 1) runs the `ghapca` algorithm on a buffer of size $W$, 2) then 'cancels' ($\sqrt{W}$) data from the buffer but keeping diversity, 3) then considers/inserts $\sqrt{W}$ fresh data into the buffer of size $W$, then returns to step 1.
 
 Intuitively, regarding the 'cancelation' part in the `testing_batch_ghapca_json.py` implementation, we use sorting of the buffer of size $W$, then we delete objects at regular intervals. The idea is to maintain diversity in this way. In step 3), we insert fresh data at the pre-calculated 'canceled' positions. This last part is accomplished in constant time. Finally, the time complexity of one round of the algorithm is bounded by the sum of the time complexity of the `ghapca` algorithm on $W$ data and the time complexity of sorting (${\cal O} (W\log W)$ in case of a quicksort).
+
+#### Settings and graphical results' representation
 
 In the following, we set $W=1024$ and explore the previous Tour Perret dataset again. A run (`python3 testing_batch_ghapca_json.py`) sample gives two Figures:
 
@@ -112,6 +116,19 @@ to an unsmooth (i.e. high-variance) density distribution.
 The parameter $bandwidth$ controls this smoothing. One can either set
 this parameter manually or use Scott’s and Silverman's estimation
 methods. Check with the [implementation](https://scikit-learn.org/1.5/modules/generated/sklearn.neighbors.KernelDensity.html#sklearn.neighbors.KernelDensity).
+
+#### Comparing Kernel density estimations
+
+The implementation also prints statistics on the Kernel density estimations (max, min, mean, and standard deviation of the KDE vector), when using `ghapca`on the entire data and using our extreme edge incremental `ghapca` algorithm. A typical result is the following and we can conclude that our implementation gives similar results of the offline computation:
+
+<code>
+Kernel Density Estimation (KDE) vector: [0.47197848 0.47193862 0.47208847 ... 0.46789229 0.46753965 0.46780159]
+--- Statistics on the KDE vector (incremental ghapca) ---
+Max: 0.4722774418622171 Min: 0.4675396456632397 Mean: 0.47195136140585014 StDev: 0.0007419408907973117
+Kernel Density Estimation (KDE) vector: [0.47163689 0.47149408 0.47142268 ... 0.47149246 0.47147881 0.47146548]
+--- Statistics on the KDE vector (full dataset) ---
+Max: 0.47228134196198646 Min: 0.4665597430005404 Mean: 0.471403074533755 StDev: 0.0008811148299945535
+</code>code>
 
 
 
