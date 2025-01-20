@@ -78,9 +78,9 @@ First, a dataset [available online](https://github.com/CampusIoT/datasets/tree/m
 
 ### Example 3
 
-We simulate a computing system with limited size (W) RAM and processing with the `ghapca` algorithm. Thus, the dataset does not fit entirely in RAM. We put in place an iterative schema that 1) runs the `ghapca` algorithm on a buffer of size $W$, 2) then cancels ($\sqrt{W}$) data from the buffer but keeping diversity, 3) then inserts $\sqrt{W}$ fresh data into the buffer of size $W$, then returns to step 1.
+We simulate a computing system with limited size (W) RAM and processing with the `ghapca` algorithm. Thus, the dataset does not fit entirely in RAM. We put in place an iterative schema that 1) runs the `ghapca` algorithm on a buffer of size $W$, 2) then 'cancels' ($\sqrt{W}$) data from the buffer but keeping diversity, 3) then considers/inserts $\sqrt{W}$ fresh data into the buffer of size $W$, then returns to step 1.
 
-Regarding the canceling part in the `testing_batch_ghapca_json.py` implementation, we use sorting of the buffer of size $W$, then we delete objects at regular intervals. The idea is to maintain diversity in this way. In step 3), we insert fresh data at the pre-calculated 'canceled' positions. This last part is accomplished in constant time. Finally, the time complexity of one round of the algorithm is bounded by the sum of the time complexity of the `ghapca`algorithm on $W$ data and the time complexity of sorting (${\cal O} (W\log W)$ in case of a quicksort).
+Intuitively, regarding the 'cancelation' part in the `testing_batch_ghapca_json.py` implementation, we use sorting of the buffer of size $W$, then we delete objects at regular intervals. The idea is to maintain diversity in this way. In step 3), we insert fresh data at the pre-calculated 'canceled' positions. This last part is accomplished in constant time. Finally, the time complexity of one round of the algorithm is bounded by the sum of the time complexity of the `ghapca` algorithm on $W$ data and the time complexity of sorting (${\cal O} (W\log W)$ in case of a quicksort).
 
 In the following, we set $W=1024$ and explore the previous Tour Perret dataset again. A run (`python3 testing_batch_ghapca_json.py`) sample gives two Figures:
 
