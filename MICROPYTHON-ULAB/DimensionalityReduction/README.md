@@ -102,7 +102,7 @@ In the following, we set $W=1024$ and explore the previous Tour Perret dataset a
 
 <p></p>
 
-Let us quote [Sciki-learn](https://scikit-learn.org/1.5/modules/density.html). Mathematically, a kernel is a positive function $K(x;h)$
+Let us quote [Sciki-learn](https://scikit-learn.org/1.5/modules/density.html) to explain Figure 3. Mathematically, a kernel is a positive function $K(x;h)$
 which is controlled by the bandwidth parameter $h$.
 Given this kernel form, the density estimate at a point $y$ within
 a group of points $x_i; i=1\cdots N$ is given by:
@@ -119,16 +119,16 @@ methods. Check with the [implementation](https://scikit-learn.org/1.5/modules/ge
 
 #### Comparing Kernel density estimations
 
-The implementation also prints statistics on the Kernel density estimations (max, min, mean, and standard deviation of the KDE vector), when using `ghapca`on the entire data and using our extreme edge incremental `ghapca` algorithm. A typical result is the following and we can conclude that our implementation gives similar results of the offline computation:
+The implementation also prints statistics on the Kernel density estimations (max, min, mean, and standard deviation of the KDE vector), when using `ghapca`on the entire data and using our extreme edge incremental `ghapca` algorithm. A typical result is the following and we can conclude that our implementation gives similar results to the offline computation:
 
-<code>
+<pre>
 Kernel Density Estimation (KDE) vector: [0.47197848 0.47193862 0.47208847 ... 0.46789229 0.46753965 0.46780159]
 --- Statistics on the KDE vector (incremental ghapca) ---
 Max: 0.4722774418622171 Min: 0.4675396456632397 Mean: 0.47195136140585014 StDev: 0.0007419408907973117
 Kernel Density Estimation (KDE) vector: [0.47163689 0.47149408 0.47142268 ... 0.47149246 0.47147881 0.47146548]
 --- Statistics on the KDE vector (full dataset) ---
 Max: 0.47228134196198646 Min: 0.4665597430005404 Mean: 0.471403074533755 StDev: 0.0008811148299945535
-</code>code>
+</pre>
 
 
 
