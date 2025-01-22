@@ -181,12 +181,11 @@ if __name__ == "__main__":
     
     # Apply the GHA algorithm iteratively to each data point
     for ii in range(Nrows):
-        print(type(Nrows),type(ii))
         x = my_points_orig[ii]
         gha_result_orig = ghapca(lambda_values_orig, U_orig, x, gamma, q, center_orig, sort=True)
         lambda_values_orig = gha_result_orig['values']
         U_orig = gha_result_orig['vectors']
-    # final scores
+    # final scores for the original ghapca algorithm
     scores_orig = np.dot(my_points_orig, U_orig)
 
     #print(len(my_points),W,Nrows,No_payload,int(Nrows/W))
@@ -212,18 +211,14 @@ if __name__ == "__main__":
         U = gha_result['vectors']
 
     # Print the results
-    print("Updated Eigenvalues:")
-    print(lambda_values)
+    #print("Updated Eigenvalues:")
+    #print(lambda_values)
 
-    print("Updated Eigenvectors:")
-    print(U)
+    #print("Updated Eigenvectors:")
+    #print(U)
 
     # Project data onto the new principal components
-    #scores = np.dot(my_points, U)
-    #print('------')
-    #print(scores[:, 0])
-    #print('------')
-    #print(scores[:, 1])
+    scores = np.dot(my_points, U)
 
     #
     # Second, third, etc rounds
@@ -257,11 +252,11 @@ if __name__ == "__main__":
             U = gha_result['vectors']
 
         # Print the results
-        print("Updated Eigenvalues:")
-        print(lambda_values)
+        #print("Updated Eigenvalues:")
+        #print(lambda_values)
 
-        print("Updated Eigenvectors:")
-        print(U)
+        #print("Updated Eigenvectors:")
+        #print(U)
 
         # Project data onto the new principal components
         scores = np.dot(my_points, U)
@@ -269,6 +264,20 @@ if __name__ == "__main__":
         #print(scores[:, 0])
         #print('------')
         #print(scores[:, 1])
+
+    print('----------------------------------------------')
+    print('--- Memory footprint extreme edge-inc alg. ---')
+    print('Scores dimensions:',scores.shape)
+    print('U dimensions:',U.shape)
+    print('Lambda_values dimensions:',lambda_values.shape)
+    print('Center dimensions:',center.shape)
+    print('----------------------------------------------')
+    print('--- Memory footprint original ghapca alg.  ---')
+    print('Scores dimensions:',scores_orig.shape)
+    print('U dimensions:',U_orig.shape)
+    print('Lambda_values dimensions:',lambda_values_orig.shape)
+    print('Center dimensions:',center_orig.shape)
+    print('----------------------------------------------')
 
     #
     # Kernel density estimation with scikit-learn
