@@ -132,7 +132,7 @@ Max: 0.47228134196198646 Min: 0.4665597430005404 Mean: 0.471403074533755 StDev: 
 
 #### Memory footprint
 
-The code `testing_ghapca_json.py` prints the memory footprint (matrix shape) of the main internal data structures, when we use the extreme edge incremental learning algorithm and natively `ghapca` on all the data. A message example is the following:
+The code `testing_batch_ghapca_json.py` prints the memory footprint (matrix shape) of the main internal data structures, when we use the extreme edge incremental learning algorithm and natively `ghapca` on all the data. A message example is the following:
 
 <pre>
 ----------------------------------------------
