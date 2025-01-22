@@ -130,6 +130,25 @@ Kernel Density Estimation (KDE) vector: [0.47163689 0.47149408 0.47142268 ... 0.
 Max: 0.47228134196198646 Min: 0.4665597430005404 Mean: 0.471403074533755 StDev: 0.0008811148299945535
 </pre>
 
+#### Memory footprint
+
+The code `testing_ghapca_json.py` prints the memory footprint (matrix shape) of the main internal data structures, when we use the extreme edge incremental learning algorithm and natively `ghapca` on all the data. A message example is the following:
+
+<pre>
+----------------------------------------------
+--- Memory footprint Extreme Edge-inc alg. ---
+Scores dimensions: (1024, 2)
+U dimensions: (10, 2)
+Lambda_values dimensions: (2,)
+Center dimensions: (10,)
+----------------------------------------------
+--- Memory footprint original ghapca alg.  ---
+Scores dimensions: (6635, 2)
+U dimensions: (10, 2)
+Lambda_values dimensions: (2,)
+Center dimensions: (10,)
+----------------------------------------------
+</pre>
 
 
 
