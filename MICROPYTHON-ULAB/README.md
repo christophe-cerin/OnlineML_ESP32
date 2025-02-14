@@ -1,6 +1,6 @@
-# Directory Content
+# Material dedicated to Micropython-ulab
 
-This directory contains new algorithms, implementations, and adaptations of the [River](https://github.com/online-ml/river) programs but for online machine learning on embedded systems (ESP32 and other microcontrollers).
+This folder contains new algorithms, implementations, and adaptations of the [River](https://github.com/online-ml/river) programs but for online machine learning on embedded systems (ESP32 and other microcontrollers).
 
 For instance, the k_means directory contains an adaptation of k_means that is available with River.
 
