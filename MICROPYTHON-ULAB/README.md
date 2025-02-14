@@ -1,10 +1,14 @@
 # Directory Content
 
-This directory contains adaptations of the [River](https://github.com/online-ml/river) programs but for online machine learning on embedded systems (ESP32...).
+This directory contains new algorithms, implementations, and adaptations of the [River](https://github.com/online-ml/river) programs but for online machine learning on embedded systems (ESP32 and other microcontrollers).
 
-For instance, the k_means directory contains an adaptation of k_means available with River. And so on.
+For instance, the k_means directory contains an adaptation of k_means that is available with River.
 
-It also contains instructions to build [micropython-ulab](https://micropython-ulab.readthedocs.io/en/latest/). [Micropython](https://micropython.org/) is Python for embedded systems and [ulab](https://github.com/v923z/micropython-ulab) is a numpy-like array manipulation library for Micropython. Moreover, the [Espressif](https://github.com/espressif/) repository contains many open-source projects, including SDKs, components, libraries, solutions, and tools, which aim to help developers bring their projects to life.
+We distinguish different notions related to online learning as follows. *Online processing* describes processing data sequentially, contrasting with typical machine learning, which uses full datasets at once. This method enables learning without revisiting past data. *Incremental/Online/Stream learning* involves fitting a model to data flowing in real-time. *Extreme edge*-(incremental learning) indicates restricted computing resources, such as RAM, and computations done on the edge. In this last case, data continually flows in a *window* of bounded size, or, is *summarized* periodically to preserve as much as possible some desired properties.
+
+Edge computing enables data to be analyzed, processed, and transferred at the edge of a network. This means that data are analyzed locally, closer to where it is stored, in real-time, without latency. Edge computing enables data from IoT devices to be analyzed at the edge of the network before being sent to a data center or cloud. Among the advantages of edge computing is that it offers greater security by distributing processing, storage, and applications across a wide range of devices and data centers, making it difficult to disrupt the network. In economic terms, we seek to eliminate GAFAMs and use only small-scale embedded hardware such as ESP32 microcontrollers. We believe that the smart building (our application domain) lends itself well to this vision. Why send data generated every 10 minutes to a cloud when we could analyze it on embedded hardware?
+
+This directory also contains instructions on how to build [micropython-ulab](https://micropython-ulab.readthedocs.io/en/latest/). [Micropython](https://micropython.org/) is Python for embedded systems and [ulab](https://github.com/v923z/micropython-ulab) is a numpy-like array manipulation library for Micropython. Moreover, the [Espressif](https://github.com/espressif/) repository contains many open-source projects, including SDKs, components, libraries, solutions, and tools, which aim to help developers bring their projects to life.
 
 ## Configure and Run Micropython-ulab on ESP32-based boards in the Linux Operating System
 
