@@ -8,7 +8,7 @@ The following links help to enter into the domain of Matrix Profiles:
 - [STUMPY tutorial](https://stumpy.readthedocs.io/en/latest/tutorials.html)
 - [MPF](https://matrixprofile.org/)
 
-# Our work
+# Implementation details
 
 The file `MatrixProfile.py` implements multiple offline Matrix Profiles algorithms selected according to the following set of criteria:
 
@@ -28,6 +28,22 @@ Concerning the execution times for our dataset `TourPerret.csv`, we get the foll
 ``` 
 The file `RingBuffer.py` implements an extreme edge-incremental matrix profile algorithm based on ACAMP. Data flow continually through a ring buffer (to limit the RAM footprint), and at different time intervals, we compute the Matrix Profile. Moreover, the implementation is a simulation for the following scenario. A set of sensors periodically sends data (temperature, humidity...) to a microcontroller. The microcontroller can also receive a second type of message to specify that an external agent (user, cloud, or fog) would like to consult the current matrix profile.
 
+# Experimental results
 
+The Tour Perret dataset (`TourPerret.csv`) contains a humidity attribute, in red in the following plots. This attribute shows seasonality.
+
+<figure>
+    <img src="Figure_1.png"
+         alt="Offline Matrix Profile">
+    <figcaption><b>Figure 1:</b> Offline Matrix Profile for diverse Matrix Profile algorithms..</figcaption>
+</figure>
+
+<figure>
+    <img src="Figure_11.png"
+         alt="Extreme edge-incremental Matrix Profile">
+    <figcaption><b>Figure 2:</b> Extreme edge-incremental Matrix Profile based on ACAMP.</figcaption>
+</figure>
+
+<p></p>
 
   
