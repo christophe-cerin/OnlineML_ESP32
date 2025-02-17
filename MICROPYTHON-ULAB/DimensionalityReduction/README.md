@@ -1,3 +1,5 @@
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 # Generalized Hebbian Algorithm (GHA) for Online Principal Component Analysis (PCA)
 
 This repository implements the **[Generalized Hebbian Algorithm (GHA)](https://en.wikipedia.org/wiki/Generalized_Hebbian_algorithm)**, also known as **Sanger's Rule**, for performing online Principal Component Analysis (PCA). The GHA algorithm incrementally updates the principal components and eigenvalues from streaming data, allowing for an efficient, adaptive computation of PCA.
