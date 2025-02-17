@@ -1,3 +1,5 @@
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 # Material dedicated to Micropython-ulab
 
 This folder contains new algorithms, implementations, and adaptations of the [River](https://github.com/online-ml/river) programs but for online machine learning on embedded systems (ESP32 and other microcontrollers).
