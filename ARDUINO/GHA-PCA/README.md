@@ -15,6 +15,8 @@
 - [Result](#result)
 - [License](#license)
 
+### [4- Data mining from the Perret Tower with the GHA dimension reduction algorithm](#exploitation)
+
 ##### Overview
 
 Eigen is a C++ numerical analysis library composed of template headers, developed by Benoît Jacob and Gaël Guennebaud at INRIA. It is free software under MPL2 license and multiplatform.
