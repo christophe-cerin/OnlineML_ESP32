@@ -15,7 +15,7 @@
 - [Result](#result)
 - [License](#license)
 
-### [4- Data mining from the Perret Tower with the GHA dimension reduction algorithm](#exploitation)
+### [4- Data mining from the Perret Tower with the GHA dimension reduction algorithm](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/GHA-PCA/Perret-Tower)
 
 ##### Overview
 
