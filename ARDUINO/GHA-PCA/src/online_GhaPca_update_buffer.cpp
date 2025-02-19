@@ -29,7 +29,7 @@ using Eigen::MatrixXd;
 using namespace std;
 using namespace Eigen;
 
-#include "/home/mamadou/src/matplotlibcpp.h"
+#include "matplotlibcpp.h"
 #include </usr/include/python3.10/pyconfig.h>
 #include "/usr/include/python3.10/Python.h"
 namespace plt = matplotlibcpp;
