@@ -42,6 +42,9 @@ The details of the 10 attributes from TourPerret10colHead.csv
 
 
 ## Dependencies
+The header file ghapca.h of the module contains everything that is necessary to know
+to have the right to use, in online_GhaPca_update_buffer.cpp, the functionalities of the module online_GhaPca_update_buffer.out
+
 ## Usage
 ### Example 1
 ### Example 2
