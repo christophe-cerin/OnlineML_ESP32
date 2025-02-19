@@ -15,7 +15,7 @@
 - [Result](#result)
 - [License](#license)
 
-### [4- Data mining from the Perret Tower with the GHA dimension reduction algorithm](#exploitation)
+### [4- Data mining from the Perret Tower with the GHA dimension reduction algorithm](#exploitation)
 
 ##### Overview
 
