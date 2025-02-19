@@ -28,7 +28,7 @@ Explanation:
 
 ## Overview
 
-csv
+the following 10 attributes from TourPerret10colHead.csv
 1. accMotion: sensor vibrations. This measurement counts the number of movements of the box object containing the sensor detected by the accelerometer;
 2. digital: There are no magnets on the Perret Tower sensors, so the measurement must be zero.
 3. humidity: outside relative humidity;
