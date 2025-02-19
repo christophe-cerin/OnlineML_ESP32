@@ -46,6 +46,4 @@ The header file [ghapca.h](https://github.com/madou-sow/OnlineML_ESP32/blob/main
 to have the right to use, in [online_GhaPca_update_buffer.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update_buffer.cpp), the functionalities of the module online_GhaPca_update_buffer.out
 
 ## Usage
-### Example 1
-### Example 2
-### Example 1
+### Test
