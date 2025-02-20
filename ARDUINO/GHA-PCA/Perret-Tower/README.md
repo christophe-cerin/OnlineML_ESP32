@@ -53,7 +53,7 @@ g++ online_GhaPca_update_buffer.cpp -I /home/mamadou/src -L /usr/include/python3
 ```
 ### Results
 
-Iteration over the data in blocks of W rows 1024
+Iteration over the data in blocks of W rows 1024 :
 
 ```
 Iteration 1 processing rows 0 to 1023
@@ -65,6 +65,27 @@ Iteration 6 processing rows 5120 to 6143
 Iteration 7 processing rows 6144 to 6634
 ```
 `
+Updated Eigenvalues :
+
+``` 
+1527.38
+1457.97
+``` 
+
+Updated Eigenvectors :
+
+```
+   -0.764374    -0.764374
+ -1.4892e-07  1.18823e-07
+    0.150348     0.150348
+   4.208e-07  1.23561e-08
+  -0.0978109   -0.0978117
+   -0.612758    -0.612759
+-2.32336e-07  1.25131e-07
+   0.0386407    0.0386405
+  -0.0748256   -0.0748259
+  -0.0315502   -0.0315501
+̀``` 
 
 ### Graphic
 
