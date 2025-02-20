@@ -24,7 +24,8 @@ Explanation:
 - [Usage](#usage)
   - [Compilation](#compilation)
   - [Results](#results)
-  - [Graphic obteined with online_GhaPca_update_buffer.out](#Graphic)
+  - [Graphic obteined with online_GhaPca_update_buffer.out](#Graphic1)
+  - [Graphic obteined with python and the data scores (scores.csv)](#Graphic2)
 
 ## Overview
 
@@ -87,10 +88,13 @@ Updated Eigenvectors :
   -0.0315502   -0.0315501
 ``` 
 
-### Graphic
+### Graphic1
 
 <figure>
   <img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024.png"  title="Dimensionality Reduction on the Tour Perret Dataset with batch ghapca"/>
 
-  <figcaption><b>Figure : </b> Dimensionality Reduction on the Tour Perret Dataset with  ghapca and buffer=1024.</figcaption>
+  <figcaption><b>Figure : </b> Dimensionality Reduction on the Tour Perret Dataset with  ghapca and data scores.</figcaption>
 </figure>
+
+### Graphic2
+
