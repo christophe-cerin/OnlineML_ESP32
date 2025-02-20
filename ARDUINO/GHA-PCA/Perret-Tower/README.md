@@ -16,15 +16,15 @@ Explanation:
 
 - Memory management: Eigen already manages memory dynamically
 
-##### [Code Source](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/)
+#### [Code Source](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/)
 
 ## Table of Contents
 - [Overview](#overview)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
-  - [Example 1](#example-1)
+  - [Compilation(#compilation)
   - [Example 2](#example-2)
-  - [Example 3](#example-3)
+  - [Graphic](#graphic)
 
 ## Overview
 
@@ -46,4 +46,14 @@ The header file [ghapca.h](https://github.com/madou-sow/OnlineML_ESP32/blob/main
 to have the right to use, in [online_GhaPca_update_buffer.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update_buffer.cpp), the functionalities of the module online_GhaPca_update_buffer.out
 
 ## Usage
-### Test
+### Compilation
+
+```
+g++ online_GhaPca_update_buffer.cpp -I /home/mamadou/src -L /usr/include/python3.10 -lpython3.10 -o online_GhaPca_update_buffer.out
+```
+### Graphic
+
+<center>
+<img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024" width=55% height=55%  title="GHA - First Two Principal Components"/>
+</center>
+</picture>
