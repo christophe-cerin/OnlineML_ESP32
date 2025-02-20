@@ -52,7 +52,8 @@ g++ online_GhaPca_update_buffer.cpp -I /home/mamadou/src -L /usr/include/python3
 ```
 ### Graphic
 
-<center>
-<img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024.png" width=55% height=55%  title="GHA - First Two Principal Components"/>
-</center>
-</picture>
+<figure>
+
+<img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024.png" width=55% height=55%  title="Dimensionality Reduction on the Tour Perret Dataset with batch ghapca"/>
+
+</figure>
