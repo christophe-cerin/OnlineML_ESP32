@@ -23,6 +23,7 @@ Explanation:
 - [Dependencies](#dependencies)
 - [Usage](#usage)
   - [Compilation](#compilation)
+  - [Results](#results)
   - [Graphic](#graphic)
 
 ## Overview
@@ -50,12 +51,25 @@ to have the right to use, in [online_GhaPca_update_buffer.cpp](https://github.co
 ```
 g++ online_GhaPca_update_buffer.cpp -I /home/mamadou/src -L /usr/include/python3.10 -lpython3.10 -o online_GhaPca_update_buffer.out
 ```
+### Results
+
+Iteration over the data in blocks of W rows 1024
+
+```
+Iteration 1 processing rows 0 to 1023
+Iteration 2 processing rows 1024 to 2047
+Iteration 3 processing rows 2048 to 3071
+Iteration 4 processing rows 3072 to 4095
+Iteration 5 processing rows 4096 to 5119
+Iteration 6 processing rows 5120 to 6143
+Iteration 7 processing rows 6144 to 6634
+```
+`
+
 ### Graphic
 
 <figure>
+  <img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024.png"  title="Dimensionality Reduction on the Tour Perret Dataset with batch ghapca"/>
 
-<img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024.png"  title="Dimensionality Reduction on the Tour Perret Dataset with batch ghapca"/>
-
-<figcaption><b>Figure : </b> Dimensionality Reduction on the Tour Perret Dataset with  ghapca and buffer=1024.</figcaption>
-
+  <figcaption><b>Figure : </b> Dimensionality Reduction on the Tour Perret Dataset with  ghapca and buffer=1024.</figcaption>
 </figure>
