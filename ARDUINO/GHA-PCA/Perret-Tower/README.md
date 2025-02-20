@@ -56,4 +56,6 @@ g++ online_GhaPca_update_buffer.cpp -I /home/mamadou/src -L /usr/include/python3
 
 <img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024.png" width=55% height=55%  title="Dimensionality Reduction on the Tour Perret Dataset with batch ghapca"/>
 
+<figcaption><b>Figure </b> Dimensionality Reduction on the Tour Perret Dataset with  ghapca and buffer=1024.</figcaption>
+
 </figure>
