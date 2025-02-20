@@ -24,7 +24,7 @@ Explanation:
 - [Usage](#usage)
   - [Compilation](#compilation)
   - [Results](#results)
-  - [Graphic obteined with online_GhaPca_update_buffer.out](#graphic obteined with online_GhaPca_update_buffer.out)
+  - [Graphic obteined with online_GhaPca_update_buffer.out](#graphic-obteined-with online_GhaPca_update_buffer.out)
 
 ## Overview
 
