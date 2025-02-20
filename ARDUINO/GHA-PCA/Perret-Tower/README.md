@@ -130,4 +130,11 @@ plt.title("GHA - First Two Principal Components")
 plt.show()
 ```
 
+<figure>
+  <img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/figure-buffer-python.png"  title="Dimensionality Reduction"/>
+
+  <figcaption><b>Figure : </b> Plot of Dimensionality Reduction on the Tour Perret Dataset with python</figcaption>
+</figure>
+
+
 
