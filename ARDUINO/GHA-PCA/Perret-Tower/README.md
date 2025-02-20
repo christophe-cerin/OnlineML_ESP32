@@ -98,7 +98,7 @@ Updated Eigenvectors :
 
 ### Graphic2
 
-```
+```PYTHON
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -122,7 +122,7 @@ print(scores)
 6634 -2201.68 -2201.69
 ```
 
-```
+```PYTHON
 plt.scatter(scores[0], scores[1])
 plt.xlabel("Principal Component 1")
 plt.ylabel("Principal Component 2")
