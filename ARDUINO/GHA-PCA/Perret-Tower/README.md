@@ -14,7 +14,7 @@ Explanation:
 
 - Last block management: If the total number of lines is not a multiple of 1024, the last block will be smaller. We use min(W, n - i) to handle this.
 
-- Memory management: Eigen already manages memory dynamically
+- Memory management: the template librairy Eigen already manages memory dynamically
 
 #### [Code Source](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/)
 
