@@ -122,4 +122,12 @@ print(scores)
 6634 -2201.68 -2201.69
 ```
 
+```
+plt.scatter(scores[0], scores[1])
+plt.xlabel("Principal Component 1")
+plt.ylabel("Principal Component 2")
+plt.title("GHA - First Two Principal Components")
+plt.show()
+```
+
 
