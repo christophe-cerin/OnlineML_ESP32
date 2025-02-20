@@ -98,3 +98,28 @@ Updated Eigenvectors :
 
 ### Graphic2
 
+```
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Lire les scores depuis le fichier CSV
+scores = pd.read_csv("scoresbon.csv", header=None)
+print(scores)
+```
+
+```
+         0        1
+0 -2206.21 -2206.21
+1 -2209.68 -2209.68
+2 -2209.93 -2209.93
+3 -2213.74 -2213.74
+4 -2235.08 -2235.08
+...    ...      ...  
+6630 -2358.19 -2358.19
+6631 -2245.78 -2245.78
+6632 -2247.35 -2247.35
+6633 -2208.48 -2208.48
+6634 -2201.68 -2201.69
+```
+
+
