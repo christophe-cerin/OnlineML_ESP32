@@ -2,7 +2,7 @@
 
 ## Data mining from the Perret Tower with the GHA dimension reduction algorithm
 
-The program will process the data in blocks of 1024 lines of the Perret Tower data, display the iteration number at each step, and update the eigenvalues ​​and eigenvectors accordingly. At the end, the results will be saved in a CSV file and displayed graphically.
+The program will process the data in blocks of 1024 lines of the Perret Tower data - [TourPerret10col.csv](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/TourPerret10col.csv), display the iteration number at each step, and update the eigenvalues ​​and eigenvectors accordingly. At the end, the results will be saved in a CSV file and displayed graphically.
 
 Explanation:
 
