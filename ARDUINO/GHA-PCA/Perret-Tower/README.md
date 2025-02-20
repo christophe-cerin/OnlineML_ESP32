@@ -22,8 +22,7 @@ Explanation:
 - [Overview](#overview)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
-  - [Compilation(#compilation)
-  - [Example 2](#example-2)
+  - [Compilation](#compilation)
   - [Graphic](#graphic)
 
 ## Overview
