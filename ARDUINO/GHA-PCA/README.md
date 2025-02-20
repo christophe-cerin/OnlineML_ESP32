@@ -15,6 +15,8 @@
 - [Result](#result)
 - [License](#license)
 
+### [4- Data mining from the Perret Tower with the GHA dimension reduction algorithm](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/GHA-PCA/Perret-Tower)
+
 ##### Overview
 
 Eigen is a C++ numerical analysis library composed of template headers, developed by Benoît Jacob and Gaël Guennebaud at INRIA. It is free software under MPL2 license and multiplatform.
