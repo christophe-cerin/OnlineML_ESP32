@@ -363,6 +363,6 @@ Updated Eigenvectors:
 
 <picture>
 <center>
-<img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/fig-onlinegpapca.png" width=55% height=55%  title="GHA - First Two Principal Components"/>
+<img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/fig-onlinegpapca.png" title="GHA - First Two Principal Components"/>
 </center>
 </picture>
