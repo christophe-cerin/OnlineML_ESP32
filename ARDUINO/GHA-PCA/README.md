@@ -246,7 +246,7 @@ int main() {
 g++ online_GhaPca_update.cpp -I /home/mamadou/src -L /usr/include/python3.10 -lpython3.10 -o online_GhaPca_update.out
 ```
 
-##### Result : online_GhaPca_update.out
+##### Results : online_GhaPca_update.out
 
 ```
  -0.879897  0.0326784  -0.687509   0.632997   0.106838
