@@ -43,8 +43,8 @@ The details of the 10 attributes from [TourPerret10colHead.csv](https://github.c
 
 
 ## Dependencies
-The header file [ghapca.h](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/ghapca.h) of the module contains everything that is necessary to know
-to have the right to use, in [online_GhaPca_update_buffer.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update_buffer.cpp), the functionalities of the module online_GhaPca_update_buffer.out
+
+The header file [ghapca.h](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/ghapca.h) contains the declarations of variables, constants and shared functions needed for the [online_GhaPca_update_buffer.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update_buffer.cpp) source code to be compiled into online_GhaPca_update_buffer.out
 
 ## Usage
 ### Compilation
