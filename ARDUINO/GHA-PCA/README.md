@@ -12,7 +12,7 @@
 - [Overview](#overview)
 - [Code Source](#code)
 - [Compilation](#compilation)
-- [Result](#result)
+- [Results](#results)
 - [License](#license)
 
 ### [4- Data mining from the Perret Tower with the GHA dimension reduction algorithm](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/GHA-PCA/Perret-Tower)
@@ -246,7 +246,7 @@ int main() {
 g++ online_GhaPca_update.cpp -I /home/mamadou/src -L /usr/include/python3.10 -lpython3.10 -o online_GhaPca_update.out
 ```
 
-##### Result : online_GhaPca_update.out
+##### Results : online_GhaPca_update.out
 
 ```
  -0.879897  0.0326784  -0.687509   0.632997   0.106838
@@ -363,6 +363,6 @@ Updated Eigenvectors:
 
 <picture>
 <center>
-<img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/fig-onlinegpapca.png" width=55% height=55%  title="GHA - First Two Principal Components"/>
+<img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/fig-onlinegpapca.png" title="GHA - First Two Principal Components"/>
 </center>
 </picture>
