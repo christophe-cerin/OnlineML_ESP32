@@ -28,6 +28,7 @@ Explanation:
   - [Graphic obteined with python and the data scores (scores.csv)](#Graphic2)
   - [Results2](#results2)
   - [Graphic obteined with online_GhaPca_update_buffer_normalize.out](#Graphic3)
+- Analysis(#analysis) 
     
 ## Overview
 
@@ -176,3 +177,30 @@ Updated Eigenvectors :
 
   <figcaption><b>Figure : </b> Plot of Dimensionality Reduction on the Tour Perret Dataset with [online_GhaPca_update_buffer_normalize.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update_buffer_normalize.cpp)</figcaption>
 </figure>
+
+### Analysis
+
+The differences between the results of the online_GhaPca_update_buffer_normalize.cpp and testing_batch_ghapca_json.py programs can be attributed to several factors, including:
+
+1- Data normalization: The C++ program normalizes the data by ignoring some columns (1, 3, and 6), while the Python program normalizes all columns. This can lead to differences in the values ​​of the processed data.
+
+Possible causes:
+
+1.1- Constant column: Columns 1, 3, and 6 may contain a constant value (e.g., all elements are 0, 1, or some other fixed value).
+
+1.2- Missing or poorly formatted data: If column 1,3, and 6 contain missing or poorly formatted data, it could lead to a situation where all values ​​are the same after processing.
+
+1.3- Data loading issue: The CSV file might not be loaded properly, resulting in incorrect values ​​in column 1.3 and 6.
+
+2- Data block processing: The C++ program processes the data in blocks of 1024 rows, while the Python program processes the data sequentially. This may affect how the eigenvalues ​​and eigenvectors are updated.
+
+3- Parameter initialization: The initial parameters, such as eigenvalues ​​and eigenvectors, may be initialized differently in the two programs, which may influence the final results.
+
+4- Online vs. batch learning: The C++ program uses an online approach to update the eigenvalues ​​and eigenvectors, while the Python program uses a batch approach. This may lead to differences in the convergence of the results.
+
+5- Handling missing data: The Python program skips rows without a payload, which can reduce the number of data rows processed, while the C++ program does not seem to have this logic.
+
+6- Standardization instead of normalization
+If normalization is a problem, you can consider using standardization (subtracting the mean and dividing by the standard deviation) instead of normalization. This works even if the values ​​are constant (although the standard deviation is zero in this case, which would also require special handling).
+
+
