@@ -169,3 +169,10 @@ Updated Eigenvectors :
 ``` 
 
 ### Graphic2
+
+
+<figure>
+  <img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/Figure_online_GhaPca_update_buffer_normalize.png"  title="Dimensionality Reduction"/>
+
+  <figcaption><b>Figure : </b> Plot of Dimensionality Reduction on the Tour Perret Dataset with python</figcaption>
+</figure>
