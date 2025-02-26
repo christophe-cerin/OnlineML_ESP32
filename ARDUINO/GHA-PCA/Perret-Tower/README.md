@@ -28,7 +28,8 @@ Explanation:
   - [Graphic obteined with python and the data scores (scores.csv)](#Graphic2)
   - [Results2](#results2)
   - [Graphic obteined with online_GhaPca_update_buffer_normalize.out](#Graphic3)
-- Analysis(#analysis) 
+- Analysis(#analysis)
+- Solutions(#solutions)
     
 ## Overview
 
@@ -198,9 +199,17 @@ Possible causes:
 
 4- Online vs. batch learning: The C++ program uses an online approach to update the eigenvalues ​​and eigenvectors, while the Python program uses a batch approach. This may lead to differences in the convergence of the results.
 
-5- Handling missing data: The Python program skips rows without a payload, which can reduce the number of data rows processed, while the C++ program does not seem to have this logic.
+5- Handling missing data: The Python program ignores rows without payload, which can reduce the number of data rows processed, while the C++ program does not seem to have this logic.
 
-6- Standardization instead of normalization
-If normalization is a problem, you can consider using standardization (subtracting the mean and dividing by the standard deviation) instead of normalization. This works even if the values ​​are constant (although the standard deviation is zero in this case, which would also require special handling).
+### Solutions
+
+1- Ignore the problematic column
+If columns 1,3 and 6 are not important for your analysis, you can ignore it when normalizing.
+
+2- Replace constant values
+If columns 1,3 and 6 are important but contain constant values, you can replace these values ​​with a default value or a small variation to allow normalization
+
+3- Standardization instead of normalization
+If normalization is a problem, you can consider using standardization (subtract the mean and divide by the standard deviation) instead of normalization. This works even if the values ​​are constant (although the standard deviation is zero in this case, which would also require special handling).
 
 
