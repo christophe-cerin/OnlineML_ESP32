@@ -44,7 +44,10 @@ The details of the 10 attributes from [TourPerret10colHead.csv](https://github.c
 
 ## Dependencies
 
-The header file [ghapca.h](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/ghapca.h) contains the declarations of variables, constants and shared functions needed for the [online_GhaPca_update_buffer.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update_buffer.cpp) source code to be compiled into online_GhaPca_update_buffer.out
+The header file [ghapca.h](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/ghapca.h) contains the declarations of variables, constants and shared functions needed for the [online_GhaPca_update_buffer.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update_buffer.cpp) source code to be compiled into online_GhaPca_update_buffer.out.
+In this second program online_GhaPca_update_buffer_normalize.cpp, there is a special feature: a section where the data is normalized.
+This practice allows transforming the data without distorting it. While normalization consists of harmonizing the data
+so that all the entries of the different data sets that relate to the same terms follow a similar format.
 
 ## Usage
 ### Compilation
