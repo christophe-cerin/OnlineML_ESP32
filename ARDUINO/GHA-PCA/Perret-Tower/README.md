@@ -23,10 +23,12 @@ Explanation:
 - [Dependencies](#dependencies)
 - [Usage](#usage)
   - [Compilation](#compilation)
-  - [Results](#results)
+  - [Results1](#results1)
   - [Graphic obteined with online_GhaPca_update_buffer.out](#Graphic1)
   - [Graphic obteined with python and the data scores (scores.csv)](#Graphic2)
-
+  - [Results2](#results2)
+  - [Graphic obteined with online_GhaPca_update_buffer_normalize.out](#Graphic2)
+    
 ## Overview
 
 The details of the 10 attributes from [TourPerret10colHead.csv](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/TourPerret10colHead.csv])
@@ -53,9 +55,11 @@ so that all the entries of the different data sets that relate to the same terms
 ### Compilation
 
 ```
-g++ online_GhaPca_update_buffer.cpp -I /home/mamadou/src -L /usr/include/python3.10 -lpython3.10 -o online_GhaPca_update_buffer.out
+1- g++ online_GhaPca_update_buffer.cpp -I /home/mamadou/src -L /usr/include/python3.10 -lpython3.10 -o online_GhaPca_update_buffer.out
+
+2- g++ online_GhaPca_update_buffer_normalize.cpp -I /home/mamadou/src -L /usr/include/python3.10 -lpython3.10 -o online_GhaPca_update_buffer_normalize.out
 ```
-### Results
+### Results1
 
 Iteration over the data in blocks of W rows 1024 :
 
@@ -139,5 +143,29 @@ plt.show()
   <figcaption><b>Figure : </b> Plot of Dimensionality Reduction on the Tour Perret Dataset with python</figcaption>
 </figure>
 
+### Results2
 
+Updated Eigenvalues :
 
+``` 
+0.100697
+0.100696
+``` 
+
+Updated Eigenvectors :
+
+``` 
+   -0.354593     -0.35579
+-0.000275093  0.000169886
+     0.31469     0.314211
+ 0.000777325   1.7666e-05
+    -0.34374    -0.344359
+   -0.749517    -0.748832
+-0.000429183  0.000178904
+    0.225717     0.225591
+   -0.169892    -0.170084
+   -0.124456    -0.124628
+
+``` 
+
+### Graphic2
