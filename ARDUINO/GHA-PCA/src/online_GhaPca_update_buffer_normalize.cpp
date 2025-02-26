@@ -5,7 +5,7 @@
 #include <Eigen/Dense>
 #include <algorithm>
 
-#include "/home/mamadou/big-data/cerin04102024/DimensionalityReductionCerin/pyTocpp/lib/matplotlibcpp.h"
+#include "matplotlibcpp.h"
 #include </usr/include/python3.10/pyconfig.h>
 #include "/usr/include/python3.10/Python.h"
 
