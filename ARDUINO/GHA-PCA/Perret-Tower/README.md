@@ -204,12 +204,15 @@ Possible causes:
 ### Solutions
 
 1- Ignore the problematic column
+
 If columns 1,3 and 6 are not important for your analysis, you can ignore it when normalizing.
 
 2- Replace constant values
+
 If columns 1,3 and 6 are important but contain constant values, you can replace these values ​​with a default value or a small variation to allow normalization
 
 3- Standardization instead of normalization
+
 If normalization is a problem, you can consider using standardization (subtract the mean and divide by the standard deviation) instead of normalization. This works even if the values ​​are constant (although the standard deviation is zero in this case, which would also require special handling).
 
 
