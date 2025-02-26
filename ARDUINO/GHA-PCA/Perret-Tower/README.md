@@ -27,7 +27,7 @@ Explanation:
   - [Graphic obteined with online_GhaPca_update_buffer.out](#Graphic1)
   - [Graphic obteined with python and the data scores (scores.csv)](#Graphic2)
   - [Results2](#results2)
-  - [Graphic obteined with online_GhaPca_update_buffer_normalize.out](#Graphic2)
+  - [Graphic obteined with online_GhaPca_update_buffer_normalize.out](#Graphic3)
     
 ## Overview
 
@@ -168,7 +168,7 @@ Updated Eigenvectors :
 
 ``` 
 
-### Graphic2
+### Graphic3
 
 
 <figure>
