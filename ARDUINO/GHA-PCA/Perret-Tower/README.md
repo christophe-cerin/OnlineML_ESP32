@@ -28,8 +28,8 @@ Explanation:
   - [Graphic obteined with python and the data scores (scores.csv)](#Graphic2)
   - [Results2](#results2)
   - [Graphic obteined with online_GhaPca_update_buffer_normalize.out](#Graphic3)
-- Analysis(#analysis)
-- Solutions(#solutions)
+- [Analysis](#analysis)
+- [Solutions](#solutions)
     
 ## Overview
 
