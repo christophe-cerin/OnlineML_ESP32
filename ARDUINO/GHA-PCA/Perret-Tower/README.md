@@ -100,7 +100,7 @@ Updated Eigenvectors :
 <figure>
   <img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024.png"  title="Dimensionality Reduction on the Tour Perret Dataset with batch ghapca"/>
 
-  <figcaption><b>Figure : </b> Dimensionality Reduction on the Tour Perret Dataset with  ghapca and data scores.</figcaption>
+  <figcaption><b>Figure : </b> Dimensionality Reduction on the Tour Perret Dataset with  online_GhaPca_update_buffer_normalize.cpp.</figcaption>
 </figure>
 
 ### Graphic2
@@ -174,5 +174,5 @@ Updated Eigenvectors :
 <figure>
   <img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/Figure_online_GhaPca_update_buffer_normalize.png"  title="Dimensionality Reduction"/>
 
-  <figcaption><b>Figure : </b> Plot of Dimensionality Reduction on the Tour Perret Dataset with python</figcaption>
+  <figcaption><b>Figure : </b> Plot of Dimensionality Reduction on the Tour Perret Dataset with online_GhaPca_update_buffer_normalize.cpp</figcaption>
 </figure>
