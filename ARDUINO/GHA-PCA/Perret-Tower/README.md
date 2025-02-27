@@ -211,7 +211,7 @@ If columns 1, 3 and 6 are not important for your analysis, you can ignore it whe
 
 If columns 1, 3 and 6 are important but contain constant values, you can replace these values ​​with a default value or a small variation to allow normalization
 
-```
+```SHELL
 // Function to normalize data for the solution 1 and 2
 MatrixXd normalize(const MatrixXd& data) {
     VectorXd min_vals = data.colwise().minCoeff();
@@ -238,7 +238,7 @@ MatrixXd normalize(const MatrixXd& data) {
 
 If normalization is a problem, you can consider using standardization (subtract the mean and divide by the standard deviation) instead of normalization. This works even if the values ​​are constant (although the standard deviation is zero in this case, which would also require special handling).
 
-```
+```SHELL
 // Function to standardize data
 MatrixXd standardize(const MatrixXd& data) {
     VectorXd mean = data.colwise().mean();
