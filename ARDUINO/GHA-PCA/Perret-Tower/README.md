@@ -199,7 +199,7 @@ Possible causes:
 
 4- Online vs. batch learning: The C++ program uses an online approach to update the eigenvalues ​​and eigenvectors, while the Python program uses a batch approach. This may lead to differences in the convergence of the results.
 
-5- Handling missing data: The Python program ignores rows without payload, which can reduce the number of data rows processed, while the C++ program does not seem to have this logic.
+5- Handling missing data: The Python program ignores rows without payload, which can reduce the number of data rows processed, while the C++ program does not seem to have this logic. Payload is the part of a message or data transmission containing the essential information intended for the end user, often distinguished from control or header data.
 
 ### Solutions
 
