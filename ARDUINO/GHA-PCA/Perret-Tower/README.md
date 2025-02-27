@@ -187,11 +187,11 @@ The differences between the results of the online_GhaPca_update_buffer_normalize
 
 Possible causes:
 
-1.1- Constant column: Columns 1, 3, and 6 may contain a constant value (e.g., all elements are 0, 1, or some other fixed value).
+1.1- Constant column: Columns 1, 3 and 6 may contain a constant value (e.g., all elements are 0, 1, or some other fixed value).
 
-1.2- Missing or poorly formatted data: If column 1,3, and 6 contain missing or poorly formatted data, it could lead to a situation where all values ​​are the same after processing.
+1.2- Missing or poorly formatted data: If column 1,3 and 6 contain missing or poorly formatted data, it could lead to a situation where all values ​​are the same after processing.
 
-1.3- Data loading issue: The CSV file might not be loaded properly, resulting in incorrect values ​​in column 1.3 and 6.
+1.3- Data loading issue: The CSV file might not be loaded properly, resulting in incorrect values ​​in column 1, 3 and 6.
 
 2- Data block processing: The C++ program processes the data in blocks of 1024 rows, while the Python program processes the data sequentially. This may affect how the eigenvalues ​​and eigenvectors are updated.
 
@@ -205,11 +205,11 @@ Possible causes:
 
 1- Ignore the problematic column
 
-If columns 1,3 and 6 are not important for your analysis, you can ignore it when normalizing.
+If columns 1, 3 and 6 are not important for your analysis, you can ignore it when normalizing.
 
 2- Replace constant values
 
-If columns 1,3 and 6 are important but contain constant values, you can replace these values ​​with a default value or a small variation to allow normalization
+If columns 1, 3 and 6 are important but contain constant values, you can replace these values ​​with a default value or a small variation to allow normalization
 
 3- Standardization instead of normalization
 
