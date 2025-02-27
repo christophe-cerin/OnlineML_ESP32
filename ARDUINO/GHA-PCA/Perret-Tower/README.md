@@ -211,8 +211,51 @@ If columns 1, 3 and 6 are not important for your analysis, you can ignore it whe
 
 If columns 1, 3 and 6 are important but contain constant values, you can replace these values ​​with a default value or a small variation to allow normalization
 
+```
+// Function to normalize data for the solution 1 and 2
+MatrixXd normalize(const MatrixXd& data) {
+    VectorXd min_vals = data.colwise().minCoeff();
+    VectorXd max_vals = data.colwise().maxCoeff();
+
+    MatrixXd normalized = data;
+    for (int i = 0; i < data.cols(); ++i) {
+	     //if (i == 1 || i == 3 || i==6) continue;  // Ignore columns 1, 3 and 6
+        if (max_vals(i) == min_vals(i)) {
+        //  cerr << "Error: max_vals == min_vals for column " << i << ". Unable to normalize." << endl;
+        //  exit(1);
+				// If the column is constant, add a little variation
+            normalized.col(i).array() = 0.5;  // Replace with default value
+            continue;
+        }
+        normalized.col(i) = (data.col(i).array() - min_vals(i)) / (max_vals(i) - min_vals(i));
+    }
+
+    return normalized;
+}
+```
+
 3- Standardization instead of normalization
 
 If normalization is a problem, you can consider using standardization (subtract the mean and divide by the standard deviation) instead of normalization. This works even if the values ​​are constant (although the standard deviation is zero in this case, which would also require special handling).
 
+```
+// Function to standardize data
+MatrixXd standardize(const MatrixXd& data) {
+    VectorXd mean = data.colwise().mean();
+    VectorXd std_dev = ((data.rowwise() - mean.transpose()).array().square().colwise().sum() / data.rows()).sqrt();
+
+    MatrixXd standardized = data;
+    for (int i = 0; i < data.cols(); ++i) {
+        if (std_dev(i) == 0) {
+            // If the standard deviation is zero, replace with a default value
+            standardized.col(i).array() = 0.0;
+            continue;
+        }
+        standardized.col(i) = (data.col(i).array() - mean(i)) / std_dev(i);
+    }
+
+    return standardized;
+}
+
+```
 
