@@ -17,6 +17,56 @@ All the files with prefix `batch_` implement offline (or batch) regression metho
 
 ## Offline learning and regression
 
+<figure>
+  <img src="Images/LASSO.png" alt="My image caption">
+  <figcaption><b>Fig. 1:</b> Exploring data with LASSO method</figcaption>
+</figure>
 
+  <p>  <br></p>
+<figure>
+  <img src="Images/LSTM.png" alt="My image caption">
+  <figcaption><b>Fig. 2:</b> Exploring data with RIDGE method</figcaption>
+</figure>
+
+  <p>  <br></p>
+
+  The next figures correspond to outcomes of the `batch_SVR.py` Python code, and illustrate different situations and configurations for the parameters of the model. Please, refer to the source code.
+
+ <p>  <br></p>
+  <figure>
+  <img src="Images/SVR_1.png" alt="My image caption">
+  <figcaption><b>Fig. 3:</b> Exploring dataset with SVR (1/6)</figcaption>
+</figure>
+
+ <p>  <br></p>
+  <figure>
+  <img src="Images/SVR_2.png" alt="My image caption">
+  <figcaption><b>Fig. 4:</b> Exploring dataset with SVR (2/6)</figcaption>
+</figure>
+
+ <p>  <br></p>
+  <figure>
+  <img src="Images/SVR_3.png" alt="My image caption">
+  <figcaption><b>Fig. 5:</b> Exploring dataset with SVR (3/6)</figcaption>
+</figure>
+
+ <p>  <br></p>
+  <figure>
+  <img src="Images/SVR_4.png" alt="My image caption">
+  <figcaption><b>Fig. 6:</b> Exploring dataset with SVR (4/6)</figcaption>
+</figure>
+
+ <p>  <br></p>
+  <figure>
+  <img src="Images/SVR_5.png" alt="My image caption">
+  <figcaption><b>Fig. 7:</b> Exploring dataset with SVR (5/6)</figcaption>
+</figure>
+
+ <p>  <br></p>
+  <figure>
+  <img src="Images/SVR_6.png" alt="My image caption">
+  <figcaption><b>Fig. 8:</b> Exploring dataset with SVR (6/6)</figcaption>
+</figure>
+  <p>  <br></p>
 
 ## Extreme-edge incremental learning and regression
