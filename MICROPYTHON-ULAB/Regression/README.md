@@ -24,7 +24,7 @@ All the files with prefix `batch_` implement offline (or batch) regression metho
 
   <p>  <br></p>
 <figure>
-  <img src="Images/LSTM.png" alt="My image caption">
+  <img src="Images/RIDGE.png" alt="My image caption">
   <figcaption><b>Fig. 2:</b> Exploring data with RIDGE method</figcaption>
 </figure>
 
