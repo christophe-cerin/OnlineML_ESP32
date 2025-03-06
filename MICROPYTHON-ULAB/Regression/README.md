@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In statistical modeling, regression analysis is a set of statistical processes for estimating the relationships between a dependent variable (often called the outcome or response variable, or a label in machine learning parlance) and one or more error-free independent variables (often called regressors, predictors, covariates, explanatory variables or features).
+Within the framework of statistical modeling, regression analysis comprises a collection of statistical methodologies aimed at quantifying the relationships between a dependent variable—frequently referred to as the outcome, response variable, or, in the context of machine learning, a label—and one or more independent variables devoid of errors. These independent variables are commonly termed as regressors, predictors, covariates, explanatory variables, or features.
 
-This page introduces the following methods:
+This page introduces the following regression methods:
 
 - Gradient Boosting;
 - Lasso;
