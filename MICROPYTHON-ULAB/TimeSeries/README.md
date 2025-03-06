@@ -14,7 +14,7 @@ You will find three types of methods: LSTM (Long short-term memory) and BI-LSTM 
 
 Figure 1 illustrates the humidity values over 360 time intervals, represented by the plot in red. The green and blue lines indicate the training data, while the grey line represents the predictions. The Python code adheres to traditional methodologies. Once the dataset is prepared, it is imperative to partition it into training and testing subsets to assess the model's performance on data unseen during training. Subsequently, a Long Short-Term Memory (LSTM) model is employed. Upon fitting the model with the training data, predictions are generated on the test set. This approach provides insights into the model's efficacy in forecasting humidity based on novel input data.
 
-Note that the computing time for learning the 360 time intervals is about 35s on a Macbook Air equipped with 24MB of RAM and an M3 processor.
+Note that the computing time for learning the 360 time intervals is about 35s on a Macbook Air equipped with 24MB of RAM and an M3 processor. Note that the top of Figure 1 corresponds to a trial over the first 15 values of the dataset.
 
 <figure>
   <img src="Images/LSTM.png" alt="My image caption">
