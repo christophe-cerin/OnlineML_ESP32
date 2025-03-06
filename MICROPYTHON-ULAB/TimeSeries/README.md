@@ -10,6 +10,6 @@ You will find three types of methods: LSTM (Long short-term memory) and BI-LSTM 
 - Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. It works best with time series with strong seasonal effects and several seasons of historical data. Prophet is robust to missing data and shifts in the trend, and typically handles outliers well.
 - TBATS model is a powerful method for time series forecasting that can handle multiple seasonalities and complex patterns.
 
-
+Here are some results, based on random generated data or real data from an outside building (`Tour Perret dataset`).
 
 ## Extreme-edge incremental learning and time series
