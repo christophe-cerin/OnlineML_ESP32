@@ -7,9 +7,9 @@ Within the framework of statistical modeling, regression analysis comprises a co
 This page introduces the following regression methods:
 
 - Gradient Boosting;
-- Lasso;
+- Lasso (batch and online);
 - Random Forest;
-- Ridge;
+- Ridge (batch and online);
 - SVR (Support Vector Regression)
 - The file `batch_regression.py` aggregates and compiles different methods.
 
@@ -30,7 +30,7 @@ All the files with prefix `batch_` implement offline (or batch) regression metho
 
   <p>  <br></p>
 
-  The next figures correspond to outcomes of the `batch_SVR.py` Python code, and illustrate different situations and configurations for the parameters of the model. Please, refer to the source code.
+  The next figures correspond to outcomes of the `batch_SVR.py` Python code and illustrate different situations and configurations for the model's parameters. Please refer to the source code.
 
  <p>  <br></p>
   <figure>
@@ -70,3 +70,19 @@ All the files with prefix `batch_` implement offline (or batch) regression metho
   <p>  <br></p>
 
 ## Extreme-edge incremental learning and regression
+
+According to the scenario, we consider the Tour Perret dataset from the Smart-Building sector. IoT sensors continually send data to an embedded device that is supposed to learn from the data. The device receives two types of messages: data like temperature and humidity, or a request to send back to the cloud or fog layer, the model learned from the data.
+
+<p>  <br></p>
+  <figure>
+  <img src="Images/online_lasso.png" alt="My image caption">
+  <figcaption><b>Fig. 9:</b> Exploring Tour Perret dataset with online Lasso</figcaption>
+</figure>
+  <p>  <br></p>
+
+  <p>  <br></p>
+  <figure>
+  <img src="Images/online_ridge.png" alt="My image caption">
+  <figcaption><b>Fig. 8:</b> Exploring Tour Perret dataset with online Ridge</figcaption>
+</figure>
+  <p>  <br></p>
