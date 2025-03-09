@@ -42,13 +42,16 @@ In online computing, using a circular buffer with an offline algorithm is effect
 We implemented a simulation because there is no feedback and the precision is not used. The algorithm applies a circular buffer and TBATS for forecasting, which handles data with multiple seasonal patterns. TBATS is preferred over BATS for its ability to manage complex high-frequency data due to trigonometric seasonality. TBATS stands for Trigonometric seasonality, Box-Cox transformation, ARIMA errors, Trend, and Seasonal components.
 
 TBATS is ideal for handling seasonality. This page includes an example using Tour Perret data, showcasing the seasonality in humidity and forecasts every 360 ticks. See Figure 3. We also compare results with TBATS from the SKtime package. See after Figure 3.
- <p>  <br></p>
+
+<p>  <br></p>
 
 <figure>
-  <img src="Images/online_TABATS.png" alt="My image caption">
+  <img src="Images/online_TBATS.png" alt="My image caption">
   <figcaption><b>Fig. 3:</b> Exploring humidity attribute of Tour Perret dataset</figcaption>
 </figure>
 
+<p>  <br></p>
+ 
 <code>
 % python3 online_TBATS_1.py
 Forecast based on data between [0,360[: ['49.21', '49.21', '49.21', '49.21', '49.21']
