@@ -49,7 +49,7 @@ TBATS is ideal for handling seasonality. This page includes an example using Tou
   <figcaption><b>Fig. 3:</b> Exploring humidity attribute of Tour Perret dataset</figcaption>
 </figure>
 
-
+<p>  <br></p>
  
 <code>
 % python3 online_TBATS_1.py
