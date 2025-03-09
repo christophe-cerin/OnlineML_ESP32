@@ -36,3 +36,45 @@ Figure 2 illustrates a periodic signal subjected to 'noise' interference. The gr
 
 
 ## Extreme-edge incremental learning and time series
+
+In online computing, using a circular buffer with an offline algorithm is effective. For example, in a smart building, data arrives every 10 minutes (6 data points per hour). The circular buffer, with a capacity of 360, stores 60 hours of data. Every 60 hours, a forecast is sent to the cloud or fog level for the building administrator to decide on further actions.
+
+We implemented a simulation because there is no feedback and the precision is not used. The algorithm applies a circular buffer and TBATS for forecasting, which handles data with multiple seasonal patterns. TBATS is preferred over BATS for its ability to manage complex high-frequency data due to trigonometric seasonality. TBATS stands for Trigonometric seasonality, Box-Cox transformation, ARIMA errors, Trend, and Seasonal components.
+
+TBATS is ideal for handling seasonality. This page includes an example using Tour Perret data, showcasing the seasonality in humidity and forecasts every 360 ticks. See Figure 3. We also compare results with TBATS from the SKtime package. See after Figure 3.
+ <p>  <br></p>
+
+<figure>
+  <img src="Images/online_TABATS.png" alt="My image caption">
+  <figcaption><b>Fig. 3:</b> Exploring humidity attribute of Tour Perret dataset</figcaption>
+</figure>
+
+<code>
+% python3 online_TBATS_1.py
+Forecast based on data between [0,360[: ['49.21', '49.21', '49.21', '49.21', '49.21']
+Forecast based on SKTIME + TBATS: ['46.02', '46.02', '46.02', '46.02', '46.02']
+Forecast based on data between [360,720[: ['64.93', '64.93', '64.93', '64.93', '64.93']
+Forecast based on SKTIME + TBATS: ['54.93', '54.93', '54.93', '54.93', '54.93']
+Forecast based on data between [720,1080[: ['50.35', '50.35', '50.35', '50.35', '50.35']
+Forecast based on SKTIME + TBATS: ['70.43', '70.43', '70.43', '70.43', '70.43']
+Forecast based on data between [1080,1440[: ['52.95', '52.95', '52.95', '52.95', '52.95']
+Forecast based on SKTIME + TBATS: ['43.11', '43.11', '43.11', '43.11', '43.11']
+Forecast based on data between [1440,1800[: ['53.30', '53.30', '53.30', '53.30', '53.30']
+Forecast based on SKTIME + TBATS: ['56.02', '56.02', '56.02', '56.02', '56.02']
+Forecast based on data between [1800,2160[: ['58.34', '58.34', '58.34', '58.34', '58.34']
+Forecast based on SKTIME + TBATS: ['56.23', '56.23', '56.23', '56.23', '56.23']
+Forecast based on data between [2160,2520[: ['55.13', '55.13', '55.13', '55.13', '55.13']
+Forecast based on SKTIME + TBATS: ['47.02', '47.02', '47.02', '47.02', '47.02']
+Forecast based on data between [2520,2880[: ['45.63', '45.63', '45.63', '45.63', '45.63']
+Forecast based on SKTIME + TBATS: ['45.24', '45.24', '45.24', '45.24', '45.24']
+Forecast based on data between [2880,3240[: ['42.32', '42.32', '42.32', '42.32', '42.32']
+Forecast based on SKTIME + TBATS: ['30.16', '30.16', '30.16', '30.16', '30.16']
+Forecast based on data between [3240,3600[: ['38.52', '38.52', '38.52', '38.52', '38.52']
+Forecast based on SKTIME + TBATS: ['60.91', '60.91', '60.91', '60.91', '60.91']
+Forecast based on data between [3600,3960[: ['73.56', '73.56', '73.56', '73.56', '73.56']
+Forecast based on SKTIME + TBATS: ['68.17', '68.17', '68.17', '68.17', '68.17']
+Forecast based on data between [3960,4320[: ['55.48', '55.48', '55.48', '55.48', '55.48']
+Forecast based on SKTIME + TBATS: ['50.08', '50.08', '50.08', '50.08', '50.08']
+Forecast based on data between [4320,4680[: ['53.83', '53.83', '53.83', '53.83', '53.83']
+Forecast based on SKTIME + TBATS: ['62.21', '62.21', '62.21', '62.21', '62.21']
+</code>
