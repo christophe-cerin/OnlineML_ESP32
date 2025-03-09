@@ -51,7 +51,7 @@ TBATS is ideal for handling seasonality. This page includes an example using Tou
 
 <p>  <br></p>
  
-<code>
+```
 % python3 online_TBATS_1.py
 Forecast based on data between [0,360[: ['49.21', '49.21', '49.21', '49.21', '49.21']
 Forecast based on SKTIME + TBATS: ['46.02', '46.02', '46.02', '46.02', '46.02']
@@ -79,4 +79,4 @@ Forecast based on data between [3960,4320[: ['55.48', '55.48', '55.48', '55.48',
 Forecast based on SKTIME + TBATS: ['50.08', '50.08', '50.08', '50.08', '50.08']
 Forecast based on data between [4320,4680[: ['53.83', '53.83', '53.83', '53.83', '53.83']
 Forecast based on SKTIME + TBATS: ['62.21', '62.21', '62.21', '62.21', '62.21']
-</code>
+```
