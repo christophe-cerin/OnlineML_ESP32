@@ -43,14 +43,13 @@ We implemented a simulation because there is no feedback and the precision is no
 
 TBATS is ideal for handling seasonality. This page includes an example using Tour Perret data, showcasing the seasonality in humidity and forecasts every 360 ticks. See Figure 3. We also compare results with TBATS from the SKtime package. See after Figure 3.
 
-<p>  <br></p>
 
 <figure>
   <img src="Images/online_TBATS.png" alt="My image caption">
   <figcaption><b>Fig. 3:</b> Exploring humidity attribute of Tour Perret dataset</figcaption>
 </figure>
 
-<p>  <br></p>
+
  
 <code>
 % python3 online_TBATS_1.py
