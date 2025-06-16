@@ -10,7 +10,7 @@ When to Use Lasso Regression
 Lasso regression is ideal for predictive problems: its ability to perform automatic variable selection can simplify models and improve prediction accuracy. 
 That said, Ridge Regression can perform better than Lasso regression due to the bias introduced by the latter as coefficients shrink toward zero. It also has limitations regarding correlated features in the data, as it arbitrarily chooses one feature to include in the model.
 
-## Lasso Regression: How Does It Work ?
+## Lasso Regression : How Does It Work ?
 
 ### Performing Exploratory Data Analysis
 
