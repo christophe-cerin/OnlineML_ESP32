@@ -37,7 +37,7 @@ g++ online_lasso_regression_optimized_en.cpp -I /home/mamadou/src -L /usr/includ
 ```
 ### Results
 
-Iteration over the data in blocks of W rows 1024 :
+Iteration over the data in blocks of W rows 4096 :
 
 ```
 Data loaded : 6635x10
@@ -63,7 +63,7 @@ Processing Completed Successfully
 ### Graphic
 
 <figure>
-  <img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024.png"  title="Dimensionality Reduction on the Tour Perret Dataset with batch ghapca"/>
+  <img alt="Regression LASSO-Real Values Predictions" align="center" src="[https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024.png](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/regression_lasso_optimized.png)"  title="Regression LASSO-Real Values Predictions"/>
 
-  <figcaption><b>Figure : </b> Dimensionality Reduction on the Tour Perret Dataset with  [online_GhaPca_update_buffer.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update_buffer.cpp).</figcaption>
+  <figcaption><b>Figure : </b> Regression LASSO-Real Values Predictions on the Tour Perret Dataset with  [online_lasso_regression_optimized_en.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_lasso_regression_optimized_en.cpp).</figcaption>
 </figure>
