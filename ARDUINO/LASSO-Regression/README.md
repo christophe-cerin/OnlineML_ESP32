@@ -1,4 +1,4 @@
-## What is Lasso Regression ?
+## What is Lasso Regression ?
 
 The acronym Lasso stands for "Least Absolute Shrinkage and Selection Operator." This method is frequently used in machine learning to handle high-dimensional data, as it facilitates automatic feature selection.
 
@@ -23,7 +23,7 @@ Understanding these elements is important because datasets with high dimensional
 Data that is not centered around the mean with a standard deviation of 1 will also need to be rescaled to limit the impact of large scales on the model. 
 If features are not rescaled, this can negatively affect the cost function, which in turn will impact the beta coefficients. Simply put, unscaled features can lead to unintended penalties in Lasso regression due to unit differences.
 
-### Split the Data and Rescaling Continuous Predictors
+### Split the Data and Rescaling Continuous Predictors
 
 Once we have performed exploratory data analysis, we will split the data into a training set and a test set. After this splitting step, rescaling is applied to the data as needed. 
 Z-score scaling is a common approach to feature scaling: it rescales features so that they have a standard deviation of 1 and a mean of 0.
