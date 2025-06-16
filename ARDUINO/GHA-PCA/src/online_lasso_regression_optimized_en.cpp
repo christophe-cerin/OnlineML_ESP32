@@ -10,12 +10,19 @@
 #include <string>
 #include <omp.h>
 
-#include "/home/mamadou/big-data/cerin04102024/DimensionalityReductionCerin/pyTocpp/lib/matplotlibcpp.h"
+#include "matplotlibcpp.h"
 #include "/usr/include/python3.10/Python.h"
 
 using namespace std;
 using namespace Eigen;
 namespace plt = matplotlibcpp;
+
+/*
+   Author : M. SOW
+   Date : 2025-06-16
+   Objective : The provided Python code online_lasso.py has been converted into C++ while maintaining the original logic and structure
+   Name of programm : online_lasso_regression_optimized_en.cpp
+*/
 
 struct Point {
     double x, y;
