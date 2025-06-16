@@ -27,3 +27,43 @@ If features are not rescaled, this can negatively affect the cost function, whic
 
 Once we have performed exploratory data analysis, we will split the data into a training set and a test set. After this splitting step, rescaling is applied to the data as needed. 
 Z-score scaling is a common approach to feature scaling: it rescales features so that they have a standard deviation of 1 and a mean of 0.
+
+
+## Usage
+### Compilation
+
+```
+g++ online_lasso_regression_optimized_en.cpp -I /home/mamadou/src -L /usr/include/python3.10 -lpython3.10 -o online_lasso_regression_optimized_en.out
+```
+### Results
+
+Iteration over the data in blocks of W rows 1024 :
+
+```
+Data loaded : 6635x10
+Convergence after 993 iterations
+Score MSE: 0.941619
+
+Examples of Predictions vs Real Values :
+Prediction : -0.344497 | Actual : 1.45842 | Error : 1.80292
+Prediction : -0.106083 | Actual : -0.882726 | Error : 0.776643
+Prediction : 0.150393 | Actual : -0.947758 | Error : 1.09815
+Prediction : 0.143169 | Actual : -0.557566 | Error : 0.700735
+Prediction : 0.150393 | Actual : 2.36887 | Error : 2.21848
+Prediction : -0.337272 | Actual : 0.157785 | Error : 0.495057
+Prediction : 0.0564726 | Actual : -0.232407 | Error : 0.288879
+Prediction : 0.150393 | Actual : 0.417913 | Error : 0.267519
+Prediction : 0.150393 | Actual : -0.492534 | Error : 0.642928
+Prediction : 0.0239616 | Actual : -0.427502 | Error : 0.451464
+
+Processing Completed Successfully
+
+``` 
+
+### Graphic
+
+<figure>
+  <img alt="GHA - First Two Principal Components" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/FigureBufer1024.png"  title="Dimensionality Reduction on the Tour Perret Dataset with batch ghapca"/>
+
+  <figcaption><b>Figure : </b> Dimensionality Reduction on the Tour Perret Dataset with  [online_GhaPca_update_buffer.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_GhaPca_update_buffer.cpp).</figcaption>
+</figure>
