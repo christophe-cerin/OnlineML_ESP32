@@ -65,5 +65,5 @@ Processing Completed Successfully
 <figure>
   <img alt="Regression LASSO-Real Values Predictions" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/regression_lasso_optimized.png"  title="Regression LASSO-Real Values Predictions"/>
 
-  <figcaption><b>Figure : </b> Regression LASSO-Real Values Predictions on the Tour Perret Dataset with  [online_lasso_regression_optimized_en.cpp].(https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_lasso_regression_optimized_en.cpp).</figcaption>
+  <figcaption><b>Figure : </b> Regression LASSO-Real Values Predictions on the Tour Perret Dataset with  [online_lasso_regression_optimized_en.cpp](https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_lasso_regression_optimized_en.cpp)</figcaption>
 </figure>
