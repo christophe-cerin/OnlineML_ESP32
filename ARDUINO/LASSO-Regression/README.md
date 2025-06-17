@@ -142,6 +142,7 @@ Processing Completed Successfully
     ```
 
 ```
+Regression LASSO & Collinearity Check
 Data loaded : 6635x10
 Condition number: 1
 Convergence after 993 iterations
@@ -194,7 +195,7 @@ This program now provides a comprehensive analysis of:
 ### Graphic
 
 <figure>
-  <img alt="Regression LASSO-Real Values & Predictions" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/regression_lasso_optimized.png"  title="Regression LASSO-Real Values & Predictions"/>
+  <img alt="Residuals analys with Collinearity Check" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/residuals_analysisEngi.png"  title="Residuals Analys & Collinearity Check"/>
 
-  <figcaption><b>Figure : </b> Regression LASSO-Real Values & Predictions on the Tour Perret Dataset with  <a href="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_lasso_regression_optimized_en.cpp">online_lasso_regression_optimized_en.cpp </a></figcaption>
+  <figcaption><b>Figure : </b> Regression LASSO-Real Values & Predictions on the Tour Perret Dataset with  <a href="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/onlineLassoRegressionOptimizedFeatureEngineering.cpp ">  onlineLassoRegressionOptimizedFeatureEngineering.cpp</a></figcaption>
 </figure>
