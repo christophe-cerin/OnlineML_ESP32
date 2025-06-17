@@ -10,7 +10,7 @@
 #include <string>
 #include <omp.h>
 
-#include "/home/mamadou/big-data/cerin04102024/DimensionalityReductionCerin/pyTocpp/lib/matplotlibcpp.h"
+#include "matplotlibcpp.h"
 #include "/usr/include/python3.10/Python.h"
 
 using namespace std;
