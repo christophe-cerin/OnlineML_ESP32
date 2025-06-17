@@ -93,14 +93,14 @@ The resulting graph shows three main elements:
    
 3. Diagnosing Potential Problems
   Case 1: Homogeneous Dispersion
-    • Problem: Noise in the data or missing features.
-    • Solution: Increase the L1 penalty (λ) or add variables.
+    - Problem: Noise in the data or missing features.
+    - Solution: Increase the L1 penalty (λ) or add variables.
   Case 2: Visible Nonlinear Pattern
-    • Problem: The LASSO is linear, but the data is not.
-    • Solution: Add polynomial features or use a nonlinear model.
+    - Problem: The LASSO is linear, but the data is not.
+    - Solution: Add polynomial features or use a nonlinear model.
   Case 3: Outliers
-    • Problem: Outliers disrupting the regression.
-    • Solution: Preprocess the data (robust normalization, outlier removal).
+    - Problem: Outliers disrupting the regression.
+    - Solution: Preprocess the data (robust normalization, outlier removal).
    
 4. Possible Optimizations
   a. Hyperparameter Tuning
