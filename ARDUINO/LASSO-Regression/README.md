@@ -140,3 +140,29 @@ Processing Completed Successfully
     JacobiSVD<MatrixXd> svd(X);
     cout << "Condition number: " << svd.singularValues()(0) / svd.singularValues()(svd.singularValues().size()-1);
     ```
+    ```
+    Data loaded : 6635x10
+Condition number: 1
+Convergence after 993 iterations
+Score MSE: 0.941619
+
+Examples of Predictions vs Real Values :
+Prediction : -0.344497 | Actual : 1.45842 | Error : 1.80292
+Prediction : -0.106083 | Actual : -0.882726 | Error : 0.776643
+Prediction : 0.150393 | Actual : -0.947758 | Error : 1.09815
+Prediction : 0.143169 | Actual : -0.557566 | Error : 0.700735
+Prediction : 0.150393 | Actual : 2.36887 | Error : 2.21848
+Prediction : -0.337272 | Actual : 0.157785 | Error : 0.495057
+Prediction : 0.0564726 | Actual : -0.232407 | Error : 0.288879
+Prediction : 0.150393 | Actual : 0.417913 | Error : 0.267519
+Prediction : 0.150393 | Actual : -0.492534 | Error : 0.642928
+Prediction : 0.0239616 | Actual : -0.427502 | Error : 0.451464
+
+Residual Analysis:
+Mean residual: -0.013148
+Residual standard deviation: 0.970281
+
+Processing Completed Successfully
+
+    ```
+    
