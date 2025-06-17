@@ -104,3 +104,22 @@ The resulting graph shows three main elements:
     OptimizedLasso model(0.01 /*lr*/, 1000 /*iter*/, 1.0 /*l1*/);      
       - λ (l1): Increase for more sparsity (1.0 → 5.0).
       - Learning Rate: Reduce for oscillations (0.01 → 0.001).
+```
+Data loaded : 6635x10
+Score MSE: 0.956771
+
+Examples of Predictions vs Real Values :
+Prediction : -0.219614 | Actual : 1.45842 | Error : 1.67804
+Prediction : -0.0681535 | Actual : -0.882726 | Error : 0.814572
+Prediction : 0.094781 | Actual : -0.947758 | Error : 1.04254
+Prediction : 0.0901913 | Actual : -0.557566 | Error : 0.647758
+Prediction : 0.094781 | Actual : 2.36887 | Error : 2.27409
+Prediction : -0.215024 | Actual : 0.157785 | Error : 0.372809
+Prediction : 0.0351148 | Actual : -0.232407 | Error : 0.267521
+Prediction : 0.094781 | Actual : 0.417913 | Error : 0.323132
+Prediction : 0.094781 | Actual : -0.492534 | Error : 0.587315
+Prediction : 0.0144612 | Actual : -0.427502 | Error : 0.441964
+
+Processing Completed Successfully
+
+```
