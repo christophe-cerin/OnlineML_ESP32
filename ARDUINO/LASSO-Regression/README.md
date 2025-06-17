@@ -65,41 +65,8 @@ Processing Completed Successfully
 
 ### Advanced Analysis of the LASSO Regression Plot
 
-1. Graph Structure
-The resulting graph shows three main elements:
-  - Blue points: Standardized true values ​​(Y)
-  - Red points: LASSO model predictions
-  - Green line: Regression line (Y = wX + b)
-2. Interpreting the Results  
-  - Alignment of Predictions with True Values
-      - A good model would show overlapping red and blue points. If the red points are scattered around the blue points, this indicates:
-        - Underestimation (red points systematically below)
-        - Overestimation (red points systematically above)
-        - High variance (random scatter)
-  - Regression Line Slope (w)
-      - Slope close to 1: Strong linear relationship between X and Y.
-      - Slope close to 0: Weak relationship, suggesting that X poorly explains Y.
-      - Negative slope: Inverse correlation (rare in LASSO unless λ is too low).
-  - MSE Deviation: Mean Squared Error (MSE)
-      - A high MSE (> 0.5 on standardized data) indicates:
-        - Noisy data
-        - Insufficient explanatory variables
-        - Incorrectly set hyperparameters (λ, learning rate)
-3. Diagnosing Potential Problems
-  - Case 1: Homogeneous Dispersion
-    - Problem: Noise in the data or missing features.
-    - Solution: Increase the L1 penalty (λ) or add variables.
-  - Case 2: Visible Nonlinear Pattern
-    - Problem: The LASSO is linear, but the data is not.
-    - Solution: Add polynomial features or use a nonlinear model.
-  - Case 3: Outliers
-    - Problem: Outliers disrupting the regression.
-    - Solution: Preprocess the data (robust normalization, outlier removal).
-4. Possible Optimizations
-    - a. Hyperparameter Tuning    
-    OptimizedLasso model(0.01 /*lr*/, 1000 /*iter*/, 1.0 /*l1*/);      
-      - λ (l1): Increase for more sparsity (1.0 → 5.0).
-      - Learning Rate: Reduce for oscillations (0.01 → 0.001).
+To assess regression model performance, three key aspects must be analyzed: (1) The alignment between predicted values (red points) and true values (blue points) reveals systematic biases - underestimation if red points consistently fall below, overestimation if above, or high variance in case of random scatter. (2) The regression line slope (w) indicates the strength of the linear relationship: a slope near 1 shows strong correlation, near 0 suggests weak explanatory power, and negative values indicate inverse correlation (rare in LASSO except with excessively low λ). (3) The Mean Squared Error (MSE) signals potential issues when exceeding 0.5 on standardized data, potentially indicating noisy data, insufficient explanatory variables, or poorly calibrated hyperparameters (λ, learning rate). Together, these metrics provide a comprehensive diagnostic of model accuracy, relationship strength, and potential optimization needs.
+When diagnosing potential regression problems, three key scenarios emerge: (1) For homogeneous dispersion indicating noisy data or missing features, the solution involves increasing the L1 penalty (λ) or incorporating additional variables; (2) When nonlinear patterns contradict LASSO's linear assumptions, consider adding polynomial features or switching to nonlinear models; (3) Outliers distorting results require robust normalization or removal during preprocessing. For optimization, hyperparameter tuning is crucial: adjust λ (e.g., from 1.0 to 5.0) to enhance sparsity and reduce the learning rate (e.g., 0.01 to 0.001) if oscillations occur, ensuring proper model calibration through systematic testing of these parameters. This combined diagnostic and optimization approach addresses both fundamental data issues and model refinement needs.
 ```
 Regression LASSO with Hyper Parameter Tuning
 Data loaded : 6635x10
