@@ -217,7 +217,7 @@ This program now provides a comprehensive analysis of:
     - Error handling:
     - Removing unsupported optional parameters
     - Using a base color ("purple")
-- 3.The graphs produced will show:
+- 3. The graphs produced will show:
     -1. The distribution of the residuals (histogram)
     -2. Descriptive statistics in the console
     -3. A clear visualization of the quality of the predictions
