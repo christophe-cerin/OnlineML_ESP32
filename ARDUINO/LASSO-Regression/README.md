@@ -228,3 +228,76 @@ The plot should show :
   - 2. Residuals centered on 0 in a histogram.
   - 3. A regression line ideally close to y=x.
 Adjust λ and the learning rate based on these observations to improve performance.
+
+
+## Comparative Study of LASSO Programs
+-1. Technical Comparison
+
+| Criteria: | C++ (Eigen/OMP) | Python (Sklearn/NumPy)|
+|---|---|---|
+|Performance: | Optimized (OMP parallelization) | Interpreted (slower on large datasets)|
+|Accuracy: | Double precision Eigen | Float64, NumPy (similar)|
+|Memory Management: | Fine-grained control (Eigen) | Automatic management (Python)|
+|Visualization: | matplotlibcpp (basic) | Matplotlib (advanced)|
+|Deployment: | Compilation required | immediate scripting|
+
+-2. Results Analysis
+  - C++:  
+    - Standardized MSE ~0.15 (best numerical precision)    
+    - Centered residuals (mean ≈ 0) but high variance (σ≈0.4)
+    - Number of conditions <100 (no collinearity)  
+  - Python:  
+    - Raw MSE ~3.5e4 (unspecified data) standardized)
+    - Clearer visualization but less detailed metrics
+
+-3. Identified Limitations
+
+  - C++ Program:
+      - Visualization: Basic graphics (lack of annotations)      
+      - Feature Engineering: Manual standardization (risk of errors)      
+      - Debugging: Complicated (possible segfaults on large datasets)
+  
+  - Python Program:
+     - Scalability: Slow on >100k points
+     - Control: Less flexibility on L1 regularization
+     - Reproducibility: Uncontrolled randomness (despite random_state)
+       
+-4. Opportunities for Improvement
+
+  - For C++:
+``` 
+// Add to OptimizedLasso:
+void feature_importance() const {
+VectorXd importance = w.cwiseAbs();
+cout << "Feature importance:\n" << importance << endl;
+}
+``` 
+  - Integrate XGBoost-C++ to compare models
+  - Python interface via pybind11 for advanced visualization
+
+  - For Python:
+```
+# Replace StandardScaler with:
+from sklearn.compose import TransformedTargetRegressor
+regressor = TransformedTargetRegressor(regressor=LassoRegression(), transformer=StandardScaler())
+```
+  - Add cross-validation with sklearn.model_selection.KFold
+  - Optimize λ (L1) via sklearn.linear_model.LassoCV
+
+-5. Summary of Optimization Areas
+
+  - Hybridization:  
+    - Use C++ for training on large datasets  
+    - Python for visualization via IPC
+  
+  - Benchmark:  
+    - Compare with ElasticNet (L1/L2 mix)  
+    - Test on high-dimensional data (p >> n)
+  
+  - Industrialization:
+    - Docker container with both Implementations
+    - REST API with FastAPI (Python) to serve C++ models
+
+-6. Conclusion
+
+C++ excels in raw performance but requires a more mature ecosystem for ML. Python remains more accessible but reaches its limits on very large datasets. A hybrid architecture (C++ for computation, Python for analysis) seems optimal, especially with libraries like Hummingbird to convert Sklearn models to C++.
