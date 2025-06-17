@@ -127,7 +127,7 @@ Processing Completed Successfully
 ### Graphic
 
 <figure>
-  <img alt="Regression LASSO-Real Values & Predictions" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/regression_lasso_optimized.png"  title="Regression LASSO-Real Values & Predictions"/>
+  <img alt="Regression LASSO with Hyperparameter Tuning  -Real Values & Predictions" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/regressionLassoOptimizedHyperParaTunning.png"  title="Regression LASSO with Hyperparameter Tuning-Real Values & Predictions"/>
 
-  <figcaption><b>Figure : </b> Regression LASSO-Real Values & Predictions on the Tour Perret Dataset with  <a href="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_lasso_regression_optimized_en.cpp">online_lasso_regression_optimized_en.cpp </a></figcaption>
+  <figcaption><b>Figure : </b> Regression LASSO with Hyperparameter Tuning -Real Values & Predictions on the Tour Perret Dataset with  <a href="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/onlineLassoRegressionOptimizedHyperParaTunning.cpp">onlineLassoRegressionOptimizedHyperParaTunning.cpp </a></figcaption>
 </figure>
