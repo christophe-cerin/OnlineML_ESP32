@@ -215,8 +215,8 @@ This program now provides a comprehensive analysis of:
     - Displaying statistics in the console
     - Adding labels and a grid for the graph
     - Error handling:
-    - Removing unsupported optional parameters
-    - Using a base color ("purple")
+      - Removing unsupported optional parameters
+      - Using a base color ("purple")
 - 3. The graphs produced will show:
     -1. The distribution of the residuals (histogram)
     -2. Descriptive statistics in the console
