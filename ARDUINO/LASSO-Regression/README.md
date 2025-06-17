@@ -69,7 +69,7 @@ Processing Completed Successfully
 </figure>
 
 ### Advanced Analysis of the LASSO Regression Plot
-Advanced Analysis of the LASSO Regression Plot
+
 1. Graph Structure
 The resulting graph shows three main elements:
   - Blue points: Standardized true values ​​(Y)
