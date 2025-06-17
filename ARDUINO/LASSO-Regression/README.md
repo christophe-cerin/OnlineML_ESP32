@@ -131,3 +131,10 @@ Processing Completed Successfully
 
   <figcaption><b>Figure : </b> Regression LASSO with Hyperparameter Tuning -Real Values & Predictions on the Tour Perret Dataset with  <a href="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/onlineLassoRegressionOptimizedHyperParaTunning.cpp">onlineLassoRegressionOptimizedHyperParaTunning.cpp </a></figcaption>
 </figure>
+
+  - b. Feature Engineering
+    - Standardize X and Y separately
+    - Check for collinearity using:
+    
+    JacobiSVD<MatrixXd> svd(X);
+    cout << "Condition number: " << svd.singularValues()(0) / svd.singularValues()(svd.singularValues().size()-1);
