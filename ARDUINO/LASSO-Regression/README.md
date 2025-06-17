@@ -91,7 +91,7 @@ The resulting graph shows three main elements:
       - Insufficient explanatory variables
       - Incorrectly set hyperparameters (λ, learning rate)
 3. Diagnosing Potential Problems
-  -Case 1: Homogeneous Dispersion
+  - Case 1: Homogeneous Dispersion
     - Problem: Noise in the data or missing features.
     - Solution: Increase the L1 penalty (λ) or add variables. Case 2: Visible Nonlinear Pattern
     - Problem: The LASSO is linear, but the data is not.
