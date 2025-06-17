@@ -77,19 +77,19 @@ The resulting graph shows three main elements:
 
 2. Interpreting the Results
   a. Alignment of Predictions with True Values
-    • A good model would show overlapping red and blue points. If the red points are scattered around the blue points, this indicates:
-      ◦ Underestimation (red points systematically below)
-      ◦ Overestimation (red points systematically above)
-      ◦ High variance (random scatter)
+    - A good model would show overlapping red and blue points. If the red points are scattered around the blue points, this indicates:
+        - Underestimation (red points systematically below)
+        - Overestimation (red points systematically above)
+        - High variance (random scatter)
   b. Regression Line Slope (w)
-    • Slope close to 1: Strong linear relationship between X and Y.
-    • Slope close to 0: Weak relationship, suggesting that X poorly explains Y.
-    • Negative slope: Inverse correlation (rare in LASSO unless λ is too low).
+    - Slope close to 1: Strong linear relationship between X and Y.
+    - Slope close to 0: Weak relationship, suggesting that X poorly explains Y.
+    - Negative slope: Inverse correlation (rare in LASSO unless λ is too low).
   c. MSE Deviation: Mean Squared Error (MSE)
-    • A high MSE (> 0.5 on standardized data) indicates:
-      ◦ Noisy data
-      ◦ Insufficient explanatory variables
-      ◦ Incorrectly set hyperparameters (λ, learning rate)
+    - A high MSE (> 0.5 on standardized data) indicates:
+        - Noisy data
+        - Insufficient explanatory variables
+        - Incorrectly set hyperparameters (λ, learning rate)
    
 3. Diagnosing Potential Problems
   Case 1: Homogeneous Dispersion
