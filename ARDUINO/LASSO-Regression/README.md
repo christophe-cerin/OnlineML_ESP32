@@ -140,8 +140,9 @@ Processing Completed Successfully
     JacobiSVD<MatrixXd> svd(X);
     cout << "Condition number: " << svd.singularValues()(0) / svd.singularValues()(svd.singularValues().size()-1);
     ```
-    ```
-    Data loaded : 6635x10
+
+```
+Data loaded : 6635x10
 Condition number: 1
 Convergence after 993 iterations
 Score MSE: 0.941619
@@ -163,6 +164,5 @@ Mean residual: -0.013148
 Residual standard deviation: 0.970281
 
 Processing Completed Successfully
-
-    ```
+```
     
