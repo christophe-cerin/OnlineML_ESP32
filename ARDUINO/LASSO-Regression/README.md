@@ -203,13 +203,13 @@ This program now provides a comprehensive analysis of:
 </figure>
 
 
-### Concrete Interpretation
+### nterpretation
 
--1. If the graph shows :
+- 1. If the graph shows :
     - MSE = 0.2: Good performance (low residual variance).
     - w ≈ 0.8: Positive relationship but attenuated by regularization.
     - Points clustered around the line: Model fits the data.
--2. Additional Analysis Code: Residual Analysis
+- 2. Additional Analysis Code: Residual Analysis
     - Adding additional analyses:
     - Calculating the mean and standard deviation of the residuals
     - Displaying statistics in the console
@@ -217,14 +217,14 @@ This program now provides a comprehensive analysis of:
     - Error handling:
     - Removing unsupported optional parameters
     - Using a base color ("purple")
--3.The graphs produced will show:
+- 3.The graphs produced will show:
     -1. The distribution of the residuals (histogram)
     -2. Descriptive statistics in the console
     -3. A clear visualization of the quality of the predictions
 
 ### Conclusion
 The plot should show :
-  -1. A clear correlation if the model is performing well. 
-  -2. Residuals centered on 0 in a histogram.
-  -3. A regression line ideally close to y=x.
+  - 1. A clear correlation if the model is performing well. 
+  - 2. Residuals centered on 0 in a histogram.
+  - 3. A regression line ideally close to y=x.
 Adjust λ and the learning rate based on these observations to improve performance.
