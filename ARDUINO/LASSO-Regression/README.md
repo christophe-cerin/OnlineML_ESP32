@@ -218,9 +218,9 @@ This program now provides a comprehensive analysis of:
       - Removing unsupported optional parameters
       - Using a base color ("purple")
 - 3. The graphs produced will show:
-    -1. The distribution of the residuals (histogram)
-    -2. Descriptive statistics in the console
-    -3. A clear visualization of the quality of the predictions
+      -1. The distribution of the residuals (histogram)
+      -2. Descriptive statistics in the console
+      -3. A clear visualization of the quality of the predictions
 
 ### Conclusion
 The plot should show :
