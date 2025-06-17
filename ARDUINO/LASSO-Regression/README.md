@@ -136,5 +136,7 @@ Processing Completed Successfully
     - Standardize X and Y separately
     - Check for collinearity using:
     
+    ``
     JacobiSVD<MatrixXd> svd(X);
     cout << "Condition number: " << svd.singularValues()(0) / svd.singularValues()(svd.singularValues().size()-1);
+    ```
