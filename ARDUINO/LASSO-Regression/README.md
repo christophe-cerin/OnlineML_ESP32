@@ -98,11 +98,49 @@ The resulting graph shows three main elements:
   Case 2: Visible Nonlinear Pattern
     - Problem: The LASSO is linear, but the data is not.
     - Solution: Add polynomial features or use a nonlinear model.
-  Case 3: Outliers
+  Case 3: OutliersAnalyse Pointue du Tracé de Régression LASSO
+1. Structure du Graphique
+Le graphique produit montre trois éléments principaux :
+    • Points bleus : Valeurs réelles (Y) standardisées
+    • Points rouges : Prédictions du modèle LASSO
+    • Ligne verte : Droite de régression (Y = wX + b)
+2. Interprétation des Résultats
+a. Alignement des Prédictions avec les Valeurs Réelles
+    • Un bon modèle montrerait une superposition des points rouges et bleus. Si les points rouges sont dispersés autour des bleus, cela indique :
+        ◦ Sous-estimation (points rouges systématiquement en dessous)
+        ◦ Sur-estimation (points rouges systématiquement au-dessus)
+        ◦ Variance élevée (dispersion aléatoire)
+b. Pente de la Ligne de Régression (w)
+    • Pente proche de 1 : Relation linéaire forte entre X et Y.
+    • Pente proche de 0 : Faible relation, suggérant que X explique mal Y.
+    • Pente négative : Corrélation inverse (rare en LASSO sauf si λ trop faible).
+c. Écart MSE : L'erreur quadratique moyenne (Mean Squared Error ou MSE)
+    • Un MSE élevé (> 0.5 sur données standardisées) signale :
+        ◦ Données bruyantes
+        ◦ Variables explicatives insuffisantes
+        ◦ Hyperparamètres (λ, taux d'apprentissage) mal réglés
+3. Diagnostic des Problèmes Potentiels
+Cas 1 : Dispersion Homogène
+    • Problème : Bruit dans les données ou features manquantes.
+    • Solution : Augmenter le penalty L1 (λ) ou ajouter des variables.
+Cas 2 : Motif Non-Linéaire Visible
+    • Problème : Le LASSO est linéaire mais les données ne le sont pas.
+    • Solution : Ajouter des features polynomiales ou utiliser un modèle non-linéaire.
+Cas 3 : Points Aberrants
+    • Problème : Outliers perturbant la régression.
+    • Solution : Prétraiter les données (normalisation robuste, suppression des outliers).
+4. Optimisations Possibles
+a. Réglage des Hyperparamètres
+
+OptimizedLasso model(0.01 /*lr*/, 1000 /*iter*/, 1.0 /*l1*/);
+
+
+    • λ (l1) : Augmenter pour plus de sparsity (1.0 → 5.0).
+    • Taux d'apprentissage : Réduire si oscillations (0.01 → 0.001).
     - Problem: Outliers disrupting the regression.
     - Solution: Preprocess the data (robust normalization, outlier removal).
    
 4. Possible Optimizations
-  -  Hyperparameter Tuning : OptimizedLasso model(0.01 /*lr*/, 1000 /*iter*/, 1.0 /*l1*/);
-    - λ (l1): Increase for more sparsity (1.0 → 5.0).
-    - Learning Rate: Reduce for oscillations (0.01 → 0.001).
+     - Hyperparameter Tuning : OptimizedLasso model(0.01 /*lr*/, 1000 /*iter*/, 1.0 /*l1*/);
+       - λ (l1): Increase for more sparsity (1.0 → 5.0).
+       - Learning Rate: Reduce for oscillations (0.01 → 0.001).
