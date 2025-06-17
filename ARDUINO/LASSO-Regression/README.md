@@ -103,6 +103,7 @@ The resulting graph shows three main elements:
     - Solution: Preprocess the data (robust normalization, outlier removal).
    
 4. Possible Optimizations
+   
   a. Hyperparameter Tuning
   OptimizedLasso model(0.01 /*lr*/, 1000 /*iter*/, 1.0 /*l1*/);
     - λ (l1): Increase for more sparsity (1.0 → 5.0).
