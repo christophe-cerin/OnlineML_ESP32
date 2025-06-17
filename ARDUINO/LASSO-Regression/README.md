@@ -71,9 +71,9 @@ Processing Completed Successfully
 ### Advanced Analysis of the LASSO Regression Plot
 1. Graph Structure
 The resulting graph shows three main elements:
-  • Blue points: Standardized true values ​​(Y)
-  • Red points: LASSO model predictions
-  • Green line: Regression line (Y = wX + b)
+  - Blue points: Standardized true values ​​(Y)
+  - Red points: LASSO model predictions
+  - Green line: Regression line (Y = wX + b)
 
 2. Interpreting the Results
   a. Alignment of Predictions with True Values
