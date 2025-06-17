@@ -189,3 +189,12 @@ This program now provides a comprehensive analysis of:
 - 1. Feature quality (collinearity)
 - 2. Model performance (MSE, individual errors)
 - 3. Residual distribution (normality, variance)
+
+
+### Graphic
+
+<figure>
+  <img alt="Regression LASSO-Real Values & Predictions" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/regression_lasso_optimized.png"  title="Regression LASSO-Real Values & Predictions"/>
+
+  <figcaption><b>Figure : </b> Regression LASSO-Real Values & Predictions on the Tour Perret Dataset with  <a href="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/src/online_lasso_regression_optimized_en.cpp">online_lasso_regression_optimized_en.cpp </a></figcaption>
+</figure>
