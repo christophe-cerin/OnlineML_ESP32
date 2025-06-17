@@ -230,7 +230,7 @@ The plot should show :
 Adjust λ and the learning rate based on these observations to improve performance.
 
 
-## Comparative Study of LASSO Programs
+## Comparative Study of LASSO Programs
 -1. Technical Comparison
 
 | Criteria: | C++ (Eigen/OMP) | Python (Sklearn/NumPy)|
