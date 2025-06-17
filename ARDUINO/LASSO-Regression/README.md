@@ -70,12 +70,12 @@ Processing Completed Successfully
 
 ### Advanced Analysis of the LASSO Regression Plot
 Advanced Analysis of the LASSO Regression Plot
--1. Graph Structure
+1. Graph Structure
 The resulting graph shows three main elements:
   - Blue points: Standardized true values ​​(Y)
   - Red points: LASSO model predictions
   - Green line: Regression line (Y = wX + b)
--2. Interpreting the Results
+2. Interpreting the Results
   -a. Alignment of Predictions with True Values
     - A good model would show overlapping red and blue points. If the red points are scattered around the blue points, this indicates:
       - Underestimation (red points systematically below)
@@ -90,7 +90,7 @@ The resulting graph shows three main elements:
       - Noisy data
       - Insufficient explanatory variables
       - Incorrectly set hyperparameters (λ, learning rate)
--3. Diagnosing Potential Problems
+3. Diagnosing Potential Problems
   -Case 1: Homogeneous Dispersion
     - Problem: Noise in the data or missing features.
     - Solution: Increase the L1 penalty (λ) or add variables. Case 2: Visible Nonlinear Pattern
@@ -99,7 +99,7 @@ The resulting graph shows three main elements:
   -Case 3: Outliers
     - Problem: Outliers disrupting the regression.
     - Solution: Preprocess the data (robust normalization, outlier removal).
--4. Possible Optimizations
+4. Possible Optimizations
     - a. Hyperparameter Tuning    
     OptimizedLasso model(0.01 /*lr*/, 1000 /*iter*/, 1.0 /*l1*/);      
       - λ (l1): Increase for more sparsity (1.0 → 5.0).
