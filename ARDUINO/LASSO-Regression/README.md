@@ -72,26 +72,27 @@ The resulting graph shows three main elements:
   - Green line: Regression line (Y = wX + b)
 2. Interpreting the Results  
   -a. Alignment of Predictions with True Values
-    - A good model would show overlapping red and blue points. If the red points are scattered around the blue points, this indicates:
-      - Underestimation (red points systematically below)
-      - Overestimation (red points systematically above)
-      - High variance (random scatter)
+      - A good model would show overlapping red and blue points. If the red points are scattered around the blue points, this indicates:
+        - Underestimation (red points systematically below)
+        - Overestimation (red points systematically above)
+        - High variance (random scatter)
   -b. Regression Line Slope (w)
-    - Slope close to 1: Strong linear relationship between X and Y.
-    - Slope close to 0: Weak relationship, suggesting that X poorly explains Y.
-    - Negative slope: Inverse correlation (rare in LASSO unless λ is too low).
+      - Slope close to 1: Strong linear relationship between X and Y.
+      - Slope close to 0: Weak relationship, suggesting that X poorly explains Y.
+      - Negative slope: Inverse correlation (rare in LASSO unless λ is too low).
   -c. MSE Deviation: Mean Squared Error (MSE)
-    - A high MSE (> 0.5 on standardized data) indicates:
-      - Noisy data
-      - Insufficient explanatory variables
-      - Incorrectly set hyperparameters (λ, learning rate)
+      - A high MSE (> 0.5 on standardized data) indicates:
+        - Noisy data
+        - Insufficient explanatory variables
+        - Incorrectly set hyperparameters (λ, learning rate)
 3. Diagnosing Potential Problems
   - Case 1: Homogeneous Dispersion
     - Problem: Noise in the data or missing features.
-    - Solution: Increase the L1 penalty (λ) or add variables. Case 2: Visible Nonlinear Pattern
+    - Solution: Increase the L1 penalty (λ) or add variables.
+  - Case 2: Visible Nonlinear Pattern
     - Problem: The LASSO is linear, but the data is not.
     - Solution: Add polynomial features or use a nonlinear model.
-  -Case 3: Outliers
+  - Case 3: Outliers
     - Problem: Outliers disrupting the regression.
     - Solution: Preprocess the data (robust normalization, outlier removal).
 4. Possible Optimizations
