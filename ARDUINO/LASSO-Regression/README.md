@@ -71,6 +71,7 @@ The resulting graph shows three main elements:
   - Red points: LASSO model predictions
   - Green line: Regression line (Y = wX + b)
 2. Interpreting the Results
+
     -a. Alignment of Predictions with True Values
       - A good model would show overlapping red and blue points. If the red points are scattered around the blue points, this indicates:
         - Underestimation (red points systematically below)
