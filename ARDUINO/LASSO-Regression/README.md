@@ -40,6 +40,7 @@ g++ online_lasso_regression_optimized_en.cpp -I /home/mamadou/src -L /usr/includ
 Iteration over the data in blocks of W rows 4096 :
 
 ```
+Regression LASSO & Collinearity Check
 Data loaded : 6635x10
 Convergence after 993 iterations
 Score MSE: 0.941619
@@ -105,6 +106,7 @@ The resulting graph shows three main elements:
       - λ (l1): Increase for more sparsity (1.0 → 5.0).
       - Learning Rate: Reduce for oscillations (0.01 → 0.001).
 ```
+Regression LASSO with Hyper Parameter Tuning
 Data loaded : 6635x10
 Score MSE: 0.956771
 
@@ -142,7 +144,7 @@ Processing Completed Successfully
     ```
 
 ```
-Regression LASSO & Collinearity Check
+Regression LASSO with Collinearity Check
 Data loaded : 6635x10
 Condition number: 1
 Convergence after 993 iterations
