@@ -15,10 +15,10 @@ That said, Ridge Regression can perform better than Lasso regression due to the 
 ### Performing Exploratory Data Analysis
 
 Before applying a linear regression algorithm to your dataset, explore the data to identify potential underlying issues. It is important to determine whether:
-• some data are missing
-• there are a large number of features
-• the distribution of continuous variables is centered around the mean with equivalent standard deviations
-• predictors are correlated with each other.
+  • some data are missing
+  • there are a large number of features
+  • the distribution of continuous variables is centered around the mean with equivalent standard deviations
+  • predictors are correlated with each other.
 Understanding these elements is important because datasets with high dimensionality and correlated variables can be prone to overfitting. 
 Data that is not centered around the mean with a standard deviation of 1 will also need to be rescaled to limit the impact of large scales on the model. 
 If features are not rescaled, this can negatively affect the cost function, which in turn will impact the beta coefficients. Simply put, unscaled features can lead to unintended penalties in Lasso regression due to unit differences.
