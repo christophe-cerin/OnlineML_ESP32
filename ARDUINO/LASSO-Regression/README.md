@@ -203,7 +203,7 @@ This program now provides a comprehensive analysis of:
 </figure>
 
 
-### nterpretation
+### Interpretation
 
 - 1. If the graph shows :
     - MSE = 0.2: Good performance (low residual variance).
