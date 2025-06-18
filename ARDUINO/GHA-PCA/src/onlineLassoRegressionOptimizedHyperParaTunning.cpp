@@ -10,6 +10,14 @@
 #include <string>
 #include <omp.h>
 
+/*
+   Author : M. SOW
+   Date : 2025-06-16
+   Objective : The provided Python code online_lasso.py has been converted into C++ while maintaining the original logic and structure
+   with the implementation of Hyper Parameter Tunning
+   Name of programm : oonlineLassoRegressionOptimizedHyperParaTunning.cpp
+*/
+
 #include "matplotlibcpp.h"
 #include "/usr/include/python3.10/Python.h"
 
@@ -254,7 +262,7 @@ int main() {
             };
             plt::plot(reg_line_x, reg_line_y, {{"label", "Regression Line"}, {"color", "green"}, {"linewidth", "2"}});
 
-            plt::title("Regression LASSO Hyperparameter Tuning - Real Values & Predictions");
+            plt::title("Regression LASSO & Hyperparameter Tuning - Real Values & Predictions");
             plt::xlabel("X (standardized)");
             plt::ylabel("Y (standardized)");
             plt::grid(true);

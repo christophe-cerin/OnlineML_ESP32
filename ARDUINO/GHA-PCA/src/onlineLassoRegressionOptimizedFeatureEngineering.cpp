@@ -10,8 +10,18 @@
 #include <string>
 #include <omp.h>
 
-#include "/home/mamadou/big-data/cerin04102024/DimensionalityReductionCerin/pyTocpp/lib/matplotlibcpp.h"
+#include "matplotlibcpp.h"
 #include "/usr/include/python3.10/Python.h"
+
+/*
+   Author : M. SOW
+   Date : 2025-06-16
+   Objective : The provided Python code online_lasso.py has been converted into C++ while maintaining the original logic and structure
+   with Collinearity Check in the Feature Engineering part
+   Name of programm : onlineLassoRegressionOptimizedFeatureEngineering.cpp
+*/
+
+
 
 using namespace std;
 using namespace Eigen;

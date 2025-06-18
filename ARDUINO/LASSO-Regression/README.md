@@ -14,14 +14,8 @@ That said, Ridge Regression can perform better than Lasso regression due to the 
 
 ### Performing Exploratory Data Analysis
 
-Before applying a linear regression algorithm to your dataset, explore the data to identify potential underlying issues. It is important to determine whether:
-  - some data are missing
-  - there are a large number of features
-  - the distribution of continuous variables is centered around the mean with equivalent standard deviations
-  - predictors are correlated with each other.
-Understanding these elements is important because datasets with high dimensionality and correlated variables can be prone to overfitting. 
-Data that is not centered around the mean with a standard deviation of 1 will also need to be rescaled to limit the impact of large scales on the model. 
-If features are not rescaled, this can negatively affect the cost function, which in turn will impact the beta coefficients. Simply put, unscaled features can lead to unintended penalties in Lasso regression due to unit differences.
+Before applying a linear regression algorithm to your dataset, conduct a thorough exploratory analysis to identify potential issues such as missing data, high-dimensional feature spaces, non-centered distributions of continuous variables with unequal standard deviations, or correlated predictors, as these factors can significantly impact model performance. High-dimensional datasets with correlated variables are particularly prone to overfitting, while uncentered or unscaled data can distort the cost function and unfairly penalize certain features in Lasso regression due to scale disparities. Ensuring data is properly scaled (centered around the mean with a standard deviation of 1) is critical to prevent large-scale features from dominating the model and skewing beta coefficients, thereby maintaining the regularization's intended effect and improving overall model interpretability and performance.
+
 
 ### Split the Data and Rescaling Continuous Predictors
 
@@ -71,40 +65,8 @@ Processing Completed Successfully
 
 ### Advanced Analysis of the LASSO Regression Plot
 
-1. Graph Structure
-The resulting graph shows three main elements:
-  - Blue points: Standardized true values ​​(Y)
-  - Red points: LASSO model predictions
-  - Green line: Regression line (Y = wX + b)
-2. Interpreting the Results
-  -a. Alignment of Predictions with True Values
-    - A good model would show overlapping red and blue points. If the red points are scattered around the blue points, this indicates:
-      - Underestimation (red points systematically below)
-      - Overestimation (red points systematically above)
-      - High variance (random scatter)
-  -b. Regression Line Slope (w)
-    - Slope close to 1: Strong linear relationship between X and Y.
-    - Slope close to 0: Weak relationship, suggesting that X poorly explains Y.
-    - Negative slope: Inverse correlation (rare in LASSO unless λ is too low).
-  -c. MSE Deviation: Mean Squared Error (MSE)
-    - A high MSE (> 0.5 on standardized data) indicates:
-      - Noisy data
-      - Insufficient explanatory variables
-      - Incorrectly set hyperparameters (λ, learning rate)
-3. Diagnosing Potential Problems
-  - Case 1: Homogeneous Dispersion
-    - Problem: Noise in the data or missing features.
-    - Solution: Increase the L1 penalty (λ) or add variables. Case 2: Visible Nonlinear Pattern
-    - Problem: The LASSO is linear, but the data is not.
-    - Solution: Add polynomial features or use a nonlinear model.
-  -Case 3: Outliers
-    - Problem: Outliers disrupting the regression.
-    - Solution: Preprocess the data (robust normalization, outlier removal).
-4. Possible Optimizations
-    - a. Hyperparameter Tuning    
-    OptimizedLasso model(0.01 /*lr*/, 1000 /*iter*/, 1.0 /*l1*/);      
-      - λ (l1): Increase for more sparsity (1.0 → 5.0).
-      - Learning Rate: Reduce for oscillations (0.01 → 0.001).
+To assess regression model performance, three key aspects must be analyzed: (1) The alignment between predicted values (red points) and true values (blue points) reveals systematic biases - underestimation if red points consistently fall below, overestimation if above, or high variance in case of random scatter. (2) The regression line slope (w) indicates the strength of the linear relationship: a slope near 1 shows strong correlation, near 0 suggests weak explanatory power, and negative values indicate inverse correlation (rare in LASSO except with excessively low λ). (3) The Mean Squared Error (MSE) signals potential issues when exceeding 0.5 on standardized data, potentially indicating noisy data, insufficient explanatory variables, or poorly calibrated hyperparameters (λ, learning rate). Together, these metrics provide a comprehensive diagnostic of model accuracy, relationship strength, and potential optimization needs.
+When diagnosing potential regression problems, three key scenarios emerge: (1) For homogeneous dispersion indicating noisy data or missing features, the solution involves increasing the L1 penalty (λ) or incorporating additional variables; (2) When nonlinear patterns contradict LASSO's linear assumptions, consider adding polynomial features or switching to nonlinear models; (3) Outliers distorting results require robust normalization or removal during preprocessing. For optimization, hyperparameter tuning is crucial: adjust λ (e.g., from 1.0 to 5.0) to enhance sparsity and reduce the learning rate (e.g., 0.01 to 0.001) if oscillations occur, ensuring proper model calibration through systematic testing of these parameters. This combined diagnostic and optimization approach addresses both fundamental data issues and model refinement needs.
 ```
 Regression LASSO with Hyper Parameter Tuning
 Data loaded : 6635x10
@@ -170,28 +132,14 @@ Processing Completed Successfully
 ```
 
 ### Key Improvements:
-- 1. Advanced Feature Engineering:
-  - Separate standardization of X and Y with standard deviation checking
-  - Collinearity detection via SVD and condition number
-- 2. Comprehensive Residual Analysis:
-  - Residual histogram with descriptive statistics
-  - Visual detection of nonlinear patterns
-- 3. Additional Optimizations:
-  - Management of degenerate cases (division by zero)
-  - Professional visualization with matplotlibcpp
-  - Condition number calculation to diagnose collinearity
-- 4. Automated Diagnostics:
+The implementation incorporates several advanced techniques for robust regression analysis: (1) Sophisticated feature engineering including separate standardization of X and Y with standard deviation verification, coupled with collinearity detection through SVD and condition number calculation; (2) Thorough residual analysis featuring histogram visualization with comprehensive statistics and nonlinear pattern identification; (3) Critical optimizations such as handling degenerate cases (including division prevention), enhanced visualization using matplotlibcpp, and automated collinearity assessment via condition numbers; (4) Built-in diagnostic systems that automatically flag potential issues like high collinearity (condition number >1000) and provide actionable warnings, creating an end-to-end analytical pipeline that ensures model reliability while maintaining computational efficiency. These integrated approaches address both fundamental statistical assumptions and practical implementation challenges in machine learning workflows.
 
 ```
 if (condition_number > 1000) {
 cerr << "Warning: High collinearity detected!" << endl;
 }
 ```
-
-This program now provides a comprehensive analysis of:
-- 1. Feature quality (collinearity)
-- 2. Model performance (MSE, individual errors)
-- 3. Residual distribution (normality, variance)
+This program delivers a complete diagnostic framework that evaluates three critical aspects of regression modeling: (1) Feature quality assessment through collinearity detection to identify redundant predictors, (2) Model performance quantification using Mean Squared Error (MSE) metrics and individual prediction error analysis, and (3) Residual distribution examination to verify normality assumptions and variance homogeneity - providing essential validation of model assumptions while highlighting potential areas for improvement in both data preprocessing and algorithm selection. Together, these analytical components form an integrated evaluation system that thoroughly assesses model reliability from feature engineering to final prediction accuracy.
 
 
 ### Graphic
