@@ -248,4 +248,4 @@ regressor = TransformedTargetRegressor(regressor=LassoRegression(), transformer=
 
 -6. Conclusion
 
-C++ excels in raw performance but requires a more mature ecosystem for ML. Python remains more accessible but reaches its limits on very large datasets. A hybrid architecture (C++ for computation, Python for analysis) seems optimal, especially with libraries like Hummingbird to convert Sklearn models to C++.
+C++ excels in raw performance but requires a more mature ecosystem for ML. Python remains more accessible but reaches its limits on very large datasets. A hybrid architecture (C++ for computation, Python for analysis) seems optimal, especially with anothers libraries to convert Sklearn models to C++.
