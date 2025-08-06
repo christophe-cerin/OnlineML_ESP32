@@ -13,13 +13,13 @@ For a data logging system with minimal constraints, we are prioritizing direct s
 
 Here's a breakdown of the components you'll need and how to connect them for your project:
 Components
-    • Arduino Uno R4 Wifi (Your main microcontroller unit)
-    • 16x2 LCD Screen (16 pins)
-    • DHT22 Sensor (for temperature and humidity)
-    • Potentiometer
-    • 1 k Ohm Resistor
-    • Breadboard (Planche de Câble)
-    • Micro USB-C to USB2 Cable
+    - Arduino Uno R4 Wifi (Your main microcontroller unit)
+    - 16x2 LCD Screen (16 pins)
+    - DHT22 Sensor (for temperature and humidity)
+    - Potentiometer
+    - 1 k Ohm Resistor
+    - Breadboard (Planche de Câble)
+    - Micro USB-C to USB2 Cable
 Wiring Instructions
 1 k Ohm Resistor
     • Connect this resistor for overvoltage protection of the LCD screen.
