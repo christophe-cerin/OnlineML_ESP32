@@ -66,7 +66,7 @@ Below is a list of the libraries used in this project, along with their primary 
 
 Our approach relies on the use of two distinct programs. The first program is an Arduino program (file: tempHumLcdDHThdstatus.ino), whose data is read via the serial port of the Arduino IDE.
 
-Description of the tempHumLcdDHThdstatus.ino program :
+**Description of the tempHumLcdDHThdstatus.ino program :**
  - Main Functionality: Real-time display of ambient temperature and humidity on an LCD screen, as well as saving this data to a computer via the serial port.
  - Objective: This program is designed to display data (temperature and humidity readings) measured by a DHT22 sensor on the Arduino IDE's serial monitor. The DHT22 sensor is connected to digital pin 13 of an Arduino Uno R4 Wifi board.
   - Author: M SOW
@@ -79,7 +79,7 @@ Description of the tempHumLcdDHThdstatus.ino program :
     - More robust CSV output format, including an error status.
     - Display of values with one decimal place.
      
-Recommended Serial Monitor Configuration :
+**Recommended Serial Monitor Configuration :**
  - Option 1: Open the Arduino IDE's serial monitor with a baud rate of 115200, then click "Save output" to save the data.
  - Option 2: Use an external program such as a console/terminal (on Linux/Mac) with a Python script to capture the data streamed over the serial port.
 
@@ -87,7 +87,7 @@ Description of the Arduino Program tempHumLcdDHthdstatus.ino
 
 This Arduino program is designed to read temperature and humidity data from a DHT22 sensor, display it on a 16x2 LCD screen, and simultaneously send it to the Arduino IDE's serial monitor (or to a Python script) for PC logging.
 
-Main Objective
+**Main Objective**
 
  - Display real-time ambient temperature and humidity on an LCD screen.
  - Record this data on a computer via the serial port.
@@ -95,13 +95,13 @@ Author and Date
  - Author: Mamadou SOW
  - Created on: 03.07.2025
 
-Libraries Used
+**Libraries Used**
 
 The program includes two essential libraries:
  - <LiquidCrystal.h>: Used to control the 16x2 LCD screen.
  - <SimpleDHT.h>: Facilitates reading data from the DHT22 sensor.
 
-Pin and Object Definitions
+**Pin and Object Definitions**
 
 Constants define the Arduino pins connected to the LCD screen and the DHT22 sensor:
  - rs, en, d4, d5, d6, d7: Pins for the LCD screen interface.
@@ -112,7 +112,7 @@ Two objects are instantiated:
  - LiquidCrystal lcd(rs, en, d4, d5, d6, d7): The LCD object is created with the defined pins.
  - SimpleDHT22 dht22: The object for the DHT22 sensor is created.
 
-setup() Function
+**setup() Function**
 
 This function executes once when the Arduino starts:
  - 1. Serial.begin(115200): Initializes serial communication at a baud rate of 115200.
@@ -123,7 +123,8 @@ This function executes once when the Arduino starts:
  - 6. Serial.println("timestamp_ms,temperature_C,humidity_pct,status"): Sends the column header to the serial monitor. This CSV format is crucial for data logging.
  - 7. Serial.flush(): Ensures the header is sent immediately.
 
-*envoyerVersPC() Function*
+**envoyerVersPC() Function**
+
 This custom function is responsible for sending data to the PC via the serial port, in CSV format:
   - It takes temperature (temp), humidity (hum), and an optional status (defaulting to "OK") as parameters.
   - Serial.print(millis()): Sends the time elapsed since the Arduino started in milliseconds.
@@ -131,7 +132,8 @@ This custom function is responsible for sending data to the PC via the serial po
   - Serial.println(status): Sends the reading status (e.g., "OK" or "ERROR_XX").
   - Serial.flush(): Forces immediate data transmission to ensure it doesn't remain in the buffer.
     
-*loop() Function*
+**loop() Function**
+
 This function runs continuously after setup():
 - 1. DHT22 Sensor Reading:
   - dht22.read2(pinDHT22, &temperature, &humidity, NULL): Attempts to read temperature and humidity from the DHT22 sensor.
