@@ -67,11 +67,15 @@ Below is a list of the libraries used in this project, along with their primary 
 Our approach relies on the use of two distinct programs. The first program is an Arduino program (file: tempHumLcdDHThdstatus.ino), whose data is read via the serial port of the Arduino IDE.
 
 **Description of the tempHumLcdDHThdstatus.ino program :**
+
  - Main Functionality: Real-time display of ambient temperature and humidity on an LCD screen, as well as saving this data to a computer via the serial port.
- - Objective: This program is designed to display data (temperature and humidity readings) measured by a DHT22 sensor on the Arduino IDE's serial monitor. The DHT22 sensor is connected to digital pin 13 of an Arduino Uno R4 Wifi board.
+ - Objective: This program is designed to display data (temperature and humidity readings) measured by a DHT22 sensor on the Arduino IDE's serial monitor (or to a Python script) for PC logging. The DHT22 sensor is connected to digital pin 13 of an Arduino Uno R4 Wifi board.
   - Author: M SOW
   - Creation Date: 03.07.2025
-  - Libraries Used: LiquidCrystal.h (for the LCD screen) and SimpleDHT.h (for the DHT sensor).
+  - Libraries Used:
+    - The program includes two essential libraries:
+       - <LiquidCrystal.h>: Used to control the 16x2 LCD screen.
+       - <SimpleDHT.h>: Facilitates reading data from the DHT22 sensor.
   - Specific Arduino Script Enhancements:
     - Uses the read2() function for more precise floating-point values.
     - Improved error handling with direct display on the LCD screen.
@@ -80,27 +84,9 @@ Our approach relies on the use of two distinct programs. The first program is an
     - Display of values with one decimal place.
      
 **Recommended Serial Monitor Configuration :**
+
  - Option 1: Open the Arduino IDE's serial monitor with a baud rate of 115200, then click "Save output" to save the data.
  - Option 2: Use an external program such as a console/terminal (on Linux/Mac) with a Python script to capture the data streamed over the serial port.
-
-Description of the Arduino Program tempHumLcdDHthdstatus.ino
-
-This Arduino program is designed to read temperature and humidity data from a DHT22 sensor, display it on a 16x2 LCD screen, and simultaneously send it to the Arduino IDE's serial monitor (or to a Python script) for PC logging.
-
-**Main Objective**
-
- - Display real-time ambient temperature and humidity on an LCD screen.
- - Record this data on a computer via the serial port.
-
-**Author and Date**
- - Author: Mamadou SOW
- - Created on: 03.07.2025
-
-**Libraries Used**
-
-The program includes two essential libraries:
- - <LiquidCrystal.h>: Used to control the 16x2 LCD screen.
- - <SimpleDHT.h>: Facilitates reading data from the DHT22 sensor.
 
 **Pin and Object Definitions**
 
