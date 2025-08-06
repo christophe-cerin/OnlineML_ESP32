@@ -142,6 +142,7 @@ The second program is a script written in Python, named recuperationDataArretTim
     - The captured data will be saved in a CSV file, including a timestamp for each entry.
 
 **Usage Instructions :**
+
     1. Upload the Arduino code (tempHumLcdDHThdstatus.ino) to your Arduino board.
     
     2. Close the Arduino IDE's Serial Monitor. This is a crucial step to free up the serial port.
