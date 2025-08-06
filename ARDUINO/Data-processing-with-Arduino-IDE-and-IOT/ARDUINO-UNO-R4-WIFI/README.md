@@ -190,3 +190,12 @@ This Python script (recuperationDataArretTimerEachTime.py) is designed to automa
      - Updates the last save time to show minute-by-minute progress.
    - Handles exceptions (KeyboardInterrupt, serial.SerialException, UnicodeDecodeError, Exception).
    - Ensures proper closure of the serial connection in the finally block.
+
+**Usage**
+
+To use this script :
+ 1. Ensure your Arduino board is connected and the Arduino program is sending data over the serial port.
+ 2. Close any other program that might be using the serial port (especially the Arduino IDE's Serial Monitor).
+ 3. Execute the Python script from your terminal:
+    python3 recuperationDataArretTimerEachTime.py
+ 4. Data will begin to display in your terminal and will be saved to a timestamped CSV file in the same directory as the script. The script will automatically stop after 10 minutes.
