@@ -46,9 +46,18 @@ Wiring Instructions
 
 (Note: LCD pins D0, D1, D2, D3, and V0 are mentioned but their connections are implied or handled by the potentiometer connection for V0.)
 
-
-
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ARDUINO-UNO-R4-WIFI/images/schemaUnoDht22LcdPot.png" width=40% height=40%  title="unoDht22Lcd"/>
     <figcaption><b>Figure 1:</b> Wiring diagrams</figcaption>
 </figure>
+
+## 2. Libraries Installed in Arduino IDE
+
+Below is a list of the libraries used in this project, along with their primary functions:
+
+|Library | Function |
+| --- | --- |
+| DHT22 (by dvarrel), SimpleDHT (by winlin) | Temperature & Humidity Sensor |
+| LiquidCrystal (by Adafruit and Arduino) | LCD Screen Display |
+| DHT sensor library (by Adafruit) | Temperature & Humidity Sensor |
+| Adafruit AM2320, sensor library (by Adafruit) | Temperature & Humidity Sensor |
