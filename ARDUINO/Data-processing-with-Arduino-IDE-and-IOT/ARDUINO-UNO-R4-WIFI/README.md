@@ -132,5 +132,19 @@ This function runs continuously after setup():
   - envoyerVersPC(temperature, humidity): Calls the function to send the read data (temperature, humidity, and "OK" status) to the PC.
 - 4. delay(3000): The program pauses for 3 seconds before the next reading, meaning data is read and sent every 3 seconds.
 
+## 4. The Second Program: recuperationDataArretTimerEachTime.py (Python)
+
+The second program is a script written in Python, named recuperationDataArretTimerEachTime.py.
+
+**Key Features :**
+    - This Python script is designed to automatically detect and use the correct serial port.
+    - With each execution, it will create a unique storage file for the data.
+    - The captured data will be saved in a CSV file, including a timestamp for each entry.
+
+**Usage Instructions :**
+    1. Upload the Arduino code (tempHumLcdDHThdstatus.ino) to your Arduino board.
+    2. Close the Arduino IDE's Serial Monitor. This is a crucial step to free up the serial port.
+    3. Execute the Python script using the command: python3 recuperationDataArretTimerEachTime.py.
+    4. Data will then begin to be automatically saved into the generated CSV file.
 
 
