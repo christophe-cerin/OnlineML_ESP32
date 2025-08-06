@@ -149,4 +149,17 @@ The second program is a script written in Python, named recuperationDataArretTim
  3. Execute the Python script using the command: python3 recuperationDataArretTimerEachTime.py.    
  4. Data will then begin to be automatically saved into the generated CSV file.
 
+**Description of the Python Data Retrieval Script**
 
+This Python script (recuperationDataArretTimerEachTime.py) is designed to automate serial port detection, read data from a sensor (like the DHT22 via Arduino), save this data to a local CSV file, and automatically stop after a defined duration.
+
+**Key Features**
+
+ - Automatic Arduino Port Detection: The script attempts to find the serial port to which the Arduino is connected by iterating through a list of common ports on different operating systems (Linux/macOS and Windows).
+ - Serial Connection: Once the port is detected, it establishes a serial connection with the Arduino at a baud rate of 115200.
+ - Timestamped CSV File Creation: Each time it runs, a new CSV file is created with a unique name based on the current timestamp (e.g., donnees_capteur_YYYYMMDD_HHMMSS.csv).
+ - Data Logging: Data read from the Arduino's serial port is written to the CSV file. Each line of data is preceded by a real-time timestamp (PC date and time) for better traceability.
+ - CSV File Header: The CSV file includes a clear header (date_time,arduino_timestamp_ms,temperature_C,humidity_pct,status) to facilitate data analysis.
+ - Real-time Display: The script displays the received data and progress status (current minute out of total duration) directly in the console.
+ - Automatic Stop: Recording automatically stops after a predefined duration (by default, 10 minutes), ensuring controlled data collection.
+ - Error Handling: The script includes try-except blocks to handle common errors such as inability to open the serial port, decoding errors, or keyboard interruptions.
