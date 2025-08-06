@@ -88,24 +88,32 @@ Description of the Arduino Program tempHumLcdDHthdstatus.ino
 This Arduino program is designed to read temperature and humidity data from a DHT22 sensor, display it on a 16x2 LCD screen, and simultaneously send it to the Arduino IDE's serial monitor (or to a Python script) for PC logging.
 
 Main Objective
+
  - Display real-time ambient temperature and humidity on an LCD screen.
  - Record this data on a computer via the serial port.
 Author and Date
  - Author: Mamadou SOW
  - Created on: 03.07.2025
+
 Libraries Used
+
 The program includes two essential libraries:
  - <LiquidCrystal.h>: Used to control the 16x2 LCD screen.
  - <SimpleDHT.h>: Facilitates reading data from the DHT22 sensor.
+
 Pin and Object Definitions
+
 Constants define the Arduino pins connected to the LCD screen and the DHT22 sensor:
  - rs, en, d4, d5, d6, d7: Pins for the LCD screen interface.
  - POTENTIOMETRE (A0): Analog pin for the potentiometer (although not used in the data reading/sending logic, it is declared).
  - pinDHT22 (13): Digital pin to which the DHT22 sensor is connected.
+
 Two objects are instantiated:
  - LiquidCrystal lcd(rs, en, d4, d5, d6, d7): The LCD object is created with the defined pins.
  - SimpleDHT22 dht22: The object for the DHT22 sensor is created.
+
 setup() Function
+
 This function executes once when the Arduino starts:
  - 1. Serial.begin(115200): Initializes serial communication at a baud rate of 115200.
  - 2. while(!Serial): Waits for the serial connection to be established (useful for boards that reset when the serial monitor is opened).
@@ -114,14 +122,18 @@ This function executes once when the Arduino starts:
  - 5. Displays a startup message ("Demarrage...") on the LCD screen for 2 seconds, then clears it.
  - 6. Serial.println("timestamp_ms,temperature_C,humidity_pct,status"): Sends the column header to the serial monitor. This CSV format is crucial for data logging.
  - 7. Serial.flush(): Ensures the header is sent immediately.
+
 envoyerVersPC() Function
+
 This custom function is responsible for sending data to the PC via the serial port, in CSV format:
   - It takes temperature (temp), humidity (hum), and an optional status (defaulting to "OK") as parameters.
   - Serial.print(millis()): Sends the time elapsed since the Arduino started in milliseconds.
   - Serial.print(temp, 1) and Serial.print(hum, 1): Send temperature and humidity with one decimal place.
   - Serial.println(status): Sends the reading status (e.g., "OK" or "ERROR_XX").
   - Serial.flush(): Forces immediate data transmission to ensure it doesn't remain in the buffer.
+    
 loop() Function
+
 This function runs continuously after setup():
 - 1. DHT22 Sensor Reading:
   - dht22.read2(pinDHT22, &temperature, &humidity, NULL): Attempts to read temperature and humidity from the DHT22 sensor.
