@@ -91,7 +91,8 @@ This Arduino program is designed to read temperature and humidity data from a DH
 
  - Display real-time ambient temperature and humidity on an LCD screen.
  - Record this data on a computer via the serial port.
-Author and Date
+
+**Author and Date**
  - Author: Mamadou SOW
  - Created on: 03.07.2025
 
