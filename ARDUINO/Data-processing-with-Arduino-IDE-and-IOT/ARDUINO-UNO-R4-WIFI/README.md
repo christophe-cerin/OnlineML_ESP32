@@ -1,5 +1,5 @@
 
-### Storing Data from Serial Port to Disk
+# Storing Data from Serial Port to Disk
 
 This project aims to display real-time temperature and humidity on an LCD screen and then save this data to a local or remote computer.
 To achieve this, we're using an  Arduino Uno R4 Wifi board and the  Arduino IDE to program the system. Additional hardware includes a DHT22 sensor , a potentiometer, a 16x2 LCD screen, and a breadboard.
