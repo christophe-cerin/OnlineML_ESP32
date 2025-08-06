@@ -169,9 +169,9 @@ This Python script (recuperationDataArretTimerEachTime.py) is designed to automa
  1. Imports: Imports necessary modules (serial, time, datetime, os, sys).
 
  2. trouver_port_arduino():
-   ◦ This function iterates over a list of possible serial ports.
-   ◦ It attempts to open and close each port to check its availability.
-   ◦ If a port is found and accessible, its name is returned; otherwise, None is returned.
+    ◦ This function iterates over a list of possible serial ports.
+    ◦ It attempts to open and close each port to check its availability.
+    ◦ If a port is found and accessible, its name is returned; otherwise, None is returned.
     
  3. main():
    ◦ Calls trouver_port_arduino() to get the port. If no port is found, the script exits.
