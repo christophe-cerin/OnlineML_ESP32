@@ -123,8 +123,7 @@ This function executes once when the Arduino starts:
  - 6. Serial.println("timestamp_ms,temperature_C,humidity_pct,status"): Sends the column header to the serial monitor. This CSV format is crucial for data logging.
  - 7. Serial.flush(): Ensures the header is sent immediately.
 
-envoyerVersPC() Function
-
+*envoyerVersPC() Function*
 This custom function is responsible for sending data to the PC via the serial port, in CSV format:
   - It takes temperature (temp), humidity (hum), and an optional status (defaulting to "OK") as parameters.
   - Serial.print(millis()): Sends the time elapsed since the Arduino started in milliseconds.
@@ -132,8 +131,7 @@ This custom function is responsible for sending data to the PC via the serial po
   - Serial.println(status): Sends the reading status (e.g., "OK" or "ERROR_XX").
   - Serial.flush(): Forces immediate data transmission to ensure it doesn't remain in the buffer.
     
-loop() Function
-
+*loop() Function*
 This function runs continuously after setup():
 - 1. DHT22 Sensor Reading:
   - dht22.read2(pinDHT22, &temperature, &humidity, NULL): Attempts to read temperature and humidity from the DHT22 sensor.
