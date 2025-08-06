@@ -49,6 +49,6 @@ Wiring Instructions
 
 <picture>
 <center>
-<img alt="Matrice X" align="center" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ARDUINO-UNO-R4-WIFI/images/schemaUnoDht22LcdPot.png" width=40% height=40%  title="Matrice X"/>
+<img alt="Matrice X" align="center" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ARDUINO-UNO-R4-WIFI/images/schemaUnoDht22LcdPot.png" width=40% height=40%  title="unoDht22Lcd"/>
 </center>
 </picture>
