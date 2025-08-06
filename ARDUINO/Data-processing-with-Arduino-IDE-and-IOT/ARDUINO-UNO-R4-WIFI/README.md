@@ -124,13 +124,13 @@ This custom function is responsible for sending data to the PC via the serial po
 loop() Function
 This function runs continuously after setup():
 - 1. DHT22 Sensor Reading:
- - dht22.read2(pinDHT22, &temperature, &humidity, NULL): Attempts to read temperature and humidity from the DHT22 sensor.
- - Error Handling: If the reading fails (err != SimpleDHTErrSuccess), an error message is displayed on the LCD screen with the error code, and an error line is sent to the PC via envoyerVersPC(0, 0, "ERROR_" + String(err)). The program waits 2 seconds before retrying.
+  - dht22.read2(pinDHT22, &temperature, &humidity, NULL): Attempts to read temperature and humidity from the DHT22 sensor.
+  - Error Handling: If the reading fails (err != SimpleDHTErrSuccess), an error message is displayed on the LCD screen with the error code, and an error line is sent to the PC via envoyerVersPC(0, 0, "ERROR_" + String(err)). The program waits 2 seconds before retrying.
 - 2. LCD Display (if successful):
- - Clears the screen.
- - Displays the current temperature and humidity on both lines of the LCD screen.
+  - Clears the screen.
+  - Displays the current temperature and humidity on both lines of the LCD screen.
 - 3. Send to PC:
- - envoyerVersPC(temperature, humidity): Calls the function to send the read data (temperature, humidity, and "OK" status) to the PC.
+  - envoyerVersPC(temperature, humidity): Calls the function to send the read data (temperature, humidity, and "OK" status) to the PC.
 - 4. delay(3000): The program pauses for 3 seconds before the next reading, meaning data is read and sent every 3 seconds.
 
 
