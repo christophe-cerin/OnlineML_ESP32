@@ -116,11 +116,11 @@ This function executes once when the Arduino starts:
  - 7. Serial.flush(): Ensures the header is sent immediately.
 envoyerVersPC() Function
 This custom function is responsible for sending data to the PC via the serial port, in CSV format:
- - It takes temperature (temp), humidity (hum), and an optional status (defaulting to "OK") as parameters.
- - Serial.print(millis()): Sends the time elapsed since the Arduino started in milliseconds.
- - Serial.print(temp, 1) and Serial.print(hum, 1): Send temperature and humidity with one decimal place.
- - Serial.println(status): Sends the reading status (e.g., "OK" or "ERROR_XX").
- - Serial.flush(): Forces immediate data transmission to ensure it doesn't remain in the buffer.
+  - It takes temperature (temp), humidity (hum), and an optional status (defaulting to "OK") as parameters.
+  - Serial.print(millis()): Sends the time elapsed since the Arduino started in milliseconds.
+  - Serial.print(temp, 1) and Serial.print(hum, 1): Send temperature and humidity with one decimal place.
+  - Serial.println(status): Sends the reading status (e.g., "OK" or "ERROR_XX").
+  - Serial.flush(): Forces immediate data transmission to ensure it doesn't remain in the buffer.
 loop() Function
 This function runs continuously after setup():
 - 1. DHT22 Sensor Reading:
