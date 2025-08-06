@@ -45,3 +45,10 @@ Wiring Instructions
    - LCD VSS pin connects to Arduino Uno R4 Wifi GND digital pin.
 
 (Note: LCD pins D0, D1, D2, D3, and V0 are mentioned but their connections are implied or handled by the potentiometer connection for V0.)
+
+
+<picture>
+<center>
+<img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/GHA-PCA/images/poids-liaisons.png" width=40% height=40%  title="Matrice X"/>
+</center>
+</picture>
