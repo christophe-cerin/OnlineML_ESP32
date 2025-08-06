@@ -169,23 +169,23 @@ This Python script (recuperationDataArretTimerEachTime.py) is designed to automa
  1. Imports: Imports necessary modules (serial, time, datetime, os, sys).
 
  2. trouver_port_arduino():
-    ◦ This function iterates over a list of possible serial ports.
-    ◦ It attempts to open and close each port to check its availability.
-    ◦ If a port is found and accessible, its name is returned; otherwise, None is returned.
+  -This function iterates over a list of possible serial ports.
+  - It attempts to open and close each port to check its availability.
+  - If a port is found and accessible, its name is returned; otherwise, None is returned.
     
  3. main():
-   ◦ Calls trouver_port_arduino() to get the port. If no port is found, the script exits.
-   ◦ Initializes the serial connection.
-   ◦ Generates a unique filename with a timestamp.
-   ◦ Defines duree_max (maximum recording duration, here 10 minutes).
-   ◦ Opens the CSV file in write mode and writes the header.
-   ◦ Enters an infinite loop that terminates when duree_max is reached.
-   ◦ Inside the loop:
-     ▪ Reads a line from the serial port.
-     ▪ Decodes and cleans the line.
-     ▪ Ignores lines starting with # (comments).
-     ▪ Adds the real PC timestamp to the data line.
-     ▪ Displays the complete line in the console and writes it to the CSV file.
-     ▪ Updates the last save time to show minute-by-minute progress.
-   ◦ Handles exceptions (KeyboardInterrupt, serial.SerialException, UnicodeDecodeError, Exception).
-   ◦ Ensures proper closure of the serial connection in the finally block.
+  - Calls trouver_port_arduino() to get the port. If no port is found, the script exits.
+  - Initializes the serial connection.
+  - Generates a unique filename with a timestamp.
+  - Defines duree_max (maximum recording duration, here 10 minutes).
+  - Opens the CSV file in write mode and writes the header.
+  - Enters an infinite loop that terminates when duree_max is reached.
+  - Inside the loop:
+     - Reads a line from the serial port.
+     - Decodes and cleans the line.
+     - Ignores lines starting with # (comments).
+     - Adds the real PC timestamp to the data line.
+     - Displays the complete line in the console and writes it to the CSV file.
+     - Updates the last save time to show minute-by-minute progress.
+   - Handles exceptions (KeyboardInterrupt, serial.SerialException, UnicodeDecodeError, Exception).
+   - Ensures proper closure of the serial connection in the finally block.
