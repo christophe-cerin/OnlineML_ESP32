@@ -48,3 +48,28 @@ This direct wiring will allow you to control your entire monitoring system. Once
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/lcd16pinsdetailsvertical.png"/>
     <figcaption><b>Figure 2:</b> The LCD screen and 16 pins</figcaption>
 </figure>
+
+## Wiring and Required Hardware
+
+Here is a summary table of the necessary hardware and connections for your project.
+
+| Required Hardware | Wiring |
+| --- | --- |
+| 2 x 1 k Ohm Resistors | Protect the screen and LED from power surges. |
+| Potentiometer | The third pin is connected to the V0 / Contrast pin of the LCD screen. |
+| DHT22 Sensor | The green wire is connected to pin 15 of the ESP32 board. The red wire is connected to the positive rail of the breadboard, and the black wire to the negative rail. |
+| | - LCD terminal pin - connected to the GND pin of the ESP32. |
+| | - LCD terminal pin + connected to the 5V pin of the ESP32. |
+| | - LCD D7 pin connected to pin 19 of the ESP32. |
+| | - LCD D6 pin connected to pin 23 of the ESP32. |
+| | - LCD D5 pin connected to pin 18 of the ESP32. |
+| 16x2 LCD Screen (16 pins) | - LCD D4 pin connected to pin 5 of the ESP32. |
+| | - LCD Enable pin connected to pin 21 of the ESP32. |
+| | - LCD R/W pin connected to the GND pin of the ESP32. |  
+| | - LCD RS pin connected to pin 22 of the ESP32. |
+| | - LCD VCC/VDD pin connected to the 5V pin of the ESP32. | 
+| | - LCD VSS pin connected to the GND pin of the ESP32. |
+| Microcontroller Unit (MCU) Board | ESP WROOM 32UE. |
+| Breadboard | Breadboard |
+| One microUSB and USB2 cable | For powering and programming the ESP32. |
+| LED | The LED is connected to pin 21 of the ESP32. |
