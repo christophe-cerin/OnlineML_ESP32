@@ -74,7 +74,7 @@ Here is a summary table of the necessary hardware and connections for your proje
 | One microUSB and USB2 cable | For powering and programming the ESP32. |
 | LED | The LED is connected to pin 21 of the ESP32. |
 
-## Arduino IDE Libraries to Install
+## Arduino IDE Libraries to Install
 
 To make your temperature and humidity monitoring project work, you will need to install the following libraries in your Arduino IDE:
 
@@ -85,5 +85,42 @@ To make your temperature and humidity monitoring project work, you will need to 
 | DHT sensor library (by Adafruit) | Another option for interfacing with the temperature and humidity sensor. |
 | Adafruit AM2320 (by Adafruit) | A library for another type of temperature and humidity sensor, the AM2320. |
 
+## Guide to Using the Blynk.cloud Platform
+To use Blynk.cloud, follow these steps to set up a dashboard and connect your device:
 
+**1. Account and Project Creation**
+
+    • Create an account on the Blynk.cloud platform.
+    • Once logged in, create a new Dashboard for your project.
+
+**2. Datastream Configuration**
+
+The Datastream allows you to define the data flows between your device and the dashboard.
+
+    • Create a virtual pin V0 for temperature: Define the variable as a float (decimal) for "Temperature (°C)" with a value range of 0 to 50.
+    • Create a virtual pin V1 for humidity: Define the variable as a float (decimal) for "Humidity (%)" with a value range of 0 to 100.
+    • Create a virtual pin V2 for an LED: Define the variable as a boolean (true/false) for "LED".
+    • Create a virtual pin V3 for a switch: Define the variable as a boolean (true/false) for "SWITCH".
+
+**3. Web Dashboard Configuration**
+
+Repeat the same steps as for the Datastream in the "Web Dashboard" section to display the data on Blynk's web interface.
+
+**4. Device Addition**
+
+    • Add a new device by selecting the ESP32-WROOM-DA-MODULE model.
+    • Give your device a name and associate it with the template you previously created in the Dashboard.
+
+**5. ESP32 Connection**
+
+    • Copy your device's authentication information, which looks like this:
+#define BLYNK_TEMPLATE_NAME "xxxxx"
+#define BLYNK_AUTH_TOKEN "yyyyy"
+    • Open the Arduino IDE. Go to Examples → Blynk → Boards_Wifi → Esp32_Wifi.
+    • Paste the authentication information you just copied into the example code.
+    • In your Blynk dashboard, you will find another piece of information to copy:
+#define BLYNK_TEMPLATE_ID "zzzzz"
+#define BLYNK_TEMPLATE_NAME "xxxxx"
+    • Also paste this information into your Arduino code. You can then adapt the program to your specific needs.
+    • The program that we have successfully developed and tested is now ready to be uploaded to your ESP32.
 
