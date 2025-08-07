@@ -117,7 +117,7 @@ Repeat the same steps as for the Datastream in the "Web Dashboard" section to di
  ``` 
 #define BLYNK_TEMPLATE_NAME "xxxxx"
 #define BLYNK_AUTH_TOKEN "yyyyy"
-``
+```
  - Open the Arduino IDE. Go to Examples → Blynk → Boards_Wifi → Esp32_Wifi.
  - Paste the authentication information you just copied into the example code.
  - In your Blynk dashboard, you will find another piece of information to copy :
