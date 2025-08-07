@@ -73,3 +73,17 @@ Here is a summary table of the necessary hardware and connections for your proje
 | Breadboard | Breadboard |
 | One microUSB and USB2 cable | For powering and programming the ESP32. |
 | LED | The LED is connected to pin 21 of the ESP32. |
+
+## Arduino IDE Libraries to Install
+
+To make your temperature and humidity monitoring project work, you will need to install the following libraries in your Arduino IDE:
+
+| Library | Function |
+| --- | --- |
+| DHT22 (by dvarrel), SimpleDHT (by winlin) | These allow you to read data from the temperature and humidity sensor. |
+| LiquidCrystal (by Adafruit and Arduino) | Manages the display on the LCD screen. |
+| DHT sensor library (by Adafruit) | Another option for interfacing with the temperature and humidity sensor. |
+| Adafruit AM2320 (by Adafruit) | A library for another type of temperature and humidity sensor, the AM2320. |
+
+
+
