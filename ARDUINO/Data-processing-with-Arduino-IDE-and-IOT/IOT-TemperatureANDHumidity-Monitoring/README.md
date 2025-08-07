@@ -39,12 +39,12 @@ This direct wiring will allow you to control your entire monitoring system. Once
 
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/Storing%20Data%20from%20Serial%20Port%20to%20Disk/images/iotLCDunoTempHum.jpg"/>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/circuitEspLcdBreadPot.png"/>
     <figcaption><b>Figure 2:</b> Component and Circuit Diagram</figcaption>
 </figure>
 
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/Storing%20Data%20from%20Serial%20Port%20to%20Disk/images/iotLCDunoTempHum.jpg"/>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/lcd16pinsdetailsvertical.png"/>
     <figcaption><b>Figure 2:</b> The LCD screen and 16 pins</figcaption>
 </figure>
