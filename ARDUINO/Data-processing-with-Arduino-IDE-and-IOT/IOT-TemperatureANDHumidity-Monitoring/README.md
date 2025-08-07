@@ -90,8 +90,8 @@ To use Blynk.cloud, follow these steps to set up a dashboard and connect your de
 
 **1. Account and Project Creation**
 
- • Create an account on the Blynk.cloud platform.
- • Once logged in, create a new Dashboard for your project.
+ - Create an account on the Blynk.cloud platform.
+ - Once logged in, create a new Dashboard for your project.
 
 **2. Datastream Configuration**
 
