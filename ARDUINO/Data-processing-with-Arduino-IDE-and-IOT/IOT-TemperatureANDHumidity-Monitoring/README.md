@@ -36,3 +36,15 @@ For this project, you will need the following items:
    - DHT22 Probe: The DHT22 sensor connects to the ESP32 with three wires: VCC (3.3V power), GND (ground), and a data pin. The data pin must be connected to a digital input pin on the ESP32.
 
 This direct wiring will allow you to control your entire monitoring system. Once the hardware is in place, you can write the necessary code to read data from the DHT22 sensor and display it on the LCD screen.
+
+
+<figure>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/Storing%20Data%20from%20Serial%20Port%20to%20Disk/images/iotLCDunoTempHum.jpg"/>
+    <figcaption><b>Figure 2:</b> Component and Circuit Diagram</figcaption>
+</figure>
+
+
+<figure>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/Storing%20Data%20from%20Serial%20Port%20to%20Disk/images/iotLCDunoTempHum.jpg"/>
+    <figcaption><b>Figure 2:</b> The LCD screen and 16 pins</figcaption>
+</figure>
