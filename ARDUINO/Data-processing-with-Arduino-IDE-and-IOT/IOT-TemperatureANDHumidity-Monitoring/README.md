@@ -114,17 +114,17 @@ Repeat the same steps as for the Datastream in the "Web Dashboard" section to di
 **5. ESP32 Connection**
 
  - Copy your device's authentication information, which looks like this:
-   
+ ``` 
 #define BLYNK_TEMPLATE_NAME "xxxxx"
 #define BLYNK_AUTH_TOKEN "yyyyy"
-
+``
  - Open the Arduino IDE. Go to Examples → Blynk → Boards_Wifi → Esp32_Wifi.
  - Paste the authentication information you just copied into the example code.
  - In your Blynk dashboard, you will find another piece of information to copy :
-   
+```    
 #define BLYNK_TEMPLATE_ID "zzzzz"
 #define BLYNK_TEMPLATE_NAME "xxxxx"
-
+``` 
  - Also paste this information into your Arduino code. You can then adapt the program to your specific needs.
  - The program that we have successfully developed and tested is now ready to be uploaded to your ESP32.
 
