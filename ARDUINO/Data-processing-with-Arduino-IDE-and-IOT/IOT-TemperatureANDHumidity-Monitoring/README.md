@@ -133,7 +133,7 @@ Once the program has been uploaded to the board, you can watch in the IDE's **se
 
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/iotarduinocloud-esp32LCDwithoutRyverski.png" width=30% height=30% />
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/iotarduinocloud-esp32LCDwithoutRyverski.png" width=50% height=50% />
     <figcaption><b>Figure 1:</b> TProgram, Serial Port and Data</figcaption>
 </figure>
 
