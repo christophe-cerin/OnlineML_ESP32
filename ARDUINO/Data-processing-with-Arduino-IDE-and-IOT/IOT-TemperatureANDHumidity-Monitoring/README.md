@@ -128,3 +128,22 @@ Repeat the same steps as for the Datastream in the "Web Dashboard" section to di
  - Also paste this information into your Arduino code. You can then adapt the program to your specific needs.
  - The program that we have successfully developed and tested is now ready to be uploaded to your ESP32.
 
+
+Once the program has been uploaded to the board, you can watch in the IDE's **serial monitor** as the connection is established between your computer and the Blynk IoT Cloud. You'll then be able to track the real-time data directly on the Blynk **Dashboard**.
+
+
+<figure>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/iotarduinocloud-esp32LCDwithoutRyverski.png"/>
+    <figcaption><b>Figure 2:</b> The LCD screen and 16 pins</figcaption>
+</figure>
+
+<figure>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/circuitesplcdpc.jpg"/>
+    <figcaption><b>Figure 2:</b> The LCD screen and 16 pins</figcaption>
+</figure>
+
+
+<figure>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/dashBoardEspBlynkTempHumTelephone.jpg"/>
+    <figcaption><b>Figure 2:</b> The LCD screen and 16 pins</figcaption>
+</figure>
