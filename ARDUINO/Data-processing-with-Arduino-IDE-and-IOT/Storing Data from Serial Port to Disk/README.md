@@ -1,4 +1,5 @@
 
+
 # Storing Data from Serial Port to Disk
 
 **Abstract**
@@ -47,7 +48,7 @@ Wiring Instructions
 (Note: LCD pins D0, D1, D2, D3, and V0 are mentioned but their connections are implied or handled by the potentiometer connection for V0.)
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/christophe-cerin/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/ARDUINO-UNO-R4-WIFI/images/schemaUnoDht22LcdPot.png" width=40% height=40%  title="unoDht22Lcd"/>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/Storing%20Data%20from%20Serial%20Port%20to%20Disk/images/schemaUnoDht22LcdPot.png"/>
     <figcaption><b>Figure 1:</b> Wiring diagrams</figcaption>
 </figure>
 
@@ -202,6 +203,12 @@ To use this script :
 
 ## 5. Our Results
 
+<figure>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/Storing%20Data%20from%20Serial%20Port%20to%20Disk/images/iotLCDunoTempHum.jpg"/>
+    <figcaption><b>Figure 2:</b> Electronic Circuit</figcaption>
+</figure>
+
+
 ``` 
 data_consolidated_20250709_140934.csv
 data_20250709_140934.csv
@@ -232,4 +239,3 @@ $cat data_20250709_140934.csv
 2025-07-09T14:09:18.122691,5638198,25.7,38.9,OK
 2025-07-09T14:09:21.124698,5641212,25.7,38.9,OK
 ```
-
