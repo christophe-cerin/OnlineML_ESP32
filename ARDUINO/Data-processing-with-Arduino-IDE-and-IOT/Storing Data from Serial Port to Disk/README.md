@@ -203,6 +203,12 @@ To use this script :
 
 ## 5. Our Results
 
+<figure>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/Storing%20Data%20from%20Serial%20Port%20to%20Disk/images/iotLCDunoTempHum.jpg"/>
+    <figcaption><b>Figure 1:</b> Electronic Circuit</figcaption>
+</figure>
+
+
 ``` 
 data_consolidated_20250709_140934.csv
 data_20250709_140934.csv
