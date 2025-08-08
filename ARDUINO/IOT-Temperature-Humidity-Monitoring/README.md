@@ -39,13 +39,13 @@ This direct wiring will allow you to control your entire monitoring system. Once
 
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/circuitEspLcdBreadPot.png"/>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/circuitEspLcdBreadPot.png"/>
     <figcaption><b>Figure 2:</b> Component and Circuit Diagram</figcaption>
 </figure>
 
 
 <figure>
-   <img alt="Matrice X" align="center" width=30% height=30% src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/lcd16pinsdetailsvertical.png"/>
+   <img alt="Matrice X" align="center" width=30% height=30% src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/lcd16pinsdetailsvertical.png"/>
     <figcaption><b>Figure 2:</b> The LCD screen and 16 pins</figcaption>
 </figure>
 
@@ -133,17 +133,17 @@ Once the program has been uploaded to the board, you can watch in the IDE's **se
 
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/iotarduinocloud-esp32LCDwithoutRyverski.png" width=50% height=70% />
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/iotarduinocloud-esp32LCDwithoutRyverski.png" width=50% height=70% />
     <figcaption><b>Figure 1:</b> TProgram, Serial Port and Data</figcaption>
 </figure>
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/circuitesplcdpc.jpg" width=30% height=30% />
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/circuitesplcdpc.jpg" width=30% height=30% />
     <figcaption><b>Figure 2:</b> Electronic Circuit</figcaption>
 </figure>
 
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/IOT-TemperatureANDHumidity-Monitoring/images/dashBoardEspBlynkTempHumTelephone.jpg"  width=30% height=30% />
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/dashBoardEspBlynkTempHumTelephone.jpg"  width=30% height=30% />
     <figcaption><b>Figure 3:</b> Dashboard</figcaption>
 </figure>
