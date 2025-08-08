@@ -1,5 +1,3 @@
-
-
 # Storing Data from Serial Port to Disk
 
 **Abstract**
@@ -48,7 +46,7 @@ Wiring Instructions
 (Note: LCD pins D0, D1, D2, D3, and V0 are mentioned but their connections are implied or handled by the potentiometer connection for V0.)
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/Storing%20Data%20from%20Serial%20Port%20to%20Disk/images/schemaUnoDht22LcdPot.png"/>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/STORING-Data-from-Serial-Port/images/schemaUnoDht22LcdPot.png"/>
     <figcaption><b>Figure 1:</b> Wiring diagrams</figcaption>
 </figure>
 
@@ -204,7 +202,7 @@ To use this script :
 ## 5. Our Results
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/Data-processing-with-Arduino-IDE-and-IOT/Storing%20Data%20from%20Serial%20Port%20to%20Disk/images/iotLCDunoTempHum.jpg"/>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/STORING-Data-from-Serial-Port/images/iotLCDunoTempHum.jpg"/>
     <figcaption><b>Figure 2:</b> Electronic Circuit</figcaption>
 </figure>
 
