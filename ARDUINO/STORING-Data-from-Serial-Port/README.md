@@ -237,3 +237,10 @@ $cat data_20250709_140934.csv
 2025-07-09T14:09:18.122691,5638198,25.7,38.9,OK
 2025-07-09T14:09:21.124698,5641212,25.7,38.9,OK
 ```
+## 6. The main functions of this architecture
+
+The primary functions of this architecture include first-level data analysis, which involves processing data upstream to prevent network overload by avoiding the transmission of massive volumes of information. Additionally, it enables real-time action on Internet of Things (IoT) data, acting quickly and efficiently based on predefined policies. Finally, it ensures a rigorous selection of transmitted data, sending only the relevant information to the server for in-depth analysis and long-term storage. 
+
+Advantages of this architecture are numerous, including enhanced security by leveraging existing computer security protocols. By processing data locally, it helps reduce bandwidth costs and latency, which is critical for applications that require quick decisions, such as autonomous vehicles. This local approach also contributes to improving user privacy since their data is analyzed on-site instead of being sent to a remote server. Finally, it offers great mobility, as electronic devices and laptops can connect to or disconnect from the network at any time.
+
+This computing architecture has certain limitations, particularly regarding security challenges. Complex encryption algorithms and security policies can hinder data exchange between devices, and flaws in these algorithms can make data vulnerable to cyberattacks. Major concerns also include threats such as IP address spoofing, man-in-the-middle attacks, and wireless network vulnerabilities. Furthermore, data consistency and management remain complex challenges, despite the goal of creating a global storage system that is both vast and fast. Trust and authentication are also significant issues. Lastly, this architecture results in higher power consumption, as the fog nodes are more energy-intensive than a centralized cloud architecture.
