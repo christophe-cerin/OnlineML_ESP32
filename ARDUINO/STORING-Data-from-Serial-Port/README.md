@@ -244,3 +244,19 @@ The primary functions of this architecture include first-level data analysis, wh
 Advantages of this architecture are numerous, including enhanced security by leveraging existing computer security protocols. By processing data locally, it helps reduce bandwidth costs and latency, which is critical for applications that require quick decisions, such as autonomous vehicles. This local approach also contributes to improving user privacy since their data is analyzed on-site instead of being sent to a remote server. Finally, it offers great mobility, as electronic devices and laptops can connect to or disconnect from the network at any time.
 
 This computing architecture has certain limitations, particularly regarding security challenges. Complex encryption algorithms and security policies can hinder data exchange between devices, and flaws in these algorithms can make data vulnerable to cyberattacks. Major concerns also include threats such as IP address spoofing, man-in-the-middle attacks, and wireless network vulnerabilities. Furthermore, data consistency and management remain complex challenges, despite the goal of creating a global storage system that is both vast and fast. Trust and authentication are also significant issues. Lastly, this architecture results in higher power consumption, as the fog nodes are more energy-intensive than a centralized cloud architecture.
+
+## 7. This network infrastructure is distinguished by several key features 
+
+The main features of this infrastructure lie in the ability to access resources at any time and from anywhere. It enables direct communication without intermediarie between the electronic device, the host computer, and the storage system, which is a significant advantage. Users can also choose between a public cloud, managed by a third party, or a private cloud, dedicated to a single organization, to ensure centralized and exclusive access.
+Among the key applications is upstream data processing, which allows for real-time analysis of time-sensitive information directly at the source, in order to reduce latency. Advanced storage and analysis can then be performed in the cloud or on a remote server for more complex processing and long-term storage.
+
+| Specifications | Remarks | 
+| --- | --- |
+| Latency | Low |
+| Service location | On the Internet or at the edge of the local network |
+| Security | Configurable based on needs |
+| Risk of data attack | Very low probability |
+| Location awareness | No |
+| Supports mobility | Yes |
+| Real-time interactions | Supported |
+
