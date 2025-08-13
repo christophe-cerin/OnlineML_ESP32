@@ -42,5 +42,5 @@ Most machine learning implementations are based on Python, here are some algorit
 ##### [1.6.6- LibIsolationForest](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/LibIsolationForest)
 ##### [1.6.7 - Lasso Regression](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/LASSO-Regression)
 
-#### [1.7 - IoT Temperature and Humidity Monitoring : An Integrated Solution]()
+#### [1.7 - IoT Temperature and Humidity Monitoring : An Integrated Solution](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/IOT-Temperature-Humidity-Monitoring)
 #### [1.8 - Storing Data from Serial Port to Disk](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/STORING-Data-from-Serial-Port)
