@@ -78,6 +78,15 @@ Here is a summary table of the necessary hardware and connections for your proje
 | One microUSB and USB2 cable | For powering and programming the ESP32. |
 | LED | The LED is connected to pin 21 of the ESP32. |
 
+| Specifications | DHT22 |
+| --- | --- |
+| Temperature range | -40 to 80 ºC |
+| Humidity range | 0 to 100% |
+| Resolution | Humidity: 0.1% , Temperature: 0.1ºC |
+| Operating voltage | 3 – 6 V DC |
+| Current supply | 1 – 1.5 mA |
+|Sampling period | 2 seconds | 
+
 ## Arduino IDE Libraries to Install
 
 To make your temperature and humidity monitoring project work, you will need to install the following libraries in your Arduino IDE:
