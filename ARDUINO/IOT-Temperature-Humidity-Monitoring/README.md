@@ -191,8 +191,13 @@ Your dashboard is ready and displays the temperature and humidity values capture
     <figcaption><b>Figure 3:</b> Electronic Circuit</figcaption>
 </figure>
 
+<figure>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/dashBoardEspBlynkTempHumTelephone.jpg"  width=30% height=30% />
+    <figcaption><b>Figure 4:</b> Dashboard on our computer's screen</figcaption>
+</figure>
+
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/dashBoardEspBlynkTempHumTelephone.jpg"  width=30% height=30% />
-    <figcaption><b>Figure 4:</b> Dashboard</figcaption>
+    <figcaption><b>Figure 4:</b> This figure shows the Arduino IoT Cloud dashboard as it appears on our phone</figcaption>
 </figure>
