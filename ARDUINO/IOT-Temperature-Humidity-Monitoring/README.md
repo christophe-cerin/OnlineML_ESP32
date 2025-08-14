@@ -87,7 +87,7 @@ Here is a summary table of the necessary hardware and connections for your proje
 | Current supply | 1 – 1.5 mA |
 |Sampling period | 2 seconds | 
 
-| Specifications | 	Details LCD 16x2 |
+| Specifications | LCD 16x2 |
 | --- | --- |
 | Operating Voltage | 4.7V to 5.3V | 
 | Display Bezel Dimensions | 72 x 25 mm | 
