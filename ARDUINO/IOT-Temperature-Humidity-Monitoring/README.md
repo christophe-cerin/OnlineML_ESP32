@@ -241,3 +241,12 @@ The code begins by including the necessary libraries :
 
  - **setup() :** This function is executed once at startup. It initializes serial communication, configures the ESP32 pins for input and output, initializes the LCD screen, and establishes the connection with the Arduino IoT Cloud.
  - **loop() :** This function runs continuously. It updates the Cloud connection status (ArduinoCloud.update()), reads data from the DHT22 sensor, and displays it on both the serial monitor and the LCD screen. It also manages the synchronization of other components like the potentiometer and the LED.
+
+**Callback Functions**
+
+The program uses callback functions to react to changes from the Cloud.
+ - **onLEDChange() and onButtonChange() :** These functions are called when the state of the LED or button is changed from the Cloud dashboard. The onButtonChange() function contains the logic to turn the LED on or off based on the button state on the dashboard.
+ - **onPOTENTIOMETREChange() :** This function is activated when the potentiometer value changes. It reads the analog value and maps it to a scale of 0 to 270 before sending it to the Cloud.
+ - **onTemperatureChange() and onHumidityChange() :** These functions are declared, but their bodies are empty, meaning they currently perform no specific actions.
+   
+In summary, this program is a complete example of an IoT project that integrates sensor reading, local display, and bidirectional communication with a Cloud service.
