@@ -49,7 +49,7 @@ This direct wiring will allow you to control your entire monitoring system. Once
 </figure>
 
 <figure>
-   <img alt="Matrice X" align="center" width=30% height=30% src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/DHT22.png"/>
+   <img alt="Matrice X" align="center" width=30% height=30% src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/DHT22.jpg"/>
     <figcaption><b>Figure 2:</b> DHT22 Sensor: To measure the temperature and humidity of the environment </figcaption>
 </figure>
 
