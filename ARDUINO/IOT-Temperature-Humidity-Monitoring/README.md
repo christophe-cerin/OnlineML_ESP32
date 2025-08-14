@@ -87,6 +87,26 @@ Here is a summary table of the necessary hardware and connections for your proje
 | Current supply | 1 – 1.5 mA |
 |Sampling period | 2 seconds | 
 
+| Specifications | 	Details LCD 16x2 |
+| --- | --- |
+| Operating Voltage | 4.7V to 5.3V | 
+| Display Bezel Dimensions | 72 x 25 mm | 
+| Operating Current | 1mA (without backlight) | 
+| PCB Size | 80L x 36W x 10H mm | 
+| Controller | 	HD47780 | 
+| Display Color | Green or Blue |
+| Display Type | Alphanumeric character display |
+| Number of Columns | 16 |
+| Number of Rows | 2 |
+| Number of Pins | 16 | 
+| Total Characters | 32 |
+| Operating Modes | 4-bit and 8-bit |
+| Pixel Box Size | 5×8 pixels per character |
+| Character Font Size | 0.125W x 0.200H (mm) | 
+| Dimension | 84.0 x 44.0 x 13.0 mm |
+| Operating Temperature | -20°C to +70°C |
+| Backlight | LED backlight |
+
 ## Arduino IDE Libraries to Install
 
 To make your temperature and humidity monitoring project work, you will need to install the following libraries in your Arduino IDE:
