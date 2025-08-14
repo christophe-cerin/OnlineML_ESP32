@@ -132,18 +132,24 @@ Repeat the same steps as for the Datastream in the "Web Dashboard" section to di
 Once the program has been uploaded to the board, you can watch in the IDE's **serial monitor** as the connection is established between your computer and the Blynk IoT Cloud. You'll then be able to track the real-time data directly on the Blynk **Dashboard**.
 
 
+
+<figure>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/connectingBlynkaffichage.jpg" width=50% height=70% />
+    <figcaption><b>Figure 1:</b> Image of the Blynk Cloud connection</figcaption>
+</figure>
+
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/iotarduinocloud-esp32LCDwithoutRyverski.png" width=50% height=70% />
-    <figcaption><b>Figure 1:</b> TProgram, Serial Port and Data</figcaption>
+    <figcaption><b>Figure 2:</b> Program, Serial Port and Data</figcaption>
 </figure>
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/circuitesplcdpc.jpg" width=30% height=30% />
-    <figcaption><b>Figure 2:</b> Electronic Circuit</figcaption>
+    <figcaption><b>Figure 3:</b> Electronic Circuit</figcaption>
 </figure>
 
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/dashBoardEspBlynkTempHumTelephone.jpg"  width=30% height=30% />
-    <figcaption><b>Figure 3:</b> Dashboard</figcaption>
+    <figcaption><b>Figure 4:</b> Dashboard</figcaption>
 </figure>
