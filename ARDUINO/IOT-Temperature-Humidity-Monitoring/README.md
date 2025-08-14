@@ -210,10 +210,10 @@ Here's what you'll find in it:
  - **Connection Credentials :** The device name (DEVICE_LOGIN_NAME), WiFi credentials (SSID and PASS), and the device secret key (DEVICE_KEY). This information is retrieved from a secret file.
  - **Callback Functions :** The functions onLEDChange() and onButtonChange() are declared here. They are automatically called by the cloud when the state of the LED or the button is changed.
  - **Cloud Properties :** Variables that sync the state of your board with the cloud are defined.
-   - LED: A controllable color light.
-   - temperature: A temperature sensor. The data is read-only.
-   - angle: A variable for an angle, also read-only.
+   - LED : A controllable color light.
+   - temperature : A temperature sensor. The data is read-only.
+   - angle : A variable for an angle, also read-only.
    - humidity: A relative humidity sensor, read-only.
-   - button: A button whose state can be read and modified.
+   - button : A button whose state can be read and modified.
  - **Property Initialization :** The initProperties() function configures the above properties for communication with the Arduino IoT Cloud. It specifies whether the properties are read-only (READ) or read/write (READWRITE) and which functions to call in case of a change (ON_CHANGE).
  - **Connection Handler :** WiFiConnectionHandlerArduinoIoTPreferredConnection manages the board's connection to the WiFi network using the provided credentials.
