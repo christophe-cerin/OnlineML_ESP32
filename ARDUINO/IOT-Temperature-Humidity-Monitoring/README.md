@@ -37,7 +37,6 @@ For this project, you will need the following items:
 
 This direct wiring will allow you to control your entire monitoring system. Once the hardware is in place, you can write the necessary code to read data from the DHT22 sensor and display it on the LCD screen.
 
-
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/circuitEspLcdBreadPot.png"/>
     <figcaption><b>Figure 2:</b> Component and Circuit Diagram</figcaption>
@@ -217,3 +216,14 @@ Here's what you'll find in it:
    - button : A button whose state can be read and modified.
  - **Property Initialization :** The initProperties() function configures the above properties for communication with the Arduino IoT Cloud. It specifies whether the properties are read-only (READ) or read/write (READWRITE) and which functions to call in case of a change (ON_CHANGE).
  - **Connection Handler :** WiFiConnectionHandlerArduinoIoTPreferredConnection manages the board's connection to the WiFi network using the provided credentials.
+
+## Interpretation of the main file esp32LCDwithouti2cRyverskiDHT22TempHumSimpleHDHlibCloudArduino.ino
+
+This code is the core of your project. It manages reading data from the DHT22 sensor, displaying it on an LCD screen, and communicating with the **Arduino IoT Cloud**.
+
+**Summary of Features**
+
+ - **DHT22 Sensor :** The program continuously reads temperature and humidity from the sensor.
+ - **LCD Screen :** Temperature and humidity values are displayed on a 16x2 LCD screen.
+ - **Arduino IoT Cloud :** The code is designed to connect to Arduino's IoT platform. It sends sensor data to the Cloud and can receive commands (like turning on an LED) from a dashboard.
+ - **Potentiometer and LED :** The code also manages reading a potentiometer and controlling an LED, which are synchronized with the Cloud.
