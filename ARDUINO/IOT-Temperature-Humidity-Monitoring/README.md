@@ -192,7 +192,7 @@ Your dashboard is ready and displays the temperature and humidity values capture
 </figure>
 
 <figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/dashbordIotCloudesp32LCDryverski.png"  width=30% height=30% />
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/dashbordIotCloudesp32LCDryverski.png"  width=60% height=60% />
     <figcaption><b>Figure 4:</b> Dashboard on our computer's screen</figcaption>
 </figure>
 
