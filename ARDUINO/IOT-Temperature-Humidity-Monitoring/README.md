@@ -129,8 +129,51 @@ Repeat the same steps as for the Datastream in the "Web Dashboard" section to di
  - The program that we have successfully developed and tested is now ready to be uploaded to your ESP32.
 
 
-Once the program has been uploaded to the board, you can watch in the IDE's **serial monitor** as the connection is established between your computer and the Blynk IoT Cloud. You'll then be able to track the real-time data directly on the Blynk **Dashboard**.
+Once the program has been uploaded to the board, you can watch in the IDE's **serial monitor** as the connection is established between your computer and the Blynk IoT Cloud (Figure 1). You'll then be able to track the real-time data directly on the Blynk **Dashboard**.
 
+## Arduino IoT Cloud Guide for Temperature and Humidity Monitoring
+
+This guide explains how to use an **ESP32-WROOM-32UE** microcontroller with a **DHT22** sensor and a **16x2 LCD** screen to monitor temperature and humidity. You'll learn how to use the **Arduino IoT Cloud** platform to view this data on your phone or computer, wherever you are.
+
+### 1. Project Overview
+
+This project will show you how to integrate your sensors with the Arduino IoT Cloud. You'll be able to remotely monitor the temperature and humidity of a location.
+
+### 2. Setting Up Your Project on Arduino IoT Cloud
+
+Once your electronic circuit is assembled, log in to the **Arduino IoT Cloud** platform and follow these steps to configure your project:
+
+**Create a "Thing"**
+
+A **Thing** is a container that groups all the elements of your project, such as devices, Cloud variables, code, and metadata.
+ - Name your **Thing**.
+ - Create **Cloud variables** for temperature and humidity. These are specific variables that synchronize data between your board and the platform.
+ - Associate your board (**ESP32**) with your **Thing**.
+ - Configure your board's Wi-Fi settings.
+
+### 3. Device Installation and Configuration
+
+Before associating your device, make sure you have installed the **Arduino Create Agent**. This tool allows the Arduino IoT Cloud to detect boards connected to your computer. Once the agent is installed, you can connect your board and configure its Wi-Fi settings.
+
+### 4. Uploading the Code
+
+ - Go to the Sketch tab to access the online code editor.
+ - Copy the code provided in the corresponding section of this guide and paste it into the editor.
+ - Click the upload button. The code will be verified, then transferred to your board.
+
+Your device is now operational and sending data to the Arduino IoT Cloud!
+
+### 5. Visualizing Data on a Dashboard
+   
+To visualize your sensor data, you need to create a dashboard.
+
+ - Go to the tab dedicated to configuring widgets.
+ - Add a "Gauge" widget for temperature.
+ - Add a "Percentage" widget for humidity.
+ - For each widget, give it a name and associate it with the corresponding Cloud variable (Temperature or Humidity).
+ - Click "DONE".
+
+Your dashboard is ready and displays the temperature and humidity values captured by your device in real time.
 
 
 <figure>
