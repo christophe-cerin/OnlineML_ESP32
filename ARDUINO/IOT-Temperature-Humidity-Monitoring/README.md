@@ -39,7 +39,7 @@ This direct wiring will allow you to control your entire monitoring system. Once
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/circuitEspLcdBreadPot.png"/>
-    <figcaption><b>Figure 2:</b> Component and Circuit Diagram</figcaption>
+    <figcaption><b>Figure 1:</b> Component (ESP32, LCD and Potentiometer) and Circuit Diagram</figcaption>
 </figure>
 
 
@@ -49,8 +49,8 @@ This direct wiring will allow you to control your entire monitoring system. Once
 </figure>
 
 <figure>
-   <img alt="Matrice X" align="center" width=30% height=30% src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/DHT22.jpg"/>
-    <figcaption><b>Figure 2:</b> DHT22 Sensor: To measure the temperature and humidity of the environment </figcaption>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/DHT22.jpg"/>
+    <figcaption><b>Figure 3:</b> DHT22 Sensor: To measure the temperature and humidity of the environment </figcaption>
 </figure>
 
 ## Wiring and Required Hardware
@@ -182,28 +182,28 @@ Your dashboard is ready and displays the temperature and humidity values capture
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/connectingBlynkaffichage.jpg" width=50% height=70% />
-    <figcaption><b>Figure 1:</b> Image of the Blynk Cloud connection</figcaption>
+    <figcaption><b>Figure 4:</b> Image of the Blynk Cloud connection</figcaption>
 </figure>
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/iotarduinocloud-esp32LCDwithoutRyverski.png" width=70% height=70% />
-    <figcaption><b>Figure 2:</b> Arduino IoT Cloud, Serial Port, Arduino Create Agent</figcaption>
+    <figcaption><b>Figure 5:</b> Arduino IoT Cloud, Serial Port, Arduino Create Agent</figcaption>
 </figure>
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/circuitesplcdpc.jpg" width=30% height=30% />
-    <figcaption><b>Figure 3:</b> Electronic Circuit</figcaption>
+    <figcaption><b>Figure 6:</b> Electronic Circuit</figcaption>
 </figure>
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/dashbordIotCloudesp32LCDryverski.png"  width=60% height=60% />
-    <figcaption><b>Figure 4:</b> Arduino IoT Cloud Dashboard on a computer</figcaption>
+    <figcaption><b>Figure 7:</b> Arduino IoT Cloud Dashboard on a computer</figcaption>
 </figure>
 
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Temperature-Humidity-Monitoring/images/dashBoardEspBlynkTempHumTelephone.jpg"  width=30% height=30% />
-    <figcaption><b>Figure 5:</b> This figure shows the Arduino IoT Cloud dashboard as it appears on our phone</figcaption>
+    <figcaption><b>Figure 8:</b> This figure shows the Arduino IoT Cloud dashboard as it appears on our phone</figcaption>
 </figure>
 
 ## The Different Files Created in the Arduino Cloud IDE
