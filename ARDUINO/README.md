@@ -44,3 +44,4 @@ Most machine learning implementations are based on Python, here are some algorit
 
 #### [1.7 - IoT Temperature and Humidity Monitoring : An Integrated Solution](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/IOT-Temperature-Humidity-Monitoring)
 #### [1.8 - Storing Data from Serial Port to Disk](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/STORING-Data-from-Serial-Port)
+#### [1.9 - ESP32 Web Server for DHT22 Temperature and Humidity Sensor](https://github.com/madou-sow/OnlineML_ESP32/tree/main/ARDUINO/ESP32-WebServer-for-DHT22)
