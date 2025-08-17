@@ -40,7 +40,7 @@ Your ESP32 is a server, and just like a website on the internet, it needs a uniq
 When your ESP32 connects to a Wi-Fi network, it is assigned an IP address by that network. This address is what allows other devices, like your computer or phone, to find it and access the web server you created. Simply type this IP address into your browser's address bar to connect to it.
 
 <figure>
-   <img alt="Matrice X" align="center" src=""/>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/ESP32-WebServer-for-DHT22/images/ArduinowebAsync.png"/>
     <figcaption><b>Figure 2:</b> Electronic Circuit</figcaption>
 </figure>
 
@@ -56,6 +56,6 @@ The process is simple:
 This page will display the information you programmed, such as temperature and humidity data from the DHT22 sensor.
 
 <figure>
-   <img alt="Matrice X" align="center" src=""/>
+   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/ESP32-WebServer-for-DHT22/images/httpwebAsync.png"/>
     <figcaption><b>Figure 2:</b> Electronic Circuit</figcaption>
 </figure>
