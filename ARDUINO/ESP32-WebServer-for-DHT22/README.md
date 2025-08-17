@@ -39,6 +39,11 @@ To access it, simply know the IP address assigned to your ESP32 by your router a
 Your ESP32 is a server, and just like a website on the internet, it needs a unique address to be accessible. This is the role of the IP address.
 When your ESP32 connects to a Wi-Fi network, it is assigned an IP address by that network. This address is what allows other devices, like your computer or phone, to find it and access the web server you created. Simply type this IP address into your browser's address bar to connect to it.
 
+<figure>
+   <img alt="Matrice X" align="center" src=""/>
+    <figcaption><b>Figure 2:</b> Electronic Circuit</figcaption>
+</figure>
+
 ### How to Access the ESP32 Web Page
 
 To view the web page hosted on your ESP32, you need its IP address. This unique address allows your browser to find it on the network.
@@ -49,3 +54,8 @@ The process is simple:
  - 3. Display the page: The browser will send a request to the ESP32 and display the web page stored there.
 
 This page will display the information you programmed, such as temperature and humidity data from the DHT22 sensor.
+
+<figure>
+   <img alt="Matrice X" align="center" src=""/>
+    <figcaption><b>Figure 2:</b> Electronic Circuit</figcaption>
+</figure>
