@@ -41,7 +41,7 @@ When your ESP32 connects to a Wi-Fi network, it is assigned an IP address by tha
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/ESP32-WebServer-for-DHT22/images/ArduinowebAsync.png"/>
-    <figcaption><b>Figure 2:</b> Electronic Circuit</figcaption>
+    <figcaption><b>Figure 1:</b> Arduino IDE and Serial Port</figcaption>
 </figure>
 
 ### How to Access the ESP32 Web Page
@@ -57,5 +57,5 @@ This page will display the information you programmed, such as temperature and h
 
 <figure>
    <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/ESP32-WebServer-for-DHT22/images/httpwebAsync.png"/>
-    <figcaption><b>Figure 2:</b> Electronic Circuit</figcaption>
+    <figcaption><b>Figure 2:</b> Reading DHT22 sensor values with ESP32 Web Server</figcaption>
 </figure>
