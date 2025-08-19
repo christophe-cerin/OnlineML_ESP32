@@ -11,7 +11,7 @@
 We need 2 USB ports on our laptop
 USB port n°1 of the laptop
 
-- connect the Laptop PC and the ESP32-VROOM-32D using the microUSB/USB cable
+- connect the Laptop PC and the ESP32-WROOM-32D using the microUSB/USB cable
 - load your sketch or program from the Arduino IDE then disconnect the ESP32 card and replace it with the PPK2
 - the PPK2, connected to the Laptop via the miniUSB/USB cable, will be mounted on the device /dev/ttyACM0
 - now connect PPK2 and ESP32, two female grove cables will be useful for this. The red cable will connect the positive terminal of the 3.8 V voltage difference on ESP32 to the VOUT (+) terminal on PPK2. The black cable will connect the negative terminal of the 3.8 V voltage difference on ESP32 to the GND(-) terminal on PPK2
