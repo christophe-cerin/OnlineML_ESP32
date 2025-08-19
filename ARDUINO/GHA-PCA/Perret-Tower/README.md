@@ -39,7 +39,7 @@ The details of the 10 attributes from [TourPerret10colHead.csv](https://github.c
 3. humidity: outside relative humidity;
 4. pulseAbs: Relative pulse count;
 5. temperature: outside temperature;
-6. vdd: battery voltage in mV. It varies with ambient temperature. The battery is almost empty at around 2.9 - 2.8V;
+6. vdd: battery voltage in mV. It varies with ambient temperature. The battery is almost empty at around 2.9 - 3.8V;
 7. waterleak: Water Leak strength or detection;
 8. x: x-axis sensor orientation;
 9. y: y-axis sensor orientation;
