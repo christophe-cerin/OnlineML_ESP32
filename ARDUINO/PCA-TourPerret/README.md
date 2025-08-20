@@ -91,7 +91,7 @@ Its core idea is based on the **Hebbian learning rule** ("neurons that fire toge
 
 ---
 
-## Output 📈
+## Output 
 
 The program will generate a file named **`projected_data.csv`** in the same directory where the executable is run. This CSV file will contain two columns, labeled "PC1" and "PC2", representing the **two principal components** (reduced dimensions) of your input data. Each row in this file corresponds to a row in your original input CSV ("TourPerrethead11col.csv"), but now transformed into a 2-dimensional space.
 
