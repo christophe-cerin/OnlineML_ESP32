@@ -121,7 +121,7 @@ After execution, a file named `projected_data.csv` will be created. It contains 
 
 The program saves the results in a CSV file, but does not trace them directly. To do this, a data visualization tool such as Python with the Matplotlib and Seaborn libraries can be used.
 
-### Python Script for File Visualization $projected\_data.csv$
+### Python Script for File Visualization projected_data.csv
 
 
 ```Python
@@ -352,7 +352,7 @@ By analyzing the graph, you can identify :
 
 Your approach to managing limited memory and maintaining data diversity is clever and worth integrating into the code. It goes beyond a simple sequential reading by introducing explicit management of the buffer.
 
-### Changes to the programme $gha\_pca\_limited\_memory.cpp$
+### Changes to the programme gha_pca_limited_memory.cpp
 
 We're going to change the algorithm to implement your strategy :
 
