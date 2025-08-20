@@ -364,9 +364,82 @@ This method ensures that the algorithm does not focus on a subset of data that i
 
 Here's the code C-plus modified to incorporate this logic. I have added comments to explain the new steps.
 
-```C++
-Explain
-```
+This C++ code refines the Generalized Hebbian Algorithm (GHA) implementation by introducing a more sophisticated **memory management strategy** for the data buffer. This new approach aims to handle large datasets more effectively by dynamically managing the data points retained in memory. 🧠
+
+---
+
+## Code Explanation 
+
+The core idea of iterative GHA training remains, but the way data is handled within the buffer has been significantly altered.
+
+### `struct DataPoint`
+A new `struct` named `DataPoint` is introduced to bundle each data row with an additional piece of information:
+* `VectorXd data`: This holds the actual numerical feature values for a single data row (e.g., `accMotion`, `humidity`, `temperature`, `vdd`).
+* `double sortValue`: This is a specific value from the `data` that will be used to **sort** the `DataPoint` objects within the buffer. In this code, the **first feature (`accMotion`, column 1)** is chosen as the `sortValue`.
+
+---
+
+### `readData(ifstream& file, int numFeatures, int count)`
+This function is a modified version of `readDataBuffer`.
+* Instead of returning a `MatrixXd`, it now returns a `vector<DataPoint>`.
+* It reads `count` lines from the CSV file.
+* For each line, it parses the specified features (columns 1, 3, 5, 6) into an `Eigen::VectorXd`.
+* Crucially, it populates the `sortValue` of each `DataPoint` with the value from the first feature (`row(0)`, which corresponds to `accMotion`).
+* The function then returns a vector of these `DataPoint` structs.
+
+---
+
+### `normalizeData(const MatrixXd& data)`
+This function remains **unchanged**, performing mean-variance normalization on the input `MatrixXd`.
+
+---
+
+### `GHA_step(const MatrixXd& dataBuffer, MatrixXd& W, double learningRate)`
+This function also remains **unchanged**. It still applies the GHA update rule to the `W` matrix based on the provided `dataBuffer`. The key is that `dataBuffer` is now constructed from the `data` fields of the `DataPoint` objects in the buffer.
+
+---
+
+### `main()`
+The `main` function incorporates the new memory management logic.
+1.  **Parameters**: `bufferSize` (total capacity of the buffer), `dataToKeep` (number of data points to retain after processing a buffer), `numFeatures`, `numComponents`, `learningRate`, and `numIterations` per buffer.
+2.  **Initial Buffer Filling**: The `buffer` (a `vector<DataPoint>`) is initially filled using `readData`.
+3.  **Iterative Processing Loop**: The `while (!buffer.empty())` loop continues as long as there's data in the buffer.
+    * **Run GHA on the buffer**: The `vector<DataPoint>` is converted into a `MatrixXd` (`bufferMatrix`) so that it can be normalized and fed into the `GHA_step` function. GHA is run for `numIterations` on this buffer, updating `W`. The learning rate is decayed.
+    * **Sorting and "Cancelling" Data**: This is the **most significant new part**.
+        * The `buffer` is **sorted** based on the `sortValue` (which is `accMotion` in this case). This arranges the data points by their `accMotion` values. 
+        * A `newBuffer` is created. Instead of discarding old data entirely, this strategy aims to preserve **diversity** while reducing the buffer size. It keeps the **lower half** and the **upper half** of the sorted buffer. Specifically, it takes `dataToKeep/2` elements from the beginning and `dataToKeep/2` elements from the end of the sorted buffer. This ensures that extreme values (lowest and highest `accMotion`) are always retained.
+        * The original `buffer` is then replaced with `newBuffer`.
+    * **Inserting New Data**: New data points are read from the CSV file to refill the `buffer` up to its `bufferSize` capacity. This fills the space made available by "cancelling" the middle data points.
+4.  **Final Projection**: After the loop finishes (all data processed), the entire original dataset is read again, normalized, and projected using the final learned `W` matrix to generate the complete `projected_data_buffer_gestionmem.csv` file.
+
+---
+
+## Rationale Behind This Memory Management Strategy 
+
+This advanced buffer management technique is designed for situations where:
+* **Dataset Size Exceeds RAM**: The full dataset cannot fit into memory.
+* **Desire for Diversity in Buffer**: Instead of simply discarding old data, there's a need to ensure the buffer retains a representative sample, particularly focusing on **extreme values** or the **range of the data**. By sorting and keeping the tails (lowest and highest values for a chosen feature), the algorithm attempts to prevent the GHA from "forgetting" about less frequent or outlier observations that might be important for learning robust principal components.
+
+**Trade-offs**:
+* **Increased Complexity**: The buffer management logic is more complex than a simple sliding window.
+* **Computational Overhead**: Sorting the buffer in each iteration adds computational cost.
+* **Potential Information Loss**: While aiming for diversity, this method still discards a significant portion of the data (the middle `bufferSize - dataToKeep` elements). The choice of `sortValue` is critical; if it doesn't represent the overall data distribution well, important information might be lost.
+
+---
+
+## Output 
+
+The program will now save the projected 2-dimensional data to a CSV file named **`projected_data_buffer_gestionmem.csv`**. This file will contain the principal components (PC1, PC2) for each data point from the original file, based on the `W` matrix learned using this new buffered and selective memory management approach.
+
+---
+
+## Potential Next Steps and Improvements 
+
+* **Smart `sortValue` Selection**: Instead of a fixed `sortValue`, consider dynamically choosing a feature for sorting that has high variance or is most representative of data extremes.
+* **Clustering-Based Data Retention**: Instead of simple sorting, implement a mini-clustering step within the buffer to identify distinct groups and retain a representative point from each cluster, ensuring even better diversity.
+* **Adaptive `dataToKeep`**: Dynamically adjust `dataToKeep` based on the data's characteristics or available memory.
+* **Performance Benchmarking**: Compare the training time and the quality of learned components (e.g., explained variance) between the simple buffered approach and this new memory-managed approach.
+* **Online Mean/StdDev**: For truly incremental learning, implement online algorithms to update the mean and standard deviation of the features rather than re-calculating them for each buffer or the entire dataset.
 
 ### Time complexity analysis
 
