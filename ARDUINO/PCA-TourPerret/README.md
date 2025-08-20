@@ -309,7 +309,7 @@ The graph obtained will show the distribution of the data after the reduction in
     
 
 
-To plot the file $projected\_data\_buffer.csv$ with a KDE plot (Kernel Density Estimate plot), we're going to use Python with the Pandas libraries for data manipulation and Seaborn for visualization. The KDE plot is an excellent alternative to the dispersion graph (scatter plot) because it represents the probability density of the data points, which is particularly useful for identifying regions with high data concentration.
+To plot the file projected_data_buffer.csv with a KDE plot (Kernel Density Estimate plot), we're going to use Python with the Pandas libraries for data manipulation and Seaborn for visualization. The KDE plot is an excellent alternative to the dispersion graph (scatter plot) because it represents the probability density of the data points, which is particularly useful for identifying regions with high data concentration.
 
 **Alternatives to the use of Scatter Plot**
 
@@ -322,7 +322,7 @@ Each type of graph has its advantages and limitations, and the Scatter Plot is n
 
 ### Python Script for the KDE Plot 
 
-This is the Python script to generate the graph. It assumes that the file $projected\_data\_buffer.csv$ as created by the previous program C' and that it contains the columns PC1 and PC2.
+This is the Python script to generate the graph. It assumes that the file projected_data_buffer.csv as created by the previous program C' and that it contains the columns PC1 and PC2.
 
 
     
@@ -553,13 +553,4 @@ The comparison of the three figures clearly shows that the **strategy of managin
 
 
 
-
-```python
-
-```
-
-
-```python
-
-```
 
