@@ -19,9 +19,95 @@ The weights of the first layer of the network converge towards the eigenvectors 
 
 The program ```gha_pca.cpp``` The next uses the Eigen library for matrix manipulation, which is very practical for PCA calculations. If you do not have Eigen, you will need to install it (e.g. with ```sudo apt-get install libeigen3-dev``` on Ubuntu).
 
-``` C++
-Explain
-```
+This C++ code implements a dimensionality reduction technique similar to Principal Component Analysis (PCA) using the **Generalized Hebbian Algorithm (GHA)**. It reads specific columns from a CSV file, normalizes the data, applies GHA to reduce dimensions, and then saves the projected data to a new CSV file for visualization.
+
+---
+
+## Code Explanation 
+
+The provided code is structured into several functions:
+
+### `readCSV(const string& filename)`
+This function is responsible for **reading data from a CSV file**.
+* It opens the specified `filename` and checks if it's accessible.
+* The first line (header) is ignored.
+* For each subsequent line, it reads specific columns (1, 3, 5, 6, which correspond to `accMotion`, `humidity`, `temperature`, and `vdd` from the assumed "TourPerrethead11col.csv" file) and converts them to `double`.
+* The extracted data is stored in a `vector<vector<double>>` and then converted into an `Eigen::MatrixXd` for numerical operations.
+
+---
+
+### `normalizeData(const MatrixXd& data)`
+This function performs **data normalization** using mean subtraction and division by standard deviation.
+* It calculates the **mean** of each column (feature).
+* It then **centers** the data by subtracting the mean from each corresponding column.
+* Finally, it computes the **standard deviation** for each column and scales the centered data by dividing by the standard deviation. This process ensures that each feature has a mean of 0 and a standard deviation of 1, which is crucial for many machine learning algorithms like GHA.
+
+---
+
+### `GHA(const MatrixXd& data, int numComponents, double learningRate, int numIterations)`
+This is the core function that implements the **Generalized Hebbian Algorithm (GHA)**.
+* It initializes a **weight matrix** `W` with random values, where the dimensions are `numFeatures` (number of columns in input data) by `numComponents` (desired output dimensions). The weights are then normalized.
+* The algorithm iterates for a specified `numIterations`. In each iteration, it processes every row (data point) from the `data` matrix.
+* For each data point `x` and for each principal component `j`:
+    * It calculates a **residual** by subtracting the projections of `x` onto previously learned principal components (from 0 to `j-1`). This ensures that each new component captures the remaining variance in the data.
+    * It updates the weight vector `W.col(j)` using a **Hebb-like learning rule**: `learningRate * (residual.dot(wj)) * residual`. This rule moves the weight vector in the direction of the residual, proportional to the current activation.
+    * The updated weight vector is then **normalized** to maintain unit length.
+* The `learningRate` is gradually decreased (`learningRate *= 0.99`) over iterations, which helps the algorithm converge.
+* The function returns the learned **weight matrix `W`**, whose columns represent the principal components.
+
+---
+
+### `main()`
+The `main` function orchestrates the entire process:
+1.  **Data Loading and Preprocessing**:
+    * It calls `readCSV` to load data from "TourPerrethead11col.csv".
+    * It then calls `normalizeData` to normalize the loaded data.
+2.  **Dimension Reduction with GHA**:
+    * Sets `numComponents` to 2 for a 2-dimensional reduction, ideal for visualization.
+    * Sets initial `learningRate` to 0.01 and `numIterations` to 1024.
+    * Calls the `GHA` function with the normalized data and specified parameters to obtain the weight matrix `W`.
+3.  **Projecting Data**:
+    * The original normalized data is **projected** onto the new dimensions (principal components) by multiplying `normalizedData` by the learned `W` matrix. This results in `projectedData`, which now has 2 columns.
+4.  **Saving Projected Data**:
+    * It opens a new CSV file named "projected_data.csv".
+    * It writes a header "PC1,PC2".
+    * It then writes each row of the `projectedData` matrix into the CSV, separated by a comma.
+    * A success message is printed to the console upon successful saving.
+
+---
+
+## Generalized Hebbian Algorithm (GHA) 
+
+The Generalized Hebbian Algorithm (GHA), also known as Sanger's Rule, is a **neural network model for unsupervised learning** that can perform Principal Component Analysis (PCA). Unlike traditional PCA which often relies on eigenvalue decomposition, GHA is an **iterative, online algorithm**. This means it can update its weights with each new data point, making it suitable for large datasets or streaming data.
+
+Its core idea is based on the **Hebbian learning rule** ("neurons that fire together, wire together"), extended to allow for the extraction of multiple principal components in a **sequential and orthogonal manner**. Each principal component is learned by subtracting the variance explained by the previously learned components, ensuring they are uncorrelated.
+
+**How it works conceptually**:
+* Imagine the algorithm trying to find directions (principal components) in your data that capture the most variance.
+* It starts with random guesses for these directions.
+* Then, for each data point, it slightly adjusts its guesses. If a data point aligns strongly with a guess, that guess is reinforced (moved closer to the data point).
+* The "generalized" part ensures that each new direction found is independent of the ones already found, effectively making them orthogonal.
+* This iterative process continues until the directions converge to the true principal components of the data.
+
+---
+
+## Output 📈
+
+The program will generate a file named **`projected_data.csv`** in the same directory where the executable is run. This CSV file will contain two columns, labeled "PC1" and "PC2", representing the **two principal components** (reduced dimensions) of your input data. Each row in this file corresponds to a row in your original input CSV ("TourPerrethead11col.csv"), but now transformed into a 2-dimensional space.
+
+This `projected_data.csv` can then be used with plotting tools (like Python's Matplotlib, R, or even spreadsheet software) to create **scatter plots** and visualize the data in a reduced dimension, potentially revealing clusters or patterns that were harder to discern in the original 4-dimensional feature space. 
+
+---
+
+## Potential Next Steps and Improvements 
+
+* **Visualization**: Use Python (e.g., `matplotlib`, `seaborn`) or R to load `projected_data.csv` and create scatter plots to visualize the reduced data.
+* **Hyperparameter Tuning**: Experiment with different `learningRate` values and `numIterations` to see their effect on convergence and the quality of the principal components.
+* **Comparison with PCA**: Implement a standard PCA algorithm (e.g., using `Eigen::SelfAdjointEigenSolver`) and compare its results (eigenvectors) with the `W` matrix obtained from GHA.
+* **Error Handling**: Add more robust error handling for file operations and numerical stability.
+* **Feature Selection**: Consider techniques for selecting the most relevant features before applying dimensionality reduction, especially if the original dataset had many irrelevant columns.
+* **User Input**: Allow the user to specify the input CSV filename, output filename, and number of components from the command line.
+* **Dynamic Learning Rate Scheduling**: Implement more advanced learning rate schedules beyond simple linear decay.
 
 To compile this program, the following command can be used :
 
