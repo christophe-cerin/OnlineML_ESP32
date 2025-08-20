@@ -210,9 +210,80 @@ This method allows the GHA algorithm to converge progressively towards the main 
 
 Here's the C-plus program updated in ```gha_pca_limited_memory.cpp```
 
-```C++
-Explain
-```
+This updated C++ code enhances the previous Generalized Hebbian Algorithm (GHA) implementation by introducing **data buffering**, allowing it to process larger datasets that may not fit entirely into memory. Instead of loading the entire CSV file at once, it reads and processes data in chunks. 
+
+---
+
+## Code Explanation 
+
+The fundamental goal remains the same: to perform dimensionality reduction using GHA. However, the approach is now **iterative and memory-efficient**, suitable for big data.
+
+### `readDataBuffer(ifstream& file, MatrixXd& buffer, int bufferSize, int numFeatures)`
+This is a **new function** designed to read the CSV file in fixed-size chunks, or "buffers".
+* It takes an `ifstream` object (the open CSV file), a `MatrixXd` reference for the `buffer` to be filled, the `bufferSize` (number of rows to read at a time), and `numFeatures` (number of columns to extract).
+* **Header Handling**: On the first call, it skips the CSV header line.
+* **Buffer Filling**: It attempts to read `bufferSize` lines from the file.
+* **End-of-File (EOF) Handling**: If it reaches the end of the file before filling the buffer, it populates the `buffer` with the remaining available data and returns `true`. If no data is read (i.e., the file is empty or already fully read), it returns `false`, signaling the end of processing.
+* Similar to the previous `readCSV` function, it specifically extracts columns 1, 3, 5, and 6 (`accMotion`, `humidity`, `temperature`, `vdd`).
+
+---
+
+### `normalizeData(const MatrixXd& data)`
+This function remains **unchanged**. It still performs **data normalization** (mean subtraction and division by standard deviation) on the input `MatrixXd`, ensuring that the data processed by GHA has a mean of 0 and a standard deviation of 1.
+
+---
+
+### `GHA_step(const MatrixXd& dataBuffer, MatrixXd& W, double learningRate)`
+This is the **core GHA algorithm, adapted to work with a buffer**.
+* Instead of processing the entire dataset at once, this function takes a `dataBuffer` (a chunk of data) and the current **weight matrix `W`** by reference.
+* It iterates through each row in the `dataBuffer` and applies the same **Generalized Hebbian Algorithm update rule** as before.
+* The key difference is that `W` is now **updated incrementally** with each buffer. The learned components from one buffer are carried over and refined by the next buffer, allowing the model to adapt to the entire dataset over multiple passes of different buffers.
+* Weight normalization is performed after each update.
+
+---
+
+### `main()`
+The `main` function has been significantly restructured to accommodate the buffered processing.
+1.  **Parameters**: It defines `bufferSize` (simulating RAM limitations for a data chunk), `numFeatures`, `numComponents`, `learningRate`, and `numIterations` (number of GHA updates per buffer).
+2.  **Weight Initialization**: The weight matrix `W` is initialized randomly and normalized, as before.
+3.  **Buffered Data Processing Loop**:
+    * It opens the "TourPerrethead11col.csv" file.
+    * It enters a `while` loop that continuously calls `readDataBuffer`. The loop continues as long as `readDataBuffer` successfully reads data into the `buffer`.
+    * **Inside the loop**:
+        * The `buffer` is `normalizedData`.
+        * The `GHA_step` function is called `numIterations` times for the current `normalizedBuffer`. This means the GHA algorithm refines its weights using the current data chunk multiple times before moving to the next chunk.
+        * The `learningRate` is decayed (`learningRate *= 0.99`) after processing each buffer, promoting convergence.
+        * A message "Buffer traité. Poids mis à jour." (Buffer processed. Weights updated.) is printed.
+4.  **Final Projection**: After all buffers have been processed and the `W` matrix has been fully learned, the program re-opens the original CSV file to read the **entire dataset** again.
+    * The `fullData` is then normalized (`normalizedFullData`).
+    * Finally, the entire `normalizedFullData` is projected onto the learned `W` matrix to get the `projectedData`. This ensures that the final output includes all data points transformed by the globally learned principal components.
+5.  **Saving Projected Data**: The `projectedData` is saved to a new CSV file named **`projected_data_buffer.csv`**, with columns "PC1" and "PC2".
+
+---
+
+## Benefits of Buffered Processing 
+
+This buffered approach offers significant advantages, especially for large datasets:
+* **Memory Efficiency**: The entire dataset does not need to be loaded into RAM simultaneously. Only a small `bufferSize` chunk is in memory at any given time.
+* **Online Learning**: GHA inherently supports online learning, where the model's parameters (weights `W`) are updated incrementally as new data arrives (or is read in chunks). This makes it suitable for real-time applications or continuously growing datasets.
+* **Scalability**: By processing data in blocks, the algorithm can scale to datasets far larger than available memory.
+
+---
+
+## Output 
+
+The program will now produce a CSV file named **`projected_data_buffer.csv`**. This file contains the 2-dimensional projections of all data points from your original "TourPerrethead11col.csv" file, using the principal components learned iteratively from the buffered data. This file is ready for visualization.
+
+---
+
+## Potential Next Steps and Improvements 
+
+* **Adaptive Buffer Sizing**: Explore ways to dynamically adjust the `bufferSize` based on available system memory.
+* **Parallel Processing**: For very large datasets, consider parallelizing the `GHA_step` on different buffers or within the `GHA_step` itself (if `Eigen` operations allow for it implicitly).
+* **Convergence Criteria**: Instead of a fixed `numIterations` per buffer, implement a convergence criterion for `W` updates (e.g., stopping when the change in `W` falls below a threshold).
+* **Mini-batch Learning**: The current approach iterates over all samples in a buffer. For very large buffers, you could introduce mini-batch processing within `GHA_step` to update weights more frequently.
+* **Saving Intermediate Weights**: For extremely long-running processes, you might want to periodically save the `W` matrix to disk.
+* **Mean and Standard Deviation Tracking**: For truly online learning, one might need to update the mean and standard deviation incrementally for normalization, instead of re-calculating them for each buffer or the full dataset at the end.
 
 ### Compilation and implementation instructions
 
