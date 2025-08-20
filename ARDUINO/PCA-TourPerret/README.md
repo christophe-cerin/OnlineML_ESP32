@@ -364,7 +364,7 @@ This method ensures that the algorithm does not focus on a subset of data that i
 
 Here's the code C-plus modified to incorporate this logic. I have added comments to explain the new steps.
 
-This C++ code refines the Generalized Hebbian Algorithm (GHA) implementation by introducing a more sophisticated **memory management strategy** for the data buffer. This new approach aims to handle large datasets more effectively by dynamically managing the data points retained in memory. 🧠
+This C++ code refines the Generalized Hebbian Algorithm (GHA) implementation by introducing a more sophisticated **memory management strategy** for the data buffer. This new approach aims to handle large datasets more effectively by dynamically managing the data points retained in memory.
 
 ---
 
