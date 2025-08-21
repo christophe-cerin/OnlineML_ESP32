@@ -366,26 +366,6 @@ A new `struct` named `DataPoint` is introduced to bundle each data row with an a
 
 ---
 
-### `readData(ifstream& file, int numFeatures, int count)`
-This function is a modified version of `readDataBuffer`.
-* Instead of returning a `MatrixXd`, it now returns a `vector<DataPoint>`.
-* It reads `count` lines from the CSV file.
-* For each line, it parses the specified features (columns 1, 3, 5, 6) into an `Eigen::VectorXd`.
-* Crucially, it populates the `sortValue` of each `DataPoint` with the value from the first feature (`row(0)`, which corresponds to `accMotion`).
-* The function then returns a vector of these `DataPoint` structs.
-
----
-
-### `normalizeData(const MatrixXd& data)`
-This function remains **unchanged**, performing mean-variance normalization on the input `MatrixXd`.
-
----
-
-### `GHA_step(const MatrixXd& dataBuffer, MatrixXd& W, double learningRate)`
-This function also remains **unchanged**. It still applies the GHA update rule to the `W` matrix based on the provided `dataBuffer`. The key is that `dataBuffer` is now constructed from the `data` fields of the `DataPoint` objects in the buffer.
-
----
-
 ### `main()`
 The `main` function incorporates the new memory management logic.
 1.  **Parameters**: `bufferSize` (total capacity of the buffer), `dataToKeep` (number of data points to retain after processing a buffer), `numFeatures`, `numComponents`, `learningRate`, and `numIterations` per buffer.
