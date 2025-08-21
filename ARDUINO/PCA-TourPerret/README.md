@@ -336,10 +336,9 @@ By analyzing the graph, you can identify :
 
 
 ## Sequential reading of the data by introducing explicit management of the buffer
+Our approach to managing limited memory and maintaining data diversity is clever and worth integrating into the code. It goes beyond a simple sequential reading by introducing explicit management of the buffer.
 
-Your approach to managing limited memory and maintaining data diversity is clever and worth integrating into the code. It goes beyond a simple sequential reading by introducing explicit management of the buffer.
-
-### Changes to the programme gha_pca_limited_memory.cpp
+### Changes to the program gha_pca_limited_memory.cpp
 
 We're going to change the algorithm to implement your strategy :
 
@@ -349,7 +348,7 @@ We're going to change the algorithm to implement your strategy :
 
 This method ensures that the algorithm does not focus on a subset of data that is too homogeneous, while reducing the number of elements on which the GHA calculation is performed.
 
-Here's the code C-plus modified to incorporate this logic. I have added comments to explain the new steps.
+Here's the code C++ modified to incorporate this logic. I have added comments to explain the new steps.
 
 This C++ code refines the Generalized Hebbian Algorithm (GHA) implementation by introducing a more sophisticated **memory management strategy** for the data buffer. This new approach aims to handle large datasets more effectively by dynamically managing the data points retained in memory.
 
