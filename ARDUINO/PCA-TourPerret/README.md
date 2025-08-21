@@ -1,4 +1,4 @@
-# Approaching the PCA algorithm by implementing the Generalized Hebbian Algorithm (GHA) algorithm through the reduction of data dimensioning of the Tower of Perret
+# Approaching the PCA algorithm by implementing the Generalized Hebbian Algorithm (GHA) through the reduction of data dimensioning of the Tower of Perret
 
 The GHA algorithm is a single-layer neural network that learns the main components iteratively, without the need to calculate the covariance matrix. Its operation is based on a modified Hebbian-type learning rule. Thus, for each input data vector, it updates its weights (which correspond to the vectors of the main components) using the following formula:
 
