@@ -183,7 +183,7 @@ The figure is a **distribution of points** that reveals trends or subpopulations
 
 ***
 
-### Critique
+### Criticism
 
 1.  **PCA linearity** : PCA is a linear method. If the relationship between the original variables is not linear, PCA might not capture the true data structure. The displayed clusters could be a simplification of more complex relationships.
 2.  **Loss of information** : Two-dimensional reduction results in an inevitable loss of total variance. For a full analysis, the percentage of variance explained by PC1 and PC2 should be verified. If it is too weak, other components may be necessary.
@@ -217,19 +217,6 @@ This updated C++ code enhances the previous Generalized Hebbian Algorithm (GHA) 
 ## Code Explanation 
 
 The fundamental goal remains the same: to perform dimensionality reduction using GHA. However, the approach is now **iterative and memory-efficient**, suitable for big data.
-
-### `readDataBuffer(ifstream& file, MatrixXd& buffer, int bufferSize, int numFeatures)`
-This is a **new function** designed to read the CSV file in fixed-size chunks, or "buffers".
-* It takes an `ifstream` object (the open CSV file), a `MatrixXd` reference for the `buffer` to be filled, the `bufferSize` (number of rows to read at a time), and `numFeatures` (number of columns to extract).
-* **Header Handling**: On the first call, it skips the CSV header line.
-* **Buffer Filling**: It attempts to read `bufferSize` lines from the file.
-* **End-of-File (EOF) Handling**: If it reaches the end of the file before filling the buffer, it populates the `buffer` with the remaining available data and returns `true`. If no data is read (i.e., the file is empty or already fully read), it returns `false`, signaling the end of processing.
-* Similar to the previous `readCSV` function, it specifically extracts columns 1, 3, 5, and 6 (`accMotion`, `humidity`, `temperature`, `vdd`).
-
----
-
-### `normalizeData(const MatrixXd& data)`
-This function remains **unchanged**. It still performs **data normalization** (mean subtraction and division by standard deviation) on the input `MatrixXd`, ensuring that the data processed by GHA has a mean of 0 and a standard deviation of 1.
 
 ---
 
