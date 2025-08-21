@@ -29,7 +29,7 @@ How it works conceptually :
 1. This C++ code implements a dimensionality reduction technique similar to Principal Component Analysis (PCA) using the Generalized Hebbian Algorithm (GHA). 
 It reads specific columns from a CSV file, normalizes the data, applies GHA to reduce dimensions, and then saves the projected data to a new CSV file for visualization.
 
-2. Dataset from CampusIOT ELSYS
+2. Dataset from CampusIOT ELSYS, TourPerrethead11col.csv
 
 
 */
