@@ -12,6 +12,20 @@ using namespace std;
 Created : 2025, August 2025
 Implemented by : M. SOW
 
+The Generalized Hebbian Algorithm (GHA), also known as Sanger's Rule, is a "neural network model for unsupervised learning" that can perform Principal Component Analysis (PCA). 
+Unlike traditional PCA which often relies on eigenvalue decomposition, GHA is an "iterative, online algorithm". 
+This means it can update its weights with each new data point, making it suitable for large datasets or streaming data.
+Its core idea is based on the "Hebbian learning rule" ("neurons that fire together, wire together"), extended to allow for the extraction of multiple principal components in a "sequential and orthogonal manner". 
+Each principal component is learned by subtracting the variance explained by the previously learned components, ensuring they are uncorrelated.
+
+How it works conceptually :
+- Imagine the algorithm trying to find directions (principal components) in your data that capture the most variance.
+- It starts with random guesses for these directions.
+- Then, for each data point, it slightly adjusts its guesses. If a data point aligns strongly with a guess, that guess is reinforced (moved closer to the data point).
+- The "generalized" part ensures that each new direction found is independent of the ones already found, effectively making them orthogonal.
+- This iterative process continues until the directions converge to the true principal components of the data.
+
+
 1. This C++ code implements a dimensionality reduction technique similar to Principal Component Analysis (PCA) using the Generalized Hebbian Algorithm (GHA). 
 It reads specific columns from a CSV file, normalizes the data, applies GHA to reduce dimensions, and then saves the projected data to a new CSV file for visualization.
 
