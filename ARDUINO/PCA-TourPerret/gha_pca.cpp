@@ -7,6 +7,21 @@
 using namespace Eigen;
 using namespace std;
 
+/*
+
+Created : 2025, August 2025
+Implemented by : M. SOW
+
+1. This C++ code implements a dimensionality reduction technique similar to Principal Component Analysis (PCA) using the Generalized Hebbian Algorithm (GHA). 
+It reads specific columns from a CSV file, normalizes the data, applies GHA to reduce dimensions, and then saves the projected data to a new CSV file for visualization.
+
+2. Dataset from CampusIOT ELSYS
+
+
+*/
+
+
+
 // Function to read data from CSV file
 MatrixXd readCSV(const string& filename) {
     ifstream file(filename);
