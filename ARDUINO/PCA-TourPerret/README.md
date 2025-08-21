@@ -158,7 +158,7 @@ Once the dispersion graph has been displayed, the analysis can be started :
   * **Criticism of the approach :**
       * **Limits of GHA :** The GHA algorithm is sensitive to **learning rates** ($\\eta$) and the number of iterations. Too high a rate can make the model unstable, while too low a rate can make it converge very slowly. Convergence is not always guaranteed for PCA's optimal solutions, but in most practical cases it works very well.
       * **PCA limits :** PCA, whether implemented by GHA or other methods, is a linear method. This means that it can only capture linear relationships between variables. If the relationships in your data are non-linear, other techniques such as t-SNE or auto-encoders might be more appropriate.
-      * **Loss of information :** Dimension reduction always implies a **perte d'information**. It is crucial to ensure that the lost dimensions are not essential to the analysis you want to do.
+      * **Loss of information :** Dimension reduction always implies a **Loss of information**. It is crucial to ensure that the lost dimensions are not essential to the analysis you want to do.
 
 
     
