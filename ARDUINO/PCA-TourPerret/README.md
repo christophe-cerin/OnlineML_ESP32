@@ -1,4 +1,4 @@
-# Approaching the PCA algorithm by implementing the Generalized Hebbian Algorithm (GHA) algorithm through the reduction of data dimensioning of the Tower of Perret
+# Approaching the PCA algorithm by implementing the Generalized Hebbian Algorithm (GHA) through the reduction of data dimensioning of the Tower of Perret
 
 The GHA algorithm is a single-layer neural network that learns the main components iteratively, without the need to calculate the covariance matrix. Its operation is based on a modified Hebbian-type learning rule. Thus, for each input data vector, it updates its weights (which correspond to the vectors of the main components) using the following formula:
 
@@ -158,7 +158,7 @@ Once the dispersion graph has been displayed, the analysis can be started :
   * **Criticism of the approach :**
       * **Limits of GHA :** The GHA algorithm is sensitive to **learning rates** ($\\eta$) and the number of iterations. Too high a rate can make the model unstable, while too low a rate can make it converge very slowly. Convergence is not always guaranteed for PCA's optimal solutions, but in most practical cases it works very well.
       * **PCA limits :** PCA, whether implemented by GHA or other methods, is a linear method. This means that it can only capture linear relationships between variables. If the relationships in your data are non-linear, other techniques such as t-SNE or auto-encoders might be more appropriate.
-      * **Loss of information :** Dimension reduction always implies a **perte d'information**. It is crucial to ensure that the lost dimensions are not essential to the analysis you want to do.
+      * **Loss of information :** Dimension reduction always implies a **Loss of information**. It is crucial to ensure that the lost dimensions are not essential to the analysis you want to do.
 
 
     
@@ -183,7 +183,7 @@ The figure is a **distribution of points** that reveals trends or subpopulations
 
 ***
 
-### Critique
+### Criticism
 
 1.  **PCA linearity** : PCA is a linear method. If the relationship between the original variables is not linear, PCA might not capture the true data structure. The displayed clusters could be a simplification of more complex relationships.
 2.  **Loss of information** : Two-dimensional reduction results in an inevitable loss of total variance. For a full analysis, the percentage of variance explained by PC1 and PC2 should be verified. If it is too weak, other components may be necessary.
@@ -217,19 +217,6 @@ This updated C++ code enhances the previous Generalized Hebbian Algorithm (GHA) 
 ## Code Explanation 
 
 The fundamental goal remains the same: to perform dimensionality reduction using GHA. However, the approach is now **iterative and memory-efficient**, suitable for big data.
-
-### `readDataBuffer(ifstream& file, MatrixXd& buffer, int bufferSize, int numFeatures)`
-This is a **new function** designed to read the CSV file in fixed-size chunks, or "buffers".
-* It takes an `ifstream` object (the open CSV file), a `MatrixXd` reference for the `buffer` to be filled, the `bufferSize` (number of rows to read at a time), and `numFeatures` (number of columns to extract).
-* **Header Handling**: On the first call, it skips the CSV header line.
-* **Buffer Filling**: It attempts to read `bufferSize` lines from the file.
-* **End-of-File (EOF) Handling**: If it reaches the end of the file before filling the buffer, it populates the `buffer` with the remaining available data and returns `true`. If no data is read (i.e., the file is empty or already fully read), it returns `false`, signaling the end of processing.
-* Similar to the previous `readCSV` function, it specifically extracts columns 1, 3, 5, and 6 (`accMotion`, `humidity`, `temperature`, `vdd`).
-
----
-
-### `normalizeData(const MatrixXd& data)`
-This function remains **unchanged**. It still performs **data normalization** (mean subtraction and division by standard deviation) on the input `MatrixXd`, ensuring that the data processed by GHA has a mean of 0 and a standard deviation of 1.
 
 ---
 
@@ -349,10 +336,9 @@ By analyzing the graph, you can identify :
 
 
 ## Sequential reading of the data by introducing explicit management of the buffer
+Our approach to managing limited memory and maintaining data diversity is clever and worth integrating into the code. It goes beyond a simple sequential reading by introducing explicit management of the buffer.
 
-Your approach to managing limited memory and maintaining data diversity is clever and worth integrating into the code. It goes beyond a simple sequential reading by introducing explicit management of the buffer.
-
-### Changes to the programme gha_pca_limited_memory.cpp
+### Changes to the program gha_pca_limited_memory.cpp
 
 We're going to change the algorithm to implement your strategy :
 
@@ -362,7 +348,7 @@ We're going to change the algorithm to implement your strategy :
 
 This method ensures that the algorithm does not focus on a subset of data that is too homogeneous, while reducing the number of elements on which the GHA calculation is performed.
 
-Here's the code C-plus modified to incorporate this logic. I have added comments to explain the new steps.
+Here's the code C++ modified to incorporate this logic. I have added comments to explain the new steps.
 
 This C++ code refines the Generalized Hebbian Algorithm (GHA) implementation by introducing a more sophisticated **memory management strategy** for the data buffer. This new approach aims to handle large datasets more effectively by dynamically managing the data points retained in memory.
 
@@ -376,26 +362,6 @@ The core idea of iterative GHA training remains, but the way data is handled wit
 A new `struct` named `DataPoint` is introduced to bundle each data row with an additional piece of information:
 * `VectorXd data`: This holds the actual numerical feature values for a single data row (e.g., `accMotion`, `humidity`, `temperature`, `vdd`).
 * `double sortValue`: This is a specific value from the `data` that will be used to **sort** the `DataPoint` objects within the buffer. In this code, the **first feature (`accMotion`, column 1)** is chosen as the `sortValue`.
-
----
-
-### `readData(ifstream& file, int numFeatures, int count)`
-This function is a modified version of `readDataBuffer`.
-* Instead of returning a `MatrixXd`, it now returns a `vector<DataPoint>`.
-* It reads `count` lines from the CSV file.
-* For each line, it parses the specified features (columns 1, 3, 5, 6) into an `Eigen::VectorXd`.
-* Crucially, it populates the `sortValue` of each `DataPoint` with the value from the first feature (`row(0)`, which corresponds to `accMotion`).
-* The function then returns a vector of these `DataPoint` structs.
-
----
-
-### `normalizeData(const MatrixXd& data)`
-This function remains **unchanged**, performing mean-variance normalization on the input `MatrixXd`.
-
----
-
-### `GHA_step(const MatrixXd& dataBuffer, MatrixXd& W, double learningRate)`
-This function also remains **unchanged**. It still applies the GHA update rule to the `W` matrix based on the provided `dataBuffer`. The key is that `dataBuffer` is now constructed from the `data` fields of the `DataPoint` objects in the buffer.
 
 ---
 
