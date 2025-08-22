@@ -15,6 +15,21 @@ Where :
 
 The weights of the first layer of the network converge towards the eigenvectors of the data covariance matrix, i.e. the main components.
 
+---
+
+## Generalized Hebbian Algorithm (GHA) 
+
+The Generalized Hebbian Algorithm (GHA), also known as Sanger's Rule, is a **neural network model for unsupervised learning** that can perform Principal Component Analysis (PCA). Unlike traditional PCA which often relies on eigenvalue decomposition, GHA is an **iterative, online algorithm**. This means it can update its weights with each new data point, making it suitable for large datasets or streaming data.
+
+Its core idea is based on the **Hebbian learning rule** ("neurons that fire together, wire together"), extended to allow for the extraction of multiple principal components in a **sequential and orthogonal manner**. Each principal component is learned by subtracting the variance explained by the previously learned components, ensuring they are uncorrelated.
+
+**How it works conceptually**:
+* Imagine the algorithm trying to find directions (principal components) in your data that capture the most variance.
+* It starts with random guesses for these directions.
+* Then, for each data point, it slightly adjusts its guesses. If a data point aligns strongly with a guess, that guess is reinforced (moved closer to the data point).
+* The "generalized" part ensures that each new direction found is independent of the ones already found, effectively making them orthogonal.
+* This iterative process continues until the directions converge to the true principal components of the data.
+
 ## C++ program
 
 The program ```gha_pca.cpp``` The next uses the Eigen library for matrix manipulation, which is very practical for PCA calculations. If you do not have Eigen, you will need to install it (e.g. with ```sudo apt-get install libeigen3-dev``` on Ubuntu).
@@ -23,7 +38,7 @@ This C++ code implements a dimensionality reduction technique similar to Princip
 
 ---
 
-## Code Explanation 
+## Code Explanation ```gha_pca.cpp```
 
 The provided code is structured into several functions:
 
@@ -31,7 +46,7 @@ The provided code is structured into several functions:
 This function is responsible for **reading data from a CSV file**.
 * It opens the specified `filename` and checks if it's accessible.
 * The first line (header) is ignored.
-* For each subsequent line, it reads specific columns (1, 3, 5, 6, which correspond to `accMotion`, `humidity`, `temperature`, and `vdd` from the assumed "TourPerrethead11col.csv" file) and converts them to `double`.
+* For each subsequent line, it reads specific columns (1, 3, 5, 6, which correspond to `accMotion`, `humidity`, `temperature`, and `vdd` from the assumed `TourPerrethead11col.csv` file) and converts them to `double`.
 * The extracted data is stored in a `vector<vector<double>>` and then converted into an `Eigen::MatrixXd` for numerical operations.
 
 ---
@@ -76,24 +91,9 @@ The `main` function orchestrates the entire process:
 
 ---
 
-## Generalized Hebbian Algorithm (GHA) 
-
-The Generalized Hebbian Algorithm (GHA), also known as Sanger's Rule, is a **neural network model for unsupervised learning** that can perform Principal Component Analysis (PCA). Unlike traditional PCA which often relies on eigenvalue decomposition, GHA is an **iterative, online algorithm**. This means it can update its weights with each new data point, making it suitable for large datasets or streaming data.
-
-Its core idea is based on the **Hebbian learning rule** ("neurons that fire together, wire together"), extended to allow for the extraction of multiple principal components in a **sequential and orthogonal manner**. Each principal component is learned by subtracting the variance explained by the previously learned components, ensuring they are uncorrelated.
-
-**How it works conceptually**:
-* Imagine the algorithm trying to find directions (principal components) in your data that capture the most variance.
-* It starts with random guesses for these directions.
-* Then, for each data point, it slightly adjusts its guesses. If a data point aligns strongly with a guess, that guess is reinforced (moved closer to the data point).
-* The "generalized" part ensures that each new direction found is independent of the ones already found, effectively making them orthogonal.
-* This iterative process continues until the directions converge to the true principal components of the data.
-
----
-
 ## Output 
 
-The program will generate a file named **`projected_data.csv`** in the same directory where the executable is run. This CSV file will contain two columns, labeled "PC1" and "PC2", representing the **two principal components** (reduced dimensions) of your input data. Each row in this file corresponds to a row in your original input CSV ("TourPerrethead11col.csv"), but now transformed into a 2-dimensional space.
+The program will generate a file named **`projected_data.csv`** in the same directory where the executable is run. This CSV file will contain two columns, labeled "PC1" and "PC2", representing the **two principal components** (reduced dimensions) of your input data. Each row in this file corresponds to a row in your original input CSV (`TourPerrethead11col.csv`), but now transformed into a 2-dimensional space.
 
 This `projected_data.csv` can then be used with plotting tools (like Python's Matplotlib, R, or even spreadsheet software) to create **scatter plots** and visualize the data in a reduced dimension, potentially revealing clusters or patterns that were harder to discern in the original 4-dimensional feature space. 
 
@@ -214,7 +214,7 @@ This updated C++ code enhances the previous Generalized Hebbian Algorithm (GHA) 
 
 ---
 
-## Code Explanation 
+## Code Explanation `gha_pca_limited_memory.cpp`
 
 The fundamental goal remains the same: to perform dimensionality reduction using GHA. However, the approach is now **iterative and memory-efficient**, suitable for big data.
 
@@ -296,7 +296,7 @@ The graph obtained will show the distribution of the data after the reduction in
     
 
 
-To plot the file projected_data_buffer.csv with a KDE plot (Kernel Density Estimate plot), we're going to use Python with the Pandas libraries for data manipulation and Seaborn for visualization. The KDE plot is an excellent alternative to the dispersion graph (scatter plot) because it represents the probability density of the data points, which is particularly useful for identifying regions with high data concentration.
+To plot the file `projected_data_buffer.csv` with a KDE plot (Kernel Density Estimate plot), we're going to use Python with the Pandas libraries for data manipulation and Seaborn for visualization. The KDE plot is an excellent alternative to the dispersion graph (scatter plot) because it represents the probability density of the data points, which is particularly useful for identifying regions with high data concentration.
 
 **Alternatives to the use of Scatter Plot**
 
@@ -338,7 +338,7 @@ By analyzing the graph, you can identify :
 ## Sequential reading of the data by introducing explicit management of the buffer
 Our approach to managing limited memory and maintaining data diversity is clever and worth integrating into the code. It goes beyond a simple sequential reading by introducing explicit management of the buffer.
 
-### Changes to the program gha_pca_limited_memory.cpp
+### Changes to the program `gha_pca_gestion_memory.cpp`
 
 We're going to change the algorithm to implement your strategy :
 
@@ -354,7 +354,7 @@ This C++ code refines the Generalized Hebbian Algorithm (GHA) implementation by 
 
 ---
 
-## Code Explanation 
+## Code Explanation `gha_pca_gestion_memory.cpp`
 
 The core idea of iterative GHA training remains, but the way data is handled within the buffer has been significantly altered.
 
@@ -496,17 +496,17 @@ The three figures are **point cloud distributions or clouds** representing the p
 
 ### Analysis and Interpretation
 
-1.  **Reference method (`fig-data.png`)** : This figure clearly shows two main clusters, each representing a separate state of operation of the system. The density distribution is fairly smooth, suggesting a stable convergence of the algorithm over the complete set of data. 
+1.  **Reference method (`fig-data.png with projected_data.csv data`)** : This figure clearly shows two main clusters, each representing a separate state of operation of the system. The density distribution is fairly smooth, suggesting a stable convergence of the algorithm over the complete set of data. 
 
-2.  **Simple block processing (`fig-data-buffer.png`)** : The graph of this figure shows a structure similar to the reference figure, with two well-defined clusters. However, the density within the clusters appears to be slightly less concentrated and more dispersed. This could indicate that block learning, without a diversity strategy, is less effective in capturing the fine structure of the data. The boundaries of the clusters are less clear, which may reflect a less stable convergence of the algorithm. 
+2.  **Simple block processing (`fig-data-buffer.png with projected_data_buffer.csv data`)** : The graph of this figure shows a structure similar to the reference figure, with two well-defined clusters. However, the density within the clusters appears to be slightly less concentrated and more dispersed. This could indicate that block learning, without a diversity strategy, is less effective in capturing the fine structure of the data. The boundaries of the clusters are less clear, which may reflect a less stable convergence of the algorithm. 
 
-3.  **Block processing with diversity management (`fig-data-buffer-gestionmem.png`)** : This graph is visually the closest to the reference figure. The two clusters are not only present, but their density is also highly concentrated, with more distinct edges. The shape and position of the clusters are almost identical to the reference figure. This proves that the strategy of sorting and conserving extreme points has been **very effective in maintaining the diversity** of data seen by the algorithm at each iteration. The algorithm was thus able to better generalize and converge towards the optimal solution.
+3.  **Block processing with diversity management (`fig-data-buffer-gestionmem.png with projected_data_buffer_gestionmem.csv data`)** : This graph is visually the closest to the reference figure. The two clusters are not only present, but their density is also highly concentrated, with more distinct edges. The shape and position of the clusters are almost identical to the reference figure. This proves that the strategy of sorting and conserving extreme points has been **very effective in maintaining the diversity** of data seen by the algorithm at each iteration. The algorithm was thus able to better generalize and converge towards the optimal solution.
 
 ---
 
 ### Criticism
 
-* **Complexity of implementation** : The diversity management method (`fig-data-buffer-gestionmem.png`) is more complex to implement than simple block processing. It introduces a sorting step which increases the temporal complexity of each iteration ($O(W \log W)$), although the gain in convergence performance and the quality of the final result seem to justify it.
+* **Complexity of implementation** : The diversity management method (`fig-data-buffer-gestionmem.png`) is more complex to implement than simple block processing. It introduces a sorting step which increases the temporal complexity of each iteration (`O(W log W)`), although the gain in convergence performance and the quality of the final result seem to justify it.
 * **Dependence on sorting** : The effectiveness of the diversity management method is highly dependent on the sorting criterion used (here, the first component). If this criterion does not represent the distribution of data well, diversity may not be preserved optimally.
 * **Quality of results** : The simple block processing method is a good compromise, but diversity management offers results of almost equivalent quality to the total memory approach, which is remarkable for a limited memory problem.
 
