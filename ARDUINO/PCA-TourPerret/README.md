@@ -31,7 +31,7 @@ The provided code is structured into several functions:
 This function is responsible for **reading data from a CSV file**.
 * It opens the specified `filename` and checks if it's accessible.
 * The first line (header) is ignored.
-* For each subsequent line, it reads specific columns (1, 3, 5, 6, which correspond to `accMotion`, `humidity`, `temperature`, and `vdd` from the assumed "TourPerrethead11col.csv" file) and converts them to `double`.
+* For each subsequent line, it reads specific columns (1, 3, 5, 6, which correspond to `accMotion`, `humidity`, `temperature`, and `vdd` from the assumed TourPerrethead11col.csv` file) and converts them to `double`.
 * The extracted data is stored in a `vector<vector<double>>` and then converted into an `Eigen::MatrixXd` for numerical operations.
 
 ---
