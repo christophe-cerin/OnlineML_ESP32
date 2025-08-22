@@ -506,7 +506,7 @@ The three figures are **point cloud distributions or clouds** representing the p
 
 ### Criticism
 
-* **Complexity of implementation** : The diversity management method (`fig-data-buffer-gestionmem.png`) is more complex to implement than simple block processing. It introduces a sorting step which increases the temporal complexity of each iteration ($O(W \log W)$), although the gain in convergence performance and the quality of the final result seem to justify it.
+* **Complexity of implementation** : The diversity management method (`fig-data-buffer-gestionmem.png`) is more complex to implement than simple block processing. It introduces a sorting step which increases the temporal complexity of each iteration (`O(W log W)`), although the gain in convergence performance and the quality of the final result seem to justify it.
 * **Dependence on sorting** : The effectiveness of the diversity management method is highly dependent on the sorting criterion used (here, the first component). If this criterion does not represent the distribution of data well, diversity may not be preserved optimally.
 * **Quality of results** : The simple block processing method is a good compromise, but diversity management offers results of almost equivalent quality to the total memory approach, which is remarkable for a limited memory problem.
 
