@@ -23,7 +23,7 @@ This C++ code implements a dimensionality reduction technique similar to Princip
 
 ---
 
-## Code Explanation 
+## Code Explanation ```gha_pca.cpp```
 
 The provided code is structured into several functions:
 
