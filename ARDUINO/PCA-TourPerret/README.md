@@ -93,7 +93,7 @@ The `main` function orchestrates the entire process:
 
 ## Output 
 
-The program will generate a file named **`projected_data.csv`** in the same directory where the executable is run. This CSV file will contain two columns, labeled "PC1" and "PC2", representing the **two principal components** (reduced dimensions) of your input data. Each row in this file corresponds to a row in your original input CSV ("TourPerrethead11col.csv"), but now transformed into a 2-dimensional space.
+The program will generate a file named **`projected_data.csv`** in the same directory where the executable is run. This CSV file will contain two columns, labeled "PC1" and "PC2", representing the **two principal components** (reduced dimensions) of your input data. Each row in this file corresponds to a row in your original input CSV (`TourPerrethead11col.csv`), but now transformed into a 2-dimensional space.
 
 This `projected_data.csv` can then be used with plotting tools (like Python's Matplotlib, R, or even spreadsheet software) to create **scatter plots** and visualize the data in a reduced dimension, potentially revealing clusters or patterns that were harder to discern in the original 4-dimensional feature space. 
 
@@ -296,7 +296,7 @@ The graph obtained will show the distribution of the data after the reduction in
     
 
 
-To plot the file projected_data_buffer.csv with a KDE plot (Kernel Density Estimate plot), we're going to use Python with the Pandas libraries for data manipulation and Seaborn for visualization. The KDE plot is an excellent alternative to the dispersion graph (scatter plot) because it represents the probability density of the data points, which is particularly useful for identifying regions with high data concentration.
+To plot the file `projected_data_buffer.csv` with a KDE plot (Kernel Density Estimate plot), we're going to use Python with the Pandas libraries for data manipulation and Seaborn for visualization. The KDE plot is an excellent alternative to the dispersion graph (scatter plot) because it represents the probability density of the data points, which is particularly useful for identifying regions with high data concentration.
 
 **Alternatives to the use of Scatter Plot**
 
