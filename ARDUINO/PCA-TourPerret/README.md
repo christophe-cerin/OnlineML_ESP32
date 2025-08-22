@@ -214,7 +214,7 @@ This updated C++ code enhances the previous Generalized Hebbian Algorithm (GHA) 
 
 ---
 
-## Code Explanation 
+## Code Explanation `gha_pca_limited_memory.cpp`
 
 The fundamental goal remains the same: to perform dimensionality reduction using GHA. However, the approach is now **iterative and memory-efficient**, suitable for big data.
 
