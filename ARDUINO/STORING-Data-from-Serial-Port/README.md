@@ -23,9 +23,9 @@ Components
 
 Wiring Instructions
  - 1 k Ohm Resistor
-  - Connect this resistor for overvoltage protection of the LCD screen.
+   - Connect this resistor for overvoltage protection of the LCD screen.
  - Potentiometer
-  - The third pin of the potentiometer connects to the V0 pin of the LCD screen.
+   - The third pin of the potentiometer connects to the V0 pin of the LCD screen.
  - DHT22 Sensor
    - Green cable (for data/display) connects to digital pin 13 on the Arduino Uno.
    - Red cable (for power) connects to the positive rail of the breadboard.
