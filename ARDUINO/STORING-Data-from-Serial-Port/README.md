@@ -22,15 +22,15 @@ Components
  - Micro USB-C to USB2 Cable
 
 Wiring Instructions
- 1 k Ohm Resistor
-  - Connect this resistor for overvoltage protection of the LCD screen.
- Potentiometer
-  - The third pin of the potentiometer connects to the V0 pin of the LCD screen.
- DHT22 Sensor
-  - Green cable (for data/display) connects to digital pin 13 on the Arduino Uno.
-  - Red cable (for power) connects to the positive rail of the breadboard.
-  - Black cable (for ground) connects to the negative rail of the breadboard.
- 16x2 LCD Screen
+  1 k Ohm Resistor
+   - Connect this resistor for overvoltage protection of the LCD screen.
+  Potentiometer
+   - The third pin of the potentiometer connects to the V0 pin of the LCD screen.
+  DHT22 Sensor
+   - Green cable (for data/display) connects to digital pin 13 on the Arduino Uno.
+   - Red cable (for power) connects to the positive rail of the breadboard.
+   - Black cable (for ground) connects to the negative rail of the breadboard.
+  16x2 LCD Screen
    - LCD Pin - (Negative) connects to Arduino Uno R4 Wifi GND digital pin.
    - LCD Pin + (Positive) connects to Arduino Uno R4 Wifi 5V digital pin.
    - LCD D7 pin connects to Arduino Uno R4 Wifi digital pin 2.
