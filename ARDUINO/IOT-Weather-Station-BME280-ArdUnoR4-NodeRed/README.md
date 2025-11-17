@@ -85,63 +85,42 @@ This project serves as a solid foundation but can be easily extended thanks to N
 
 ### Illustrations 
 
-<figure>
-   <img alt="Matrice X" align="center" src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Weather-Station-BME280-ArdUnoR4-NodeRed/images/"/>
-    <figcaption><b>Figure 1:</b> Arduino IDE and Serial Port</figcaption>
-</figure>
-
-
 <figure style="text-align: center;">
 <img src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Weather-Station-BME280-ArdUnoR4-NodeRed/images/unoBME280-2ic-5v50.png" align = "center">
 <figcaption > <b>Figure 1 :</b> Wiring Diagram </figcaption>
 </figure>
 
-
-<div style="text-align: center;">
-<figure >
+<figure style="text-align: center;">
 <img src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Weather-Station-BME280-ArdUnoR4-NodeRed/images/weatherA310IDE50.png" align = "center">
-<figcaption > <b>Figure 3 :</b> Reading and Sending Data on the Arduino Serial Port </figcaption>
+<figcaption > <b>Figure 2 :</b> Reading and Sending Data on the Arduino Serial Port </figcaption>
 </figure>
-</div>
 
-<div style="text-align: center;">
 <figure >
 <img src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Weather-Station-BME280-ArdUnoR4-NodeRed/images/weatherA310nodeRedMoni50.png" align = "center">
-<figcaption > <b>Figure 4 :</b> Node-RED Node and Flow Configuration Interface (or Setup Interface) </figcaption>
+<figcaption > <b>Figure 3 :</b> Node-RED Node and Flow Configuration Interface (or Setup Interface) </figcaption>
 </figure>
-</div>
 
-<div style="text-align: center;">
 <figure >
 <img src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Weather-Station-BME280-ArdUnoR4-NodeRed/images/weatherA310dashboardPC50.png" align = "center">
-<figcaption > <b>Figure 5 :</b> Node-RED Dashboard on the Laptop </figcaption>
+<figcaption > <b>Figure 4 :</b> Node-RED Dashboard on the Laptop </figcaption>
 </figure>
-</div>
 
-<div style="text-align: center;">
 <figure >
 <img src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Weather-Station-BME280-ArdUnoR4-NodeRed/images/weatherA310TelTemp150.jpg" align = "center">
-<figcaption > <b>Figure 6 :</b> Node-RED Dashboard Temperature Reading on the Smartphone </figcaption>
+<figcaption > <b>Figure 5 :</b> Node-RED Dashboard Temperature Reading on the Smartphone </figcaption>
 </figure>
-</div>
 
-<div style="text-align: center;">
 <figure >
 <img src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Weather-Station-BME280-ArdUnoR4-NodeRed/images/weatherA310TelAlt50.jpg" align = "center">
-<figcaption > <b>Figure 7 :</b> Node-RED Dashboard Sea-Level Variation on the Smartphone </figcaption>
+<figcaption > <b>Figure 6 :</b> Node-RED Dashboard Sea-Level Variation on the Smartphone </figcaption>
 </figure>
-</div>
 
-<div style="text-align: center;">
 <figure >
 <img src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Weather-Station-BME280-ArdUnoR4-NodeRed/images/weatherA310TelPressure50.jpg" align = "center">
-<figcaption > <b>Figure 8 :</b> Node-RED Dashboard Atmospheric Pressure Variation on the Smartphone </figcaption>
+<figcaption > <b>Figure 7 :</b> Node-RED Dashboard Atmospheric Pressure Variation on the Smartphone </figcaption>
 </figure>
-</div>
 
-<div style="text-align: center;">
 <figure >
 <img src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Weather-Station-BME280-ArdUnoR4-NodeRed/images/weatherA310TelHum50.jpg" align = "center">
-<figcaption > <b>Figure 9 :</b> Node-RED Dashboard Humidity Variation on the Smartphone </figcaption>
+<figcaption > <b>Figure 8 :</b> Node-RED Dashboard Humidity Variation on the Smartphone </figcaption>
 </figure>
-</div>
