@@ -57,7 +57,8 @@ The flow is a set of nodes connected by wires, representing the program logic26.
   - It then creates a JavaScript object (JSON) by converting each string to a number (parseFloat) and stores it in msg.payload for subsequent nodes:
         
  ```json
-                                         msg.payload={temp,hum,press,alt} ``` 
+                                         msg.payload={temp,hum,press,alt}
+``` 
 
 - **Change Nodes :** Separates the JSON object properties.
   - Four Change nodes are used (one for each measurement: Temperature, Humidity, Pressure, Altitude).
