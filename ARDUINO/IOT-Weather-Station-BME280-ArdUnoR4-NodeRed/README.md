@@ -1,4 +1,4 @@
-# IoT Weather Station: Integrating the BME280 into Node-RED via the Arduino Uno R4
+# IoT Weather Station : Integrating the BME280 into Node-RED via the Arduino Uno R4
 
 ## Summary and Objectives
 
