@@ -5,7 +5,7 @@
 This project aims to build an autonomous weather station using the Arduino Uno R4 WiFi board and the BME280 environmental sensor. The main objective is to retrieve and visualize environmental data (temperature, humidity, atmospheric pressure and sea-level) on a user-friendly web dashboard using the Node-RED platform.
 The overall process is divided into two main phases :
 
-1. Arduino Code : Reading data from the BME280 and sending it via the USB-C serial port.
+1. **Arduino Code** : Reading data from the BME280 and sending it via the USB-C serial port.
 1. Node-RED Flow : Receiving, parsing the serial data, and displaying it on a user interface (Dashboard).
 
 ## Arduino Configuration
