@@ -90,12 +90,12 @@ This project serves as a solid foundation but can be easily extended thanks to N
     <figcaption><b>Figure 1:</b> Arduino IDE and Serial Port</figcaption>
 </figure>
 
-<div style="text-align: center;">
-<figure >
+
+<figure style="text-align: center;">
 <img src="https://github.com/madou-sow/OnlineML_ESP32/blob/main/ARDUINO/IOT-Weather-Station-BME280-ArdUnoR4-NodeRed/images/unoBME280-2ic-5v50.png" align = "center">
 <figcaption > <b>Figure 1 :</b> Wiring Diagram </figcaption>
 </figure>
-</div>
+
 
 <div style="text-align: center;">
 <figure >
